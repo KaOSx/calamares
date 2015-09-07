@@ -132,7 +132,7 @@ def install_bootloader(boot_loader, fw_type):
                 boot_p = boot_device[-1:]
                 device = boot_device[:-1]
                 print(device)
-        subprocess.call(["sgdisk", "--typecode=%s:EF00" % boot_p, "%s" % device])
+                subprocess.call(["sgdisk", "--typecode=%s:EF00" % boot_p, "%s" % device])
         subprocess.call(
             ["bootctl", "--path=%s/boot" % install_path, "install"])
         create_conf(uuid, conf_path)
