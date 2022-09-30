@@ -15,7 +15,17 @@
             development is sponsored by &lt;br/&gt;
             &lt;a href='http://www.blue-systems.com/'&gt;Blue Systems&lt;/a&gt; -
             Liberating Software.</source>
-        <translation type="unfinished"/>
+        <translation>&lt;h1&gt;%1&lt;/h1&gt;&lt;br/&gt;
+            &lt;strong&gt;%2&lt;br/&gt;
+            pour %3&lt;/strong&gt;&lt;br/&gt;&lt;br/&gt;
+            Copyright 2014-2017 Teo Mrnjavac &amp;lt;teo@kde.org&amp;gt;&lt;br/&gt;
+            Copyright 2017-2022 Adriaan de Groot &amp;lt;groot@kde.org&amp;gt;&lt;br/&gt;
+           Merci à &lt;a href=&apos;https://calamares.io/team/&apos;&gt;l’équipe Calamares&lt;/a&gt;
+            et l’&lt;a href=&apos;https://www.transifex.com/kaos/kaos/&apos;&gt;équipe de traducteurs KaOS&lt;/a&gt;.&lt;br/&gt;&lt;br/&gt;
+            Le développement de &lt;a href=&apos;https://calamares.io/&apos;&gt;Calamares&lt;/a&gt;
+            est sponsorisé par &lt;br/&gt;
+            &lt;a href=&apos;http://www.blue-systems.com/&apos;&gt;Blue Systems&lt;/a&gt; -
+            Liberating Software.</translation>
     </message>
 </context>
 <context>
@@ -1466,17 +1476,17 @@ L&apos;installateur va fermer et tous les changements seront perdus.</translatio
     <message>
         <location filename="../src/modules/dracutlukscfg/DracutLuksCfgJob.cpp" line="117"/>
         <source>Write LUKS configuration for Dracut to %1</source>
-        <translation type="unfinished"/>
+        <translation>Écriture de la configuration de LUKS pour dracut dans %1</translation>
     </message>
     <message>
         <location filename="../src/modules/dracutlukscfg/DracutLuksCfgJob.cpp" line="121"/>
         <source>Skip writing LUKS configuration for Dracut: &quot;/&quot; partition is not encrypted</source>
-        <translation type="unfinished"/>
+        <translation>Configuration de LUKS pour Dracut ignorée : la partition « / »  n’est pas chiffrée</translation>
     </message>
     <message>
         <location filename="../src/modules/dracutlukscfg/DracutLuksCfgJob.cpp" line="138"/>
         <source>Failed to open %1</source>
-        <translation type="unfinished"/>
+        <translation>Impossible d’ouvrir %1</translation>
     </message>
 </context>
 <context>
@@ -4153,13 +4163,15 @@ Vous pouvez maintenant redémarrer votre système.</translation>
         <location filename="../src/modules/localeq/localeq.qml" line="171"/>
         <source>&lt;h3&gt;Languages&lt;/h3&gt; &lt;/br&gt;
                             The system locale setting affects the language and character set for some command line user interface elements. The current setting is &lt;strong&gt;%1&lt;/strong&gt;.</source>
-        <translation type="unfinished"/>
+        <translation>&lt;h3&gt;Langues&lt;/h3&gt; &lt;/br&gt;
+Les paramètres régionaux du système affectent la langue et le jeu de caractères de certains éléments de l’interface utilisateur de ligne de commande. La configuration actuelle est &lt;strong&gt;%1&lt;/strong&gt;.</translation>
     </message>
     <message>
         <location filename="../src/modules/localeq/localeq.qml" line="242"/>
         <source>&lt;h3&gt;Locales&lt;/h3&gt; &lt;/br&gt;
                                 The system locale setting affects the numbers and dates format. The current setting is &lt;strong&gt;%1&lt;/strong&gt;.</source>
-        <translation type="unfinished"/>
+        <translation>&lt;h3&gt;Paramètres régionaux&lt;/h3&gt; &lt;/br&gt;
+Les paramètres régionaux du système affectent le format des dates et des nombres. La configuration actuelle est &lt;strong&gt;%1&lt;/strong&gt;.</translation>
     </message>
 </context>
 <context>
@@ -4401,67 +4413,67 @@ Veuillez consuter les contrats de licence utilisateur finaux.&lt;/p&gt;</transla
     <message>
         <location filename="../src/branding/kaos_branding/show.qml" line="72"/>
         <source>installation</source>
-        <translation type="unfinished"/>
+        <translation>installation</translation>
     </message>
     <message>
         <location filename="../src/branding/kaos_branding/show.qml" line="73"/>
         <source>After creating your chosen disk setup in the first 10 % the full copying of the ISO will take the longest of this install phase and will run until approximately 45%.</source>
-        <translation type="unfinished"/>
+        <translation>Après avoir créé le disque choisi selon la configuration durant les premiers 10%, la copie complète de l’ISO occupera la plus longue partie du temps de la phase d’installation et tournera jusqu’à environ 45%.</translation>
     </message>
     <message>
         <location filename="../src/branding/kaos_branding/show.qml" line="76"/>
         <source>modules</source>
-        <translation type="unfinished"/>
+        <translation>modules</translation>
     </message>
     <message>
         <location filename="../src/branding/kaos_branding/show.qml" line="77"/>
         <source>Once the ISO is copied some 25 post-install modules will run. This includes setting user specific options, removing Live Session only packages and adjusting hardware setup.</source>
-        <translation type="unfinished"/>
+        <translation>Une fois l’ISO copiée, près de 25 modules post-installation seront exécutés. Cela comprend la configuration d’options utilisateur spécifiques, la suppression des paquets uniquement utilisés pour la session Live et la configuration des paramètres matériels.</translation>
     </message>
     <message>
         <location filename="../src/branding/kaos_branding/show.qml" line="80"/>
         <source>office suites</source>
-        <translation type="unfinished"/>
+        <translation>suites bureautiques</translation>
     </message>
     <message>
         <location filename="../src/branding/kaos_branding/show.qml" line="81"/>
         <source>The default Office Suite is LibreOffice.</source>
-        <translation type="unfinished"/>
+        <translation>La suite bureautique par défaut est LibreOffice.</translation>
     </message>
     <message>
         <location filename="../src/branding/kaos_branding/show.qml" line="82"/>
         <source>Calligra is available in the repositories</source>
-        <translation type="unfinished"/>
+        <translation>Calligra est disponible dans les dépôts.</translation>
     </message>
     <message>
         <location filename="../src/branding/kaos_branding/show.qml" line="85"/>
         <source>Package Management</source>
-        <translation type="unfinished"/>
+        <translation>Gestion des paquets</translation>
     </message>
     <message>
         <location filename="../src/branding/kaos_branding/show.qml" line="86"/>
         <source>For package management Octopi is the GUI application.</source>
-        <translation type="unfinished"/>
+        <translation>Octopi est l’interface graphique pour la gestion de paquets.</translation>
     </message>
     <message>
         <location filename="../src/branding/kaos_branding/show.qml" line="87"/>
         <source>Pacman is the cli application.</source>
-        <translation type="unfinished"/>
+        <translation>Pacman est l’application en ligne de commande.</translation>
     </message>
     <message>
         <location filename="../src/branding/kaos_branding/show.qml" line="90"/>
         <source>internet</source>
-        <translation type="unfinished"/>
+        <translation>internet</translation>
     </message>
     <message>
         <location filename="../src/branding/kaos_branding/show.qml" line="91"/>
         <source>Qt/KDE specific internet applications include the Falkon web-browser, KDE Connect for device Synchronization, Kaidan for chat  and NeoChat, the Matrix client.</source>
-        <translation type="unfinished"/>
+        <translation>Les applications internet spécifiquement Qt/KDE comprennent le navigateur Web Falkon, KDE Connect pour la synchronisation, Kaidan pour le chat et le client Matrix, Neochat.</translation>
     </message>
     <message>
         <location filename="../src/branding/kaos_branding/show.qml" line="94"/>
         <source>enjoy</source>
-        <translation type="unfinished"/>
+        <translation>profitez bien</translation>
     </message>
     <message>
         <location filename="../src/branding/kaos_branding/show.qml" line="95"/>
@@ -4471,7 +4483,7 @@ Veuillez consuter les contrats de licence utilisateur finaux.&lt;/p&gt;</transla
     <message>
         <location filename="../src/branding/kaos_branding/show.qml" line="96"/>
         <source>Don&apos;t hesitate to give your opinion about KaOS in the Forum</source>
-        <translation type="unfinished"/>
+        <translation>N’hésitez pas à donner votre opinion sur KaOS dans le forum.</translation>
     </message>
     <message>
         <location filename="../src/branding/default/show.qml" line="55"/>
