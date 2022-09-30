@@ -180,7 +180,6 @@ Item {
                 Label {
                     width: parent.width
                     text: qsTr("If more than one person will use this computer, you can create multiple accounts after installation.")
-                    font.weight: Font.Thin
                     font.pointSize: 8
                     color: commentsColor
                 }
@@ -254,7 +253,6 @@ Item {
                 Label {
                     width: parent.width
                     text: qsTr("This name will be used if you make the computer visible to others on a network.")
-                    font.weight: Font.Thin
                     font.pointSize: 8
                     color: commentsColor
                 }
@@ -345,7 +343,6 @@ Item {
                 Label {
                     width: parent.width
                     text: qsTr("Enter the same password twice, so that it can be checked for typing errors. A good password will contain a mixture of letters, numbers and punctuation, should be at least eight characters long, and should be changed at regular intervals.")
-                    font.weight: Font.Thin
                     font.pointSize: 8
                     wrapMode: Text.WordWrap
                     color: commentsColor
@@ -461,7 +458,6 @@ Item {
                     visible: ! root.checked
                     width: parent.width
                     text: qsTr("Enter the same password twice, so that it can be checked for typing errors.")
-                    font.weight: Font.Thin
                     font.pointSize: 8
                     color: commentsColor
                 }
@@ -516,7 +512,6 @@ Item {
                 width: parent.width
                 Layout.alignment: Qt.AlignCenter
                 text: qsTr("When this box is checked, password-strength checking is done and you will not be able to use a weak password.")
-                font.weight: Font.Thin
                 font.pointSize: 8
                 color: commentsColor
             }
