@@ -54,10 +54,10 @@ def run():
         print('installing driver')
         shutil.copytree(
             '/opt/kdeos/pkgs', '%s/opt/kdeos/pkgs' % (install_path))
-        for nvidia_utils in glob.glob('/opt/kdeos/pkgs/nvidia-utils-1:51*'):
+        for nvidia_utils in glob.glob('/opt/kdeos/pkgs/nvidia-utils-1:52*'):
             libcalamares.utils.target_env_call(
                 ['pacman', '-Ud', '--noconfirm', nvidia_utils])
-        for nvidia in glob.glob('/opt/kdeos/pkgs/nvidia-1:51*'):
+        for nvidia in glob.glob('/opt/kdeos/pkgs/nvidia-1:52*'):
             libcalamares.utils.target_env_call(
                 ['pacman', '-Ud', '--noconfirm', nvidia])
         shutil.rmtree('%s/opt/kdeos/pkgs' % (install_path))
@@ -80,10 +80,10 @@ def run():
         print('installing driver')
         shutil.copytree(
             '/opt/kdeos/pkgs', '%s/opt/kdeos/pkgs' % (install_path))
-        for nvidia_utils in glob.glob('/opt/kdeos/pkgs/nvidia-utils-1:51*'):
+        for nvidia_utils in glob.glob('/opt/kdeos/pkgs/nvidia-utils-1:52*'):
             libcalamares.utils.target_env_call(
                 ['pacman', '-Ud', '--noconfirm', nvidia_utils])
-        for nvidia in glob.glob('/opt/kdeos/pkgs/nvidia-1:51*'):
+        for nvidia in glob.glob('/opt/kdeos/pkgs/nvidia-1:52*'):
             libcalamares.utils.target_env_call(
                 ['pacman', '-Ud', '--noconfirm', nvidia])
         for prime in glob.glob('/opt/kdeos/pkgs/prime*'):
