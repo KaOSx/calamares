@@ -138,6 +138,13 @@ ZfsJob::createZpool( QString deviceName, QString poolName, QString poolOptions, 
     // zfs doesn't wait for the devices so pause for 2 seconds to ensure we give time for the device files to be created
     sleep( 2 );
 
+    // Generate the zfs hostid file
+    auto r = system->runCommand( "zgenhostid" )
+    if ( r.getExitCode() != 0 )
+    {
+        cWarning() << "Failed to create /etc/hostid";
+    }
+
     QStringList command;
     if ( encrypt )
     {
@@ -339,13 +346,6 @@ ZfsJob::exec()
         if ( r.getExitCode() != 0 )
         {
             cWarning() << "Failed to export pool" << m_poolName;
-        }
-
-        // Generate the zfs hostid file
-        auto r = system->runCommand( "zgenhostid" )
-        if ( r.getExitCode() != 0 )
-        {
-            cWarning() << "Failed to create /etc/hostid";
         }
     }
 
