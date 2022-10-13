@@ -241,6 +241,14 @@ ZfsJob::exec()
             }
         }
 
+        // Generate the zfs hostid file
+        QStringList command = { "zgenhostid" };
+        auto i = CalamaresUtils::System::instance()->targetEnvCommand( command, QString(), QString() );
+        if ( i.getExitCode() != 0 )
+        {
+            cWarning() << "Failed to create /etc/hostid";
+        }
+
         // Create the zpool
         ZfsResult zfsResult;
         if ( encrypt )
@@ -339,13 +347,6 @@ ZfsJob::exec()
         if ( r.getExitCode() != 0 )
         {
             cWarning() << "Failed to export pool" << m_poolName;
-        }
-
-        // Generate the zfs hostid file
-        auto r = system->runCommand( "zgenhostid" )
-        if ( r.getExitCode() != 0 )
-        {
-            cWarning() << "Failed to create /etc/hostid";
         }
     }
 
