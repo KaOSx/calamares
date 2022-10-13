@@ -242,8 +242,9 @@ ZfsJob::exec()
         }
 
         // Generate the zfs hostid file
-        QStringList command = { "zgenhostid" };
-        auto i = CalamaresUtils::System::instance()->targetEnvCommand( command, QString(), QString() );
+        //QStringList command = { "zgenhostid" };
+        auto i = system->runCommand( { "zgenhostid" }, std::chrono::seconds( 3 ) );
+        //auto i = CalamaresUtils::System::instance()->targetEnvCommand( command, QString(), QString() );
         if ( i.getExitCode() != 0 )
         {
             cWarning() << "Failed to create /etc/hostid";
