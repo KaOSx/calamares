@@ -340,6 +340,13 @@ ZfsJob::exec()
         {
             cWarning() << "Failed to export pool" << m_poolName;
         }
+
+        // Generate the zfs hostid file
+        auto r = system->runCommand( "zgenhostid" )
+        if ( r.getExitCode() != 0 )
+        {
+            cWarning() << "Failed to create /etc/hostid";
+        }
     }
 
     // Put the list of zpools into global storage
