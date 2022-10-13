@@ -119,7 +119,7 @@ def update_conf(uuid, conf_path):
         if zfs_params:
             kernel_params.append(zfs_params)
         else:
-        kernel_params.append("root=UUID={!s}".format(uuid))
+            kernel_params.append("root=UUID={!s}".format(uuid))
 
     if swap:
         kernel_params.append("resume=UUID={!s}".format(swap))
