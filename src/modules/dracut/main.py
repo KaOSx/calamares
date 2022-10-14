@@ -13,6 +13,7 @@
 #   Calamares is Free Software: see the License-Identifier above.
 #
 
+import os
 import shutil
 import libcalamares
 from libcalamares.utils import check_target_env_call
@@ -37,6 +38,7 @@ def run_dracut():
     """
     kernelName = libcalamares.job.configuration['kernelName']
     zfs = libcalamares.globalstorage.value("zfsDatasets")
+    root_mount_point = libcalamares.globalstorage.value("rootMountPoint")
 
     if zfs:
         hostid_source = '/etc/hostid'
