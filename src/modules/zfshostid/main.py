@@ -27,7 +27,7 @@ def pretty_name():
     return _("Copying zfs generated hostid.")
 
 
-def run_zfshostid():
+def run():
 
     zfs = libcalamares.globalstorage.value("zfsDatasets")
     root_mount_point = libcalamares.globalstorage.value("rootMountPoint")
@@ -42,16 +42,4 @@ def run_zfshostid():
             except Exception as e:
                 libcalamares.utils.warning("Could not copy hostid")
 
-
-def run():
-    """
-    Starts routine to copy /etc/hostid. It passes back the exit code
-    if it fails.
-
-    :return:
-    """
-    return_code = run_zfshostid()
-
-    if return_code != 0:
-        return (_("Failed to run zfshostid on the target"),
-                _("The exit code was {}").format(return_code))
+    return None
