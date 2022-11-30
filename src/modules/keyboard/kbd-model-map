@@ -4,11 +4,11 @@
 #
 # Copied from systemd-localed
 #
-# https://cgit.freedesktop.org/systemd/systemd/log/src/locale/kbd-model-map
+# https://github.com/systemd/systemd/commits/main/src/locale/kbd-model-map
 # (originally under LGPLv2.1+, used under the LGPL to GPL conversion clause)
 #
-# This is the version from 534644b7be7b240eb0fbbe06e20cbecbe8206767,
-# committed 2015-01-22 01:07:24 .
+# This is the version from 950aeeb8ffc950637fac22cb5a42074f227d57f3,
+# committed 2022-09-30 01:07:24 .
 #
 # Updates:
 #  - 2018-09-26 Added "Austrian" keyboard (de at). Issue #1035
@@ -57,6 +57,7 @@ fr-pc			fr	pc105		-		terminate:ctrl_alt_bksp
 bg_pho-utf8		bg,us	pc105		,phonetic	terminate:ctrl_alt_bksp,grp:shifts_toggle,grp_led:scroll
 it-ibm			it	pc105		-		terminate:ctrl_alt_bksp
 cz-us-qwertz		cz,us	pc105		-		terminate:ctrl_alt_bksp,grp:shifts_toggle,grp_led:scroll
+cz-qwerty		cz,us	pc105		qwerty,		terminate:ctrl_alt_bksp,grp:shifts_toggle,grp_led:scroll
 br-abnt2		br	abnt2		-		terminate:ctrl_alt_bksp
 ro			ro	pc105		-		terminate:ctrl_alt_bksp
 us-acentos		us	pc105		intl		terminate:ctrl_alt_bksp
@@ -87,6 +88,9 @@ by			by,us	pc105		-		terminate:ctrl_alt_bksp,grp:shifts_toggle,grp_led:scroll
 il			il	pc105		-		terminate:ctrl_alt_bksp
 kazakh			kz,us	pc105		-		terminate:ctrl_alt_bksp,grp:shifts_toggle,grp_led:scroll
 lt.baltic		lt	pc105		-		terminate:ctrl_alt_bksp
-lt.l4                  lt	pc105		-		terminate:ctrl_alt_bksp
+lt.l4			lt	pc105		-		terminate:ctrl_alt_bksp
 lt			lt	pc105		-		terminate:ctrl_alt_bksp
 khmer			kh,us	pc105		-		terminate:ctrl_alt_bksp
+es-dvorak		es	microsoftpro	dvorak		terminate:ctrl_alt_bksp
+lv			lv	pc105		apostrophe	terminate:ctrl_alt_bksp
+lv-tilde		lv	pc105		tilde		terminate:ctrl_alt_bksp
