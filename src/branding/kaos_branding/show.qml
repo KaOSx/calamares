@@ -88,7 +88,7 @@ Item {
             },
             Dia {
                 title: qsTr("internet")
-                body: qsTr("Qt/KDE specific internet applications include the Falkon web-browser, KDE Connect for device Synchronization, Kaidan for chat  and NeoChat, the Matrix client.")
+                body: qsTr("Qt/KDE specific internet applications include the Falkon web-browser, KDE Connect for device Synchronization, Kaidan for chat and NeoChat, the Matrix client.")
             },
             Dia {
                 title: qsTr("enjoy")
