@@ -3,7 +3,7 @@
 #
 # === This file is part of Calamares - <http://github.com/calamares> ===
 #
-#   Copyright 2014-2022, Anke Boersma <demm@kaosx.us>
+#   Copyright 2014-2023, Anke Boersma <demm@kaosx.us>
 #
 #   Calamares is free software: you can redistribute it and/or modify
 #   it under the terms of the GNU General Public License as published by
@@ -54,10 +54,10 @@ def run():
         print('installing driver')
         shutil.copytree(
             '/opt/kdeos/pkgs', '%s/opt/kdeos/pkgs' % (install_path))
-        for nvidia_utils in glob.glob('/opt/kdeos/pkgs/nvidia-utils-1:52*'):
+        for nvidia_utils in glob.glob('/opt/kdeos/pkgs/nvidia-utils-1:53*'):
             libcalamares.utils.target_env_call(
                 ['pacman', '-Ud', '--noconfirm', nvidia_utils])
-        for nvidia in glob.glob('/opt/kdeos/pkgs/nvidia-1:52*'):
+        for nvidia in glob.glob('/opt/kdeos/pkgs/nvidia-1:53*'):
             libcalamares.utils.target_env_call(
                 ['pacman', '-Ud', '--noconfirm', nvidia])
         shutil.rmtree('%s/opt/kdeos/pkgs' % (install_path))
@@ -80,10 +80,10 @@ def run():
         print('installing driver')
         shutil.copytree(
             '/opt/kdeos/pkgs', '%s/opt/kdeos/pkgs' % (install_path))
-        for nvidia_utils in glob.glob('/opt/kdeos/pkgs/nvidia-utils-1:52*'):
+        for nvidia_utils in glob.glob('/opt/kdeos/pkgs/nvidia-utils-1:53*'):
             libcalamares.utils.target_env_call(
                 ['pacman', '-Ud', '--noconfirm', nvidia_utils])
-        for nvidia in glob.glob('/opt/kdeos/pkgs/nvidia-1:52*'):
+        for nvidia in glob.glob('/opt/kdeos/pkgs/nvidia-1:53*'):
             libcalamares.utils.target_env_call(
                 ['pacman', '-Ud', '--noconfirm', nvidia])
         for prime in glob.glob('/opt/kdeos/pkgs/prime*'):
