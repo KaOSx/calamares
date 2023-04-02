@@ -1796,7 +1796,7 @@ The installer will quit and all changes will be lost.</source>
     <message>
         <location filename="../src/modules/welcome/checker/GeneralRequirements.cpp" line="199"/>
         <source>is running the installer as an administrator (root)</source>
-        <translation>は管理者（root）としてインストーラーを実行しています</translation>
+        <translation>管理者（root）としてインストーラーを実行しています</translation>
     </message>
     <message>
         <location filename="../src/modules/welcome/checker/GeneralRequirements.cpp" line="203"/>
@@ -2954,7 +2954,7 @@ The installer will quit and all changes will be lost.</source>
     <message>
         <location filename="../src/modules/partition/PartitionViewStep.cpp" line="713"/>
         <source>has at least one disk device available.</source>
-        <translation>は少なくとも1つのディスクデバイスを利用可能です。</translation>
+        <translation>少なくとも1つのディスクデバイスを利用可能です。</translation>
     </message>
 </context>
 <context>
