@@ -137,7 +137,7 @@ Item {
 
     Audio {
         id: playMusic
-        source: "sample.mp3"
+        source: "timescapes.mp3"
     }
 
     Rectangle {
