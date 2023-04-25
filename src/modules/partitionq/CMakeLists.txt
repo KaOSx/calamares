@@ -42,9 +42,7 @@ include( KPMcoreHelper )
 find_package( KF5Config CONFIG )
 find_package( KF5I18n CONFIG )
 
-if ( KPMcore_FOUND AND Qt5DBus_FOUND AND KF5CoreAddons_FOUND AND KF5Config_FOUND )
-    list( APPEND _partition_defs ${KPMcore_API_DEFINITIONS} )
-    include_directories( ${KPMCORE_INCLUDE_DIR} )
+if ( KPMcore_FOUND )
     include_directories( ${PROJECT_BINARY_DIR}/src/libcalamaresui )
 
     # Because we're sharing sources with the regular partition module
@@ -94,7 +92,7 @@ if ( KPMcore_FOUND AND Qt5DBus_FOUND AND KF5CoreAddons_FOUND AND KF5Config_FOUND
         RESOURCES
             partitionq.qrc
         LINK_PRIVATE_LIBRARIES
-            kpmcore
+            calamares::kpmcore
             KF5::CoreAddons
         COMPILE_DEFINITIONS ${_partition_defs}
         SHARED_LIB
