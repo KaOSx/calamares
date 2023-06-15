@@ -10,7 +10,6 @@
  */
 
 import QtQuick 2.15;
-import QtMultimedia 5.15
 //import calamares.slideshow 1.0;
 
 Item {
@@ -132,50 +131,6 @@ Item {
             centerIn: parent
             horizontalCenterOffset: -400
             verticalCenterOffset: -100
-        }
-    }
-
-    Audio {
-        id: playMusic
-        source: "timescapes.mp3"
-    }
-
-    Rectangle {
-        id: container
-
-        anchors {
-            centerIn: parent
-            horizontalCenterOffset: 250
-            verticalCenterOffset: 220
-        }
-        width: buttonLabel.width + 20; height: buttonLabel.height + 5
-        antialiasing: true
-        radius: 1
-        color: "#70788B";
-
-        MouseArea {
-            id: mouseArea
-            anchors.fill: parent
-            onClicked: {
-                if (playMusic.playbackState != Audio.PlayingState) {
-                playMusic.play();
-            } else {
-                playMusic.pause();
-            }
-            }
-        }
-
-        Text {
-            id: buttonLabel
-            anchors.centerIn: container
-            color: "#ffffff";
-            text: playMusic.playbackState != Audio.PlayingState ? "Play Music" : "Pause Music"
-            font {
-                family: "Raleway"
-                capitalization: Font.AllUppercase
-                weight: Font.DemiBold
-                pointSize: 12
-            }
         }
     }
 }
