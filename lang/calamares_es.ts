@@ -50,27 +50,27 @@
     <message>
         <location filename="../src/modules/packagechooserq/BIOS.qml" line="41"/>
         <source>GRUB 2, the GRand Unified Bootloader is the reference implementation of the Free Software Foundation&apos;s Multiboot Specification, which provides a user the choice to boot one of multiple operating systems installed on a computer.</source>
-        <translation type="unfinished"/>
+        <translation>GRUB 2, GRand Unified Bootloader es la implementación de referencia de la especificación de arranque múltiple de la Free Software Foundation, que brinda al usuario la opción de arrancar uno de los múltiples sistemas operativos instalados en una computadora.</translation>
     </message>
     <message>
         <location filename="../src/modules/packagechooserq/BIOS.qml" line="54"/>
         <source>GRUB</source>
-        <translation type="unfinished"/>
+        <translation>GRUB</translation>
     </message>
     <message>
         <location filename="../src/modules/packagechooserq/BIOS.qml" line="108"/>
         <source>No bootloader selected. Selecting no bootloader might result in an un-bootable system, if you don&apos;t already have a bootloader were you can add this install to.</source>
-        <translation type="unfinished"/>
+        <translation>Ningún gestor de arranque seleccionado. Si no selecciona un gestor de arranque, es posible que el sistema no se pueda arrancar, si aún no tiene un gestor de arranque al que pueda agregar esta instalación.</translation>
     </message>
     <message>
         <location filename="../src/modules/packagechooserq/BIOS.qml" line="121"/>
         <source>No bootloader</source>
-        <translation type="unfinished"/>
+        <translation>Sin gestor de arranque</translation>
     </message>
     <message>
         <location filename="../src/modules/packagechooserq/BIOS.qml" line="173"/>
         <source>Please select a bootloader option for your install, or leave the default option, &lt;strong&gt;GRUB 2&lt;/strong&gt;.</source>
-        <translation type="unfinished"/>
+        <translation>Seleccione una opción de gestor de arranque para su instalación o deje la opción predeterminada, &lt;strong&gt;GRUB 2&lt;/strong&gt;.</translation>
     </message>
 </context>
 <context>
@@ -132,7 +132,7 @@
     <message>
         <location filename="../src/calamares/DebugWindow.ui" line="18"/>
         <source>Form</source>
-        <translation>Form</translation>
+        <translation>Forma</translation>
     </message>
     <message>
         <location filename="../src/calamares/DebugWindow.ui" line="28"/>
@@ -322,7 +322,7 @@
     <message>
         <location filename="../src/libcalamares/modulesystem/RequirementsChecker.cpp" line="94"/>
         <source>Requirements checking for module &apos;%1&apos; is complete.</source>
-        <translation type="unfinished"/>
+        <translation>Se completó la verificación de requisitos para el módulo &apos;%1&apos;.</translation>
     </message>
     <message numerus="yes">
         <location filename="../src/libcalamares/modulesystem/RequirementsChecker.cpp" line="118"/>
@@ -720,7 +720,7 @@ Saldrá del instalador y se perderán todos los cambios.</translation>
     <message>
         <location filename="../src/modules/partition/gui/ChoicePage.cpp" line="1631"/>
         <source>Swap (with Hibernate)</source>
-        <translation>Swap ( con Hibernación)</translation>
+        <translation>Swap (con Hibernación)</translation>
     </message>
     <message>
         <location filename="../src/modules/partition/gui/ChoicePage.cpp" line="1634"/>
@@ -735,7 +735,7 @@ Saldrá del instalador y se perderán todos los cambios.</translation>
     <message>
         <location filename="../src/modules/partition/gui/ChoicePage.ui" line="18"/>
         <source>Form</source>
-        <translation>Formulario</translation>
+        <translation>Forma</translation>
     </message>
 </context>
 <context>
@@ -744,43 +744,43 @@ Saldrá del instalador y se perderán todos los cambios.</translation>
         <location filename="../src/modules/partitionq/ChoicePageQml.cpp" line="157"/>
         <location filename="../src/modules/partitionq/ChoicePageQml.cpp" line="191"/>
         <source>No swap</source>
-        <translation type="unfinished"/>
+        <translation>Sin swap</translation>
     </message>
     <message>
         <location filename="../src/modules/partitionq/ChoicePageQml.cpp" line="163"/>
         <source>Reuse swap</source>
-        <translation type="unfinished"/>
+        <translation>Reutilizar swap</translation>
     </message>
     <message>
         <location filename="../src/modules/partitionq/ChoicePageQml.cpp" line="169"/>
         <source>Swap (no Hibernate)</source>
-        <translation type="unfinished"/>
+        <translation>Swap (sin Hibernación)</translation>
     </message>
     <message>
         <location filename="../src/modules/partitionq/ChoicePageQml.cpp" line="175"/>
         <location filename="../src/modules/partitionq/ChoicePageQml.cpp" line="194"/>
         <source>Swap (with Hibernate)</source>
-        <translation type="unfinished"/>
+        <translation>Swap (con Hibernación)</translation>
     </message>
     <message>
         <location filename="../src/modules/partitionq/ChoicePageQml.cpp" line="181"/>
         <source>Swap to file</source>
-        <translation type="unfinished"/>
+        <translation>Swap a archivo</translation>
     </message>
     <message>
         <location filename="../src/modules/partitionq/ChoicePageQml.cpp" line="548"/>
         <source>An EFI system partition cannot be found anywhere on this system. Please go back and use manual partitioning to set up %1.</source>
-        <translation type="unfinished"/>
+        <translation>No se puede encontrar una partición del sistema EFI en ninguna parte de este sistema. Vuelva atrás y utilice la partición manual para configurar %1.</translation>
     </message>
     <message>
         <location filename="../src/modules/partitionq/ChoicePageQml.cpp" line="556"/>
         <source>The EFI system partition at %1 will be used for starting %2.</source>
-        <translation type="unfinished"/>
+        <translation>La partición del sistema EFI en %1 se utilizará para iniciar %2.</translation>
     </message>
     <message>
         <location filename="../src/modules/partitionq/ChoicePageQml.cpp" line="564"/>
         <source>EFI system partition:</source>
-        <translation type="unfinished"/>
+        <translation>Partición del sistema EFI:</translation>
     </message>
     <message>
         <location filename="../src/modules/partitionq/ChoicePageQml.cpp" line="698"/>
@@ -852,17 +852,17 @@ Saldrá del instalador y se perderán todos los cambios.</translation>
     <message>
         <location filename="../src/modules/partition/jobs/ClearMountsJob.cpp" line="272"/>
         <source>Successfully unmounted %1.</source>
-        <translation type="unfinished"/>
+        <translation>Desmontado con éxito %1.</translation>
     </message>
     <message>
         <location filename="../src/modules/partition/jobs/ClearMountsJob.cpp" line="279"/>
         <source>Successfully disabled swap %1.</source>
-        <translation type="unfinished"/>
+        <translation>Swap deshabilitado con éxito %1.</translation>
     </message>
     <message>
         <location filename="../src/modules/partition/jobs/ClearMountsJob.cpp" line="305"/>
         <source>Successfully cleared swap %1.</source>
-        <translation type="unfinished"/>
+        <translation>Swap borrado con éxito %1.</translation>
     </message>
     <message>
         <location filename="../src/modules/partition/jobs/ClearMountsJob.cpp" line="319"/>
@@ -872,7 +872,7 @@ Saldrá del instalador y se perderán todos los cambios.</translation>
     <message>
         <location filename="../src/modules/partition/jobs/ClearMountsJob.cpp" line="332"/>
         <source>Successfully disabled volume group %1.</source>
-        <translation type="unfinished"/>
+        <translation>Se deshabilitó correctamente el grupo de volúmenes %1.</translation>
     </message>
     <message>
         <location filename="../src/modules/partition/jobs/ClearMountsJob.cpp" line="371"/>
@@ -918,7 +918,7 @@ Saldrá del instalador y se perderán todos los cambios.</translation>
     <message>
         <location filename="../src/libcalamares/utils/CommandList.cpp" line="166"/>
         <source>The commands use variables that are not defined. Missing variables are: %1.</source>
-        <translation type="unfinished"/>
+        <translation>Los comandos utilizan variables que no están definidas. Las variables que faltan son: %1.</translation>
     </message>
 </context>
 <context>
@@ -996,7 +996,7 @@ Saldrá del instalador y se perderán todos los cambios.</translation>
     <message>
         <location filename="../src/modules/summary/Config.cpp" line="94"/>
         <source>Summary</source>
-        <translation type="unfinished"/>
+        <translation>Resumen</translation>
     </message>
     <message>
         <location filename="../src/modules/summary/Config.cpp" line="98"/>
@@ -1056,7 +1056,7 @@ Saldrá del instalador y se perderán todos los cambios.</translation>
     <message>
         <location filename="../src/modules/users/Config.cpp" line="598"/>
         <source>OK!</source>
-        <translation type="unfinished"/>
+        <translation>OK!</translation>
     </message>
     <message>
         <location filename="../src/modules/finished/Config.cpp" line="145"/>
@@ -1116,7 +1116,7 @@ Saldrá del instalador y se perderán todos los cambios.</translation>
     <message>
         <location filename="../src/modules/packagechooser/Config.cpp" line="243"/>
         <source>None</source>
-        <translation type="unfinished"/>
+        <translation>Ninguno</translation>
     </message>
 </context>
 <context>
