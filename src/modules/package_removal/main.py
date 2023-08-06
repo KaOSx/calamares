@@ -3,7 +3,7 @@
 #
 # === This file is part of Calamares - <http://github.com/calamares> ===
 #
-#   Copyright 2014-2022, Anke Boersma <demm@kaosx.us>
+#   Copyright 2014-2023, Anke Boersma <demm@kaosx.us>
 #
 #   Calamares is free software: you can redistribute it and/or modify
 #   it under the terms of the GNU General Public License as published by
@@ -96,38 +96,6 @@ def run():
     else:
         print(zfs_pool_list)
 
-    # Remove KDE l10n
-    this_locale = libcalamares.globalstorage.value("localeConf")["LANG"][:2]
-    # this_locale = 'us'
-    list_of_pkgs = []
-
-    print(libcalamares.globalstorage.value("localeConf")["LANG"])
-    print(this_locale)
-
-    p = subprocess.Popen("pacman -Q | grep -i kde-l10n | awk '{print $1}'",
-                         shell=True, stdout=subprocess.PIPE, stderr=subprocess.STDOUT)
-
-    # Iterates over every found pkg and put each one in a list
-    for line in p.stdout.readlines():
-        s = line.decode('ascii')
-        s = s.rstrip('\n')
-        list_of_pkgs.append(s)
-
-    print(list_of_pkgs)
-
-    # Print the pkgs that do not have the locale 'this_locale' for future
-    # removal!
-    for pkg in list_of_pkgs:
-        if pkg[9:11] != this_locale:
-            print(pkg)
-
-    # Remove the pkgs that do not have the locale 'this_locale'
-    for pkg in list_of_pkgs:
-        if pkg[9:11] != this_locale:
-            print('Removing KDE l10n packages')
-            libcalamares.utils.target_env_call(
-                ['pacman', '-Rddn', '--noconfirm', '{!s}' .format(pkg)])
-
     # Packagechooser outcome / remove LibreOffice l10n
     packages = libcalamares.globalstorage.value("packagechooser_packagechooserq")
 
@@ -158,7 +126,6 @@ def run():
                 'plasma-firewall',
                 'quassel',
                 'smplayer',
-                'smtube',
                 'haruna',
                 'oxygen-sounds',
                 'elisa',
