@@ -7,25 +7,77 @@ contributors are listed. Note that Calamares does not have a historical
 changelog -- this log starts with version 3.3.0. See CHANGES-3.2 for
 the history of the 3.2 series (2018-05 - 2022-08).
 
+# 3.3.0 (unreleased)
 
-# 3.3.0-alpha3 (unreleased)
+The very first we-will-call-it-3.3 release!
 
 This release contains contributions from (alphabetically by first name):
  - Adriaan de Groot
+ - Hector Martin
+ - Ivan Borzenkov
+
+## Core ##
+
+## Modules ##
+ - *keyboard* module can now be explicitly configured to use X11 keyboard
+   settings or the FreeDesktop locale1 DBus service. The latter is most
+   useful for Calamares as an "initial setup" system, not an installer,
+   in a Wayland session. (thanks Hector)
+ - *keyboard* module now writes X11 layout configuration with variants
+   for all non-ASCII (e.g. us) layouts. (thanks Ivan)
+
+# 3.3.0-alpha3 (2023-08-28)
+
+This release contains contributions from (alphabetically by first name):
+ - Adriaan de Groot
+ - Aleksey Samoilov
  - Anke Boersma
+ - Arjen Balfoort
+ - Boria138
+ - Brian Morison
+ - Emir Sari
+ - Evan Goode
+ - Evan James
+ - Ficelloo
+ - Hector Martin
+ - Jeremy Attall
+ - Johannes Kamprad
+ - Kasta Hashemi
+ - Kevin Kofler
+ - Mario Haustein
+ - Masato TOYOSHIMA
+ - Panda
+ - Paolo Dongilli
+ - Peter Jung
+ - Philip Müller
+ - Shivanand
+ - Sławomir Lach
+ - Sunderland93
+ - wiz64
 
 ## Core ##
  - Incompatible module-configuration changes, see #1438.
  - Branding entries use ${var} instead of @{var} for substitutions,
    in line with all the other substitution mechanisms used from C++
    core. See documentation in `branding.desc`.
- - Boost::Python requires at least version 1.72
- - KDE Frameworks must be version 5.58 or later
+ - Boost::Python requires at least version 1.72.
+ - KDE Frameworks must be version 5.58 or later.
+ - The `INSTALL_CONFIG` option has been removed. If you are installing
+   the example configuration files from the Calamares repository, just
+   stop. That was never a good idea, and you should keep your configs elsewhere.
+ - Progress percentage during install can now be localized. (thanks Emir)
 
 ## Modules ##
  - *dracut* added a configurable kernel name. (thanks Anke)
+ - *initcpiocfg* orders hookds slightly differently. (thanks Peter)
  - *localeq* moved to using Drawer instead of ComboBox in UI. (thanks Anke)
  - *keyboardq* moved to using Drawer instead of ComboBox in UI. (thanks Anke)
+ - *netinstall* now has a new *noncheckable* option for groups, which prevent
+   it a group from being checked/uncheckd as a whole. You can still check
+   individual items **in** the group though. (thanks Shivanand)
+ - *partition* can now pick LUKS or LUKS2. (thanks Jeremy)
+ - *zfs* creates a hostid through zgenhostid.
+ - *zfshostid* new module to copy zfs generated /etc/hostid
 
 
 # 3.3.0-alpha2 (2022-08-23)

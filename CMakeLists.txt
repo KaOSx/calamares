@@ -43,8 +43,8 @@
 
 cmake_minimum_required(VERSION 3.16 FATAL_ERROR)
 
-set(CALAMARES_VERSION 3.3.0-alpha3)
-set(CALAMARES_RELEASE_MODE ON) # Set to ON during a release
+set(CALAMARES_VERSION 3.3.0)
+set(CALAMARES_RELEASE_MODE OFF) # Set to ON during a release
 
 if(CMAKE_SCRIPT_MODE_FILE)
     include(${CMAKE_CURRENT_LIST_DIR}/CMakeModules/ExtendedVersion.cmake)
@@ -137,7 +137,7 @@ set(CALAMARES_DESCRIPTION_SUMMARY "The distribution-independent installer framew
 #
 # Language en (source language) is added later. It isn't listed in
 # Transifex either. Get the list of languages and their status
-# from https://transifex.com/calamares/calamares/ , or (preferably)
+# from https://app.transifex.com/calamares/calamares/ , or (preferably)
 # use ci/txstats.py to automatically check.
 #
 # When adding a new language, take care that it is properly loaded
@@ -210,10 +210,10 @@ set(CMAKE_C_STANDARD_REQUIRED ON)
 set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -Wall")
 set(CMAKE_C_FLAGS_DEBUG "-Og -g")
 set(CMAKE_C_FLAGS_MINSIZEREL "-Os -DNDEBUG")
-set(CMAKE_C_FLAGS_RELEASE "-O4 -DNDEBUG")
+set(CMAKE_C_FLAGS_RELEASE "-O3 -DNDEBUG")
 set(CMAKE_C_FLAGS_RELWITHDEBINFO "-O2 -g")
 
-set(CMAKE_SHARED_LINKER_FLAGS "-Wl,--no-undefined -Wl,--fatal-warnings")
+set(CMAKE_SHARED_LINKER_FLAGS "-Wl,--no-undefined -Wl,--fatal-warnings ${CMAKE_SHARED_LINKER_FLAGS}")
 
 # If no build type is set, pick a reasonable one
 if(NOT CMAKE_BUILD_TYPE)
@@ -289,15 +289,14 @@ add_compile_definitions(QT_DISABLE_DEPRECATED_BEFORE=0x050f00)
 
 ### DEPENDENCIES
 #
-find_package(Qt5 ${QT_VERSION} CONFIG REQUIRED Concurrent Core Gui LinguistTools Network Svg Widgets)
+find_package(Qt5 ${QT_VERSION} CONFIG REQUIRED Concurrent Core DBus Gui LinguistTools Network Svg Widgets)
 if(WITH_QML)
     find_package(Qt5 ${QT_VERSION} CONFIG REQUIRED Quick QuickWidgets)
 endif()
 if(WITH_QT_VIRTUAL_KEYBOARD)
     find_package(Qt5 ${QT_VERSION} CONFIG REQUIRED VirtualKeyboard)
 endif()
-# Optional Qt parts
-find_package(Qt5DBus CONFIG)
+# Note that some modules need more Qt modules, optionally.
 
 find_package(YAMLCPP ${YAMLCPP_VERSION} REQUIRED)
 if(INSTALL_POLKIT)
@@ -607,7 +606,9 @@ install(FILES calamares.desktop DESTINATION ${CMAKE_INSTALL_DATADIR}/application
 
 install(FILES man/calamares.8 DESTINATION ${CMAKE_INSTALL_MANDIR}/man8/)
 
-# uninstall target
+### Uninstall
+#
+#
 configure_file(
     "${CMAKE_CURRENT_SOURCE_DIR}/cmake_uninstall.cmake.in"
     "${CMAKE_CURRENT_BINARY_DIR}/cmake_uninstall.cmake"
@@ -616,6 +617,17 @@ configure_file(
 )
 
 add_custom_target(uninstall COMMAND ${CMAKE_COMMAND} -P ${CMAKE_CURRENT_BINARY_DIR}/cmake_uninstall.cmake)
+
+### Developer convenience
+#
+# The module support files -- .desc files, .conf files -- are copied into the build
+# directory so that it is possible to run `calamares -d` from there. Copy the
+# top-level settings.conf as well, into the build directory.
+if( settings.conf IS_NEWER_THAN ${CMAKE_BINARY_DIR}/settings.conf )
+    configure_file(settings.conf ${CMAKE_BINARY_DIR}/settings.conf COPYONLY)
+endif()
+
+
 
 ### CMAKE SUMMARY REPORT
 #
