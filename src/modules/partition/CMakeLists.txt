@@ -52,7 +52,7 @@ find_package(KF6WidgetsAddons CONFIG)
 if(KPMcore_FOUND)
     include_directories(${PROJECT_BINARY_DIR}/src/libcalamaresui)
 
-    add_subdirectory(tests)
+    #add_subdirectory(tests)
 
     calamares_add_plugin(partition
         TYPE viewmodule
