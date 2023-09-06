@@ -39,10 +39,12 @@ find_package(ECM ${ECM_VERSION} REQUIRED NO_MODULE)
 
 include( KPMcoreHelper )
 
-find_package( KF5Config CONFIG )
-find_package( KF5I18n CONFIG )
+find_package( KF6Config CONFIG )
+find_package( KF6I18n CONFIG )
 
-if ( KPMcore_FOUND )
+if ( KPMcore_FOUND AND Qt6DBus_FOUND AND KF6CoreAddons_FOUND AND KF6Config_FOUND )
+    list( APPEND _partition_defs ${KPMcore_API_DEFINITIONS} )
+    include_directories( ${KPMCORE_INCLUDE_DIR} )
     include_directories( ${PROJECT_BINARY_DIR}/src/libcalamaresui )
 
     # Because we're sharing sources with the regular partition module
@@ -92,8 +94,8 @@ if ( KPMcore_FOUND )
         RESOURCES
             partitionq.qrc
         LINK_PRIVATE_LIBRARIES
-            calamares::kpmcore
-            KF5::CoreAddons
+            kpmcore
+            KF6::CoreAddons
         COMPILE_DEFINITIONS ${_partition_defs}
         SHARED_LIB
     )

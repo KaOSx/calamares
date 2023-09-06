@@ -45,9 +45,9 @@ find_package(ECM ${ECM_VERSION} REQUIRED NO_MODULE)
 
 include(KPMcoreHelper)
 
-find_package(KF5Config CONFIG)
-find_package(KF5I18n CONFIG)
-find_package(KF5WidgetsAddons CONFIG)
+find_package(KF6Config CONFIG)
+find_package(KF6I18n CONFIG)
+find_package(KF6WidgetsAddons CONFIG)
 
 if(KPMcore_FOUND)
     include_directories(${PROJECT_BINARY_DIR}/src/libcalamaresui)
@@ -115,7 +115,7 @@ if(KPMcore_FOUND)
             gui/VolumeGroupBaseDialog.ui
         LINK_PRIVATE_LIBRARIES
             calamares::kpmcore
-            KF5::CoreAddons
+            KF6::CoreAddons
         COMPILE_DEFINITIONS ${_partition_defs}
         SHARED_LIB
     )
