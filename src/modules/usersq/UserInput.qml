@@ -16,9 +16,9 @@ import QtQuick.Controls 2.15
 import QtQuick.Controls 2.15 as QQC2
 import QtQuick.Layouts 1.3
 
-import QtGraphicalEffects 1.0
+import Qt5Compat.GraphicalEffects
 import QtQuick.Window 2.3
-import QtQuick.VirtualKeyboard 2.4
+import QtQuick.VirtualKeyboard
 import "content"
 
 import org.kde.kirigami 2.7 as Kirigami

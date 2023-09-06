@@ -89,13 +89,14 @@ doAutopartition( PartitionCoreModule* core, Device* dev, Choices::AutoPartitionO
 {
     Calamares::GlobalStorage* gs = Calamares::JobQueue::instance()->globalStorage();
 
-    bool isEfi = PartUtils::isEfiSystem();
+    const bool isEfi = PartUtils::isEfiSystem();
 
     // Partition sizes are expressed in MiB, should be multiples of
     // the logical sector size (usually 512B). EFI starts with 2MiB
     // empty and a EFI boot partition, while BIOS starts at
     // the 1MiB boundary (usually sector 2048).
-    int empty_space_sizeB = isEfi ? 2_MiB : 1_MiB;
+    // ARM empty sectors are 16 MiB in size.
+    const int empty_space_sizeB = PartUtils::isArmSystem() ? 16_MiB : ( isEfi ? 2_MiB : 1_MiB );
 
     // Since sectors count from 0, if the space is 2048 sectors in size,
     // the first free sector has number 2048 (and there are 2048 sectors
@@ -169,7 +170,7 @@ doAutopartition( PartitionCoreModule* core, Device* dev, Choices::AutoPartitionO
         lastSectorForRoot -= suggestedSwapSizeB / sectorSize + 1;
     }
 
-    core->layoutApply( dev, firstFreeSector, lastSectorForRoot, o.luksPassphrase );
+    core->layoutApply( dev, firstFreeSector, lastSectorForRoot, o.luksFsType, o.luksPassphrase );
 
     if ( shouldCreateSwap )
     {
@@ -194,6 +195,7 @@ doAutopartition( PartitionCoreModule* core, Device* dev, Choices::AutoPartitionO
                                                                      QStringLiteral( "swap" ),
                                                                      lastSectorForRoot + 1,
                                                                      dev->totalLogical() - 1,
+                                                                     o.luksFsType,
                                                                      o.luksPassphrase,
                                                                      KPM_PARTITION_FLAG( None ) );
         }
@@ -215,6 +217,12 @@ doReplacePartition( PartitionCoreModule* core, Device* dev, Partition* partition
     qint64 firstSector, lastSector;
 
     cDebug() << "doReplacePartition for device" << partition->partitionPath();
+
+    // Looking up the defaultFsType (which should name a filesystem type)
+    // will log an error and set the type to Unknown if there's something wrong.
+    FileSystem::Type type = FileSystem::Unknown;
+    PartUtils::canonicalFilesystemName( o.defaultFsType, &type );
+    core->partitionLayout().setDefaultFsType( type == FileSystem::Unknown ? FileSystem::Ext4 : type );
 
     PartitionRole newRoles( partition->roles() );
     if ( partition->roles().has( PartitionRole::Extended ) )
@@ -244,7 +252,7 @@ doReplacePartition( PartitionCoreModule* core, Device* dev, Partition* partition
         core->deletePartition( dev, partition );
     }
 
-    core->layoutApply( dev, firstSector, lastSector, o.luksPassphrase );
+    core->layoutApply( dev, firstSector, lastSector, o.luksFsType, o.luksPassphrase );
 
     core->dumpQueue();
 }

@@ -12,7 +12,7 @@ import io.calamares.ui 1.0
 
 import QtQuick 2.15
 import QtQuick.Controls 2.15
-import QtQuick.Layouts 1.3
+import QtQuick.Layouts
 
 Item {
     width:  parent.width

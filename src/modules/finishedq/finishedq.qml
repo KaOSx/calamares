@@ -1,6 +1,6 @@
 /* === This file is part of Calamares - <https://github.com/calamares> ===
  *
- *   SPDX-FileCopyrightText: 2021 Anke Boersma <demm@kaosx.us>
+ *   SPDX-FileCopyrightText: 2021 - 2023 Anke Boersma <demm@kaosx.us>
  *   SPDX-License-Identifier: GPL-3.0-or-later
  *   License-Filename: LICENSE
  *
@@ -13,9 +13,9 @@ import io.calamares.ui 1.0
 
 import QtQuick 2.15
 import QtQuick.Controls 2.15
-import QtQuick.Layouts 1.3
+import QtQuick.Layouts
 import org.kde.kirigami 2.7 as Kirigami
-import QtGraphicalEffects 1.0
+import Qt5Compat.GraphicalEffects
 import QtQuick.Window 2.3
 
 Page {

@@ -2,7 +2,6 @@
  *
  *   SPDX-FileCopyrightText: 2014 Teo Mrnjavac <teo@kde.org>
  *   SPDX-FileCopyrightText: 2017-2020 Adriaan de Groot <groot@kde.org>
- *   SPDX-FileCopyrightText: 2022 Anke Boersma <demm@kaosx.us>
  *   SPDX-License-Identifier: GPL-3.0-or-later
  *
  *   Calamares is Free Software: see the License-Identifier above.
@@ -20,9 +19,9 @@
 // From 3rdparty/
 #include "kdsingleapplication.h"
 
-#include <KCoreAddons/KAboutData>
-#ifdef BUILD_KF5Crash
-#include <KCrash/KCrash>
+#include <KAboutData>
+#ifdef BUILD_CRASH_REPORTING
+#include <KCrash>
 #endif
 
 #include <QCommandLineParser>
@@ -108,9 +107,10 @@ handle_args( CalamaresApplication& a )
 int
 main( int argc, char* argv[] )
 {
-    QApplication::setAttribute(Qt::AA_EnableHighDpiScaling);
-    qputenv("QT_IM_MODULE", QByteArray("qtvirtualkeyboard"));
-
+#if QT_VERSION < QT_VERSION_CHECK( 6, 0, 0 )
+    // Not needed in Qt6
+    QApplication::setAttribute( Qt::AA_EnableHighDpiScaling );
+#endif
     CalamaresApplication a( argc, argv );
 
     KAboutData aboutData( "calamares",
@@ -125,7 +125,7 @@ main( int argc, char* argv[] )
     KAboutData::setApplicationData( aboutData );
     a.setApplicationDisplayName( QString() );  // To avoid putting an extra "Calamares/" into the log-file
 
-#ifdef BUILD_KF5Crash
+#ifdef BUILD_CRASH_REPORTING
     KCrash::initialize();
     // KCrash::setCrashHandler();
     KCrash::setDrKonqiEnabled( true );

@@ -11,11 +11,11 @@ import io.calamares.core 1.0
 import io.calamares.ui 1.0
 
 import QtQuick 2.5
-import QtQuick.Controls 2.15
+import QtQuick.Controls
 import QtQml 2.14
 import QtQuick.Window 2.2
-import QtQuick.VirtualKeyboard 2.2
-import QtQuick.VirtualKeyboard.Settings 2.2
+import QtQuick.VirtualKeyboard
+import QtQuick.VirtualKeyboard.Settings
 import "content"
 
 Item {

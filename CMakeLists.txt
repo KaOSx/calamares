@@ -19,27 +19,30 @@
 #
 #   SKIP_MODULES    : a space or semicolon-separated list of directory names
 #                     under src/modules that should not be built.
-#   USE_<foo>       : fills in SKIP_MODULES for modules called <foo>-<something>
+#   USE_<foo>       : fills in SKIP_MODULES for modules called <foo>-<something>.
 #   WITH_<foo>      : try to enable <foo> (these usually default to ON). For
 #                     a list of WITH_<foo> grep CMakeCache.txt after running
 #                     CMake once. These affect the ABI offered by Calamares.
 #                       - PYTHON (enable Python Job modules)
 #                       - QML (enable QML UI View modules)
+#                       - QT6 (use Qt6 rather than Qt5, default to OFF)
 #                     The WITH_* options affect the ABI of Calamares: you must
 #                     build (C++) modules for Calamares with the same WITH_*
 #                     settings, or they may not load at all.
 #   BUILD_<foo>     : choose additional things to build
-#                       - TESTING (standard CMake option)
+#                       - APPDATA (use AppData in packagechooser, requires QtXml)
+#                       - APPSTREAM (use AppStream in packagechooser, requires libappstream-qt)
+#                       - BUILD_CRASH_REPORTING (uses KCrash, rather than Calamares internal, for crash reporting)
 #                       - SCHEMA_TESTING (requires Python, see ci/configvalidator.py)
-#                       - KF5Crash (uses KCrash, rather than Calamares internal, for crash reporting)
-#   DEBUG_<foo>     : special developer flags for debugging
+#                       - TESTING (standard CMake option)
+#   DEBUG_<foo>     : special developer flags for debugging.
 #
 # Example usage:
 #
 #   cmake . -DSKIP_MODULES="partition luksbootkeycfg"
 #
-# One special target is "show-version", which can be built
-# to obtain the version number from here.
+# To obtain the version number of calamares, run CMake in script mode, e.g.
+#   cmake -P CMakeLists.txt
 
 cmake_minimum_required(VERSION 3.16 FATAL_ERROR)
 
@@ -80,12 +83,12 @@ option(INSTALL_COMPLETION "Install shell completions" OFF)
 # also update libcalamares/CalamaresConfig.h.in
 option(WITH_PYTHON "Enable Python modules API (requires Boost.Python)." ON)
 option(WITH_QML "Enable QML UI options." ON)
+option(WITH_QT6 "Use Qt6 instead of Qt5" OFF)
 #
 # Additional parts to build that do not affect ABI
 option(BUILD_SCHEMA_TESTING "Enable schema-validation-tests" ON)
 # Options for the calamares executable
-option(BUILD_KF5Crash "Enable crash reporting with KCrash." ON)
-option(WITH_QT_VIRTUAL_KEYBOARD "Enable using a virtualkeyboard." OFF)
+option(BUILD_CRASH_REPORTING "Enable crash reporting with KCrash." ON)
 
 # Possible debugging flags are:
 #  - DEBUG_TIMEZONES draws latitude and longitude lines on the timezone
@@ -158,11 +161,29 @@ set( _tx_ok sv )
 ### Required versions
 #
 # See DEPENDENCIES section below.
-set(QT_VERSION 5.15.0)
-set(YAMLCPP_VERSION 0.5.1)
-set(ECM_VERSION 5.58)
-set(PYTHONLIBS_VERSION 3.6)
+if(WITH_QT6)
+    message(STATUS "Building Calamares with Qt6")
+    set(qtname "Qt6")
+    set(kfname "KF6")
+    set(QT_VERSION 6.5.0)
+    set(ECM_VERSION 5.240)
+    set(KF_VERSION 5.240) # KDE Neon weirdness
+    # API that was deprecated before Qt 5.15 causes a compile error
+    add_compile_definitions(QT_DISABLE_DEPRECATED_BEFORE=0x060400)
+else()
+    message(STATUS "Building Calamares with Qt5")
+    set(qtname "Qt5")
+    set(kfname "KF5")
+    set(QT_VERSION 5.15.0)
+    set(ECM_VERSION 5.78)
+    set(KF_VERSION 5.78)
+    # API that was deprecated before Qt 5.15 causes a compile error
+    add_compile_definitions(QT_DISABLE_DEPRECATED_BEFORE=0x050f00)
+endif()
+
 set(BOOSTPYTHON_VERSION 1.72.0)
+set(PYTHONLIBS_VERSION 3.6)
+set(YAMLCPP_VERSION 0.5.1)
 
 ### CMAKE SETUP
 #
@@ -284,33 +305,27 @@ if(CMAKE_COMPILER_IS_GNUCXX)
     endif()
 endif()
 
-# API that was deprecated before Qt 5.15 causes a compile error
-add_compile_definitions(QT_DISABLE_DEPRECATED_BEFORE=0x050f00)
-
 ### DEPENDENCIES
 #
-find_package(Qt5 ${QT_VERSION} CONFIG REQUIRED Concurrent Core DBus Gui LinguistTools Network Svg Widgets)
+find_package(${qtname} ${QT_VERSION} CONFIG REQUIRED Concurrent Core DBus Gui LinguistTools Network Svg Widgets)
 if(WITH_QML)
-    find_package(Qt5 ${QT_VERSION} CONFIG REQUIRED Quick QuickWidgets)
-endif()
-if(WITH_QT_VIRTUAL_KEYBOARD)
-    find_package(Qt5 ${QT_VERSION} CONFIG REQUIRED VirtualKeyboard)
+    find_package(${qtname} ${QT_VERSION} CONFIG REQUIRED Quick QuickWidgets)
 endif()
 # Note that some modules need more Qt modules, optionally.
 
 find_package(YAMLCPP ${YAMLCPP_VERSION} REQUIRED)
 if(INSTALL_POLKIT)
-    find_package(PolkitQt5-1 REQUIRED)
+    find_package(Polkit${qtname}-1 REQUIRED)
 else()
     # Find it anyway, for dependencies-reporting
-    find_package(PolkitQt5-1)
+    find_package(Polkit${qtname}-1)
 endif()
 set_package_properties(
-    PolkitQt5-1
+    Polkit${qtname}-1
     PROPERTIES
-    DESCRIPTION "Qt5 support for Polkit"
+    DESCRIPTION "${qtname} support for Polkit"
     URL "https://cgit.kde.org/polkit-qt-1.git"
-    PURPOSE "PolkitQt5-1 helps with installing Polkit configuration"
+    PURPOSE "Polkit${qtname}-1 helps with installing Polkit configuration"
 )
 
 # Find ECM once, and add it to the module search path; Calamares
@@ -319,29 +334,49 @@ set_package_properties(
 # no need to mess with the module path after.
 find_package(ECM ${ECM_VERSION} NO_MODULE)
 if(ECM_FOUND)
+    message(STATUS "Found KDE ECM ${ECM_MODULE_PATH}")
     set(CMAKE_MODULE_PATH ${ECM_MODULE_PATH} ${CMAKE_MODULE_PATH})
     if(BUILD_TESTING)
         # ECM implies that we can build the tests, too
-        find_package(Qt5 COMPONENTS Test REQUIRED)
+        find_package(${qtname} COMPONENTS Test REQUIRED)
         include(ECMAddTests)
     endif()
     include(KDEInstallDirs)
 endif()
 
-find_package(KF5 ${ECM_VERSION} QUIET COMPONENTS CoreAddons Crash)
+find_package(${kfname} ${KF_VERSION} QUIET COMPONENTS CoreAddons)
 set_package_properties(
-    KF5::CoreAddons
+    ${kfname}
     PROPERTIES
     TYPE REQUIRED
-    DESCRIPTION "Classes built on QtCore for About Data"
+    DESCRIPTION "KDE Frameworks (CoreAddons)"
     URL "https://api.kde.org/frameworks/kcoreaddons/"
     PURPOSE "About Calamares"
 )
-if(NOT KF5Crash_FOUND)
-    if(BUILD_KF5Crash)
-        message(WARNING "BUILD_KF5Crash is set, but KF5::Crash is not available.")
+
+feature_summary(
+    WHAT REQUIRED_PACKAGES_NOT_FOUND
+    FATAL_ON_MISSING_REQUIRED_PACKAGES
+    DESCRIPTION "The following REQUIRED packages were not found:"
+    QUIET_ON_EMPTY
+)
+
+#
+# OPTIONAL DEPENDENCIES
+#
+# First, set KF back to optional so that any missing components don't trip us up.
+set_package_properties(
+    ${kfname}
+    PROPERTIES
+    TYPE OPTIONAL
+)
+find_package(${kfname} ${KF_VERSION} QUIET COMPONENTS CoreAddons Crash)
+
+if(NOT TARGET ${kfname}::Crash)
+    if(BUILD_CRASH_REPORTING)
+        message(WARNING "BUILD_CRASH_REPORTING is set, but ${kfname}::Crash is not available.")
     endif()
-    set(BUILD_KF5Crash OFF)
+    set(BUILD_CRASH_REPORTING OFF)
 endif()
 
 find_package(Python ${PYTHONLIBS_VERSION} COMPONENTS Interpreter Development)
@@ -409,6 +444,7 @@ endif()
 # when building out-of-tree.
 set(Calamares_WITH_PYTHON ${WITH_PYTHON})
 set(Calamares_WITH_QML ${WITH_QML})
+set(Calamares_WITH_QT6 ${WITH_QT6})
 
 ### Transifex Translation status
 #
@@ -540,10 +576,8 @@ add_subdirectory(src)
 
 add_feature_info(Python ${WITH_PYTHON} "Python job modules")
 add_feature_info(Qml ${WITH_QML} "QML UI support")
-add_feature_info(Config ${INSTALL_CONFIG} "Install Calamares configuration")
 add_feature_info(Polkit ${INSTALL_POLKIT} "Install Polkit files")
-add_feature_info(KCrash ${BUILD_KF5Crash} "Crash dumps via KCrash")
-add_feature_info(VirtualKeyboard ${WITH_QT_VIRTUAL_KEYBOARD} "Enable qtvirtualkeyboard QT_IM_MODULE")
+add_feature_info(KCrash ${BUILD_CRASH_REPORTING} "Crash dumps via KCrash")
 
 ### CMake infrastructure installation
 #

@@ -13,7 +13,7 @@ import io.calamares.ui 1.0
 import QtQuick 2.15
 import QtQuick.Controls 2.15
 import QtQuick.Window 2.15
-import QtQuick.Layouts 1.3
+import QtQuick.Layouts
 
 import org.kde.kirigami 2.7 as Kirigami
 import "data"

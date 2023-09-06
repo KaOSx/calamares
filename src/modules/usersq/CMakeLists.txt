@@ -8,11 +8,7 @@ if(NOT WITH_QML)
     return()
 endif()
 
-if(WITH_QT_VIRTUAL_KEYBOARD)
-    find_package(Qt5 ${QT_VERSION} CONFIG REQUIRED VirtualKeyboard)
-endif()
-
-find_package(Qt5 ${QT_VERSION} CONFIG REQUIRED Core DBus Network)
+find_package(${qtname} ${QT_VERSION} CONFIG REQUIRED Core DBus Network)
 find_package(Crypt REQUIRED)
 
 # Add optional libraries here
@@ -50,6 +46,6 @@ calamares_add_plugin(usersq
         users_internal
         ${CRYPT_LIBRARIES}
         ${USER_EXTRA_LIB}
-        Qt5::DBus
+        ${qtname}::DBus
     SHARED_LIB
 )

@@ -8,6 +8,7 @@ AlignEscapedNewlines: DontAlign
 AllowAllParametersOfDeclarationOnNextLine: "false"
 AllowShortFunctionsOnASingleLine: Inline
 AllowShortIfStatementsOnASingleLine: "false"
+AllowShortLambdasOnASingleLine: All
 AllowShortLoopsOnASingleLine: "false"
 AlwaysBreakAfterReturnType: TopLevelDefinitions
 AlwaysBreakTemplateDeclarations: Yes
@@ -27,9 +28,9 @@ PointerAlignment: Left
 ReflowComments: "false"
 SortIncludes: "true"
 SpaceAfterCStyleCast: "false"
+SpaceInEmptyBlock: "false"
 SpacesBeforeTrailingComments: "2"
-# SpaceInEmptyBlock: "true"
 SpacesInAngles: "true"
 SpacesInParentheses: "true"
 SpacesInSquareBrackets: "true"
-Standard: Cpp11
+Standard: c++17

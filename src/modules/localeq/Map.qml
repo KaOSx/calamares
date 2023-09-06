@@ -1,6 +1,6 @@
 /* === This file is part of Calamares - <https://github.com/calamares> ===
  *
- *   Copyright 2020 - 2022, Anke Boersma <demm@kaosx.us>
+ *   Copyright 2020 - 2023, Anke Boersma <demm@kaosx.us>
  *
  *   Calamares is Free Software: see the License-Identifier above.
  *
@@ -9,12 +9,12 @@
 import QtQuick 2.10
 import QtQuick.Controls 2.10
 import QtQuick.Window 2.14
-import QtQuick.Layouts 1.3
+import QtQuick.Layouts
 
 import org.kde.kirigami 2.7 as Kirigami
 
-import QtLocation 5.15
-import QtPositioning 5.15
+import QtLocation
+import QtPositioning
 
 Column {
     width: parent.width

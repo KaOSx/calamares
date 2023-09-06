@@ -12,8 +12,8 @@ import io.calamares.ui 1.0
 
 import QtQuick 2.10
 import QtQuick.Controls 2.10
-import QtQuick.Layouts 1.3
-import QtGraphicalEffects 1.0
+import QtQuick.Layouts
+import Qt5Compat.GraphicalEffects
 import QtQuick.Window 2.3
 
 Page

@@ -12,9 +12,11 @@
 #include "CalamaresVersion.h"
 #include "GlobalStorage.h"
 #include "JobQueue.h"
+#include "compat/Variant.h"
 #include "utils/CalamaresUtilsSystem.h"
 #include "utils/CommandList.h"
 #include "utils/Logger.h"
+#include "utils/StringExpander.h"
 #include "utils/Units.h"
 
 #include <QFile>
@@ -37,7 +39,8 @@ atReplacements( QString s )
         user = gs->value( "username" ).toString();
     }
 
-    return s.replace( "@@ROOT@@", root ).replace( "@@USER@@", user );
+    Calamares::String::DictionaryExpander d;
+    return d.add( QStringLiteral( "ROOT" ), root ).add( QStringLiteral( "USER" ), user ).expand( s );
 }
 
 PreserveFiles::PreserveFiles( QObject* parent )
@@ -95,7 +98,7 @@ PreserveFiles::setConfigurationMap( const QVariantMap& configurationMap )
         return;
     }
 
-    if ( files.type() != QVariant::List )
+    if ( Calamares::typeOf( files ) != Calamares::ListVariantType )
     {
         cDebug() << "Configuration key 'files' is not a list for preservefiles.";
         return;

@@ -4,6 +4,7 @@
  *   SPDX-FileCopyrightText: 2017-2019 Adriaan de Groot <groot@kde.org>
  *   SPDX-FileCopyrightText: 2019 Collabora Ltd
  *   SPDX-FileCopyrightText: 2021 Anubhav Choudhary <ac.10edu@gmail.com>
+ *   SPDX-FileCopyrightText: 2023 Evan James <dalto@fastmail.com>
  *   SPDX-License-Identifier: GPL-3.0-or-later
  *
  *   Calamares is Free Software: see the License-Identifier above.
@@ -287,6 +288,16 @@ ChoicePage::setupChoices()
             m_eraseFsTypesChoiceComboBox, &QComboBox::currentTextChanged, m_config, &Config::setEraseFsTypeChoice );
         connect( m_config, &Config::eraseModeFilesystemChanged, this, &ChoicePage::onActionChanged );
         m_eraseButton->addOptionsComboBox( m_eraseFsTypesChoiceComboBox );
+
+        // Also offer it for "replace
+        m_replaceFsTypesChoiceComboBox = new QComboBox;
+        m_replaceFsTypesChoiceComboBox->addItems( m_config->eraseFsTypes() );
+        connect( m_replaceFsTypesChoiceComboBox,
+                 &QComboBox::currentTextChanged,
+                 m_config,
+                 &Config::setReplaceFilesystemChoice );
+        connect( m_config, &Config::replaceModeFilesystemChanged, this, &ChoicePage::onActionChanged );
+        m_replaceButton->addOptionsComboBox( m_replaceFsTypesChoiceComboBox );
     }
 
     m_itemsLayout->addWidget( m_alongsideButton );
@@ -302,13 +313,8 @@ ChoicePage::setupChoices()
 
     m_itemsLayout->addStretch();
 
-#if ( QT_VERSION < QT_VERSION_CHECK( 5, 15, 0 ) )
-    auto buttonSignal = QOverload< int, bool >::of( &QButtonGroup::buttonToggled );
-#else
-    auto buttonSignal = &QButtonGroup::idToggled;
-#endif
     connect( m_grp,
-             buttonSignal,
+             &QButtonGroup::idToggled,
              this,
              [ this ]( int id, bool checked )
              {
@@ -448,7 +454,6 @@ ChoicePage::continueApplyDeviceChoice()
     if ( m_lastSelectedDeviceIndex != m_drivesCombo->currentIndex() )
     {
         m_lastSelectedDeviceIndex = m_drivesCombo->currentIndex();
-        m_lastSelectedActionIndex = -1;
         m_config->setInstallChoice( m_config->initialInstallChoice() );
         checkInstallChoiceRadioButton( m_config->installChoice() );
     }
@@ -460,6 +465,18 @@ ChoicePage::continueApplyDeviceChoice()
 void
 ChoicePage::onActionChanged()
 {
+    if ( m_enableEncryptionWidget )
+    {
+        if ( m_config->installChoice() == InstallChoice::Erase && m_eraseFsTypesChoiceComboBox )
+        {
+            m_encryptWidget->setFilesystem( FileSystem::typeForName( m_eraseFsTypesChoiceComboBox->currentText() ) );
+        }
+        else if ( m_config->installChoice() == InstallChoice::Replace && m_replaceFsTypesChoiceComboBox )
+        {
+            m_encryptWidget->setFilesystem( FileSystem::typeForName( m_replaceFsTypesChoiceComboBox->currentText() ) );
+        }
+    }
+
     Device* currd = selectedDevice();
     if ( currd )
     {
@@ -482,9 +499,9 @@ ChoicePage::onEraseSwapChoiceChanged()
 void
 ChoicePage::applyActionChoice( InstallChoice choice )
 {
-    cDebug() << "Prev" << m_lastSelectedActionIndex << "InstallChoice" << choice
-             << Config::installChoiceNames().find( choice );
+    cDebug() << "InstallChoice" << choice << Config::installChoiceNames().find( choice );
     m_beforePartitionBarsView->selectionModel()->disconnect( SIGNAL( currentRowChanged( QModelIndex, QModelIndex ) ) );
+    auto priorSelection = m_beforePartitionBarsView->selectionModel()->currentIndex();
     m_beforePartitionBarsView->selectionModel()->clearSelection();
     m_beforePartitionBarsView->selectionModel()->clearCurrentIndex();
 
@@ -495,6 +512,7 @@ ChoicePage::applyActionChoice( InstallChoice choice )
         auto gs = Calamares::JobQueue::instance()->globalStorage();
         PartitionActions::Choices::AutoPartitionOptions options { gs->value( "defaultPartitionTableType" ).toString(),
                                                                   m_config->eraseFsType(),
+                                                                  m_config->luksFileSystemType(),
                                                                   m_encryptWidget->passphrase(),
                                                                   gs->value( "efiSystemPartition" ).toString(),
                                                                   CalamaresUtils::GiBtoBytes(
@@ -542,6 +560,12 @@ ChoicePage::applyActionChoice( InstallChoice choice )
                  this,
                  SLOT( onPartitionToReplaceSelected( QModelIndex, QModelIndex ) ),
                  Qt::UniqueConnection );
+
+        // Maintain the selection for replace
+        if ( priorSelection.isValid() )
+        {
+            m_beforePartitionBarsView->selectionModel()->setCurrentIndex( priorSelection, QItemSelectionModel::Select );
+        }
         break;
 
     case InstallChoice::Alongside:
@@ -751,6 +775,7 @@ ChoicePage::doAlongsideApply()
             m_core->layoutApply( dev,
                                  newLastSector + 2,
                                  oldLastSector,
+                                 m_config->luksFileSystemType(),
                                  m_encryptWidget->passphrase(),
                                  candidate->parent(),
                                  candidate->roles() );
@@ -825,6 +850,7 @@ ChoicePage::doReplaceSelectedPartition( const QModelIndex& current )
                     m_core->layoutApply( selectedDevice(),
                                          selectedPartition->firstSector(),
                                          selectedPartition->lastSector(),
+                                         m_config->luksFileSystemType(),
                                          m_encryptWidget->passphrase(),
                                          newParent,
                                          newRoles );
@@ -856,7 +882,8 @@ ChoicePage::doReplaceSelectedPartition( const QModelIndex& current )
                                                               selectedDevice(),
                                                               selectedPartition,
                                                               { gs->value( "defaultPartitionType" ).toString(),
-                                                                gs->value( "defaultFileSystemType" ).toString(),
+                                                                m_config->replaceModeFilesystem(),
+                                                                m_config->luksFileSystemType(),
                                                                 m_encryptWidget->passphrase() } );
                         Partition* homePartition = findPartitionByPath( { selectedDevice() }, *homePartitionPath );
 
@@ -1733,10 +1760,20 @@ ChoicePage::createBootloaderPanel()
     return panelWidget;
 }
 
-bool ChoicePage::shouldShowEncryptWidget( Config::InstallChoice choice ) const
+bool
+ChoicePage::shouldShowEncryptWidget( Config::InstallChoice choice ) const
 {
-    // If there are any choices for FS, check it's not ZFS because that doesn't
-    // support the kind of encryption we enable here.
-    const bool suitableFS = m_eraseFsTypesChoiceComboBox ? m_eraseFsTypesChoiceComboBox->currentText() != "zfs" : true;
-    return (choice == InstallChoice::Erase) && m_enableEncryptionWidget && suitableFS;
+    bool suitableFS = true;
+    if ( !m_config->allowZfsEncryption()
+         && ( ( m_eraseFsTypesChoiceComboBox && m_eraseFsTypesChoiceComboBox->isVisible()
+                && m_eraseFsTypesChoiceComboBox->currentText() == "zfs" )
+              || ( m_replaceFsTypesChoiceComboBox && m_replaceFsTypesChoiceComboBox->isVisible()
+                   && m_replaceFsTypesChoiceComboBox->currentText() == "zfs" ) ) )
+    {
+        suitableFS = false;
+    }
+
+    const bool suitableChoice
+        = choice == InstallChoice::Erase || choice == InstallChoice::Alongside || choice == InstallChoice::Replace;
+    return suitableChoice && m_enableEncryptionWidget && suitableFS;
 }

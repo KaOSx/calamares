@@ -30,7 +30,6 @@
 #include "utils/Retranslator.h"
 #include "viewpages/ViewStep.h"
 
-#include <QDesktopWidget>
 #include <QDir>
 #include <QFileInfo>
 #include <QScreen>
@@ -193,7 +192,7 @@ CalamaresApplication::initBranding()
         ::exit( EXIT_FAILURE );
     }
 
-    new Calamares::Branding( brandingFile.absoluteFilePath(), this );
+    new Calamares::Branding( brandingFile.absoluteFilePath(), this, devicePixelRatio() );
 }
 
 
