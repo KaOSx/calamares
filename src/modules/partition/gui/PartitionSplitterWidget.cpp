@@ -340,7 +340,7 @@ PartitionSplitterWidget::mousePressEvent( QMouseEvent* event )
 {
     if ( m_itemToResize && m_itemToResizeNext && event->button() == Qt::LeftButton )
     {
-        if ( qAbs( event->x() - m_resizeHandleX ) < HANDLE_SNAP )
+        if ( qAbs( event->position().x() - m_resizeHandleX ) < HANDLE_SNAP )
         {
             m_resizing = true;
         }
@@ -393,7 +393,7 @@ PartitionSplitterWidget::mouseMoveEvent( QMouseEvent* event )
         int ew = rect().width();  //effective width
         qreal bpp = total / static_cast< qreal >( ew );  //bytes per pixel
 
-        qreal mx = event->x() * bpp - start;
+        qreal mx = event->position().x() * bpp - start;
 
         // make sure we are within resize range
         mx = qBound( static_cast< qreal >( m_itemMinSize ), mx, static_cast< qreal >( m_itemMaxSize ) );
@@ -428,7 +428,7 @@ PartitionSplitterWidget::mouseMoveEvent( QMouseEvent* event )
     {
         if ( m_itemToResize && m_itemToResizeNext )
         {
-            if ( qAbs( event->x() - m_resizeHandleX ) < HANDLE_SNAP )
+            if ( qAbs( event->position().x() - m_resizeHandleX ) < HANDLE_SNAP )
             {
                 setCursor( Qt::SplitHCursor );
             }
