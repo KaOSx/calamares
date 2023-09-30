@@ -84,11 +84,11 @@ PackageChooserQmlViewStep::setConfigurationMap( const QVariantMap& configuration
     m_config->setConfigurationMap( configurationMap );
 
     bool qmlLabel_ok = false;
-    auto qmlLabel = CalamaresUtils::getSubMap( configurationMap, "qmlLabel", qmlLabel_ok );
+    auto qmlLabel = Calamares::getSubMap( configurationMap, "qmlLabel", qmlLabel_ok );
 
     if ( qmlLabel.contains( "label" ) )
     {
-        m_labelName = new CalamaresUtils::Locale::TranslatedString( qmlLabel, "label" );
+        m_labelName = new Calamares::Locale::TranslatedString( qmlLabel, "label" );
     }
 
     Calamares::QmlViewStep::setConfigurationMap( configurationMap );  // call parent implementation last
