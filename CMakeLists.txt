@@ -46,7 +46,7 @@
 
 cmake_minimum_required(VERSION 3.16 FATAL_ERROR)
 
-set(CALAMARES_VERSION 3.3.0)
+set(CALAMARES_VERSION 3.3.0-alpha4)
 set(CALAMARES_RELEASE_MODE OFF) # Set to ON during a release
 
 if(CMAKE_SCRIPT_MODE_FILE)
@@ -313,12 +313,22 @@ if(WITH_QML)
 endif()
 # Note that some modules need more Qt modules, optionally.
 
-find_package(YAMLCPP ${YAMLCPP_VERSION} REQUIRED)
+find_package(YAMLCPP ${YAMLCPP_VERSION})
+set_package_properties(
+    YAMLCPP
+    PROPERTIES
+    TYPE REQUIRED
+    DESCRIPTION "YAML parser for C++"
+    PURPOSE "Parsing of configuration files"
+)
+
+find_package(Polkit${qtname}-1)
 if(INSTALL_POLKIT)
-    find_package(Polkit${qtname}-1 REQUIRED)
-else()
-    # Find it anyway, for dependencies-reporting
-    find_package(Polkit${qtname}-1)
+    set_package_properties(
+        Polkit${qtname}-1
+        PROPERTIES
+        TYPE REQUIRED
+    )
 endif()
 set_package_properties(
     Polkit${qtname}-1
@@ -330,7 +340,7 @@ set_package_properties(
 
 # Find ECM once, and add it to the module search path; Calamares
 # modules that need ECM can do
-#   find_package(ECM ${ECM_VERSION} REQUIRED NO_MODULE),
+#   if(ECM_FOUND)
 # no need to mess with the module path after.
 find_package(ECM ${ECM_VERSION} NO_MODULE)
 if(ECM_FOUND)
@@ -344,16 +354,18 @@ if(ECM_FOUND)
     include(KDEInstallDirs)
 endif()
 
-find_package(${kfname} ${KF_VERSION} QUIET COMPONENTS CoreAddons)
+find_package(${kfname}CoreAddons ${KF_VERSION} QUIET)
 set_package_properties(
-    ${kfname}
+    ${kfname}CoreAddons
     PROPERTIES
     TYPE REQUIRED
-    DESCRIPTION "KDE Frameworks (CoreAddons)"
-    URL "https://api.kde.org/frameworks/kcoreaddons/"
-    PURPOSE "About Calamares"
+    DESCRIPTION "KDE Framework CoreAddons"
+    URL "https://api.kde.org/frameworks/"
+    PURPOSE "Essential Framework for AboutData and Macros"
 )
 
+# After this point, there should be no REQUIRED find_packages,
+# since we want tidy reporting of optional dependencies.
 feature_summary(
     WHAT REQUIRED_PACKAGES_NOT_FOUND
     FATAL_ON_MISSING_REQUIRED_PACKAGES
@@ -365,12 +377,15 @@ feature_summary(
 # OPTIONAL DEPENDENCIES
 #
 # First, set KF back to optional so that any missing components don't trip us up.
+find_package(${kfname}Crash ${KF_VERSION} QUIET)
 set_package_properties(
-    ${kfname}
+    ${kfname}Crash
     PROPERTIES
     TYPE OPTIONAL
+    DESCRIPTION "KDE Framework Crash"
+    URL "https://api.kde.org/frameworks/"
+    PURPOSE "Framework for sending Crash Dumps"
 )
-find_package(${kfname} ${KF_VERSION} QUIET COMPONENTS CoreAddons Crash)
 
 if(NOT TARGET ${kfname}::Crash)
     if(BUILD_CRASH_REPORTING)
@@ -578,6 +593,11 @@ add_feature_info(Python ${WITH_PYTHON} "Python job modules")
 add_feature_info(Qml ${WITH_QML} "QML UI support")
 add_feature_info(Polkit ${INSTALL_POLKIT} "Install Polkit files")
 add_feature_info(KCrash ${BUILD_CRASH_REPORTING} "Crash dumps via KCrash")
+
+### Post-source configuration
+#
+#
+find_package(${kfname} ${KF_VERSION} QUIET COMPONENTS CoreAddons)
 
 ### CMake infrastructure installation
 #

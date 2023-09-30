@@ -11,9 +11,13 @@
 # library, which will add definition WITHOUT_KPMcore.
 #
 if(NOT TARGET calapmcore)
-    if(WITH_QT6)
+    find_package(${kfname}Config CONFIG)
+    find_package(${kfname}I18n CONFIG)
+    find_package(${kfname}WidgetsAddons CONFIG)
+
+    if(NOT WITH_QT6)
         # TODO: Qt6 how to detect the version of Qt that KPMCore needs?
-        find_package(KPMcore 23.08.0)
+        find_package(KPMcore 20.04.0)
         set_package_properties(
             KPMcore
             PROPERTIES

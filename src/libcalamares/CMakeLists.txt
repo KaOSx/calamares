@@ -77,7 +77,6 @@ add_library(
     partition/PartitionSize.cpp
     partition/Sync.cpp
     # Utility service
-    utils/CalamaresUtilsSystem.cpp
     utils/CommandList.cpp
     utils/Dirs.cpp
     utils/Entropy.cpp
@@ -88,6 +87,7 @@ add_library(
     utils/Runner.cpp
     utils/String.cpp
     utils/StringExpander.cpp
+    utils/System.cpp
     utils/UMask.cpp
     utils/Variant.cpp
     utils/Yaml.cpp
@@ -100,7 +100,7 @@ set_target_properties(
         SOVERSION ${CALAMARES_SOVERSION}
         INTERFACE_INCLUDE_DIRECTORIES ${CMAKE_INSTALL_FULL_INCLUDEDIR}/libcalamares
 )
-target_link_libraries(calamares LINK_PUBLIC yamlcpp::yamlcpp ${qtname}::Core)
+target_link_libraries(calamares LINK_PUBLIC yamlcpp::yamlcpp ${qtname}::Core ${qtname}::Network)
 target_link_libraries(calamares LINK_PUBLIC ${kfname}::CoreAddons)
 
 ### OPTIONAL Automount support (requires dbus)

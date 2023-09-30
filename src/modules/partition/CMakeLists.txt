@@ -41,18 +41,12 @@ if(DEBUG_PARTITION_SKIP)
     list(APPEND _partition_defs DEBUG_PARTITION_SKIP)
 endif()
 
-find_package(ECM ${ECM_VERSION} REQUIRED NO_MODULE)
-
 include(KPMcoreHelper)
-
-find_package(${kfname}Config CONFIG)
-find_package(${kfname}I18n CONFIG)
-find_package(${kfname}WidgetsAddons CONFIG)
 
 if(KPMcore_FOUND)
     include_directories(${PROJECT_BINARY_DIR}/src/libcalamaresui)
 
-    #add_subdirectory(tests)
+    add_subdirectory(tests)
 
     calamares_add_plugin(partition
         TYPE viewmodule

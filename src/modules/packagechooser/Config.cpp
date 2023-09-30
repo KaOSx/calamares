@@ -20,7 +20,6 @@
 #include <memory>
 #endif
 
-
 #include "GlobalStorage.h"
 #include "JobQueue.h"
 #include "compat/Variant.h"
@@ -114,9 +113,9 @@ Config::introductionPackage() const
             = QT_TR_NOOP( "Please pick a product from the list. The selected product will be installed." );
         defaultIntroduction = new PackageItem( QString(), name, description );
         defaultIntroduction->screenshot = QPixmap( QStringLiteral( ":/images/no-selection.png" ) );
-        defaultIntroduction->name = CalamaresUtils::Locale::TranslatedString( name, metaObject()->className() );
+        defaultIntroduction->name = Calamares::Locale::TranslatedString( name, metaObject()->className() );
         defaultIntroduction->description
-            = CalamaresUtils::Locale::TranslatedString( description, metaObject()->className() );
+            = Calamares::Locale::TranslatedString( description, metaObject()->className() );
     }
     return *defaultIntroduction;
 }
@@ -144,7 +143,7 @@ Config::updateGlobalStorage( const QStringList& selected ) const
     {
         QStringList packageNames = m_model->getInstallPackagesForNames( selected );
         cDebug() << m_defaultId << "packages to install" << packageNames;
-        CalamaresUtils::Packages::setGSPackageAdditions(
+        Calamares::Packages::setGSPackageAdditions(
             Calamares::JobQueue::instance()->globalStorage(), m_defaultId, packageNames );
     }
     else if ( m_method == PackageChooserMethod::NetAdd )
@@ -222,7 +221,6 @@ Config::updateGlobalStorage() const
         cWarning() << "Unknown packagechooser method" << smash( m_method );
     }
 }
-
 
 void
 Config::setPackageChoice( const QString& packageChoice )
@@ -306,9 +304,9 @@ fillModel( PackageListModel* model, const QVariantList& items )
 void
 Config::setConfigurationMap( const QVariantMap& configurationMap )
 {
-    m_mode = packageChooserModeNames().find( CalamaresUtils::getString( configurationMap, "mode" ),
+    m_mode = packageChooserModeNames().find( Calamares::getString( configurationMap, "mode" ),
                                              PackageChooserMode::Required );
-    m_method = PackageChooserMethodNames().find( CalamaresUtils::getString( configurationMap, "method" ),
+    m_method = PackageChooserMethodNames().find( Calamares::getString( configurationMap, "method" ),
                                                  PackageChooserMethod::Legacy );
 
     if ( m_method == PackageChooserMethod::Legacy )
@@ -320,7 +318,7 @@ Config::setConfigurationMap( const QVariantMap& configurationMap )
     {
         fillModel( m_model, configurationMap.value( "items" ).toList() );
 
-        QString default_item_id = CalamaresUtils::getString( configurationMap, "default" );
+        QString default_item_id = Calamares::getString( configurationMap, "default" );
         if ( !default_item_id.isEmpty() )
         {
             for ( int item_n = 0; item_n < m_model->packageCount(); ++item_n )
@@ -338,7 +336,7 @@ Config::setConfigurationMap( const QVariantMap& configurationMap )
     }
     else
     {
-        setPackageChoice( CalamaresUtils::getString( configurationMap, "packageChoice" ) );
+        setPackageChoice( Calamares::getString( configurationMap, "packageChoice" ) );
         if ( m_method != PackageChooserMethod::Legacy )
         {
             cWarning() << "Single-selection QML module must use 'Legacy' method.";

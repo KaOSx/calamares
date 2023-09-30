@@ -71,25 +71,55 @@ Up to date
 [building-Calamares](https://github.com/calamares/calamares/wiki/Develop-Guide)
 instructions are on the wiki.
 
-### Dependencies
+### Simple Build in Docker
+
+You may have success with the Docker images that the CI system uses.
+Pick one (or both):
+- `docker pull docker://opensuse/tumbleweed`
+- `docker pull kdeneon/plasma:user`
+
+Then start a container with the right image, from the root of Calamares
+source checkout. Pick one:
+- `docker run  -ti --tmpfs /build:rw --user 0:0 -v .:/src opensuse/tumbleweed `
+- `docker run  -ti --tmpfs /build:rw --user 0:0 -v /tmp/.X11-unix:/tmp/.X11-unix -e DISPLAY=:0 -v .:/src kdeneon/plasma:user bash`
+This starts a container with the chosen image (openSUSE Tumbleweed or KDE neon,
+here) with a temporary build directory in `/build` and the Calamares
+sources mounted as `/src`. KDE neon needs some extra settings to avoid
+starting a complete desktop.
+
+Run the script to install dependencies: you could use `deploycala.py`
+or one of the shell scripts in `.github/workflows` to install the right
+dependencies for the image.
+- `cd /src`
+- `./.github/workflows/nightly-opensuse-qt6.sh`
+
+Then run CMake (add any CMake options you like at the end) and ninja:
+- `cmake -S /src -B /build -G Ninja`
+- `ninja -C /build`
+
+### Dependencies for Calamares 3.3
+
+> The dependencies for Calamares 3.3 reflect "resonably current"
+> software as of September 2023. For Calamares 3.2 dependencies,
+> which are 2017-era, see the `CONTRIBUTING` file in that branch.
 
 Main:
 * Compiler with C++17 support
 * CMake >= 3.16
-* Qt >= 5.15
 * yaml-cpp >= 0.5.1
-* Python >= 3.6 (required for some modules)
-* Boost.Python >= 1.67.0 (required for some modules)
-* KDE extra-cmake-modules >= 5.18 (recommended; required for some modules;
+* Qt >= 5.15 or Qt >= 6.5
+* KDE Frameworks KCoreAddons >= 5.78
+* KDE extra-cmake-modules >= 5.78 (recommended; required for some modules;
   required for some tests)
-* KDE Frameworks KCoreAddons (>= 5.58 recommended)
+* Python >= 3.6 (required for some modules)
+* Boost.Python >= 1.72.0 (required for some modules)
 
 Individual modules may have their own requirements;
 these are listed in CMake output.
 Particular requirements (not complete):
 
-* *fsresizer* KPMCore >= 3.3 (>= 4.2 recommended)
-* *partition* KPMCore >= 3.3 (>= 4.2 recommended)
+* *fsresizer* KPMCore >= 20.04
+* *partition* KPMCore >= 20.04
 * *users* LibPWQuality (optional)
 
 

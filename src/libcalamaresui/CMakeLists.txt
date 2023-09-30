@@ -16,7 +16,7 @@ set(calamaresui_SOURCES
     modulesystem/ModuleManager.cpp
     modulesystem/ProcessJobModule.cpp
     modulesystem/ViewModule.cpp
-    utils/CalamaresUtilsGui.cpp
+    utils/Gui.cpp
     utils/ImageRegistry.cpp
     utils/Paste.cpp
     viewpages/BlankViewStep.cpp
@@ -45,6 +45,7 @@ endif()
 
 calamares_add_library(calamaresui
     SOURCES ${calamaresui_SOURCES}
+    TARGET_TYPE SHARED
     EXPORT_MACRO UIDLLEXPORT_PRO
     LINK_LIBRARIES
         ${qtname}::Svg

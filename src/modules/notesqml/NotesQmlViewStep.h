@@ -11,7 +11,7 @@
 
 #include "DllMacro.h"
 #include "locale/TranslatableConfiguration.h"
-#include "utils/CalamaresUtilsSystem.h"
+#include "utils/System.h"
 #include "utils/PluginFactory.h"
 #include "utils/Variant.h"
 #include "viewpages/QmlViewStep.h"
@@ -29,7 +29,7 @@ public:
     void setConfigurationMap( const QVariantMap& configurationMap ) override;
 
 private:
-    CalamaresUtils::Locale::TranslatedString* m_notesName;  // As it appears in the sidebar
+    Calamares::Locale::TranslatedString* m_notesName;  // As it appears in the sidebar
 };
 
 CALAMARES_PLUGIN_FACTORY_DECLARATION( NotesQmlViewStepFactory )
