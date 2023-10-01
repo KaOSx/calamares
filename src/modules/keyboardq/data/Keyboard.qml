@@ -7,8 +7,8 @@
  *
  */
 
-import QtQuick 2.15
-import QtQuick.XmlListModel 2.10
+import QtQuick
+import QtQml.XmlListModel
 
 Item {
     id: keyboard
@@ -116,10 +116,10 @@ Item {
                             source: keyboard.source
                             query: "/Keyboard/Row[" + (rowIndex + 1) + "]/Key"
 
-                            XmlRole { name: "labels"; query: "@labels/string()" }
-                            XmlRole { name: "ratio"; query: "@ratio/number()" }
-                            XmlRole { name: "icon"; query: "@icon/string()" }
-                            XmlRole { name: "checkable"; query: "@checkable/string()" }
+                            XmlListModelRole { name: "labels"; elementName: "@labels/string()" }
+                            XmlListModelRole { name: "ratio"; elementName: "@ratio/number()" }
+                            XmlListModelRole { name: "icon"; elementName: "@icon/string()" }
+                            XmlListModelRole { name: "checkable"; elementName: "@checkable/string()" }
                         }
 
                         Key {

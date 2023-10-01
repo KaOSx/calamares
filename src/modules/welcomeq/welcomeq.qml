@@ -7,14 +7,14 @@
  *   Calamares is Free Software: see the License-Identifier above.
  *
  */
-import io.calamares.core 1.0
-import io.calamares.ui 1.0
+//import io.calamares.core 1.0
+//import io.calamares.ui 1.0
 
-import QtQuick 2.10
-import QtQuick.Controls 2.10
+import QtQuick
+import QtQuick.Controls
 import QtQuick.Layouts
-import Qt5Compat.GraphicalEffects
-import QtQuick.Window 2.3
+//import Qt5Compat.GraphicalEffects
+import QtQuick.Window
 
 Page
 {
