@@ -7,8 +7,8 @@
  *
  */
 
-//import io.calamares.core 1.0
-//import io.calamares.ui 1.0
+import io.calamares.core 1.0
+import io.calamares.ui 1.0
 
 import QtQuick
 import QtQuick.Controls

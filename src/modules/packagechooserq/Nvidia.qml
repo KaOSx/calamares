@@ -11,7 +11,6 @@ import QtQuick
 import QtQuick.Controls
 import QtQuick.Layouts
 import org.kde.kirigami 2.7 as Kirigami
-//import QtGraphicalEffects 1.0
 import QtQuick.Window
 
 Rectangle {
