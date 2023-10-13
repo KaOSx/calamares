@@ -110,6 +110,7 @@ main( int argc, char* argv[] )
     // Not needed in Qt6
     QApplication::setAttribute( Qt::AA_EnableHighDpiScaling );
 #endif
+    qputenv("QT_IM_MODULE", QByteArray("qtvirtualkeyboard"));
     CalamaresApplication a( argc, argv );
 
     KAboutData aboutData( "calamares",
