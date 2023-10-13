@@ -1,6 +1,6 @@
 /* === This file is part of Calamares - <https://github.com/calamares> ===
  *
- *   Copyright 2021, Anke Boersma <demm@kaosx.us>
+ *   Copyright 2021 - 2023, Anke Boersma <demm@kaosx.us>
  *
  *   Calamares is Free Software: see the License-Identifier above.
  *
