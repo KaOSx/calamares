@@ -12,12 +12,13 @@ import QtQuick
 import QtQuick.Controls
 import QtQuick.Window
 import QtQuick.Layouts
-import QtQuick.Controls.Material 2.1
-import org.kde.kirigami 2.7 as Kirigami
+import QtQuick.Controls.Material
+import org.kde.kirigami as Kirigami
 
 Kirigami.ScrollablePage {
     width: 850
     height: 580
+    Material.primary : Material.DeepPurple
 
     header: ToolBar {
         RowLayout {
