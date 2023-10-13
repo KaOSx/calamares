@@ -300,6 +300,7 @@ Page
                 anchors.fill: parent
                 contentHeight: 4200
                 ScrollBar.horizontal.policy: ScrollBar.AlwaysOff
+                ScrollBar.vertical.policy: ScrollBar.AlwaysOn
 
                 Loader {
                     //id: image
