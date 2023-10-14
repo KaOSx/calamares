@@ -91,18 +91,19 @@ Item {
             Repeater {
                 id: rowRepeater
 
-                model: XmlListModel {
-                    id: keyboardModel
-                    source: keyboard.source
-                    query: "/Keyboard/Row"
+                model: 4
+                //model: XmlListModel {
+                //    id: keyboardModel
+                //    source: keyboard.source
+                //    query: "/Keyboard/Row"
 
-                    Behavior on source {
-                        NumberAnimation {
-                            easing.type: Easing.InOutSine
-                            duration: 100
-                        }
-                    }
-                }
+                    //Behavior on source {
+                    //    NumberAnimation {
+                    //        easing.type: Easing.InOutSine
+                    //        duration: 100
+                    //    }
+                    //}
+                //}
 
                 Row {
                     id: keyRow
@@ -114,12 +115,12 @@ Item {
 
                         model: XmlListModel {
                             source: keyboard.source
-                            query: "/Keyboard/Row[" + (rowIndex + 1) + "]/Key"
+                            query: "/Keyboard/Row" + keyRow.rowIndex + "/Key"
 
-                            XmlListModelRole { name: "labels"; elementName: "@labels/string()" }
-                            XmlListModelRole { name: "ratio"; elementName: "@ratio/number()" }
-                            XmlListModelRole { name: "icon"; elementName: "@icon/string()" }
-                            XmlListModelRole { name: "checkable"; elementName: "@checkable/string()" }
+                            XmlListModelRole { name: "labels"; attributeName: "labels"; elementName: "" }
+                            XmlListModelRole { name: "ratio"; attributeName: "ratio"; elementName: "" }
+                            XmlListModelRole { name: "icon"; attributeName: "icon"; elementName: "" }
+                            XmlListModelRole { name: "checkable"; attributeName: "checkable"; elementName: "" }
                         }
 
                         Key {
