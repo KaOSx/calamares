@@ -14,7 +14,7 @@ import io.calamares.ui 1.0
 import QtQuick
 import QtQuick.Controls
 import QtQuick.Layouts
-import org.kde.kirigami 2.7 as Kirigami
+import org.kde.kirigami as Kirigami
 import QtQuick.Window
 
 Page {

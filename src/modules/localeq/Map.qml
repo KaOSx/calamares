@@ -11,7 +11,7 @@ import QtQuick.Controls 2.10
 import QtQuick.Window 2.14
 import QtQuick.Layouts
 
-import org.kde.kirigami 2.7 as Kirigami
+import org.kde.kirigami as Kirigami
 
 import QtLocation
 import QtPositioning
