@@ -43,7 +43,7 @@ static inline QDBusMessage
 kdedCall( const QString& method )
 {
     return QDBusMessage::createMethodCall(
-        QStringLiteral( "org.kde.kded5" ), QStringLiteral( "/kded" ), QStringLiteral( "org.kde.kded5" ), method );
+        QStringLiteral( "org.kde.kded6" ), QStringLiteral( "/kded" ), QStringLiteral( "org.kde.kded6" ), method );
 }
 
 /** @brief Log a response from call()
