@@ -7,6 +7,28 @@ contributors are listed. Note that Calamares does not have a historical
 changelog -- this log starts with version 3.3.0. See CHANGES-3.2 for
 the history of the 3.2 series (2018-05 - 2022-08).
 
+
+# 3.3.0-alpha5 (unreleased)
+
+This release contains contributions from (alphabetically by first name):
+ - Adriaan de Groot
+ - Anke Boersma
+ - Emir Sari
+
+## Core ##
+ - Boost::Python is no longer a dependency, Calamares uses a bundled copy
+   of pybind11 instead. This speeds up compilation and reducese the
+   dependency tree a great deal. You can set `WITH_PYBIND11=OFF` in the
+   build to keep Boost::Python and all the binary-compatibility problems
+   it entails.
+ - Coding style now wants clang-format 15 or 16, but no longer needs astyle.
+   There is also a clang-tidy file for additional styling support.
+ - Ongoing translation improvements. (thanks Emir)
+
+## Modules ##
+ - All QML modules now have a Qt6-compatible set of QML files as well. (thanks Anke)
+
+
 # 3.3.0-alpha4 (2023-10-13)
 
 Another closing-in-on-3.3.0 release! One of the big changes is that

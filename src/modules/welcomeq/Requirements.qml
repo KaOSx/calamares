@@ -20,7 +20,7 @@ Rectangle {
     focus: true
     Kirigami.Theme.backgroundColor: Kirigami.Theme.backgroundColor
     anchors.fill: parent
-    anchors.topMargin: 60
+    anchors.topMargin: 50
 
     TextArea {
         id: required
