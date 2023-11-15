@@ -231,7 +231,7 @@ Column {
             Kirigami.Theme.backgroundColor: Kirigami.Theme.backgroundColor
             text: qsTr("Please select your preferred location on the map so the installer can suggest the locale
             and timezone settings for you. You can fine-tune the suggested settings below. Search the map by dragging
-            to move and using the +/- buttons to zoom in/out or use mouse scrolling for zooming.")
+            to move and using the +/- buttons to zoom in/out or use mouse scrolling for zooming.", "@info")
         }
     }
 }

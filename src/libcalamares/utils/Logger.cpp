@@ -83,7 +83,7 @@ log_enabled( unsigned int level )
 }
 
 static void
-log_implementation( const char* msg, unsigned int debugLevel, const bool withTime )
+log_implementation( const char* msg, unsigned int debugLevel, const char* funcinfo )
 {
     Calamares::MutexLocker lock( &s_mutex );
 
@@ -93,18 +93,27 @@ log_implementation( const char* msg, unsigned int debugLevel, const bool withTim
     // If we don't format the date as a Qt::ISODate then we get a crash when
     // logging at exit as Qt tries to use QLocale to format, but QLocale is
     // on its way out.
-    logfile << date.toUtf8().data() << " - " << time.toUtf8().data() << " [" << debugLevel << "]: " << msg << std::endl;
-
+    if ( funcinfo )
+    {
+        logfile << date.toUtf8().data() << " - " << time.toUtf8().data() << " [" << debugLevel << "]: " << funcinfo
+                << '\n';
+    }
+    if ( msg )
+    {
+        logfile << date.toUtf8().data() << " - " << time.toUtf8().data() << " [" << debugLevel
+                << ( funcinfo ? "]:     " : "]: " ) << msg << '\n';
+    }
     logfile.flush();
 
     if ( logLevelEnabled( debugLevel ) )
     {
-        if ( withTime )
+        if ( funcinfo )
         {
-            std::cout << time.toUtf8().data() << " [" << debugLevel << "]: ";
+            std::cout << time.toUtf8().data() << " [" << debugLevel << "]: " << funcinfo
+                      << ( msg ? s_Continuation : "" );
         }
         // The endl is desired, since it also flushes (like the logfile, above)
-        std::cout << msg << std::endl;
+        std::cout << ( msg ? msg : "" ) << std::endl;
     }
 }
 
@@ -112,20 +121,25 @@ static void
 CalamaresLogHandler( QtMsgType type, const QMessageLogContext&, const QString& msg )
 {
     unsigned int level = LOGVERBOSE;
+    const char* funcinfo = nullptr;
     switch ( type )
     {
     case QtInfoMsg:
         level = LOGVERBOSE;
+        funcinfo = "INFO";
         break;
     case QtDebugMsg:
         level = LOGDEBUG;
+        funcinfo = "DEBUG";
         break;
     case QtWarningMsg:
         level = LOGWARNING;
+        funcinfo = "WARNING";
         break;
     case QtCriticalMsg:
     case QtFatalMsg:
         level = LOGERROR;
+        funcinfo = "ERROR";
         break;
     }
 
@@ -134,7 +148,8 @@ CalamaresLogHandler( QtMsgType type, const QMessageLogContext&, const QString& m
         return;
     }
 
-    log_implementation( msg.toUtf8().constData(), level, true );
+    log_implementation(
+        nullptr, level, ( QString( funcinfo ) + QStringLiteral( " (Qt): " ) + msg ).toUtf8().constData() );
 }
 
 QString
@@ -202,12 +217,7 @@ CDebug::~CDebug()
 {
     if ( log_enabled( m_debugLevel ) )
     {
-        if ( m_funcinfo )
-        {
-            m_msg.prepend( s_Continuation );  // Prepending, so back-to-front
-            m_msg.prepend( m_funcinfo );
-        }
-        log_implementation( m_msg.toUtf8().data(), m_debugLevel, bool( m_funcinfo ) );
+        log_implementation( m_msg.toUtf8().data(), m_debugLevel, m_funcinfo );
     }
 }
 
