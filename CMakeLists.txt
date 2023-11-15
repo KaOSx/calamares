@@ -77,9 +77,9 @@ set(CALAMARES_SOVERSION "${PROJECT_VERSION_MAJOR}.${PROJECT_VERSION_MINOR}")
 
 ### OPTIONS
 #
-option(INSTALL_CONFIG "Install configuration files" OFF)
 option(INSTALL_POLKIT "Install Polkit configuration" ON)
 option(INSTALL_COMPLETION "Install shell completions" OFF)
+option(INSTALL_CONFIG "Install configuration files" OFF)
 # When adding WITH_* that affects the ABI offered by libcalamares,
 # also update libcalamares/CalamaresConfig.h.in
 option(WITH_PYBIND11 "Use bundled pybind11 instead o Boost::Python" ON)
@@ -658,10 +658,6 @@ install(
 ### Miscellaneous installs
 #
 #
-if(INSTALL_CONFIG)
-    install(FILES settings.conf DESTINATION share/calamares)
-endif()
-
 if(INSTALL_POLKIT)
     install(FILES com.github.calamares.calamares.policy DESTINATION "${POLKITQT-1_POLICY_FILES_INSTALL_DIR}")
 endif()
@@ -677,6 +673,10 @@ endif()
 install(FILES calamares.desktop DESTINATION ${CMAKE_INSTALL_DATADIR}/applications)
 
 install(FILES man/calamares.8 DESTINATION ${CMAKE_INSTALL_MANDIR}/man8/)
+
+if(INSTALL_CONFIG)
+    install(FILES settings.conf DESTINATION share/calamares)
+endif()
 
 ### Uninstall
 #
