@@ -40,13 +40,13 @@ def run():
     if os.path.exists("{!s}/usr/bin/calamares" .format(install_path)):
         print('Removing installer packages')
         libcalamares.utils.target_env_call(
-            ['pacman', '-Rns', '--noconfirm', 'calamares', 'calamares-debug', 'console-setup'])
+            ['pacman', '-Rns', '--noconfirm', 'calamares6', 'calamares6-debug', 'console-setup'])
 
     # Remove welcome
     if os.path.exists("{!s}/usr/bin/welcome" .format(install_path)):
         print('Removing live ISO packages')
         libcalamares.utils.target_env_call(
-            ['pacman', '-Rns', '--noconfirm', 'welcome'])
+            ['pacman', '-Rns', '--noconfirm', 'welcome6'])
 
     # Remove hardware detection
     if os.path.exists("{!s}/etc/kdeos-hwdetect.conf" .format(install_path)):
@@ -120,8 +120,8 @@ def run():
         print('Minimal Install')
         pkgs = ['plasma-workspace-wallpapers',
                 'partitionmanager',
-                'gwenview',
-                'spectacle',
+                'gwenview6',
+                'spectacle6',
                 'sweeper',
                 'plasma-firewall',
                 'quassel',
