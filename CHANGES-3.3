@@ -11,11 +11,28 @@ the history of the 3.2 series (2018-05 - 2022-08).
 # 3.3.0 (unreleased)
 
 This release contains contributions from (alphabetically by first name):
- - Nobody, yet
+ - Adriaan de Groot
+ - Alberto Salvia Novella
+ - Christophe Marin
+ - Frede Hundewadt
 
 ## Core ##
 
 ## Modules ##
+ - *users* and *usersq* no longer support the password requirement 'nonempty'.
+   Use 'minLength: 1' instead. The example configuration allows the user to
+   choose any password at all, but also contains suggestions for other
+   password-requirements schemes. (thanks Alberto)
+
+
+# 3.3.0-alpha6 (2023-11-16)
+
+This release contains contributions from (alphabetically by first name):
+ - Adriaan de Groot
+ - Anke Boersma
+
+ This is a hotfix release because -alpha5 didn't compile,
+ and Anke repaired the partition unit-tests when building with Qt6.
 
 
 # 3.3.0-alpha5 (2023-11-13)

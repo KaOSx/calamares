@@ -30,20 +30,25 @@ struct AutoMountInfo
  *
  * KDE Solid automount management.
  *
- * Solid can be influenced through DBus calls to kded5. The following code
- * handles Solid: if Solid exists (e.g. we're in a KDE Plasma desktop)
+ * Solid can be influenced through DBus calls to kded (both kded5 and kded6). The
+ * following code handles Solid: if Solid exists (e.g. we're in a KDE Plasma desktop)
  * then try to turn off automount that way.
  */
 
-/** @brief Boilerplate for a call to kded5
+/** @brief Boilerplate for a call to kded
  *
  * Returns a method-call message, ready for arguments and call().
  */
 static inline QDBusMessage
 kdedCall( const QString& method )
 {
+#if QT_VERSION < QT_VERSION_CHECK( 6, 0, 0 )
+    return QDBusMessage::createMethodCall(
+        QStringLiteral( "org.kde.kded5" ), QStringLiteral( "/kded" ), QStringLiteral( "org.kde.kded5" ), method );
+#else
     return QDBusMessage::createMethodCall(
         QStringLiteral( "org.kde.kded6" ), QStringLiteral( "/kded" ), QStringLiteral( "org.kde.kded6" ), method );
+#endif
 }
 
 /** @brief Log a response from call()
