@@ -19,7 +19,7 @@ Item {
     height: parent.height
 
     property var appName: "Calamares"
-    property var appVersion: "3.3.RC"
+    property var appVersion: "3.3"
 
     Text {
         width: parent.width
