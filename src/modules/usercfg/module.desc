@@ -2,5 +2,4 @@
 type:       "job"
 name:       "usercfg"
 interface:  "python"
-requires:   []
 script:     "main.py"

@@ -19,14 +19,14 @@
 
 #include <QtTest/QtTest>
 
-using namespace CalamaresUtils::Units;
+using namespace Calamares::Units;
 
 class PartitionTable;
 class SmartStatus;
 
 QTEST_GUILESS_MAIN( CreateLayoutsTests )
 
-static CalamaresUtils::Partition::KPMManager* kpmcore = nullptr;
+static Calamares::Partition::KPMManager* kpmcore = nullptr;
 static Calamares::JobQueue* jobqueue = nullptr;
 
 #define LOGICAL_SIZE 512
@@ -40,7 +40,7 @@ void
 CreateLayoutsTests::init()
 {
     jobqueue = new Calamares::JobQueue( nullptr );
-    kpmcore = new CalamaresUtils::Partition::KPMManager();
+    kpmcore = new Calamares::Partition::KPMManager();
 }
 
 void
@@ -63,8 +63,8 @@ CreateLayoutsTests::testFixedSizePartition()
         QFAIL( qPrintable( "Unable to create / partition" ) );
     }
 
-    partitions
-        = layout.createPartitions( static_cast< Device* >( &dev ), 0, dev.totalLogical(), nullptr, nullptr, role );
+    partitions = layout.createPartitions(
+        static_cast< Device* >( &dev ), 0, dev.totalLogical(), Config::LuksGeneration::Luks1, nullptr, nullptr, role );
 
     QCOMPARE( partitions.count(), 1 );
 
@@ -84,8 +84,8 @@ CreateLayoutsTests::testPercentSizePartition()
         QFAIL( qPrintable( "Unable to create / partition" ) );
     }
 
-    partitions
-        = layout.createPartitions( static_cast< Device* >( &dev ), 0, dev.totalLogical(), nullptr, nullptr, role );
+    partitions = layout.createPartitions(
+        static_cast< Device* >( &dev ), 0, dev.totalLogical(), Config::LuksGeneration::Luks1, nullptr, nullptr, role );
 
     QCOMPARE( partitions.count(), 1 );
 
@@ -115,8 +115,8 @@ CreateLayoutsTests::testMixedSizePartition()
         QFAIL( qPrintable( "Unable to create /bkup partition" ) );
     }
 
-    partitions
-        = layout.createPartitions( static_cast< Device* >( &dev ), 0, dev.totalLogical(), nullptr, nullptr, role );
+    partitions = layout.createPartitions(
+        static_cast< Device* >( &dev ), 0, dev.totalLogical(), Config::LuksGeneration::Luks1, nullptr, nullptr, role );
 
     QCOMPARE( partitions.count(), 3 );
 

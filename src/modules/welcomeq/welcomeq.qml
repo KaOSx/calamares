@@ -1,7 +1,7 @@
 /* === This file is part of Calamares - <https://calamares.io> ===
  *
  *   SPDX-FileCopyrightText: 2020 Adriaan de Groot <groot@kde.org>
- *   SPDX-FileCopyrightText: 2020 - 2022 Anke Boersma <demm@kaosx.us>
+ *   SPDX-FileCopyrightText: 2020 - 2023 Anke Boersma <demm@kaosx.us>
  *   SPDX-License-Identifier: GPL-3.0-or-later
  *
  *   Calamares is Free Software: see the License-Identifier above.
@@ -10,11 +10,10 @@
 import io.calamares.core 1.0
 import io.calamares.ui 1.0
 
-import QtQuick 2.10
-import QtQuick.Controls 2.10
-import QtQuick.Layouts 1.3
-import QtGraphicalEffects 1.0
-import QtQuick.Window 2.3
+import QtQuick
+import QtQuick.Controls
+import QtQuick.Layouts
+import QtQuick.Window
 
 Page
 {
@@ -301,6 +300,7 @@ Page
                 anchors.fill: parent
                 contentHeight: 4200
                 ScrollBar.horizontal.policy: ScrollBar.AlwaysOff
+                ScrollBar.vertical.policy: ScrollBar.AlwaysOn
 
                 Loader {
                     //id: image

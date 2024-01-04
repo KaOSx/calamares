@@ -51,7 +51,7 @@ public:
 
 private:
     Config* m_config;
-    CalamaresUtils::Locale::TranslatedString* m_labelName;  // As it appears in the sidebar
+    Calamares::Locale::TranslatedString* m_labelName;  // As it appears in the sidebar
 };
 
 CALAMARES_PLUGIN_FACTORY_DECLARATION( PackageChooserQmlViewStepFactory )

@@ -1,6 +1,6 @@
 /* === This file is part of Calamares - <https://calamares.io> ===
  *
- *   SPDX-FileCopyrightText: 2020 - 2022 Anke Boersma <demm@kaosx.us>
+ *   SPDX-FileCopyrightText: 2020 - 2023 Anke Boersma <demm@kaosx.us>
  *   SPDX-License-Identifier: GPL-3.0-or-later
  *
  *   Calamares is Free Software: see the License-Identifier above.
@@ -10,12 +10,12 @@
 import io.calamares.core 1.0
 import io.calamares.ui 1.0
 
-import QtQuick 2.15
-import QtQuick.Controls 2.15
-import QtQuick.Window 2.15
-import QtQuick.Layouts 1.3
+import QtQuick
+import QtQuick.Controls
+import QtQuick.Window
+import QtQuick.Layouts
 
-import org.kde.kirigami 2.7 as Kirigami
+import org.kde.kirigami as Kirigami
 import "data"
 
 Item {
@@ -58,7 +58,7 @@ Item {
         Label {
             id: header
             anchors.horizontalCenter: parent.horizontalCenter
-            text: qsTr("To activate keyboard preview, select a layout.")
+            text: qsTr("To activate keyboard preview, select a layout.", "@label")
             color: textColor
             font.bold: true
         }
@@ -141,7 +141,7 @@ Item {
                 }
                 Text {
                     anchors.centerIn: parent
-                    text: qsTr("<b>Keyboard Model:&nbsp;&nbsp;</b>") + models.currentItem.currentModel.label
+                    text: qsTr("<b>Keyboard Model:&nbsp;&nbsp;</b>", "@label") + models.currentItem.currentModel.label
                     color: textColor
                 }
                 Image {
@@ -182,7 +182,7 @@ Item {
                     z: 2
                     color:backgroundColor
                     Text {
-                        text: qsTr("Layout")
+                        text: qsTr("Layout", "@label")
                         anchors.centerIn: parent
                         color: textColor
                         font.bold: true
@@ -255,7 +255,7 @@ Item {
                     z: 2
                     color:backgroundColor
                     Text {
-                        text: qsTr("Variant")
+                        text: qsTr("Variant", "@label")
                         anchors.centerIn: parent
                         color: textColor
                         font.bold: true
@@ -308,7 +308,7 @@ Item {
 
         TextField {
             id: textInput
-            placeholderText: qsTr("Type here to test your keyboard")
+            placeholderText: qsTr("Type here to test your keyboard", "@label")
             height: 36
             width: parent.width / 1.6
             horizontalAlignment: TextInput.AlignHCenter

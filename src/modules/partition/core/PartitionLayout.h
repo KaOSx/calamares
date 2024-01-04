@@ -11,9 +11,9 @@
 #ifndef PARTITIONLAYOUT_H
 #define PARTITIONLAYOUT_H
 
-#include "partition/PartitionSize.h"
-
+#include "Config.h"
 #include "core/PartUtils.h"
+#include "partition/PartitionSize.h"
 
 // KPMcore
 #include <kpmcore/core/partitiontable.h>
@@ -38,9 +38,9 @@ public:
         QString partMountPoint;
         FileSystem::Type partFileSystem = FileSystem::Unknown;
         QVariantMap partFeatures;
-        CalamaresUtils::Partition::PartitionSize partSize;
-        CalamaresUtils::Partition::PartitionSize partMinSize;
-        CalamaresUtils::Partition::PartitionSize partMaxSize;
+        Calamares::Partition::PartitionSize partSize;
+        Calamares::Partition::PartitionSize partMinSize;
+        Calamares::Partition::PartitionSize partMaxSize;
 
         /// @brief All-zeroes PartitionEntry
         PartitionEntry();
@@ -116,6 +116,7 @@ public:
     QList< Partition* > createPartitions( Device* dev,
                                           qint64 firstSector,
                                           qint64 lastSector,
+                                          Config::LuksGeneration luksFsType,
                                           QString luksPassphrase,
                                           PartitionNode* parent,
                                           const PartitionRole& role );

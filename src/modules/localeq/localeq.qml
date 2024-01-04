@@ -11,10 +11,10 @@
 import io.calamares.core 1.0
 import io.calamares.ui 1.0
 
-import QtQuick 2.10
-import QtQuick.Controls 2.10
-import QtQuick.Layouts 1.3
-import org.kde.kirigami 2.7 as Kirigami
+import QtQuick
+import QtQuick.Controls
+import QtQuick.Layouts
+import org.kde.kirigami as Kirigami
 
 Page {
     id: root
@@ -102,7 +102,7 @@ Page {
                 Button {
                     Layout.alignment: Qt.AlignRight|Qt.AlignVCenter
                     Layout.columnSpan: 2
-                    text: qsTr("Change")
+                    text: qsTr("Change", "@button")
                     onClicked: {
                         drawerLanguage.open()
                     }
@@ -132,7 +132,7 @@ Page {
                 Button {
                     Layout.alignment: Qt.AlignRight|Qt.AlignVCenter
                     Layout.columnSpan: 2
-                    text: qsTr("Change")
+                    text: qsTr("Change", "@button")
                     onClicked: {
                         drawerLocale.open()
                     }
@@ -169,7 +169,7 @@ Page {
                             anchors.fill: parent
                             wrapMode: Text.WordWrap
                             text: qsTr("<h3>Languages</h3> </br>
-                            The system locale setting affects the language and character set for some command line user interface elements. The current setting is <strong>%1</strong>.").arg(config.currentLanguageCode)
+                            The system locale setting affects the language and character set for some command line user interface elements. The current setting is <strong>%1</strong>.", "@info").arg(config.currentLanguageCode)
                             font.pointSize: 10
                         }
                     }
@@ -240,7 +240,7 @@ Page {
                             anchors.fill: parent
                             wrapMode: Text.WordWrap
                             text: qsTr("<h3>Locales</h3> </br>
-                                The system locale setting affects the numbers and dates format. The current setting is <strong>%1</strong>.").arg(config.currentLCCode)
+                                The system locale setting affects the numbers and dates format. The current setting is <strong>%1</strong>.", "@info").arg(config.currentLCCode)
                             font.pointSize: 10
                         }
                     }

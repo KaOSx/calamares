@@ -1,6 +1,6 @@
 /* === This file is part of Calamares - <https://calamares.io> ===
  *
- *   SPDX-FileCopyrightText: 2020 - 2022 Anke Boersma <demm@kaosx.us>
+ *   SPDX-FileCopyrightText: 2020 - 2023 Anke Boersma <demm@kaosx.us>
  *   SPDX-FileCopyrightText: 2020 Adriaan de Groot <groot@kde.org>
  *   SPDX-License-Identifier: GPL-3.0-or-later
  *
@@ -11,16 +11,16 @@
 import io.calamares.core 1.0
 import io.calamares.ui 1.0
 
-import QtQuick 2.7
-import QtQuick.Controls 2.2
-import QtQuick.Layouts 1.3
-import org.kde.kirigami 2.7 as Kirigami
+import QtQuick
+import QtQuick.Controls
+import QtQuick.Layouts
+import org.kde.kirigami as Kirigami
 
 Rectangle {
     focus: true
     Kirigami.Theme.backgroundColor: Kirigami.Theme.backgroundColor
     anchors.fill: parent
-    anchors.topMargin: 60
+    anchors.topMargin: 50
 
     TextArea {
         id: required

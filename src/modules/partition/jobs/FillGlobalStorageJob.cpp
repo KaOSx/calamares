@@ -11,6 +11,7 @@
 
 #include "FillGlobalStorageJob.h"
 
+#include "compat/Variant.h"
 #include "core/KPMHelpers.h"
 #include "core/PartitionInfo.h"
 
@@ -26,15 +27,16 @@
 #include <kpmcore/core/partition.h>
 #include <kpmcore/fs/filesystem.h>
 #include <kpmcore/fs/luks.h>
+#include <kpmcore/fs/luks2.h>
 
 #include <QDebug>
 #include <QDir>
 #include <QFileInfo>
 #include <QProcess>
 
-using CalamaresUtils::Partition::PartitionIterator;
-using CalamaresUtils::Partition::untranslatedFS;
-using CalamaresUtils::Partition::userVisibleFS;
+using Calamares::Partition::PartitionIterator;
+using Calamares::Partition::untranslatedFS;
+using Calamares::Partition::userVisibleFS;
 
 typedef QHash< QString, QString > UuidForPartitionHash;
 
@@ -91,11 +93,18 @@ mapForPartition( Partition* partition, const QString& uuid )
     map[ "parttype" ] = partition->type();
     map[ "partattrs" ] = partition->attributes();
     map[ "features" ] = partition->fileSystem().features();
+
     if ( partition->fileSystem().type() == FileSystem::Luks
          && dynamic_cast< FS::luks& >( partition->fileSystem() ).innerFS() )
     {
         map[ "fs" ] = untranslatedFS( dynamic_cast< FS::luks& >( partition->fileSystem() ).innerFS() );
     }
+    if ( partition->fileSystem().type() == FileSystem::Luks2
+         && dynamic_cast< FS::luks2& >( partition->fileSystem() ).innerFS() )
+    {
+        map[ "fs" ] = untranslatedFS( dynamic_cast< FS::luks2& >( partition->fileSystem() ).innerFS() );
+    }
+
     map[ "uuid" ] = uuid;
     map[ "claimed" ] = PartitionInfo::format( partition );  // If we formatted it, it's ours
 
@@ -138,7 +147,7 @@ prettyFileSystemFeatures( const QVariantMap& features )
     for ( const auto& key : features.keys() )
     {
         const auto& value = features.value( key );
-        if ( value.type() == QVariant::Bool )
+        if ( Calamares::typeOf( value ) == Calamares::BoolVariantType )
         {
             if ( value.toBool() )
             {
@@ -179,7 +188,7 @@ FillGlobalStorageJob::prettyDescription() const
     const auto partitionList = createPartitionList();
     for ( const QVariant& partitionItem : partitionList )
     {
-        if ( partitionItem.type() == QVariant::Map )
+        if ( Calamares::typeOf( partitionItem ) == Calamares::MapVariantType )
         {
             QVariantMap partitionMap = partitionItem.toMap();
             QString path = partitionMap.value( "device" ).toString();
@@ -297,14 +306,14 @@ FillGlobalStorageJob::prettyStatusMessage() const
  * .. mark as "2" if it's one of the claimed / in-use FSses
  *
  * Stores a GS key called "filesystem_use" with this mapping.
- * @see CalamaresUtils::Partition::useFilesystemGS()
+ * @see Calamares::Partition::useFilesystemGS()
  */
 static void
 storeFSUse( Calamares::GlobalStorage* storage, const QVariantList& partitions )
 {
     if ( storage )
     {
-        CalamaresUtils::Partition::clearFilesystemGS( storage );
+        Calamares::Partition::clearFilesystemGS( storage );
         for ( const auto& p : partitions )
         {
             const auto pmap = p.toMap();
@@ -316,7 +325,7 @@ storeFSUse( Calamares::GlobalStorage* storage, const QVariantList& partitions )
                 continue;
             }
 
-            CalamaresUtils::Partition::useFilesystemGS( storage, fs, true );
+            Calamares::Partition::useFilesystemGS( storage, fs, true );
         }
     }
 }

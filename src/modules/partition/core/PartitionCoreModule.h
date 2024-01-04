@@ -12,6 +12,7 @@
 #ifndef PARTITIONCOREMODULE_H
 #define PARTITIONCOREMODULE_H
 
+#include "Config.h"
 #include "core/KPMHelpers.h"
 #include "core/PartitionLayout.h"
 #include "core/PartitionModel.h"
@@ -51,9 +52,6 @@ class QStandardItemModel;
 class PartitionCoreModule : public QObject
 {
     Q_OBJECT
-    Q_PROPERTY( QAbstractListModel* deviceModel READ deviceModel CONSTANT FINAL )
-    Q_PROPERTY( QStandardItemModel* bootLoaderModel READ bootLoaderModel CONSTANT FINAL )
-
 public:
     /**
      * This helper class calls refresh() on the module
@@ -169,10 +167,15 @@ public:
      */
     PartitionLayout& partitionLayout() { return m_partLayout; }
 
-    void layoutApply( Device* dev, qint64 firstSector, qint64 lastSector, QString luksPassphrase );
     void layoutApply( Device* dev,
                       qint64 firstSector,
                       qint64 lastSector,
+                      Config::LuksGeneration luksFsType,
+                      QString luksPassphrase );
+    void layoutApply( Device* dev,
+                      qint64 firstSector,
+                      qint64 lastSector,
+                      Config::LuksGeneration luksFsType,
                       QString luksPassphrase,
                       PartitionNode* parent,
                       const PartitionRole& role );
@@ -242,7 +245,6 @@ Q_SIGNALS:
     void isDirtyChanged( bool value );
     void reverted();
     void deviceReverted( Device* device );
-    void initCompleted();
 
 private:
     void refreshAfterModelChange();
@@ -255,7 +257,7 @@ private:
 
     DeviceInfo* infoForDevice( const Device* ) const;
 
-    CalamaresUtils::Partition::KPMManager m_kpmcore;
+    Calamares::Partition::KPMManager m_kpmcore;
 
     QList< DeviceInfo* > m_deviceInfos;
     QList< Partition* > m_efiSystemPartitions;

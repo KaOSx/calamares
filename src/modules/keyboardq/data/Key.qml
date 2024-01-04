@@ -1,13 +1,13 @@
 /* === This file is part of Calamares - <https://calamares.io> ===
  *
- *   SPDX-FileCopyrightText: 2021 Anke Boersma <demm@kaosx.us>
+ *   SPDX-FileCopyrightText: 2021 - 2023 Anke Boersma <demm@kaosx.us>
  *   SPDX-License-Identifier: GPL-3.0-or-later
  *
  *   Calamares is Free Software: see the License-Identifier above.
  *
  */
 
-import QtQuick 2.15
+import QtQuick
 
 Item {
     id: key
@@ -140,7 +140,7 @@ Item {
             model: secondaryLabels.length
 
             Rectangle {
-                property bool isSelected: alternatesRow.selectedIndex == index
+                property bool isSelected: alternatesRow.selectedIndex === index
                 color: isSelected ? mainLabelItem.color : key.keyPressedColor
                 height: backgroundItem.height
                 width: backgroundItem.width

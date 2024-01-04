@@ -16,8 +16,8 @@
 #include "GlobalStorage.h"
 #include "JobQueue.h"
 #include "locale/TranslatableConfiguration.h"
-#include "utils/CalamaresUtilsSystem.h"
 #include "utils/Logger.h"
+#include "utils/System.h"
 #include "utils/Variant.h"
 
 #include <QDesktopServices>
@@ -140,12 +140,12 @@ PackageChooserViewStep::setConfigurationMap( const QVariantMap& configurationMap
     m_config->setConfigurationMap( configurationMap );
 
     bool labels_ok = false;
-    auto labels = CalamaresUtils::getSubMap( configurationMap, "labels", labels_ok );
+    auto labels = Calamares::getSubMap( configurationMap, "labels", labels_ok );
     if ( labels_ok )
     {
         if ( labels.contains( "step" ) )
         {
-            m_stepName = new CalamaresUtils::Locale::TranslatedString( labels, "step" );
+            m_stepName = new Calamares::Locale::TranslatedString( labels, "step" );
         }
     }
 

@@ -6,7 +6,7 @@
  *
  *   Calamares is Free Software: see the License-Identifier above. -->
 <Keyboard>
-    <Row>
+    <Row0>
         <Key labels = " |" ratio = ".6"/>
         <Key labels = "a|" ratio = ".7"/>
         <Key labels = "z|" ratio = ".7"/>
@@ -21,8 +21,8 @@
         <Key labels = "|" ratio = ".7"/>
         <Key labels = "|" ratio = ".7"/>
         <Key labels = " |" ratio = "1.0"/>
-    </Row>
-    <Row>
+    </Row0>
+    <Row1>
         <Key labels = " |" ratio = ".9"/>
         <Key labels = "q|" ratio = ".7"/>
         <Key labels = "s|" ratio = ".7"/>
@@ -37,8 +37,8 @@
         <Key labels = "|" ratio = ".7"/>
         <Key labels = "|" ratio = ".7"/>
         <Key labels = "↵!enter" icon = "enter.svg" ratio = ".7"/>
-    </Row>
-    <Row>
+    </Row1>
+    <Row2>
         <Key labels = "&#8593;!shift" ratio = ".7" icon = "shift.svg" checkable = "true"/>
         <Key labels = "&lt;|" ratio = ".7"/>
         <Key labels = "w|" ratio = ".7"/>
@@ -53,8 +53,8 @@
         <Key labels = "!|" ratio = ".7"/>
         <Key labels = "&#8593;!shift" ratio = ".9" icon = "shift.svg" checkable = "true"/>
         <Key labels = "⌫!backspace" icon = "backspace.svg" ratio = ".7"/>
-    </Row>
-    <Row>
+    </Row2>
+    <Row3>
         <Key labels = "Ctrl" ratio = "1"/>
         <Key labels = " |" ratio = "1"/>
         <Key labels = "Alt|" ratio = "1"/>
@@ -62,5 +62,5 @@
         <Key labels = "Alt|" ratio = "1"/>
         <Key labels = " |" ratio = "1"/>
         <Key labels = "Ctrl" ratio = "1"/>
-    </Row>
+    </Row3>
 </Keyboard>

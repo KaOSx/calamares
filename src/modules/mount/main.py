@@ -294,18 +294,31 @@ def mount_partition(root_mount_point, partition, partitions, mount_options, moun
         # Mount the subvolumes
         swap_subvol = libcalamares.job.configuration.get("btrfsSwapSubvol", "/@swap")
         for s in btrfs_subvolumes:
-            mount_option = "subvol={}".format(s['subvolume'])
             if s['subvolume'] == swap_subvol:
-                mount_option += "," + get_mount_options("btrfs_swap", mount_options, partition)
+                mount_option_no_subvol = get_mount_options("btrfs_swap", mount_options, partition)
             else:
-                mount_option += "," + get_mount_options(fstype, mount_options, partition)
+                mount_option_no_subvol = get_mount_options(fstype, mount_options, partition)
+
+            # Only add subvol= argument if we are not mounting the entire filesystem
+            if s['subvolume']:
+                mount_option = f"subvol={s['subvolume']},{mount_option_no_subvol}"
+            else:
+                mount_option = mount_option_no_subvol
             subvolume_mountpoint = mount_point[:-1] + s['mountPoint']
-            mount_options_list.append({"mountpoint": s['mountPoint'], "option_string": mount_option})
+            mount_options_list.append({"mountpoint": s['mountPoint'], "option_string": mount_option_no_subvol})
             if libcalamares.utils.mount(device,
                                         subvolume_mountpoint,
                                         fstype,
                                         mount_option) != 0:
                 libcalamares.utils.warning("Cannot mount {}".format(device))
+
+
+def enable_swap_partition(devices):
+    try:
+        for d in devices:
+            libcalamares.utils.host_env_process_output(["swapon", d])
+    except subprocess.CalledProcessError:
+        libcalamares.utils.warning(f"Failed to enable swap for devices: {devices}")
 
 
 def run():
@@ -320,6 +333,11 @@ def run():
         libcalamares.utils.warning("partitions is empty, {!s}".format(partitions))
         return (_("Configuration Error"),
                 _("No partitions are defined for <pre>{!s}</pre> to use.").format("mount"))
+
+    # Find existing swap partitions that are part of the installation and enable them now
+    swap_devices = [p["device"] for p in partitions if (p["fs"] == "linuxswap" and p.get("claimed", False))]
+
+    enable_swap_partition(swap_devices)
 
     root_mount_point = tempfile.mkdtemp(prefix="calamares-root-")
 

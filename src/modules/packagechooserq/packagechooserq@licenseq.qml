@@ -1,6 +1,6 @@
 /* === This file is part of Calamares - <https://github.com/calamares> ===
  *
- *   Copyright 2021, Anke Boersma <demm@kaosx.us>
+ *   Copyright 2021 - 2023, Anke Boersma <demm@kaosx.us>
  *
  *   Calamares is Free Software: see the License-Identifier above.
  *
@@ -8,16 +8,17 @@
 import io.calamares.core 1.0
 import io.calamares.ui 1.0
 
-import QtQuick 2.7
-import QtQuick.Controls 2.2
-import QtQuick.Window 2.2
-import QtQuick.Layouts 1.3
-import QtQuick.Controls.Material 2.1
-import org.kde.kirigami 2.7 as Kirigami
+import QtQuick
+import QtQuick.Controls
+import QtQuick.Window
+import QtQuick.Layouts
+import QtQuick.Controls.Material
+import org.kde.kirigami as Kirigami
 
 Kirigami.ScrollablePage {
     width: 850
     height: 580
+    Material.primary : Material.DeepPurple
 
     header: ToolBar {
         RowLayout {
