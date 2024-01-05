@@ -120,8 +120,8 @@ def run():
         print('Minimal Install')
         pkgs = ['plasma-workspace-wallpapers',
                 'partitionmanager',
-                'gwenview6',
-                'spectacle6',
+                'gwenview',
+                'spectacle',
                 'sweeper',
                 'plasma-firewall',
                 'quassel',
