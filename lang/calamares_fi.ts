@@ -39,12 +39,12 @@
     <message>
         <location filename="../src/libcalamares/CalamaresAbout.cpp" line="20"/>
         <source>Thanks to &lt;a href=&quot;https://calamares.io/team/&quot;&gt;the Calamares team&lt;/a&gt; and the &lt;a href=&quot;https://app.transifex.com/calamares/calamares/&quot;&gt;Calamares translators team&lt;/a&gt;.</source>
-        <translation type="unfinished"/>
+        <translation>Kiitos &lt;a href=&quot;https://calamares.io/team/&quot;&gt;Calamares-tiimille&lt;/a&gt; ja &lt;a href=&quot;https://app.transifex.com/calamares/calamares/&quot;&gt;Calamaresin kääntäjien tiimille&lt;/a&gt;.</translation>
     </message>
     <message>
         <location filename="../src/libcalamares/CalamaresAbout.cpp" line="25"/>
         <source>&lt;a href=&quot;https://calamares.io/&quot;&gt;Calamares&lt;/a&gt; development is sponsored by &lt;br/&gt;&lt;a href=&quot;http://www.blue-systems.com/&quot;&gt;Blue Systems&lt;/a&gt; - Liberating Software.</source>
-        <translation type="unfinished"/>
+        <translation>&lt;a href=&quot;https://calamares.io/&quot;&gt;Calamares&lt;/a&gt; kehitystä sponsoroi &lt;br/&gt;&lt;a href=&quot;http://www.blue-systems.com/&quot;&gt;Blue Systems&lt;/a&gt; - Liberating Software.</translation>
     </message>
     <message>
         <location filename="../src/libcalamares/CalamaresAbout.cpp" line="40"/>
@@ -199,7 +199,7 @@
     <message>
         <location filename="../src/calamares/DebugWindow.ui" line="102"/>
         <source>Crashes Calamares, so that Dr. Konqi can look at it.</source>
-        <translation type="unfinished"/>
+        <translation>Kaada Calamares, jotta tohtori Konqui voi katsoa sitä.</translation>
     </message>
     <message>
         <location filename="../src/calamares/DebugWindow.ui" line="128"/>
@@ -215,7 +215,7 @@
         <location filename="../src/calamares/DebugWindow.cpp" line="164"/>
         <source>Debug Information</source>
         <comment>@title</comment>
-        <translation type="unfinished"/>
+        <translation>Vianetsinnän tiedot</translation>
     </message>
 </context>
 <context>
@@ -224,19 +224,19 @@
         <location filename="../src/libcalamaresui/viewpages/ExecutionViewStep.cpp" line="76"/>
         <source>%p%</source>
         <comment>Progress percentage indicator: %p is where the number 0..100 is placed</comment>
-        <translation type="unfinished"/>
+        <translation>%p%</translation>
     </message>
     <message>
         <location filename="../src/libcalamaresui/viewpages/ExecutionViewStep.cpp" line="116"/>
         <source>Set Up</source>
         <comment>@label</comment>
-        <translation type="unfinished"/>
+        <translation>Määritä</translation>
     </message>
     <message>
         <location filename="../src/libcalamaresui/viewpages/ExecutionViewStep.cpp" line="116"/>
         <source>Install</source>
         <comment>@label</comment>
-        <translation type="unfinished"/>
+        <translation>Asenna</translation>
     </message>
 </context>
 <context>
@@ -274,13 +274,13 @@
         <location filename="../src/libcalamares/ProcessJob.cpp" line="49"/>
         <source>Running command %1 in target system…</source>
         <comment>@status</comment>
-        <translation type="unfinished"/>
+        <translation>Suoritetaan komentoa %1 kohdejärjestelmässä…</translation>
     </message>
     <message>
         <location filename="../src/libcalamares/ProcessJob.cpp" line="53"/>
         <source>Running command %1…</source>
         <comment>@status</comment>
-        <translation type="unfinished"/>
+        <translation>Suoritetaan komentoa %1…</translation>
     </message>
 </context>
 <context>
@@ -288,17 +288,17 @@
     <message>
         <location filename="../src/libcalamares/python/PythonJob.cpp" line="214"/>
         <source>Running %1 operation.</source>
-        <translation type="unfinished"/>
+        <translation>Suoritetaan toimintoa %1.</translation>
     </message>
     <message>
         <location filename="../src/libcalamares/python/PythonJob.cpp" line="229"/>
         <source>Bad working directory path</source>
-        <translation type="unfinished"/>
+        <translation>Virheellinen työkansion polku</translation>
     </message>
     <message>
         <location filename="../src/libcalamares/python/PythonJob.cpp" line="230"/>
         <source>Working directory %1 for python job %2 is not readable.</source>
-        <translation type="unfinished"/>
+        <translation>Työkansio %1 python-työlle %2 ei ole luettavissa.</translation>
     </message>
     <message>
         <location filename="../src/libcalamares/python/PythonJob.cpp" line="238"/>
@@ -308,43 +308,43 @@
         <location filename="../src/libcalamares/python/PythonJob.cpp" line="365"/>
         <location filename="../src/libcalamares/python/PythonJob.cpp" line="373"/>
         <source>Bad main script file</source>
-        <translation type="unfinished"/>
+        <translation>Virheellinen komentosarjan tiedosto</translation>
     </message>
     <message>
         <location filename="../src/libcalamares/python/PythonJob.cpp" line="239"/>
         <source>Main script file %1 for python job %2 is not readable.</source>
-        <translation type="unfinished"/>
+        <translation>Komentosarjan tiedosto %1 python-työlle %2 ei ole luettavissa.</translation>
     </message>
     <message>
         <location filename="../src/libcalamares/python/PythonJob.cpp" line="300"/>
         <source>Bad internal script</source>
-        <translation type="unfinished"/>
+        <translation>Virheellinen skripti</translation>
     </message>
     <message>
         <location filename="../src/libcalamares/python/PythonJob.cpp" line="301"/>
         <source>Internal script for python job %1 raised an exception.</source>
-        <translation type="unfinished"/>
+        <translation>Python-työn %1 sisäinen skripti aiheutti poikkeuksen.</translation>
     </message>
     <message>
         <location filename="../src/libcalamares/python/PythonJob.cpp" line="315"/>
         <source>Main script file %1 for python job %2 could not be loaded because it raised an  exception.</source>
-        <translation type="unfinished"/>
+        <translation>Python-työn %2 skriptitiedostoa %1 ei voitu ladata, koska se aiheutti poikkeuksen.</translation>
     </message>
     <message>
         <location filename="../src/libcalamares/python/PythonJob.cpp" line="341"/>
         <source>Main script file %1 for python job %2 raised an exception.</source>
-        <translation type="unfinished"/>
+        <translation>Skriptitiedosto %1 python-työlle %2 aiheutti poikkeuksen.</translation>
     </message>
     <message>
         <location filename="../src/libcalamares/python/PythonJob.cpp" line="358"/>
         <location filename="../src/libcalamares/python/PythonJob.cpp" line="366"/>
         <source>Main script file %1 for python job %2 returned invalid results.</source>
-        <translation type="unfinished"/>
+        <translation>Skriptitiedosto %1 python-työlle %2 palautti virheellisiä tuloksia.</translation>
     </message>
     <message>
         <location filename="../src/libcalamares/python/PythonJob.cpp" line="374"/>
         <source>Main script file %1 for python job %2 does not contain a run() function.</source>
-        <translation type="unfinished"/>
+        <translation>Python-työn %2 skriptitiedosto %1 ei sisällä run() funktiota.</translation>
     </message>
 </context>
 <context>
@@ -353,37 +353,37 @@
         <location filename="../src/libcalamares/PythonJob.cpp" line="233"/>
         <source>Running %1 operation…</source>
         <comment>@status</comment>
-        <translation type="unfinished"/>
+        <translation>Suoritetaan toimintoa %1…</translation>
     </message>
     <message>
         <location filename="../src/libcalamares/PythonJob.cpp" line="261"/>
         <source>Bad working directory path</source>
         <comment>@error</comment>
-        <translation type="unfinished"/>
+        <translation>Virheellinen työkansion polku</translation>
     </message>
     <message>
         <location filename="../src/libcalamares/PythonJob.cpp" line="262"/>
         <source>Working directory %1 for python job %2 is not readable.</source>
         <comment>@error</comment>
-        <translation type="unfinished"/>
+        <translation>Työkansio %1 python-työlle %2 ei ole luettavissa.</translation>
     </message>
     <message>
         <location filename="../src/libcalamares/PythonJob.cpp" line="270"/>
         <source>Bad main script file</source>
         <comment>@error</comment>
-        <translation type="unfinished"/>
+        <translation>Virheellinen skriptitiedosto</translation>
     </message>
     <message>
         <location filename="../src/libcalamares/PythonJob.cpp" line="271"/>
         <source>Main script file %1 for python job %2 is not readable.</source>
         <comment>@error</comment>
-        <translation type="unfinished"/>
+        <translation>Skriptitiedosto %1 python-työlle %2 ei ole luettavissa.</translation>
     </message>
     <message>
         <location filename="../src/libcalamares/PythonJob.cpp" line="343"/>
         <source>Boost.Python error in job &quot;%1&quot;</source>
         <comment>@error</comment>
-        <translation type="unfinished"/>
+        <translation>Boost.Python virhe työlle &quot;%1&quot;</translation>
     </message>
 </context>
 <context>
@@ -392,19 +392,19 @@
         <location filename="../src/libcalamaresui/viewpages/QmlViewStep.cpp" line="73"/>
         <source>Loading…</source>
         <comment>@status</comment>
-        <translation type="unfinished"/>
+        <translation>Ladataan…</translation>
     </message>
     <message>
         <location filename="../src/libcalamaresui/viewpages/QmlViewStep.cpp" line="100"/>
         <source>QML step &lt;i&gt;%1&lt;/i&gt;.</source>
         <comment>@label</comment>
-        <translation type="unfinished"/>
+        <translation>QML vaihe &lt;i&gt;%1&lt;/i&gt;.</translation>
     </message>
     <message>
         <location filename="../src/libcalamaresui/viewpages/QmlViewStep.cpp" line="286"/>
         <source>Loading failed.</source>
         <comment>@info</comment>
-        <translation type="unfinished"/>
+        <translation>Lataus epäonnistui.</translation>
     </message>
 </context>
 <context>
@@ -413,25 +413,25 @@
         <location filename="../src/libcalamares/modulesystem/RequirementsChecker.cpp" line="99"/>
         <source>Requirements checking for module &apos;%1&apos; is complete.</source>
         <comment>@info</comment>
-        <translation type="unfinished"/>
+        <translation>Moduulin &quot;%1&quot; vaatimusten tarkistus on valmis.</translation>
     </message>
     <message numerus="yes">
         <location filename="../src/libcalamares/modulesystem/RequirementsChecker.cpp" line="123"/>
         <source>Waiting for %n module(s)…</source>
         <comment>@status</comment>
-        <translation type="unfinished"><numerusform></numerusform><numerusform></numerusform></translation>
+        <translation><numerusform>Odotetaan %n moduulia…</numerusform><numerusform>Odotetaan %n moduulia (moduuleita)...</numerusform></translation>
     </message>
     <message numerus="yes">
         <location filename="../src/libcalamares/modulesystem/RequirementsChecker.cpp" line="124"/>
         <source>(%n second(s))</source>
         <comment>@status</comment>
-        <translation type="unfinished"><numerusform></numerusform><numerusform></numerusform></translation>
+        <translation><numerusform>(%n sekuntia)</numerusform><numerusform>(%n sekuntia)</numerusform></translation>
     </message>
     <message>
         <location filename="../src/libcalamares/modulesystem/RequirementsChecker.cpp" line="129"/>
         <source>System-requirements checking is complete.</source>
         <comment>@info</comment>
-        <translation type="unfinished"/>
+        <translation>Vaatimusten tarkistus on valmis.</translation>
     </message>
 </context>
 <context>
@@ -492,151 +492,151 @@ Asennusohjelma sulkeutuu ja kaikki muutoksesi katoavat.</translation>
         <location filename="../src/libcalamaresui/ViewManager.cpp" line="156"/>
         <source>Setup Failed</source>
         <comment>@title</comment>
-        <translation type="unfinished"/>
+        <translation>Asennus epäonnistui</translation>
     </message>
     <message>
         <location filename="../src/libcalamaresui/ViewManager.cpp" line="156"/>
         <source>Installation Failed</source>
         <comment>@title</comment>
-        <translation type="unfinished"/>
+        <translation>Asentaminen epäonnistui</translation>
     </message>
     <message>
         <location filename="../src/libcalamaresui/ViewManager.cpp" line="159"/>
         <source>Error</source>
         <comment>@title</comment>
-        <translation type="unfinished"/>
+        <translation>Virhe</translation>
     </message>
     <message>
         <location filename="../src/libcalamaresui/ViewManager.cpp" line="184"/>
         <source>Calamares Initialization Failed</source>
         <comment>@title</comment>
-        <translation type="unfinished"/>
+        <translation>Calamaresin valmistelu epäonnistui</translation>
     </message>
     <message>
         <location filename="../src/libcalamaresui/ViewManager.cpp" line="185"/>
         <source>%1 can not be installed. Calamares was unable to load all of the configured modules. This is a problem with the way Calamares is being used by the distribution.</source>
         <comment>@info</comment>
-        <translation type="unfinished"/>
+        <translation>%1 ei voi asentaa. Calamares ei voinut ladata kaikkia määritettyjä moduuleja. Ongelma on siinä, miten jakelu käyttää Calamaresia.</translation>
     </message>
     <message>
         <location filename="../src/libcalamaresui/ViewManager.cpp" line="191"/>
         <source>&lt;br/&gt;The following modules could not be loaded:</source>
         <comment>@info</comment>
-        <translation type="unfinished"/>
+        <translation>&lt;br/&gt;Seuraavia moduuleja ei voitu ladata:</translation>
     </message>
     <message>
         <location filename="../src/libcalamaresui/ViewManager.cpp" line="333"/>
         <source>Continue with Setup?</source>
         <comment>@title</comment>
-        <translation type="unfinished"/>
+        <translation>Jatketaanko määritystä?</translation>
     </message>
     <message>
         <location filename="../src/libcalamaresui/ViewManager.cpp" line="333"/>
         <source>Continue with Installation?</source>
         <comment>@title</comment>
-        <translation type="unfinished"/>
+        <translation>Jatketaanko asennusta?</translation>
     </message>
     <message>
         <location filename="../src/libcalamaresui/ViewManager.cpp" line="335"/>
         <source>The %1 setup program is about to make changes to your disk in order to set up %2.&lt;br/&gt;&lt;strong&gt;You will not be able to undo these changes.&lt;/strong&gt;</source>
         <comment>%1 is short product name, %2 is short product name with version</comment>
-        <translation type="unfinished"/>
+        <translation>%1-asennusohjelma on aikeissa tehdä muutoksia levylle, jotta voit määrittää kohteen %2.&lt;br/&gt;&lt;strong&gt;Et voi kumota näitä muutoksia.&lt;/strong&gt;</translation>
     </message>
     <message>
         <location filename="../src/libcalamaresui/ViewManager.cpp" line="338"/>
         <source>The %1 installer is about to make changes to your disk in order to install %2.&lt;br/&gt;&lt;strong&gt;You will not be able to undo these changes.&lt;/strong&gt;</source>
         <comment>%1 is short product name, %2 is short product name with version</comment>
-        <translation type="unfinished"/>
+        <translation>Asennusohjelman %1 on tehtävä muutoksia asemalle, jotta %2 voidaan asentaa.&lt;br/&gt;&lt;strong&gt;Et voi kumota näitä muutoksia.&lt;/strong&gt;</translation>
     </message>
     <message>
         <location filename="../src/libcalamaresui/ViewManager.cpp" line="341"/>
         <source>&amp;Set Up Now</source>
         <comment>@button</comment>
-        <translation type="unfinished"/>
+        <translation>&amp;Määritä nyt</translation>
     </message>
     <message>
         <location filename="../src/libcalamaresui/ViewManager.cpp" line="341"/>
         <source>&amp;Install Now</source>
         <comment>@button</comment>
-        <translation type="unfinished"/>
+        <translation>&amp;Asenna nyt</translation>
     </message>
     <message>
         <location filename="../src/libcalamaresui/ViewManager.cpp" line="348"/>
         <source>Go &amp;Back</source>
         <comment>@button</comment>
-        <translation type="unfinished"/>
+        <translation>&amp;Paluu</translation>
     </message>
     <message>
         <location filename="../src/libcalamaresui/ViewManager.cpp" line="395"/>
         <source>&amp;Set Up</source>
         <comment>@button</comment>
-        <translation type="unfinished"/>
+        <translation>&amp;Määritä</translation>
     </message>
     <message>
         <location filename="../src/libcalamaresui/ViewManager.cpp" line="395"/>
         <source>&amp;Install</source>
         <comment>@button</comment>
-        <translation type="unfinished"/>
+        <translation>&amp;Asenna</translation>
     </message>
     <message>
         <location filename="../src/libcalamaresui/ViewManager.cpp" line="397"/>
         <source>Setup is complete. Close the setup program.</source>
         <comment>@tooltip</comment>
-        <translation type="unfinished"/>
+        <translation>Määritys on valmis. Sulje ohjelma.</translation>
     </message>
     <message>
         <location filename="../src/libcalamaresui/ViewManager.cpp" line="398"/>
         <source>The installation is complete. Close the installer.</source>
         <comment>@tooltip</comment>
-        <translation type="unfinished"/>
+        <translation>Asennus on valmis. Sulje asennusohjelma.</translation>
     </message>
     <message>
         <location filename="../src/libcalamaresui/ViewManager.cpp" line="400"/>
         <source>Cancel the setup process without changing the system.</source>
         <comment>@tooltip</comment>
-        <translation type="unfinished"/>
+        <translation>Peruuta määritysprosessi muuttamatta järjestelmää.</translation>
     </message>
     <message>
         <location filename="../src/libcalamaresui/ViewManager.cpp" line="401"/>
         <source>Cancel the installation process without changing the system.</source>
         <comment>@tooltip</comment>
-        <translation type="unfinished"/>
+        <translation>Peruuta asennusprosessi muuttamatta järjestelmää.</translation>
     </message>
     <message>
         <location filename="../src/libcalamaresui/ViewManager.cpp" line="411"/>
         <source>&amp;Next</source>
         <comment>@button</comment>
-        <translation type="unfinished"/>
+        <translation>&amp;Seuraava</translation>
     </message>
     <message>
         <location filename="../src/libcalamaresui/ViewManager.cpp" line="416"/>
         <source>&amp;Back</source>
         <comment>@button</comment>
-        <translation type="unfinished"/>
+        <translation>&amp;Takaisin</translation>
     </message>
     <message>
         <location filename="../src/libcalamaresui/ViewManager.cpp" line="422"/>
         <source>&amp;Done</source>
         <comment>@button</comment>
-        <translation type="unfinished"/>
+        <translation>&amp;Valmis</translation>
     </message>
     <message>
         <location filename="../src/libcalamaresui/ViewManager.cpp" line="441"/>
         <source>&amp;Cancel</source>
         <comment>@button</comment>
-        <translation type="unfinished"/>
+        <translation>&amp;Peruuta</translation>
     </message>
     <message>
         <location filename="../src/libcalamaresui/ViewManager.cpp" line="513"/>
         <source>Cancel Setup?</source>
         <comment>@title</comment>
-        <translation type="unfinished"/>
+        <translation>Peruuta määritys?</translation>
     </message>
     <message>
         <location filename="../src/libcalamaresui/ViewManager.cpp" line="513"/>
         <source>Cancel Installation?</source>
         <comment>@title</comment>
-        <translation type="unfinished"/>
+        <translation>Peruuta asennus?</translation>
     </message>
 </context>
 <context>
@@ -645,25 +645,25 @@ Asennusohjelma sulkeutuu ja kaikki muutoksesi katoavat.</translation>
         <location filename="../src/libcalamares/PythonHelper.cpp" line="307"/>
         <source>Unknown exception type</source>
         <comment>@error</comment>
-        <translation type="unfinished"/>
+        <translation>Tuntematon poikkeustyyppi</translation>
     </message>
     <message>
         <location filename="../src/libcalamares/PythonHelper.cpp" line="325"/>
         <source>Unparseable Python error</source>
         <comment>@error</comment>
-        <translation type="unfinished"/>
+        <translation>Python-virhe, jota ei voi jäsentää</translation>
     </message>
     <message>
         <location filename="../src/libcalamares/PythonHelper.cpp" line="369"/>
         <source>Unparseable Python traceback</source>
         <comment>@error</comment>
-        <translation type="unfinished"/>
+        <translation>Python-jäljitys, jota ei voi jäsentää</translation>
     </message>
     <message>
         <location filename="../src/libcalamares/PythonHelper.cpp" line="376"/>
         <source>Unfetchable Python error</source>
         <comment>@error</comment>
-        <translation type="unfinished"/>
+        <translation>Python-virhe, jota ei voi hakea</translation>
     </message>
 </context>
 <context>
@@ -1177,79 +1177,79 @@ Asennus voi jatkua, mutta jotkin toiminnot saattavat olla pois käytöstä.</tra
         <location filename="../src/modules/finished/Config.cpp" line="142"/>
         <source>Setup Failed</source>
         <comment>@title</comment>
-        <translation type="unfinished"/>
+        <translation>Määritys epäonnistui</translation>
     </message>
     <message>
         <location filename="../src/modules/finished/Config.cpp" line="142"/>
         <source>Installation Failed</source>
         <comment>@title</comment>
-        <translation type="unfinished"/>
+        <translation>Asentaminen epäonnistui</translation>
     </message>
     <message>
         <location filename="../src/modules/finished/Config.cpp" line="144"/>
         <source>The setup of %1 did not complete successfully.</source>
         <comment>@info</comment>
-        <translation type="unfinished"/>
+        <translation>Määritys %1 ei onnistunut.</translation>
     </message>
     <message>
         <location filename="../src/modules/finished/Config.cpp" line="145"/>
         <source>The installation of %1 did not complete successfully.</source>
         <comment>@info</comment>
-        <translation type="unfinished"/>
+        <translation>Asennus %1 ei onnistunut.</translation>
     </message>
     <message>
         <location filename="../src/modules/finished/Config.cpp" line="149"/>
         <source>Setup Complete</source>
         <comment>@title</comment>
-        <translation type="unfinished"/>
+        <translation>Määritys valmis</translation>
     </message>
     <message>
         <location filename="../src/modules/finished/Config.cpp" line="150"/>
         <source>Installation Complete</source>
         <comment>@title</comment>
-        <translation type="unfinished"/>
+        <translation>Asennus valmis</translation>
     </message>
     <message>
         <location filename="../src/modules/finished/Config.cpp" line="151"/>
         <source>The setup of %1 is complete.</source>
         <comment>@info</comment>
-        <translation type="unfinished"/>
+        <translation>Määritys %1 on valmis.</translation>
     </message>
     <message>
         <location filename="../src/modules/finished/Config.cpp" line="152"/>
         <source>The installation of %1 is complete.</source>
         <comment>@info</comment>
-        <translation type="unfinished"/>
+        <translation>Asennus %1 on valmis.</translation>
     </message>
     <message>
         <location filename="../src/modules/keyboard/Config.cpp" line="505"/>
         <source>Keyboard model has been set to %1&lt;br/&gt;.</source>
         <comment>@label, %1 is keyboard model, as in Apple Magic Keyboard</comment>
-        <translation type="unfinished"/>
+        <translation>Näppäimistöksi on asetetaan %1&lt;br/&gt;.</translation>
     </message>
     <message>
         <location filename="../src/modules/keyboard/Config.cpp" line="512"/>
         <source>Keyboard layout has been set to %1/%2.</source>
         <comment>@label, %1 is layout, %2 is layout variant</comment>
-        <translation type="unfinished"/>
+        <translation>Näppäimistön asettelu asetetaan %1/%2.</translation>
     </message>
     <message>
         <location filename="../src/modules/locale/Config.cpp" line="373"/>
         <source>Set timezone to %1/%2</source>
         <comment>@action</comment>
-        <translation type="unfinished"/>
+        <translation>Aikavyöhykkeeksi asetetaan %1/%2</translation>
     </message>
     <message>
         <location filename="../src/modules/locale/Config.cpp" line="410"/>
         <source>The system language will be set to %1</source>
         <comment>@info</comment>
-        <translation type="unfinished"/>
+        <translation>Järjestelmän kieleksi asetetaan %1</translation>
     </message>
     <message>
         <location filename="../src/modules/locale/Config.cpp" line="417"/>
         <source>The numbers and dates locale will be set to %1</source>
         <comment>@info</comment>
-        <translation type="unfinished"/>
+        <translation>Numeroiden ja päivämääriän maa-asetukseksi asetetaan %1</translation>
     </message>
 </context>
 <context>
@@ -1601,19 +1601,19 @@ Asennus voi jatkua, mutta jotkin toiminnot saattavat olla pois käytöstä.</tra
         <location filename="../src/modules/dracutlukscfg/DracutLuksCfgJob.cpp" line="117"/>
         <source>Writing LUKS configuration for Dracut to %1…</source>
         <comment>@status</comment>
-        <translation type="unfinished"/>
+        <translation>Kirjoitetaan LUKS-määrityksiä Dracut:lle %1…</translation>
     </message>
     <message>
         <location filename="../src/modules/dracutlukscfg/DracutLuksCfgJob.cpp" line="121"/>
         <source>Skipping writing LUKS configuration for Dracut: &quot;/&quot; partition is not encrypted</source>
         <comment>@info</comment>
-        <translation type="unfinished"/>
+        <translation>Ohitetaan Dracut LUKS-määrityksen kirjoitus: &quot;/&quot;-osio ei ole salattu</translation>
     </message>
     <message>
         <location filename="../src/modules/dracutlukscfg/DracutLuksCfgJob.cpp" line="138"/>
         <source>Failed to open %1</source>
         <comment>@error</comment>
-        <translation type="unfinished"/>
+        <translation>Ei voi avata %1</translation>
     </message>
 </context>
 <context>
@@ -1720,7 +1720,7 @@ Asennus voi jatkua, mutta jotkin toiminnot saattavat olla pois käytöstä.</tra
     <message>
         <location filename="../src/modules/partition/gui/EncryptWidget.cpp" line="158"/>
         <source>Password must be a minimum of %1 characters</source>
-        <translation type="unfinished"/>
+        <translation>Salasanassa on oltava vähintään %1 merkkiä</translation>
     </message>
 </context>
 <context>
@@ -1805,37 +1805,37 @@ Asennus voi jatkua, mutta jotkin toiminnot saattavat olla pois käytöstä.</tra
         <location filename="../src/modules/finished/FinishedPage.cpp" line="75"/>
         <source>&lt;h1&gt;All done.&lt;/h1&gt;&lt;br/&gt;%1 has been set up on your computer.&lt;br/&gt;You may now start using your new system.</source>
         <comment>@info</comment>
-        <translation type="unfinished"/>
+        <translation>&lt;h1&gt;Valmista.&lt;/h1&gt;&lt;br/&gt;%1 on määritetty tietokoneellesi.&lt;br/&gt;Voit nyt alkaa käyttää uutta järjestelmääsi.</translation>
     </message>
     <message>
         <location filename="../src/modules/finished/FinishedPage.cpp" line="79"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;When this box is checked, your system will restart immediately when you click on &lt;span style=&quot;font-style:italic;&quot;&gt;Done&lt;/span&gt; or close the setup program.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <comment>@tooltip</comment>
-        <translation type="unfinished"/>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Kun tämä valintaruutu on valittu, järjestelmä käynnistyy heti, kun napsautat  &lt;span style=&quot;font-style:italic;&quot;&gt;Valmis&lt;/span&gt; -painiketta tai suljet asennusohjelman.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../src/modules/finished/FinishedPage.cpp" line="87"/>
         <source>&lt;h1&gt;All done.&lt;/h1&gt;&lt;br/&gt;%1 has been installed on your computer.&lt;br/&gt;You may now restart into your new system, or continue using the %2 Live environment.</source>
         <comment>@info</comment>
-        <translation type="unfinished"/>
+        <translation>&lt;h1&gt;Kaikki tehty.&lt;/h1&gt;&lt;br/&gt;%1 on asennettu tietokoneellesi.&lt;br/&gt;Voit käynnistää tietokoneen nyt uuteen järjestelmääsi, tai voit jatkaa käyttöjärjestelmän %2 live-ympäristön käyttöä.</translation>
     </message>
     <message>
         <location filename="../src/modules/finished/FinishedPage.cpp" line="92"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;When this box is checked, your system will restart immediately when you click on &lt;span style=&quot;font-style:italic;&quot;&gt;Done&lt;/span&gt; or close the installer.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <comment>@tooltip</comment>
-        <translation type="unfinished"/>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Kun tämä valintaruutu on valittuna, järjestelmä käynnistyy heti, kun napsautat &lt;span style=&quot;font-style:italic;&quot;&gt;Valmis&lt;/span&gt; tai suljet asentimen.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../src/modules/finished/FinishedPage.cpp" line="105"/>
         <source>&lt;h1&gt;Setup Failed&lt;/h1&gt;&lt;br/&gt;%1 has not been set up on your computer.&lt;br/&gt;The error message was: %2.</source>
         <comment>@info, %1 is product name with version</comment>
-        <translation type="unfinished"/>
+        <translation>&lt;h1&gt;Asennus epäonnistui&lt;/h1&gt;&lt;br/&gt;%1 ei ole määritetty tietokoneellesi.&lt;br/&gt; Virhesanoma oli: %2.</translation>
     </message>
     <message>
         <location filename="../src/modules/finished/FinishedPage.cpp" line="113"/>
         <source>&lt;h1&gt;Installation Failed&lt;/h1&gt;&lt;br/&gt;%1 has not been installed on your computer.&lt;br/&gt;The error message was: %2.</source>
         <comment>@info, %1 is product name with version</comment>
-        <translation type="unfinished"/>
+        <translation>&lt;h1&gt;Asennus epäonnistui &lt;/h1&gt;&lt;br/&gt;%1 ei ole asennettu tietokoneeseesi.&lt;br/&gt;Virhesanoma oli: %2.</translation>
     </message>
 </context>
 <context>
@@ -1852,7 +1852,7 @@ Asennus voi jatkua, mutta jotkin toiminnot saattavat olla pois käytöstä.</tra
         <location filename="../src/modules/finished/FinishedViewStep.cpp" line="46"/>
         <source>Finish</source>
         <comment>@label</comment>
-        <translation type="unfinished"/>
+        <translation>Valmis</translation>
     </message>
 </context>
 <context>
@@ -2045,7 +2045,7 @@ Asennus voi jatkua, mutta jotkin toiminnot saattavat olla pois käytöstä.</tra
         <location filename="../src/modules/initcpio/InitcpioJob.cpp" line="31"/>
         <source>Creating initramfs with mkinitcpio…</source>
         <comment>@status</comment>
-        <translation type="unfinished"/>
+        <translation>Luodaan initramfs mkinitcpion avulla…</translation>
     </message>
 </context>
 <context>
@@ -2054,7 +2054,7 @@ Asennus voi jatkua, mutta jotkin toiminnot saattavat olla pois käytöstä.</tra
         <location filename="../src/modules/keyboardq/KeyboardQmlViewStep.cpp" line="32"/>
         <source>Keyboard</source>
         <comment>@label</comment>
-        <translation type="unfinished"/>
+        <translation>Näppäimistö</translation>
     </message>
 </context>
 <context>
@@ -2063,7 +2063,7 @@ Asennus voi jatkua, mutta jotkin toiminnot saattavat olla pois käytöstä.</tra
         <location filename="../src/modules/keyboard/KeyboardViewStep.cpp" line="41"/>
         <source>Keyboard</source>
         <comment>@label</comment>
-        <translation type="unfinished"/>
+        <translation>Näppäimistö</translation>
     </message>
 </context>
 <context>
@@ -2072,25 +2072,25 @@ Asennus voi jatkua, mutta jotkin toiminnot saattavat olla pois käytöstä.</tra
         <location filename="../src/modules/locale/LCLocaleDialog.cpp" line="23"/>
         <source>System Locale Setting</source>
         <comment>@title</comment>
-        <translation type="unfinished"/>
+        <translation>Järjestelmän kieliasetus</translation>
     </message>
     <message>
         <location filename="../src/modules/locale/LCLocaleDialog.cpp" line="30"/>
         <source>The system locale setting affects the language and character set for some command line user interface elements.&lt;br/&gt;The current setting is &lt;strong&gt;%1&lt;/strong&gt;.</source>
         <comment>@info</comment>
-        <translation type="unfinished"/>
+        <translation>Järjestelmän kieliasetus vaikuttaa komentorivin käyttöliittymän kieleen ja merkistön käyttöön.&lt;br/&gt;Nykyinen asetus on &lt;strong&gt;%1&lt;/strong&gt;.</translation>
     </message>
     <message>
         <location filename="../src/modules/locale/LCLocaleDialog.cpp" line="54"/>
         <source>&amp;Cancel</source>
         <comment>@button</comment>
-        <translation type="unfinished"/>
+        <translation>&amp;Peruuta</translation>
     </message>
     <message>
         <location filename="../src/modules/locale/LCLocaleDialog.cpp" line="55"/>
         <source>&amp;OK</source>
         <comment>@button</comment>
-        <translation type="unfinished"/>
+        <translation>&amp;OK</translation>
     </message>
 </context>
 <context>
@@ -2127,37 +2127,37 @@ Asennus voi jatkua, mutta jotkin toiminnot saattavat olla pois käytöstä.</tra
         <location filename="../src/modules/license/LicensePage.cpp" line="142"/>
         <source>I accept the terms and conditions above.</source>
         <comment>@info</comment>
-        <translation type="unfinished"/>
+        <translation>Hyväksyn yllä olevat ehdot ja edellytykset.</translation>
     </message>
     <message>
         <location filename="../src/modules/license/LicensePage.cpp" line="144"/>
         <source>Please review the End User License Agreements (EULAs).</source>
         <comment>@info</comment>
-        <translation type="unfinished"/>
+        <translation>Ole hyvä ja tarkista loppukäyttäjän lisenssisopimus (EULA).</translation>
     </message>
     <message>
         <location filename="../src/modules/license/LicensePage.cpp" line="149"/>
         <source>This setup procedure will install proprietary software that is subject to licensing terms.</source>
         <comment>@info</comment>
-        <translation type="unfinished"/>
+        <translation>Tämä asennusohjelma asentaa patentoidun ohjelmiston, johon sovelletaan lisenssiehtoja.</translation>
     </message>
     <message>
         <location filename="../src/modules/license/LicensePage.cpp" line="152"/>
         <source>If you do not agree with the terms, the setup procedure cannot continue.</source>
         <comment>@info</comment>
-        <translation type="unfinished"/>
+        <translation>Jos et hyväksy ehtoja, asennusta ei voida jatkaa.</translation>
     </message>
     <message>
         <location filename="../src/modules/license/LicensePage.cpp" line="157"/>
         <source>This setup procedure can install proprietary software that is subject to licensing terms in order to provide additional features and enhance the user experience.</source>
         <comment>@info</comment>
-        <translation type="unfinished"/>
+        <translation>Tämä asennus voi asentaa patentoidun ohjelmiston, johon sovelletaan lisenssiehtoja lisäominaisuuksien tarjoamiseksi ja käyttökokemuksen parantamiseksi.</translation>
     </message>
     <message>
         <location filename="../src/modules/license/LicensePage.cpp" line="162"/>
         <source>If you do not agree with the terms, proprietary software will not be installed, and open source alternatives will be used instead.</source>
         <comment>@info</comment>
-        <translation type="unfinished"/>
+        <translation>Jos et hyväksy ehtoja, omaa ohjelmistoa ei asenneta, vaan sen sijaan käytetään avoimen lähdekoodin vaihtoehtoja.</translation>
     </message>
 </context>
 <context>
@@ -2166,7 +2166,7 @@ Asennus voi jatkua, mutta jotkin toiminnot saattavat olla pois käytöstä.</tra
         <location filename="../src/modules/license/LicenseViewStep.cpp" line="45"/>
         <source>License</source>
         <comment>@label</comment>
-        <translation type="unfinished"/>
+        <translation>Lisenssi</translation>
     </message>
 </context>
 <context>
@@ -2175,69 +2175,69 @@ Asennus voi jatkua, mutta jotkin toiminnot saattavat olla pois käytöstä.</tra
         <location filename="../src/modules/license/LicenseWidget.cpp" line="88"/>
         <source>URL: %1</source>
         <comment>@label</comment>
-        <translation type="unfinished"/>
+        <translation>URL: %1</translation>
     </message>
     <message>
         <location filename="../src/modules/license/LicenseWidget.cpp" line="109"/>
         <source>&lt;strong&gt;%1 driver&lt;/strong&gt;&lt;br/&gt;by %2</source>
         <comment>@label, %1 is product name, %2 is product vendor</comment>
         <extracomment>%1 is an untranslatable product name, example: Creative Audigy driver</extracomment>
-        <translation type="unfinished"/>
+        <translation>&lt;strong&gt;%1 ajuri&lt;/strong&gt;&lt;br/&gt;- %2</translation>
     </message>
     <message>
         <location filename="../src/modules/license/LicenseWidget.cpp" line="116"/>
         <source>&lt;strong&gt;%1 graphics driver&lt;/strong&gt;&lt;br/&gt;&lt;font color=&quot;Grey&quot;&gt;by %2&lt;/font&gt;</source>
         <comment>@label, %1 is product name, %2 is product vendor</comment>
         <extracomment>%1 is usually a vendor name, example: Nvidia graphics driver</extracomment>
-        <translation type="unfinished"/>
+        <translation>&lt;strong&gt;%1 näytönohjaimet&lt;/strong&gt;&lt;br/&gt;&lt;font color=&quot;Grey&quot;&gt;- %2&lt;/font&gt;</translation>
     </message>
     <message>
         <location filename="../src/modules/license/LicenseWidget.cpp" line="122"/>
         <source>&lt;strong&gt;%1 browser plugin&lt;/strong&gt;&lt;br/&gt;&lt;font color=&quot;Grey&quot;&gt;by %2&lt;/font&gt;</source>
         <comment>@label, %1 is product name, %2 is product vendor</comment>
-        <translation type="unfinished"/>
+        <translation>&lt;strong&gt;%1 selaimen laajennus&lt;/strong&gt;&lt;br/&gt;&lt;font color=&quot;Grey&quot;&gt;- %2&lt;/font&gt;</translation>
     </message>
     <message>
         <location filename="../src/modules/license/LicenseWidget.cpp" line="128"/>
         <source>&lt;strong&gt;%1 codec&lt;/strong&gt;&lt;br/&gt;&lt;font color=&quot;Grey&quot;&gt;by %2&lt;/font&gt;</source>
         <comment>@label, %1 is product name, %2 is product vendor</comment>
-        <translation type="unfinished"/>
+        <translation>&lt;strong&gt;%1 kodekki&lt;/strong&gt;&lt;br/&gt;&lt;font color=&quot;Grey&quot;&gt;- %2&lt;/font&gt;</translation>
     </message>
     <message>
         <location filename="../src/modules/license/LicenseWidget.cpp" line="134"/>
         <source>&lt;strong&gt;%1 package&lt;/strong&gt;&lt;br/&gt;&lt;font color=&quot;Grey&quot;&gt;by %2&lt;/font&gt;</source>
         <comment>@label, %1 is product name, %2 is product vendor</comment>
-        <translation type="unfinished"/>
+        <translation>&lt;strong&gt;%1 paketti&lt;/strong&gt;&lt;br/&gt;&lt;font color=&quot;Grey&quot;&gt;- %2&lt;/font&gt;</translation>
     </message>
     <message>
         <location filename="../src/modules/license/LicenseWidget.cpp" line="140"/>
         <source>&lt;strong&gt;%1&lt;/strong&gt;&lt;br/&gt;&lt;font color=&quot;Grey&quot;&gt;by %2&lt;/font&gt;</source>
         <comment>@label, %1 is product name, %2 is product vendor</comment>
-        <translation type="unfinished"/>
+        <translation>&lt;strong&gt;%1&lt;/strong&gt;&lt;br/&gt;&lt;font color=&quot;Grey&quot;&gt;- %2&lt;/font&gt;</translation>
     </message>
     <message>
         <location filename="../src/modules/license/LicenseWidget.cpp" line="163"/>
         <source>File: %1</source>
         <comment>@label</comment>
-        <translation type="unfinished"/>
+        <translation>Tiedosto: %1</translation>
     </message>
     <message>
         <location filename="../src/modules/license/LicenseWidget.cpp" line="186"/>
         <source>Hide the license text</source>
         <comment>@tooltip</comment>
-        <translation type="unfinished"/>
+        <translation>Piilota lisenssiteksti</translation>
     </message>
     <message>
         <location filename="../src/modules/license/LicenseWidget.cpp" line="186"/>
         <source>Show the license text</source>
         <comment>@tooltip</comment>
-        <translation type="unfinished"/>
+        <translation>Näytä lisenssiteksti</translation>
     </message>
     <message>
         <location filename="../src/modules/license/LicenseWidget.cpp" line="190"/>
         <source>Open the license agreement in browser</source>
         <comment>@tooltip</comment>
-        <translation type="unfinished"/>
+        <translation>Avaa lisenssisopimus selaimessa</translation>
     </message>
 </context>
 <context>
@@ -2246,20 +2246,20 @@ Asennus voi jatkua, mutta jotkin toiminnot saattavat olla pois käytöstä.</tra
         <location filename="../src/modules/locale/LocalePage.cpp" line="130"/>
         <source>Region:</source>
         <comment>@label</comment>
-        <translation type="unfinished"/>
+        <translation>Alue:</translation>
     </message>
     <message>
         <location filename="../src/modules/locale/LocalePage.cpp" line="131"/>
         <source>Zone:</source>
         <comment>@label</comment>
-        <translation type="unfinished"/>
+        <translation>Vyöhyke:</translation>
     </message>
     <message>
         <location filename="../src/modules/locale/LocalePage.cpp" line="132"/>
         <location filename="../src/modules/locale/LocalePage.cpp" line="133"/>
         <source>&amp;Change…</source>
         <comment>@button</comment>
-        <translation type="unfinished"/>
+        <translation>&amp;Vaihda…</translation>
     </message>
 </context>
 <context>
@@ -2268,7 +2268,7 @@ Asennus voi jatkua, mutta jotkin toiminnot saattavat olla pois käytöstä.</tra
         <location filename="../src/modules/localeq/LocaleQmlViewStep.cpp" line="32"/>
         <source>Location</source>
         <comment>@label</comment>
-        <translation type="unfinished"/>
+        <translation>Sijainti</translation>
     </message>
 </context>
 <context>
@@ -2285,7 +2285,7 @@ Asennus voi jatkua, mutta jotkin toiminnot saattavat olla pois käytöstä.</tra
         <location filename="../src/modules/locale/LocaleViewStep.cpp" line="71"/>
         <source>Location</source>
         <comment>@label</comment>
-        <translation type="unfinished"/>
+        <translation>Sijainti</translation>
     </message>
 </context>
 <context>
@@ -2350,7 +2350,9 @@ Asennus voi jatkua, mutta jotkin toiminnot saattavat olla pois käytöstä.</tra
             and timezone settings for you. You can fine-tune the suggested settings below. Search the map by dragging
             to move and using the +/- buttons to zoom in/out or use mouse scrolling for zooming.</source>
         <comment>@info</comment>
-        <translation type="unfinished"/>
+        <translation>Valitse sijainti kartalla, jotta asentaja voi ehdottaa maa- ja aikavyöhyke-asetukset.
+             Voit hienosäätää alla olevia asetuksia. Etsi kartalta vetämällä ja suurenna/pienennä +/- -painikkeella tai käytä
+hiiren vieritystä skaalaamiseen.</translation>
     </message>
 </context>
 <context>
@@ -2398,7 +2400,7 @@ Asennus voi jatkua, mutta jotkin toiminnot saattavat olla pois käytöstä.</tra
         <location filename="../src/modules/localeq/Offline.qml" line="47"/>
         <source>Select your preferred Region, or use the default settings.</source>
         <comment>@label</comment>
-        <translation type="unfinished"/>
+        <translation>Valitse sinun asuinalue tai käytä oletusta.</translation>
     </message>
     <message>
         <location filename="../src/modules/localeq/Offline.qml" line="103"/>
@@ -2406,25 +2408,25 @@ Asennus voi jatkua, mutta jotkin toiminnot saattavat olla pois käytöstä.</tra
         <location filename="../src/modules/localeq/Offline.qml" line="224"/>
         <source>Timezone: %1</source>
         <comment>@label</comment>
-        <translation type="unfinished"/>
+        <translation>Aikavyöhyke: %1</translation>
     </message>
     <message>
         <location filename="../src/modules/localeq/Offline.qml" line="120"/>
         <source>Select your preferred Zone within your Region.</source>
         <comment>@label</comment>
-        <translation type="unfinished"/>
+        <translation>Valitse haluamasi alue alueesi sisällä.</translation>
     </message>
     <message>
         <location filename="../src/modules/localeq/Offline.qml" line="193"/>
         <source>Zones</source>
         <comment>@button</comment>
-        <translation type="unfinished"/>
+        <translation>Vyöhykkeet</translation>
     </message>
     <message>
         <location filename="../src/modules/localeq/Offline.qml" line="240"/>
         <source>You can fine-tune Language and Locale settings below.</source>
         <comment>@label</comment>
-        <translation type="unfinished"/>
+        <translation>Voit hienosäätää kieli- ja alueasetuksia alla.</translation>
     </message>
 </context>
 <context>
@@ -2719,7 +2721,7 @@ Asennus voi jatkua, mutta jotkin toiminnot saattavat olla pois käytöstä.</tra
     <message>
         <location filename="../src/modules/keyboard/KeyboardPage.ui" line="74"/>
         <source>Keyboard model:</source>
-        <translation type="unfinished"/>
+        <translation>Näppäimistön malli:</translation>
     </message>
     <message>
         <location filename="../src/modules/keyboard/KeyboardPage.ui" line="146"/>
@@ -2730,7 +2732,7 @@ Asennus voi jatkua, mutta jotkin toiminnot saattavat olla pois käytöstä.</tra
         <location filename="../src/modules/keyboard/KeyboardPage.ui" line="153"/>
         <source>Switch Keyboard:</source>
         <extracomment>shortcut for switching between keyboard layouts</extracomment>
-        <translation type="unfinished"/>
+        <translation>Vaihda näppäimistöä:</translation>
     </message>
 </context>
 <context>
@@ -3030,17 +3032,17 @@ Asennus voi jatkua, mutta jotkin toiminnot saattavat olla pois käytöstä.</tra
     <message>
         <location filename="../src/modules/partition/PartitionViewStep.cpp" line="542"/>
         <source>An EFI system partition is necessary to start %1.&lt;br/&gt;&lt;br/&gt;The EFI system partition does not meet recommendations. It is recommended to go back and select or create a suitable filesystem.</source>
-        <translation type="unfinished"/>
+        <translation>Käynnistämiseen tarvitaan EFI %1 osio.&lt;br/&gt;&lt;br/&gt; EFI järjestelmäosio ei täytä suosituksia. Palaa takaisin ja valitse tai luo sopiva tiedostojärjestelmä.</translation>
     </message>
     <message>
         <location filename="../src/modules/partition/PartitionViewStep.cpp" line="564"/>
         <source>The minimum recommended size for the filesystem is %1 MiB.</source>
-        <translation type="unfinished"/>
+        <translation>Suositeltu vähimmäiskoko tiedostojärjestelmälle on %1 MiB.</translation>
     </message>
     <message>
         <location filename="../src/modules/partition/PartitionViewStep.cpp" line="568"/>
         <source>You can continue with this EFI system partition configuration but your system may fail to start.</source>
-        <translation type="unfinished"/>
+        <translation>Voit jatkaa tällä EFI määrityksellä, mutta järjestelmäsi ei ehkä käynnisty.</translation>
     </message>
     <message>
         <location filename="../src/modules/partition/PartitionViewStep.cpp" line="580"/>
@@ -3086,7 +3088,7 @@ Asennus voi jatkua, mutta jotkin toiminnot saattavat olla pois käytöstä.</tra
     <message>
         <location filename="../src/modules/partition/PartitionViewStep.cpp" line="608"/>
         <source>EFI system partition recommendation</source>
-        <translation type="unfinished"/>
+        <translation>EFI-järjestelmän osiointisuositus</translation>
     </message>
     <message>
         <location filename="../src/modules/partition/PartitionViewStep.cpp" line="627"/>
@@ -3267,25 +3269,25 @@ Ulostulo:
         <location filename="../src/libcalamares/partition/FileSystem.cpp" line="33"/>
         <source>unknown</source>
         <comment>@partition info</comment>
-        <translation type="unfinished"/>
+        <translation>tuntematon</translation>
     </message>
     <message>
         <location filename="../src/libcalamares/partition/FileSystem.cpp" line="35"/>
         <source>extended</source>
         <comment>@partition info</comment>
-        <translation type="unfinished"/>
+        <translation>laajennettu</translation>
     </message>
     <message>
         <location filename="../src/libcalamares/partition/FileSystem.cpp" line="37"/>
         <source>unformatted</source>
         <comment>@partition info</comment>
-        <translation type="unfinished"/>
+        <translation>formatoimaton</translation>
     </message>
     <message>
         <location filename="../src/libcalamares/partition/FileSystem.cpp" line="39"/>
         <source>swap</source>
         <comment>@partition info</comment>
-        <translation type="unfinished"/>
+        <translation>swap</translation>
     </message>
 </context>
 <context>
@@ -3441,43 +3443,43 @@ Asennus voi jatkua, mutta jotkin toiminnot saattavat olla pois käytöstä.&lt;/
         <location filename="../src/modules/keyboard/SetKeyboardLayoutJob.cpp" line="66"/>
         <source>Setting keyboard model to %1, layout as %2-%3…</source>
         <comment>@status, %1 model, %2 layout, %3 variant</comment>
-        <translation type="unfinished"/>
+        <translation>Asetetaan näppäimistön malliksi %1, asettelu %2-%3…</translation>
     </message>
     <message>
         <location filename="../src/modules/keyboard/SetKeyboardLayoutJob.cpp" line="368"/>
         <source>Failed to write keyboard configuration for the virtual console.</source>
         <comment>@error</comment>
-        <translation type="unfinished"/>
+        <translation>Näppäimistön määrityksen kirjoittaminen virtuaalikonsoliin epäonnistui.</translation>
     </message>
     <message>
         <location filename="../src/modules/keyboard/SetKeyboardLayoutJob.cpp" line="369"/>
         <source>Failed to write to %1</source>
         <comment>@error, %1 is virtual console configuration path</comment>
-        <translation type="unfinished"/>
+        <translation>Kirjoittaminen epäonnistui %1</translation>
     </message>
     <message>
         <location filename="../src/modules/keyboard/SetKeyboardLayoutJob.cpp" line="394"/>
         <source>Failed to write keyboard configuration for X11.</source>
         <comment>@error</comment>
-        <translation type="unfinished"/>
+        <translation>Näppäimistön asetusten kirjoitus X11:lle epäonnistui.</translation>
     </message>
     <message>
         <location filename="../src/modules/keyboard/SetKeyboardLayoutJob.cpp" line="395"/>
         <source>Failed to write to %1</source>
         <comment>@error, %1 is keyboard configuration path</comment>
-        <translation type="unfinished"/>
+        <translation>Kirjoittaminen epäonnistui %1</translation>
     </message>
     <message>
         <location filename="../src/modules/keyboard/SetKeyboardLayoutJob.cpp" line="411"/>
         <source>Failed to write keyboard configuration to existing /etc/default directory.</source>
         <comment>@error</comment>
-        <translation type="unfinished"/>
+        <translation>Näppäimistön asetusten kirjoittaminen epäonnistui /etc/default hakemistoon.</translation>
     </message>
     <message>
         <location filename="../src/modules/keyboard/SetKeyboardLayoutJob.cpp" line="412"/>
         <source>Failed to write to %1</source>
         <comment>@error, %1 is default keyboard path</comment>
-        <translation type="unfinished"/>
+        <translation>Kirjoittaminen epäonnistui %1</translation>
     </message>
 </context>
 <context>
@@ -3608,38 +3610,38 @@ Asennus voi jatkua, mutta jotkin toiminnot saattavat olla pois käytöstä.&lt;/
         <location filename="../src/modules/locale/SetTimezoneJob.cpp" line="32"/>
         <source>Setting timezone to %1/%2…</source>
         <comment>@status</comment>
-        <translation type="unfinished"/>
+        <translation>Aikavyöhykkeeksi asetetaan %1/%2…</translation>
     </message>
     <message>
         <location filename="../src/modules/locale/SetTimezoneJob.cpp" line="60"/>
         <source>Cannot access selected timezone path.</source>
         <comment>@error</comment>
-        <translation type="unfinished"/>
+        <translation>Ei pääsyä valittuun aikavyöhykkeen polkuun.</translation>
     </message>
     <message>
         <location filename="../src/modules/locale/SetTimezoneJob.cpp" line="61"/>
         <source>Bad path: %1</source>
         <comment>@error</comment>
-        <translation type="unfinished"/>
+        <translation>Virheellinen polku: %1</translation>
     </message>
     <message>
         <location filename="../src/modules/locale/SetTimezoneJob.cpp" line="71"/>
         <location filename="../src/modules/locale/SetTimezoneJob.cpp" line="79"/>
         <source>Cannot set timezone.</source>
         <comment>@error</comment>
-        <translation type="unfinished"/>
+        <translation>Aikavyöhykettä ei voi asettaa.</translation>
     </message>
     <message>
         <location filename="../src/modules/locale/SetTimezoneJob.cpp" line="72"/>
         <source>Link creation failed, target: %1; link name: %2</source>
         <comment>@info</comment>
-        <translation type="unfinished"/>
+        <translation>Linkin luominen epäonnistui, kohde: %1; linkin nimi: %2</translation>
     </message>
     <message>
         <location filename="../src/modules/locale/SetTimezoneJob.cpp" line="80"/>
         <source>Cannot open /etc/timezone for writing</source>
         <comment>@info</comment>
-        <translation type="unfinished"/>
+        <translation>Ei voi avata /etc/timezone kirjoitusta varten</translation>
     </message>
 </context>
 <context>
@@ -4046,13 +4048,13 @@ Asennus voi jatkua, mutta jotkin toiminnot saattavat olla pois käytöstä.&lt;/
         <location filename="../src/calamares/DebugWindow.cpp" line="235"/>
         <source>About %1 Setup</source>
         <comment>@title</comment>
-        <translation type="unfinished"/>
+        <translation>Tietoja %1 määrityksestä</translation>
     </message>
     <message>
         <location filename="../src/calamares/DebugWindow.cpp" line="236"/>
         <source>About %1 Installer</source>
         <comment>@title</comment>
-        <translation type="unfinished"/>
+        <translation>Tietoja %1 asennusohjelmasta</translation>
     </message>
 </context>
 <context>
@@ -4154,25 +4156,25 @@ Asennus voi jatkua, mutta jotkin toiminnot saattavat olla pois käytöstä.&lt;/
         <location filename="../src/calamares/CalamaresWindow.cpp" line="157"/>
         <source>About</source>
         <comment>@button</comment>
-        <translation type="unfinished"/>
+        <translation>Tietoa</translation>
     </message>
     <message>
         <location filename="../src/calamares/CalamaresWindow.cpp" line="159"/>
         <source>Show information about Calamares</source>
         <comment>@tooltip</comment>
-        <translation type="unfinished"/>
+        <translation>Näytä tietoja Calamaresista</translation>
     </message>
     <message>
         <location filename="../src/calamares/CalamaresWindow.cpp" line="173"/>
         <source>Debug</source>
         <comment>@button</comment>
-        <translation type="unfinished"/>
+        <translation>Virheet</translation>
     </message>
     <message>
         <location filename="../src/calamares/CalamaresWindow.cpp" line="175"/>
         <source>Show debug information</source>
         <comment>@tooltip</comment>
-        <translation type="unfinished"/>
+        <translation>Näytä vianetsinnän tiedot</translation>
     </message>
 </context>
 <context>
@@ -4213,26 +4215,27 @@ Asennus voi jatkua, mutta jotkin toiminnot saattavat olla pois käytöstä.&lt;/
         <location filename="../src/modules/finishedq/finishedq@mobile.qml" line="36"/>
         <source>Installation Completed</source>
         <comment>@title</comment>
-        <translation type="unfinished"/>
+        <translation>Asennus suoritettu</translation>
     </message>
     <message>
         <location filename="../src/modules/finishedq/finishedq@mobile.qml" line="43"/>
         <source>%1 has been installed on your computer.&lt;br/&gt;
             You may now restart your device.</source>
         <comment>@info, %1 is the product name</comment>
-        <translation type="unfinished"/>
+        <translation>%1 on asennettu tietokoneellesi.&lt;br/&gt;
+            Voit nyt käynnistää uudelleen.</translation>
     </message>
     <message>
         <location filename="../src/modules/finishedq/finishedq@mobile.qml" line="66"/>
         <source>Close</source>
         <comment>@button</comment>
-        <translation type="unfinished"/>
+        <translation>Sulje</translation>
     </message>
     <message>
         <location filename="../src/modules/finishedq/finishedq@mobile.qml" line="72"/>
         <source>Restart</source>
         <comment>@button</comment>
-        <translation type="unfinished"/>
+        <translation>Käynnistä</translation>
     </message>
 </context>
 <context>
@@ -4241,31 +4244,31 @@ Asennus voi jatkua, mutta jotkin toiminnot saattavat olla pois käytöstä.&lt;/
         <location filename="../src/modules/keyboardq/keyboardq.qml" line="61"/>
         <source>To activate keyboard preview, select a layout.</source>
         <comment>@label</comment>
-        <translation type="unfinished"/>
+        <translation>Jos haluat aktivoida näppäimistön esikatselun, valitse asettelu.</translation>
     </message>
     <message>
         <location filename="../src/modules/keyboardq/keyboardq.qml" line="144"/>
         <source>&lt;b&gt;Keyboard Model:&amp;nbsp;&amp;nbsp;&lt;/b&gt;</source>
         <comment>@label</comment>
-        <translation type="unfinished"/>
+        <translation>&lt;b&gt;Näppäimistö:&amp;nbsp;&amp;nbsp;&lt;/b&gt;</translation>
     </message>
     <message>
         <location filename="../src/modules/keyboardq/keyboardq.qml" line="185"/>
         <source>Layout</source>
         <comment>@label</comment>
-        <translation type="unfinished"/>
+        <translation>Asettelu</translation>
     </message>
     <message>
         <location filename="../src/modules/keyboardq/keyboardq.qml" line="258"/>
         <source>Variant</source>
         <comment>@label</comment>
-        <translation type="unfinished"/>
+        <translation>Vaihtoehto</translation>
     </message>
     <message>
         <location filename="../src/modules/keyboardq/keyboardq.qml" line="311"/>
         <source>Type here to test your keyboard</source>
         <comment>@label</comment>
-        <translation type="unfinished"/>
+        <translation>Testaa näppäimistöä kirjoittamalla tähän</translation>
     </message>
 </context>
 <context>
@@ -4275,21 +4278,23 @@ Asennus voi jatkua, mutta jotkin toiminnot saattavat olla pois käytöstä.&lt;/
         <location filename="../src/modules/localeq/localeq.qml" line="135"/>
         <source>Change</source>
         <comment>@button</comment>
-        <translation type="unfinished"/>
+        <translation>Vaihda</translation>
     </message>
     <message>
         <location filename="../src/modules/localeq/localeq.qml" line="171"/>
         <source>&lt;h3&gt;Languages&lt;/h3&gt; &lt;/br&gt;
                             The system locale setting affects the language and character set for some command line user interface elements. The current setting is &lt;strong&gt;%1&lt;/strong&gt;.</source>
         <comment>@info</comment>
-        <translation type="unfinished"/>
+        <translation>&lt;h3&gt;Kielet&lt;/h3&gt; &lt;/br&gt;
+                            Järjestelmän maa-asetus vaikuttaa joidenkin komentorivin kieleen ja merkistöihin. Nykyinen asetus on &lt;strong&gt;%1&lt;/strong&gt;.</translation>
     </message>
     <message>
         <location filename="../src/modules/localeq/localeq.qml" line="242"/>
         <source>&lt;h3&gt;Locales&lt;/h3&gt; &lt;/br&gt;
                                 The system locale setting affects the numbers and dates format. The current setting is &lt;strong&gt;%1&lt;/strong&gt;.</source>
         <comment>@info</comment>
-        <translation type="unfinished"/>
+        <translation>&lt;h3&gt;Alue&lt;/h3&gt; &lt;/br&gt;
+                                Järjestelmän maa-asetus vaikuttaa numeroiden ja päivämäärien muotoon. Nykyinen asetus on &lt;strong&gt;%1&lt;/strong&gt;.</translation>
     </message>
 </context>
 <context>
@@ -4585,7 +4590,7 @@ Asennus voi jatkua, mutta jotkin toiminnot saattavat olla pois käytöstä.&lt;/
     <message>
         <location filename="../src/branding/kaos_branding/show.qml" line="91"/>
         <source>Qt/KDE specific internet applications include the Falkon web-browser, KDE Connect for device Synchronization, Kaidan for chat and NeoChat, the Matrix client.</source>
-        <translation type="unfinished"/>
+        <translation>Qt/KDE-spesifisiä ohjelmia ovat Falkon internetselain, KDE Connect puhelimen synkronointiin, Kaidan chatille ja Matrix:lle NeoChat.</translation>
     </message>
     <message>
         <location filename="../src/branding/kaos_branding/show.qml" line="94"/>
