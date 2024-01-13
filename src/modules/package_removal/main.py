@@ -3,7 +3,7 @@
 #
 # === This file is part of Calamares - <http://github.com/calamares> ===
 #
-#   Copyright 2014-2023, Anke Boersma <demm@kaosx.us>
+#   Copyright 2014-2024, Anke Boersma <demm@kaosx.us>
 #
 #   Calamares is free software: you can redistribute it and/or modify
 #   it under the terms of the GNU General Public License as published by
@@ -40,13 +40,13 @@ def run():
     if os.path.exists("{!s}/usr/bin/calamares" .format(install_path)):
         print('Removing installer packages')
         libcalamares.utils.target_env_call(
-            ['pacman', '-Rns', '--noconfirm', 'calamares6', 'calamares6-debug', 'console-setup'])
+            ['pacman', '-Rns', '--noconfirm', 'calamares', 'calamares-debug', 'console-setup'])
 
     # Remove welcome
     if os.path.exists("{!s}/usr/bin/welcome" .format(install_path)):
         print('Removing live ISO packages')
         libcalamares.utils.target_env_call(
-            ['pacman', '-Rns', '--noconfirm', 'welcome6'])
+            ['pacman', '-Rns', '--noconfirm', 'welcome'])
 
     # Remove hardware detection
     if os.path.exists("{!s}/etc/kdeos-hwdetect.conf" .format(install_path)):
