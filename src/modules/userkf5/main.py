@@ -3,7 +3,7 @@
 #
 # === This file is part of Calamares - <http://github.com/calamares> ===
 #
-#   Copyright 2014-2021, Anke Boersma <demm@kaosx.us>
+#   Copyright 2014-2024, Anke Boersma <demm@kaosx.us>
 #
 #   Calamares is free software: you can redistribute it and/or modify
 #   it under the terms of the GNU General Public License as published by
@@ -94,18 +94,18 @@ def run():
                                             'disable','wireplumber'])
 
     # switch to wayland session if plasmawayland found in Live mode
-    if 'plasmawayland' in open('/etc/sddm.conf').read():
-        print('Wayland session')
-        sddm_conf_path = os.path.join(install_path, "etc/sddm.conf")
-        text = []
-        with open(sddm_conf_path, "r") as sddm_conf:
-            text = sddm_conf.readlines()
-            with open(sddm_conf_path, "w") as sddm_conf:
-                for line in text:
-                    if 'Session=plasma.desktop' in line:
-                        line = 'Session=plasmawayland.desktop\n'
-                    sddm_conf.write(line)
-        sddm_conf.close()
+    #if 'plasmawayland' in open('/etc/sddm.conf').read():
+    #    print('Wayland session')
+    #    sddm_conf_path = os.path.join(install_path, "etc/sddm.conf")
+    #    text = []
+    #    with open(sddm_conf_path, "r") as sddm_conf:
+    #        text = sddm_conf.readlines()
+    #        with open(sddm_conf_path, "w") as sddm_conf:
+    #            for line in text:
+    #                if 'Session=plasma.desktop' in line:
+    #                    line = 'Session=plasmawayland.desktop\n'
+    #                sddm_conf.write(line)
+    #    sddm_conf.close()
 
     # fix SUID to capable permissions on iputils
     libcalamares.utils.target_env_call(
@@ -125,11 +125,11 @@ def run():
 
     print(label)
     if 'plasmawayland' in open('/etc/sddm.conf').read():
-        m = re.search("KAOS6_\d{8}", label);
+        m = re.search("KAOS_\d{8}", label);
         print (m.group(0))
         lines = (m.group(0))
     else:
-        m = re.search("KAOS6_\d{8}", label);
+        m = re.search("KAOS_\d{8}", label);
         print (m.group(0))
         lines = (m.group(0))
 
