@@ -46,7 +46,8 @@
     <name>AutoMountManagementJob</name>
     <message>
         <location filename="../src/modules/partition/jobs/AutoMountManagementJob.cpp" line="22"/>
-        <source>Manage auto-mount settings</source>
+        <source>Managing auto-mount settings…</source>
+        <comment>@status</comment>
         <translation type="unfinished"/>
     </message>
 </context>
@@ -101,22 +102,26 @@
     <message>
         <location filename="../src/modules/partition/core/BootLoaderModel.cpp" line="60"/>
         <source>Master Boot Record of %1</source>
-        <translation>Master Boot Record %1</translation>
+        <comment>@info</comment>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location filename="../src/modules/partition/core/BootLoaderModel.cpp" line="93"/>
         <source>Boot Partition</source>
-        <translation>Zaváděcí oddíl</translation>
+        <comment>@info</comment>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location filename="../src/modules/partition/core/BootLoaderModel.cpp" line="100"/>
         <source>System Partition</source>
-        <translation>Systémový oddíl</translation>
+        <comment>@info</comment>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location filename="../src/modules/partition/core/BootLoaderModel.cpp" line="131"/>
         <source>Do not install a boot loader</source>
-        <translation>Neinstalovat samozaváděcí program</translation>
+        <comment>@label</comment>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location filename="../src/modules/partition/core/BootLoaderModel.cpp" line="148"/>
@@ -210,19 +215,19 @@
 <context>
     <name>Calamares::ExecutionViewStep</name>
     <message>
-        <location filename="../src/libcalamaresui/viewpages/ExecutionViewStep.cpp" line="76"/>
+        <location filename="../src/libcalamaresui/viewpages/ExecutionViewStep.cpp" line="77"/>
         <source>%p%</source>
         <comment>Progress percentage indicator: %p is where the number 0..100 is placed</comment>
         <translation type="unfinished"/>
     </message>
     <message>
-        <location filename="../src/libcalamaresui/viewpages/ExecutionViewStep.cpp" line="116"/>
+        <location filename="../src/libcalamaresui/viewpages/ExecutionViewStep.cpp" line="117"/>
         <source>Set Up</source>
         <comment>@label</comment>
         <translation type="unfinished"/>
     </message>
     <message>
-        <location filename="../src/libcalamaresui/viewpages/ExecutionViewStep.cpp" line="116"/>
+        <location filename="../src/libcalamaresui/viewpages/ExecutionViewStep.cpp" line="117"/>
         <source>Install</source>
         <comment>@label</comment>
         <translation type="unfinished"/>
@@ -667,18 +672,27 @@ Instalátor bude ukončen a všechny změny budou ztraceny.</translation>
     <name>ChangeFilesystemLabelJob</name>
     <message>
         <location filename="../src/modules/partition/jobs/ChangeFilesystemLabelJob.cpp" line="34"/>
-        <source>Set filesystem label on %1.</source>
+        <source>Set filesystem label on %1</source>
+        <comment>@title</comment>
         <translation type="unfinished"/>
     </message>
     <message>
         <location filename="../src/modules/partition/jobs/ChangeFilesystemLabelJob.cpp" line="41"/>
-        <source>Set filesystem label &lt;strong&gt;%1&lt;/strong&gt; to partition &lt;strong&gt;%2&lt;/strong&gt;.</source>
+        <source>Set filesystem label &lt;strong&gt;%1&lt;/strong&gt; to partition &lt;strong&gt;%2&lt;/strong&gt;</source>
+        <comment>@info</comment>
         <translation type="unfinished"/>
     </message>
     <message>
-        <location filename="../src/modules/partition/jobs/ChangeFilesystemLabelJob.cpp" line="71"/>
-        <location filename="../src/modules/partition/jobs/ChangeFilesystemLabelJob.cpp" line="83"/>
+        <location filename="../src/modules/partition/jobs/ChangeFilesystemLabelJob.cpp" line="50"/>
+        <source>Setting filesystem label &lt;strong&gt;%1&lt;/strong&gt; to partition &lt;strong&gt;%2&lt;/strong&gt;…</source>
+        <comment>@status</comment>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location filename="../src/modules/partition/jobs/ChangeFilesystemLabelJob.cpp" line="72"/>
+        <location filename="../src/modules/partition/jobs/ChangeFilesystemLabelJob.cpp" line="84"/>
         <source>The installer failed to update partition table on disk &apos;%1&apos;.</source>
+        <comment>@info</comment>
         <translation type="unfinished"/>
     </message>
 </context>
@@ -693,61 +707,28 @@ Instalátor bude ukončen a všechny změny budou ztraceny.</translation>
 <context>
     <name>ChoicePage</name>
     <message>
-        <location filename="../src/modules/partition/gui/ChoicePage.cpp" line="139"/>
-        <source>After:</source>
-        <translation>Po:</translation>
-    </message>
-    <message>
-        <location filename="../src/modules/partition/gui/ChoicePage.cpp" line="1059"/>
-        <source>%1 will be shrunk to %2MiB and a new %3MiB partition will be created for %4.</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <location filename="../src/modules/partition/gui/ChoicePage.cpp" line="1339"/>
-        <location filename="../src/modules/partition/gui/ChoicePage.cpp" line="1376"/>
-        <location filename="../src/modules/partition/gui/ChoicePage.cpp" line="1397"/>
-        <location filename="../src/modules/partition/gui/ChoicePage.cpp" line="1422"/>
+        <location filename="../src/modules/partition/gui/ChoicePage.cpp" line="1342"/>
+        <location filename="../src/modules/partition/gui/ChoicePage.cpp" line="1379"/>
+        <location filename="../src/modules/partition/gui/ChoicePage.cpp" line="1400"/>
+        <location filename="../src/modules/partition/gui/ChoicePage.cpp" line="1425"/>
         <source>&lt;strong&gt;Erase disk&lt;/strong&gt;&lt;br/&gt;This will &lt;font color=&quot;red&quot;&gt;delete&lt;/font&gt; all data currently present on the selected storage device.</source>
         <translation>&lt;strong&gt;Vymazat disk&lt;/strong&gt;&lt;br/&gt;Toto &lt;font color=&quot;red&quot;&gt;smaže&lt;/font&gt; všechna data nyní přítomná na vybraném ukládacím zařízení.</translation>
     </message>
     <message>
-        <location filename="../src/modules/partition/gui/ChoicePage.cpp" line="1343"/>
-        <location filename="../src/modules/partition/gui/ChoicePage.cpp" line="1372"/>
-        <location filename="../src/modules/partition/gui/ChoicePage.cpp" line="1393"/>
-        <location filename="../src/modules/partition/gui/ChoicePage.cpp" line="1418"/>
+        <location filename="../src/modules/partition/gui/ChoicePage.cpp" line="1346"/>
+        <location filename="../src/modules/partition/gui/ChoicePage.cpp" line="1375"/>
+        <location filename="../src/modules/partition/gui/ChoicePage.cpp" line="1396"/>
+        <location filename="../src/modules/partition/gui/ChoicePage.cpp" line="1421"/>
         <source>&lt;strong&gt;Install alongside&lt;/strong&gt;&lt;br/&gt;The installer will shrink a partition to make room for %1.</source>
         <translation>&lt;strong&gt;Nainstalovat vedle&lt;/strong&gt;&lt;br/&gt;Instalátor zmenší diskový oddíl, aby udělal místo pro %1.</translation>
     </message>
     <message>
-        <location filename="../src/modules/partition/gui/ChoicePage.cpp" line="1347"/>
-        <location filename="../src/modules/partition/gui/ChoicePage.cpp" line="1380"/>
-        <location filename="../src/modules/partition/gui/ChoicePage.cpp" line="1401"/>
-        <location filename="../src/modules/partition/gui/ChoicePage.cpp" line="1426"/>
+        <location filename="../src/modules/partition/gui/ChoicePage.cpp" line="1350"/>
+        <location filename="../src/modules/partition/gui/ChoicePage.cpp" line="1383"/>
+        <location filename="../src/modules/partition/gui/ChoicePage.cpp" line="1404"/>
+        <location filename="../src/modules/partition/gui/ChoicePage.cpp" line="1429"/>
         <source>&lt;strong&gt;Replace a partition&lt;/strong&gt;&lt;br/&gt;Replaces a partition with %1.</source>
         <translation>&lt;strong&gt;Nahradit oddíl&lt;/strong&gt;&lt;br/&gt;Nahradí diskový oddíl %1.</translation>
-    </message>
-    <message>
-        <location filename="../src/modules/partition/gui/ChoicePage.cpp" line="1690"/>
-        <source>Boot loader location:</source>
-        <translation>Umístění samozaváděcího programu:</translation>
-    </message>
-    <message>
-        <location filename="../src/modules/partition/gui/ChoicePage.cpp" line="137"/>
-        <source>Select storage de&amp;vice:</source>
-        <translation>Vybrat ukládací &amp;zařízení:</translation>
-    </message>
-    <message>
-        <location filename="../src/modules/partition/gui/ChoicePage.cpp" line="138"/>
-        <location filename="../src/modules/partition/gui/ChoicePage.cpp" line="1034"/>
-        <location filename="../src/modules/partition/gui/ChoicePage.cpp" line="1085"/>
-        <location filename="../src/modules/partition/gui/ChoicePage.cpp" line="1138"/>
-        <source>Current:</source>
-        <translation>Nynější:</translation>
-    </message>
-    <message>
-        <location filename="../src/modules/partition/gui/ChoicePage.cpp" line="896"/>
-        <source>Reuse %1 as home partition for %2.</source>
-        <translation>Znovu použít %1 jako domovský oddíl pro %2.</translation>
     </message>
     <message>
         <location filename="../src/modules/partition/gui/ChoicePage.cpp" line="1035"/>
@@ -755,87 +736,137 @@ Instalátor bude ukončen a všechny změny budou ztraceny.</translation>
         <translation>&lt;strong&gt;Vyberte oddíl pro zmenšení, a potom posuňte spodní úchyt pro změnu velikosti&lt;/strong&gt;</translation>
     </message>
     <message>
-        <location filename="../src/modules/partition/gui/ChoicePage.cpp" line="1129"/>
+        <location filename="../src/modules/partition/gui/ChoicePage.cpp" line="137"/>
+        <source>Select storage de&amp;vice:</source>
+        <comment>@label</comment>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location filename="../src/modules/partition/gui/ChoicePage.cpp" line="138"/>
+        <location filename="../src/modules/partition/gui/ChoicePage.cpp" line="1034"/>
+        <location filename="../src/modules/partition/gui/ChoicePage.cpp" line="1086"/>
+        <location filename="../src/modules/partition/gui/ChoicePage.cpp" line="1139"/>
+        <source>Current:</source>
+        <comment>@label</comment>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location filename="../src/modules/partition/gui/ChoicePage.cpp" line="139"/>
+        <source>After:</source>
+        <comment>@label</comment>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location filename="../src/modules/partition/gui/ChoicePage.cpp" line="896"/>
+        <source>Reuse %1 as home partition for %2</source>
+        <comment>@label</comment>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location filename="../src/modules/partition/gui/ChoicePage.cpp" line="1059"/>
+        <source>%1 will be shrunk to %2MiB and a new %3MiB partition will be created for %4.</source>
+        <comment>@info, %1 is partition name, %4 is product name</comment>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location filename="../src/modules/partition/gui/ChoicePage.cpp" line="1130"/>
         <source>&lt;strong&gt;Select a partition to install on&lt;/strong&gt;</source>
-        <translation>&lt;strong&gt;Vyberte oddíl, na který se má instalovat&lt;/strong&gt;</translation>
+        <comment>@label</comment>
+        <translation type="unfinished"/>
     </message>
     <message>
-        <location filename="../src/modules/partition/gui/ChoicePage.cpp" line="1189"/>
+        <location filename="../src/modules/partition/gui/ChoicePage.cpp" line="1190"/>
         <source>An EFI system partition cannot be found anywhere on this system. Please go back and use manual partitioning to set up %1.</source>
-        <translation>Nikde na tomto systému nelze najít systémový oddíl EFI. Jděte, prosím, zpět a použijte ruční rozdělení k nastavení %1.</translation>
+        <comment>@info, %1 is product name</comment>
+        <translation type="unfinished"/>
     </message>
     <message>
-        <location filename="../src/modules/partition/gui/ChoicePage.cpp" line="1197"/>
+        <location filename="../src/modules/partition/gui/ChoicePage.cpp" line="1199"/>
         <source>The EFI system partition at %1 will be used for starting %2.</source>
-        <translation>Systémový oddíl EFI na %1 se bude používat ke spouštění %2.</translation>
+        <comment>@info, %1 is partition path, %2 is product name</comment>
+        <translation type="unfinished"/>
     </message>
     <message>
-        <location filename="../src/modules/partition/gui/ChoicePage.cpp" line="1205"/>
+        <location filename="../src/modules/partition/gui/ChoicePage.cpp" line="1208"/>
         <source>EFI system partition:</source>
-        <translation>Systémový oddíl EFI:</translation>
+        <comment>@label</comment>
+        <translation type="unfinished"/>
     </message>
     <message>
-        <location filename="../src/modules/partition/gui/ChoicePage.cpp" line="1334"/>
+        <location filename="../src/modules/partition/gui/ChoicePage.cpp" line="1337"/>
         <source>This storage device does not seem to have an operating system on it. What would you like to do?&lt;br/&gt;You will be able to review and confirm your choices before any change is made to the storage device.</source>
         <translation>Zdá se, že na tomto ukládacím zařízení není operační systém. Co chcete dělat?&lt;br/&gt;Budete moci přezkoumat a potvrdit svoje volby, předtím než bude na ukládacím zařízení provedena jakákoli změna.</translation>
     </message>
     <message>
-        <location filename="../src/modules/partition/gui/ChoicePage.cpp" line="1366"/>
+        <location filename="../src/modules/partition/gui/ChoicePage.cpp" line="1369"/>
         <source>This storage device has %1 on it. What would you like to do?&lt;br/&gt;You will be able to review and confirm your choices before any change is made to the storage device.</source>
         <translation>Na tomto ukládacím zařízení je %1. Co chcete dělat?&lt;br/&gt;Budete moci přezkoumat a potvrdit svoje volby, předtím než bude na ukládacím zařízení provedena jakákoli změna.</translation>
     </message>
     <message>
-        <location filename="../src/modules/partition/gui/ChoicePage.cpp" line="1388"/>
+        <location filename="../src/modules/partition/gui/ChoicePage.cpp" line="1391"/>
         <source>This storage device already has an operating system on it. What would you like to do?&lt;br/&gt;You will be able to review and confirm your choices before any change is made to the storage device.</source>
         <translation>Na tomto ukládacím zařízení již je operační systém. Co chcete dělat?&lt;br/&gt;Budete moci přezkoumat a potvrdit svoje volby, předtím než bude na ukládacím zařízení provedena jakákoli změna.</translation>
     </message>
     <message>
-        <location filename="../src/modules/partition/gui/ChoicePage.cpp" line="1413"/>
+        <location filename="../src/modules/partition/gui/ChoicePage.cpp" line="1416"/>
         <source>This storage device has multiple operating systems on it. What would you like to do?&lt;br/&gt;You will be able to review and confirm your choices before any change is made to the storage device.</source>
         <translation>Na tomto ukládacím zařízení je více operačních systémů. Co chcete dělat?&lt;br/&gt;Budete moci přezkoumat a potvrdit svoje volby, předtím než bude na ukládacím zařízení provedena jakákoli změna.</translation>
     </message>
     <message>
-        <location filename="../src/modules/partition/gui/ChoicePage.cpp" line="1485"/>
+        <location filename="../src/modules/partition/gui/ChoicePage.cpp" line="1488"/>
         <source>This storage device already has an operating system on it, but the partition table &lt;strong&gt;%1&lt;/strong&gt; is different from the needed &lt;strong&gt;%2&lt;/strong&gt;.&lt;br/&gt;</source>
         <translation type="unfinished"/>
     </message>
     <message>
-        <location filename="../src/modules/partition/gui/ChoicePage.cpp" line="1508"/>
+        <location filename="../src/modules/partition/gui/ChoicePage.cpp" line="1512"/>
         <source>This storage device has one of its partitions &lt;strong&gt;mounted&lt;/strong&gt;.</source>
+        <comment>@info</comment>
         <translation type="unfinished"/>
     </message>
     <message>
-        <location filename="../src/modules/partition/gui/ChoicePage.cpp" line="1513"/>
+        <location filename="../src/modules/partition/gui/ChoicePage.cpp" line="1517"/>
         <source>This storage device is a part of an &lt;strong&gt;inactive RAID&lt;/strong&gt; device.</source>
+        <comment>@info</comment>
         <translation type="unfinished"/>
     </message>
     <message>
-        <location filename="../src/modules/partition/gui/ChoicePage.cpp" line="1628"/>
-        <source>No Swap</source>
-        <translation>Žádné odkládací místo (swap)</translation>
+        <location filename="../src/modules/partition/gui/ChoicePage.cpp" line="1632"/>
+        <source>No swap</source>
+        <comment>@label</comment>
+        <translation type="unfinished"/>
     </message>
     <message>
-        <location filename="../src/modules/partition/gui/ChoicePage.cpp" line="1637"/>
-        <source>Reuse Swap</source>
-        <translation>Znovupoužití odkládacího místa (swap)</translation>
+        <location filename="../src/modules/partition/gui/ChoicePage.cpp" line="1641"/>
+        <source>Reuse swap</source>
+        <comment>@label</comment>
+        <translation type="unfinished"/>
     </message>
     <message>
-        <location filename="../src/modules/partition/gui/ChoicePage.cpp" line="1640"/>
+        <location filename="../src/modules/partition/gui/ChoicePage.cpp" line="1644"/>
         <source>Swap (no Hibernate)</source>
-        <translation>Odkládací místo - swap (bez hibernace)</translation>
+        <comment>@label</comment>
+        <translation type="unfinished"/>
     </message>
     <message>
-        <location filename="../src/modules/partition/gui/ChoicePage.cpp" line="1643"/>
+        <location filename="../src/modules/partition/gui/ChoicePage.cpp" line="1647"/>
         <source>Swap (with Hibernate)</source>
-        <translation>Odkládací místo - swap (s hibernací)</translation>
+        <comment>@label</comment>
+        <translation type="unfinished"/>
     </message>
     <message>
-        <location filename="../src/modules/partition/gui/ChoicePage.cpp" line="1646"/>
+        <location filename="../src/modules/partition/gui/ChoicePage.cpp" line="1650"/>
         <source>Swap to file</source>
-        <translation>Odkládací místo - swap do souboru</translation>
+        <comment>@label</comment>
+        <translation type="unfinished"/>
     </message>
     <message>
-        <location filename="../src/modules/partition/gui/ChoicePage.cpp" line="1659"/>
+        <location filename="../src/modules/partition/gui/ChoicePage.cpp" line="1694"/>
+        <source>Bootloader location:</source>
+        <comment>@label</comment>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location filename="../src/modules/partition/gui/ChoicePage.cpp" line="1663"/>
         <source>&lt;strong&gt;Manual partitioning&lt;/strong&gt;&lt;br/&gt;You can create or resize partitions yourself.&lt;br/&gt;Having a GPT partition table and &lt;strong&gt;fat32 512Mb /boot partition is a must for UEFI installs&lt;/strong&gt;,&lt;br/&gt;either use an existing without formatting or create one.</source>
         <translation type="unfinished"/>
     </message>
@@ -979,12 +1010,14 @@ Instalátor bude ukončen a všechny změny budou ztraceny.</translation>
     <message>
         <location filename="../src/modules/partition/jobs/ClearMountsJob.cpp" line="371"/>
         <source>Clear mounts for partitioning operations on %1</source>
-        <translation>Uklidit připojení pro operace rozdělení disku na %1</translation>
+        <comment>@title</comment>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location filename="../src/modules/partition/jobs/ClearMountsJob.cpp" line="377"/>
-        <source>Clearing mounts for partitioning operations on %1.</source>
-        <translation>Uklízí se připojení pro operace rozdělení disku na %1.</translation>
+        <source>Clearing mounts for partitioning operations on %1…</source>
+        <comment>@status</comment>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location filename="../src/modules/partition/jobs/ClearMountsJob.cpp" line="396"/>
@@ -996,13 +1029,10 @@ Instalátor bude ukončen a všechny změny budou ztraceny.</translation>
     <name>ClearTempMountsJob</name>
     <message>
         <location filename="../src/modules/partition/jobs/ClearTempMountsJob.cpp" line="33"/>
-        <source>Clear all temporary mounts.</source>
-        <translation>Uklidit všechna dočasná připojení.</translation>
-    </message>
-    <message>
         <location filename="../src/modules/partition/jobs/ClearTempMountsJob.cpp" line="40"/>
-        <source>Clearing all temporary mounts.</source>
-        <translation>Uklízí se všechna dočasná připojení.</translation>
+        <source>Clearing all temporary mounts…</source>
+        <comment>@status</comment>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location filename="../src/modules/partition/jobs/ClearTempMountsJob.cpp" line="70"/>
@@ -1071,17 +1101,18 @@ Instalátor bude ukončen a všechny změny budou ztraceny.</translation>
         <translation type="unfinished"/>
     </message>
     <message>
-        <location filename="../src/modules/summary/Config.cpp" line="94"/>
+        <location filename="../src/modules/summary/Config.cpp" line="35"/>
         <source>Summary</source>
+        <comment>@label</comment>
         <translation type="unfinished"/>
     </message>
     <message>
-        <location filename="../src/modules/summary/Config.cpp" line="98"/>
+        <location filename="../src/modules/summary/Config.cpp" line="39"/>
         <source>This is an overview of what will happen once you start the setup procedure.</source>
         <translation type="unfinished"/>
     </message>
     <message>
-        <location filename="../src/modules/summary/Config.cpp" line="103"/>
+        <location filename="../src/modules/summary/Config.cpp" line="44"/>
         <source>This is an overview of what will happen once you start the install procedure.</source>
         <translation type="unfinished"/>
     </message>
@@ -1136,22 +1167,22 @@ Instalátor bude ukončen a všechny změny budou ztraceny.</translation>
         <translation type="unfinished"/>
     </message>
     <message>
-        <location filename="../src/modules/packagechooser/Config.cpp" line="111"/>
+        <location filename="../src/modules/packagechooser/Config.cpp" line="110"/>
         <source>Package Selection</source>
         <translation type="unfinished"/>
     </message>
     <message>
-        <location filename="../src/modules/packagechooser/Config.cpp" line="113"/>
+        <location filename="../src/modules/packagechooser/Config.cpp" line="112"/>
         <source>Please pick a product from the list. The selected product will be installed.</source>
         <translation type="unfinished"/>
     </message>
     <message>
-        <location filename="../src/modules/packagechooser/Config.cpp" line="242"/>
+        <location filename="../src/modules/packagechooser/Config.cpp" line="241"/>
         <source>Install option: &lt;strong&gt;%1&lt;/strong&gt;</source>
         <translation type="unfinished"/>
     </message>
     <message>
-        <location filename="../src/modules/packagechooser/Config.cpp" line="242"/>
+        <location filename="../src/modules/packagechooser/Config.cpp" line="241"/>
         <source>None</source>
         <translation type="unfinished"/>
     </message>
@@ -1223,13 +1254,13 @@ Instalátor bude ukončen a všechny změny budou ztraceny.</translation>
     </message>
     <message>
         <location filename="../src/modules/locale/Config.cpp" line="410"/>
-        <source>The system language will be set to %1</source>
+        <source>The system language will be set to %1.</source>
         <comment>@info</comment>
         <translation type="unfinished"/>
     </message>
     <message>
-        <location filename="../src/modules/locale/Config.cpp" line="417"/>
-        <source>The numbers and dates locale will be set to %1</source>
+        <location filename="../src/modules/locale/Config.cpp" line="416"/>
+        <source>The numbers and dates locale will be set to %1.</source>
         <comment>@info</comment>
         <translation type="unfinished"/>
     </message>
@@ -1299,31 +1330,37 @@ Instalátor bude ukončen a všechny změny budou ztraceny.</translation>
     <message>
         <location filename="../src/modules/partition/gui/CreatePartitionDialog.cpp" line="67"/>
         <source>En&amp;crypt</source>
-        <translation>&amp;Zašifrovat</translation>
+        <comment>@action</comment>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location filename="../src/modules/partition/gui/CreatePartitionDialog.cpp" line="195"/>
         <source>Logical</source>
-        <translation>Logický</translation>
+        <comment>@label</comment>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location filename="../src/modules/partition/gui/CreatePartitionDialog.cpp" line="200"/>
         <source>Primary</source>
-        <translation>Hlavní</translation>
+        <comment>@label</comment>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location filename="../src/modules/partition/gui/CreatePartitionDialog.cpp" line="219"/>
         <source>GPT</source>
-        <translation>GPT</translation>
+        <comment>@label</comment>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location filename="../src/modules/partition/gui/PartitionDialogHelpers.cpp" line="91"/>
         <source>Mountpoint already in use. Please select another one.</source>
-        <translation>Bod připojení je používán. Prosím vyberte jiný.</translation>
+        <comment>@info</comment>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location filename="../src/modules/partition/gui/PartitionDialogHelpers.cpp" line="96"/>
         <source>Mountpoint must start with a &lt;tt&gt;/&lt;/tt&gt;.</source>
+        <comment>@info</comment>
         <translation type="unfinished"/>
     </message>
 </context>
@@ -1331,44 +1368,52 @@ Instalátor bude ukončen a všechny změny budou ztraceny.</translation>
     <name>CreatePartitionJob</name>
     <message>
         <location filename="../src/modules/partition/jobs/CreatePartitionJob.cpp" line="181"/>
-        <source>Create new %1MiB partition on %3 (%2) with entries %4.</source>
+        <source>Create new %1MiB partition on %3 (%2) with entries %4</source>
+        <comment>@title</comment>
         <translation type="unfinished"/>
     </message>
     <message>
         <location filename="../src/modules/partition/jobs/CreatePartitionJob.cpp" line="189"/>
-        <source>Create new %1MiB partition on %3 (%2).</source>
+        <source>Create new %1MiB partition on %3 (%2)</source>
+        <comment>@title</comment>
         <translation type="unfinished"/>
     </message>
     <message>
         <location filename="../src/modules/partition/jobs/CreatePartitionJob.cpp" line="196"/>
-        <source>Create new %2MiB partition on %4 (%3) with file system %1.</source>
+        <source>Create new %2MiB partition on %4 (%3) with file system %1</source>
+        <comment>@title</comment>
         <translation type="unfinished"/>
     </message>
     <message>
         <location filename="../src/modules/partition/jobs/CreatePartitionJob.cpp" line="212"/>
-        <source>Create new &lt;strong&gt;%1MiB&lt;/strong&gt; partition on &lt;strong&gt;%3&lt;/strong&gt; (%2) with entries &lt;em&gt;%4&lt;/em&gt;.</source>
+        <source>Create new &lt;strong&gt;%1MiB&lt;/strong&gt; partition on &lt;strong&gt;%3&lt;/strong&gt; (%2) with entries &lt;em&gt;%4&lt;/em&gt;</source>
+        <comment>@info</comment>
         <translation type="unfinished"/>
     </message>
     <message>
-        <location filename="../src/modules/partition/jobs/CreatePartitionJob.cpp" line="221"/>
-        <source>Create new &lt;strong&gt;%1MiB&lt;/strong&gt; partition on &lt;strong&gt;%3&lt;/strong&gt; (%2).</source>
+        <location filename="../src/modules/partition/jobs/CreatePartitionJob.cpp" line="222"/>
+        <source>Create new &lt;strong&gt;%1MiB&lt;/strong&gt; partition on &lt;strong&gt;%3&lt;/strong&gt; (%2)</source>
+        <comment>@info</comment>
         <translation type="unfinished"/>
     </message>
     <message>
-        <location filename="../src/modules/partition/jobs/CreatePartitionJob.cpp" line="228"/>
-        <source>Create new &lt;strong&gt;%2MiB&lt;/strong&gt; partition on &lt;strong&gt;%4&lt;/strong&gt; (%3) with file system &lt;strong&gt;%1&lt;/strong&gt;.</source>
+        <location filename="../src/modules/partition/jobs/CreatePartitionJob.cpp" line="229"/>
+        <source>Create new &lt;strong&gt;%2MiB&lt;/strong&gt; partition on &lt;strong&gt;%4&lt;/strong&gt; (%3) with file system &lt;strong&gt;%1&lt;/strong&gt;</source>
+        <comment>@info</comment>
         <translation type="unfinished"/>
     </message>
     <message>
-        <location filename="../src/modules/partition/jobs/CreatePartitionJob.cpp" line="252"/>
-        <location filename="../src/modules/partition/jobs/CreatePartitionJob.cpp" line="255"/>
-        <source>Creating new %1 partition on %2.</source>
-        <translation>Vytváří se nový diskový oddíl %1 na %2.</translation>
+        <location filename="../src/modules/partition/jobs/CreatePartitionJob.cpp" line="254"/>
+        <location filename="../src/modules/partition/jobs/CreatePartitionJob.cpp" line="257"/>
+        <source>Creating new %1 partition on %2…</source>
+        <comment>@status</comment>
+        <translation type="unfinished"/>
     </message>
     <message>
-        <location filename="../src/modules/partition/jobs/CreatePartitionJob.cpp" line="272"/>
+        <location filename="../src/modules/partition/jobs/CreatePartitionJob.cpp" line="274"/>
         <source>The installer failed to create partition on disk &apos;%1&apos;.</source>
-        <translation>Instalátoru se nepodařilo vytvořit oddíl na disku &apos;%1&apos;.</translation>
+        <comment>@info</comment>
+        <translation type="unfinished"/>
     </message>
 </context>
 <context>
@@ -1403,18 +1448,16 @@ Instalátor bude ukončen a všechny změny budou ztraceny.</translation>
     <name>CreatePartitionTableJob</name>
     <message>
         <location filename="../src/modules/partition/jobs/CreatePartitionTableJob.cpp" line="41"/>
-        <source>Create new %1 partition table on %2.</source>
-        <translation>Vytvořit nový diskový oddíl %1 na %2.</translation>
+        <location filename="../src/modules/partition/jobs/CreatePartitionTableJob.cpp" line="58"/>
+        <source>Creating new %1 partition table on %2…</source>
+        <comment>@status</comment>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location filename="../src/modules/partition/jobs/CreatePartitionTableJob.cpp" line="49"/>
-        <source>Create new &lt;strong&gt;%1&lt;/strong&gt; partition table on &lt;strong&gt;%2&lt;/strong&gt; (%3).</source>
-        <translation>Vytvořit novou &lt;strong&gt;%1&lt;/strong&gt; tabulku oddílů na &lt;strong&gt;%2&lt;/strong&gt; (%3).</translation>
-    </message>
-    <message>
-        <location filename="../src/modules/partition/jobs/CreatePartitionTableJob.cpp" line="58"/>
-        <source>Creating new %1 partition table on %2.</source>
-        <translation>Vytváří se nová tabulka oddílů %1 na %2.</translation>
+        <source>Creating new &lt;strong&gt;%1&lt;/strong&gt; partition table on &lt;strong&gt;%2&lt;/strong&gt; (%3)…</source>
+        <comment>@status</comment>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location filename="../src/modules/partition/jobs/CreatePartitionTableJob.cpp" line="86"/>
@@ -1431,28 +1474,32 @@ Instalátor bude ukončen a všechny změny budou ztraceny.</translation>
     </message>
     <message>
         <location filename="../src/modules/users/CreateUserJob.cpp" line="39"/>
-        <source>Create user &lt;strong&gt;%1&lt;/strong&gt;.</source>
-        <translation>Vytvořit uživatele &lt;strong&gt;%1&lt;/strong&gt;.</translation>
+        <source>Create user &lt;strong&gt;%1&lt;/strong&gt;</source>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location filename="../src/modules/users/CreateUserJob.cpp" line="45"/>
         <location filename="../src/modules/users/CreateUserJob.cpp" line="137"/>
-        <source>Creating user %1</source>
+        <source>Creating user %1…</source>
+        <comment>@status</comment>
         <translation type="unfinished"/>
     </message>
     <message>
         <location filename="../src/modules/users/CreateUserJob.cpp" line="120"/>
-        <source>Preserving home directory</source>
+        <source>Preserving home directory…</source>
+        <comment>@status</comment>
         <translation type="unfinished"/>
     </message>
     <message>
         <location filename="../src/modules/users/CreateUserJob.cpp" line="145"/>
         <source>Configuring user %1</source>
+        <comment>@status</comment>
         <translation type="unfinished"/>
     </message>
     <message>
         <location filename="../src/modules/users/CreateUserJob.cpp" line="153"/>
-        <source>Setting file permissions</source>
+        <source>Setting file permissions…</source>
+        <comment>@status</comment>
         <translation type="unfinished"/>
     </message>
 </context>
@@ -1461,6 +1508,7 @@ Instalátor bude ukončen a všechny změny budou ztraceny.</translation>
     <message>
         <location filename="../src/modules/partition/gui/CreateVolumeGroupDialog.cpp" line="28"/>
         <source>Create Volume Group</source>
+        <comment>@title</comment>
         <translation type="unfinished"/>
     </message>
 </context>
@@ -1468,17 +1516,15 @@ Instalátor bude ukončen a všechny změny budou ztraceny.</translation>
     <name>CreateVolumeGroupJob</name>
     <message>
         <location filename="../src/modules/partition/jobs/CreateVolumeGroupJob.cpp" line="32"/>
-        <source>Create new volume group named %1.</source>
+        <location filename="../src/modules/partition/jobs/CreateVolumeGroupJob.cpp" line="44"/>
+        <source>Creating new volume group named %1…</source>
+        <comment>@status</comment>
         <translation type="unfinished"/>
     </message>
     <message>
         <location filename="../src/modules/partition/jobs/CreateVolumeGroupJob.cpp" line="38"/>
-        <source>Create new volume group named &lt;strong&gt;%1&lt;/strong&gt;.</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <location filename="../src/modules/partition/jobs/CreateVolumeGroupJob.cpp" line="44"/>
-        <source>Creating new volume group named %1.</source>
+        <source>Creating new volume group named &lt;strong&gt;%1&lt;/strong&gt;…</source>
+        <comment>@status</comment>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -1492,12 +1538,14 @@ Instalátor bude ukončen a všechny změny budou ztraceny.</translation>
     <message>
         <location filename="../src/modules/partition/jobs/DeactivateVolumeGroupJob.cpp" line="26"/>
         <location filename="../src/modules/partition/jobs/DeactivateVolumeGroupJob.cpp" line="38"/>
-        <source>Deactivate volume group named %1.</source>
+        <source>Deactivating volume group named %1…</source>
+        <comment>@status</comment>
         <translation type="unfinished"/>
     </message>
     <message>
         <location filename="../src/modules/partition/jobs/DeactivateVolumeGroupJob.cpp" line="32"/>
-        <source>Deactivate volume group named &lt;strong&gt;%1&lt;/strong&gt;.</source>
+        <source>Deactivating volume group named &lt;strong&gt;%1&lt;/strong&gt;…</source>
+        <comment>@status</comment>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -1510,18 +1558,16 @@ Instalátor bude ukončen a všechny změny budou ztraceny.</translation>
     <name>DeletePartitionJob</name>
     <message>
         <location filename="../src/modules/partition/jobs/DeletePartitionJob.cpp" line="73"/>
-        <source>Delete partition %1.</source>
-        <translation>Smazat diskový oddíl %1.</translation>
+        <location filename="../src/modules/partition/jobs/DeletePartitionJob.cpp" line="85"/>
+        <source>Deleting partition %1…</source>
+        <comment>@status</comment>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location filename="../src/modules/partition/jobs/DeletePartitionJob.cpp" line="79"/>
-        <source>Delete partition &lt;strong&gt;%1&lt;/strong&gt;.</source>
-        <translation>Smazat diskový oddíl &lt;strong&gt;%1&lt;/strong&gt;.</translation>
-    </message>
-    <message>
-        <location filename="../src/modules/partition/jobs/DeletePartitionJob.cpp" line="85"/>
-        <source>Deleting partition %1.</source>
-        <translation>Maže se diskový oddíl %1.</translation>
+        <source>Deleting partition &lt;strong&gt;%1&lt;/strong&gt;…</source>
+        <comment>@status</comment>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location filename="../src/modules/partition/jobs/DeletePartitionJob.cpp" line="99"/>
@@ -1697,11 +1743,13 @@ Instalátor bude ukončen a všechny změny budou ztraceny.</translation>
         <location filename="../src/modules/partition/gui/EncryptWidget.cpp" line="153"/>
         <location filename="../src/modules/partition/gui/EncryptWidget.cpp" line="168"/>
         <source>Please enter the same passphrase in both boxes.</source>
-        <translation>Vložte, prosím, stejné přístupové údaje do obou polí. </translation>
+        <comment>@tooltip</comment>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location filename="../src/modules/partition/gui/EncryptWidget.cpp" line="158"/>
-        <source>Password must be a minimum of %1 characters</source>
+        <source>Password must be a minimum of %1 characters.</source>
+        <comment>@tooltip</comment>
         <translation type="unfinished"/>
     </message>
 </context>
@@ -1723,57 +1771,68 @@ Instalátor bude ukončen a všechny změny budou ztraceny.</translation>
     <message>
         <location filename="../src/modules/partition/jobs/FillGlobalStorageJob.cpp" line="179"/>
         <source>Set partition information</source>
-        <translation>Nastavit informace o oddílu</translation>
+        <comment>@title</comment>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location filename="../src/modules/partition/jobs/FillGlobalStorageJob.cpp" line="208"/>
         <source>Install %1 on &lt;strong&gt;new&lt;/strong&gt; %2 system partition with features &lt;em&gt;%3&lt;/em&gt;</source>
+        <comment>@info</comment>
         <translation type="unfinished"/>
     </message>
     <message>
-        <location filename="../src/modules/partition/jobs/FillGlobalStorageJob.cpp" line="216"/>
-        <source>Install %1 on &lt;strong&gt;new&lt;/strong&gt; %2 system partition.</source>
-        <translation>Instalovat %1 na &lt;strong&gt;novém&lt;/strong&gt; %2 systémový diskový oddílu.</translation>
-    </message>
-    <message>
-        <location filename="../src/modules/partition/jobs/FillGlobalStorageJob.cpp" line="225"/>
-        <source>Set up &lt;strong&gt;new&lt;/strong&gt; %2 partition with mount point &lt;strong&gt;%1&lt;/strong&gt; and features &lt;em&gt;%3&lt;/em&gt;.</source>
+        <location filename="../src/modules/partition/jobs/FillGlobalStorageJob.cpp" line="217"/>
+        <source>Install %1 on &lt;strong&gt;new&lt;/strong&gt; %2 system partition</source>
+        <comment>@info</comment>
         <translation type="unfinished"/>
     </message>
     <message>
-        <location filename="../src/modules/partition/jobs/FillGlobalStorageJob.cpp" line="233"/>
-        <source>Set up &lt;strong&gt;new&lt;/strong&gt; %2 partition with mount point &lt;strong&gt;%1&lt;/strong&gt;%3.</source>
+        <location filename="../src/modules/partition/jobs/FillGlobalStorageJob.cpp" line="226"/>
+        <source>Set up &lt;strong&gt;new&lt;/strong&gt; %2 partition with mount point &lt;strong&gt;%1&lt;/strong&gt; and features &lt;em&gt;%3&lt;/em&gt;</source>
+        <comment>@info</comment>
         <translation type="unfinished"/>
     </message>
     <message>
-        <location filename="../src/modules/partition/jobs/FillGlobalStorageJob.cpp" line="247"/>
-        <source>Install %2 on %3 system partition &lt;strong&gt;%1&lt;/strong&gt; with features &lt;em&gt;%4&lt;/em&gt;.</source>
+        <location filename="../src/modules/partition/jobs/FillGlobalStorageJob.cpp" line="235"/>
+        <source>Set up &lt;strong&gt;new&lt;/strong&gt; %2 partition with mount point &lt;strong&gt;%1&lt;/strong&gt;%3</source>
+        <comment>@info</comment>
         <translation type="unfinished"/>
     </message>
     <message>
-        <location filename="../src/modules/partition/jobs/FillGlobalStorageJob.cpp" line="266"/>
-        <source>Set up %3 partition &lt;strong&gt;%1&lt;/strong&gt; with mount point &lt;strong&gt;%2&lt;/strong&gt; and features &lt;em&gt;%4&lt;/em&gt;.</source>
+        <location filename="../src/modules/partition/jobs/FillGlobalStorageJob.cpp" line="250"/>
+        <source>Install %2 on %3 system partition &lt;strong&gt;%1&lt;/strong&gt; with features &lt;em&gt;%4&lt;/em&gt;</source>
+        <comment>@info</comment>
         <translation type="unfinished"/>
     </message>
     <message>
-        <location filename="../src/modules/partition/jobs/FillGlobalStorageJob.cpp" line="275"/>
-        <source>Set up %3 partition &lt;strong&gt;%1&lt;/strong&gt; with mount point &lt;strong&gt;%2&lt;/strong&gt;%4.</source>
+        <location filename="../src/modules/partition/jobs/FillGlobalStorageJob.cpp" line="260"/>
+        <source>Install %2 on %3 system partition &lt;strong&gt;%1&lt;/strong&gt;</source>
+        <comment>@info</comment>
         <translation type="unfinished"/>
     </message>
     <message>
-        <location filename="../src/modules/partition/jobs/FillGlobalStorageJob.cpp" line="256"/>
-        <source>Install %2 on %3 system partition &lt;strong&gt;%1&lt;/strong&gt;.</source>
-        <translation>Instalovat %2 na %3 systémový diskový oddíl &lt;strong&gt;%1&lt;/strong&gt;.</translation>
+        <location filename="../src/modules/partition/jobs/FillGlobalStorageJob.cpp" line="270"/>
+        <source>Set up %3 partition &lt;strong&gt;%1&lt;/strong&gt; with mount point &lt;strong&gt;%2&lt;/strong&gt; and features &lt;em&gt;%4&lt;/em&gt;</source>
+        <comment>@info</comment>
+        <translation type="unfinished"/>
     </message>
     <message>
-        <location filename="../src/modules/partition/jobs/FillGlobalStorageJob.cpp" line="290"/>
-        <source>Install boot loader on &lt;strong&gt;%1&lt;/strong&gt;.</source>
-        <translation>Instalovat samozaváděcí program na &lt;strong&gt;%1&lt;/strong&gt;.</translation>
+        <location filename="../src/modules/partition/jobs/FillGlobalStorageJob.cpp" line="280"/>
+        <source>Set up %3 partition &lt;strong&gt;%1&lt;/strong&gt; with mount point &lt;strong&gt;%2&lt;/strong&gt;%4…</source>
+        <comment>@info</comment>
+        <translation type="unfinished"/>
     </message>
     <message>
-        <location filename="../src/modules/partition/jobs/FillGlobalStorageJob.cpp" line="299"/>
-        <source>Setting up mount points.</source>
-        <translation>Nastavují se přípojné body.</translation>
+        <location filename="../src/modules/partition/jobs/FillGlobalStorageJob.cpp" line="296"/>
+        <source>Install boot loader on &lt;strong&gt;%1&lt;/strong&gt;…</source>
+        <comment>@info</comment>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location filename="../src/modules/partition/jobs/FillGlobalStorageJob.cpp" line="305"/>
+        <source>Setting up mount points…</source>
+        <comment>@status</comment>
+        <translation type="unfinished"/>
     </message>
 </context>
 <context>
@@ -1841,24 +1900,27 @@ Instalátor bude ukončen a všechny změny budou ztraceny.</translation>
     <name>FormatPartitionJob</name>
     <message>
         <location filename="../src/modules/partition/jobs/FormatPartitionJob.cpp" line="39"/>
-        <source>Format partition %1 (file system: %2, size: %3 MiB) on %4.</source>
+        <source>Format partition %1 (file system: %2, size: %3 MiB) on %4</source>
+        <comment>@title</comment>
         <translation type="unfinished"/>
     </message>
     <message>
         <location filename="../src/modules/partition/jobs/FormatPartitionJob.cpp" line="49"/>
-        <source>Format &lt;strong&gt;%3MiB&lt;/strong&gt; partition &lt;strong&gt;%1&lt;/strong&gt; with file system &lt;strong&gt;%2&lt;/strong&gt;.</source>
+        <source>Format &lt;strong&gt;%3MiB&lt;/strong&gt; partition &lt;strong&gt;%1&lt;/strong&gt; with file system &lt;strong&gt;%2&lt;/strong&gt;</source>
+        <comment>@info</comment>
         <translation type="unfinished"/>
     </message>
     <message>
-        <location filename="../src/modules/partition/jobs/FormatPartitionJob.cpp" line="61"/>
+        <location filename="../src/modules/partition/jobs/FormatPartitionJob.cpp" line="62"/>
         <source>%1 (%2)</source>
         <comment>partition label %1 (device path %2)</comment>
         <translation type="unfinished"/>
     </message>
     <message>
-        <location filename="../src/modules/partition/jobs/FormatPartitionJob.cpp" line="63"/>
-        <source>Formatting partition %1 with file system %2.</source>
-        <translation>Formátuje seoddíl %1 se souborovým systémem %2.</translation>
+        <location filename="../src/modules/partition/jobs/FormatPartitionJob.cpp" line="64"/>
+        <source>Formatting partition %1 with file system %2…</source>
+        <comment>@status</comment>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location filename="../src/modules/partition/jobs/FormatPartitionJob.cpp" line="73"/>
@@ -2315,6 +2377,24 @@ Instalátor bude ukončen a všechny změny budou ztraceny.</translation>
     <message>
         <location filename="../src/modules/machineid/MachineIdJob.cpp" line="72"/>
         <source>No root mount point is set for MachineId.</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location filename="../src/modules/machineid/Workers.cpp" line="63"/>
+        <location filename="../src/modules/machineid/Workers.cpp" line="71"/>
+        <location filename="../src/modules/machineid/Workers.cpp" line="75"/>
+        <location filename="../src/modules/machineid/Workers.cpp" line="92"/>
+        <source>File not found</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location filename="../src/modules/machineid/Workers.cpp" line="64"/>
+        <source>Path &lt;pre&gt;%1&lt;/pre&gt; must be an absolute path.</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location filename="../src/modules/machineid/Workers.cpp" line="93"/>
+        <source>Could not create new random file &lt;pre&gt;%1&lt;/pre&gt;.</source>
         <translation type="unfinished"/>
     </message>
 </context>
@@ -2817,32 +2897,38 @@ Instalátor bude ukončen a všechny změny budou ztraceny.</translation>
     <message>
         <location filename="../src/modules/partition/gui/PartitionLabelsView.cpp" line="182"/>
         <source>Home</source>
-        <translation>Domovská složka</translation>
+        <comment>@label</comment>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location filename="../src/modules/partition/gui/PartitionLabelsView.cpp" line="186"/>
         <source>Boot</source>
-        <translation>Boot</translation>
+        <comment>@label</comment>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location filename="../src/modules/partition/gui/PartitionLabelsView.cpp" line="191"/>
         <source>EFI system</source>
-        <translation>Systém EFI</translation>
+        <comment>@label</comment>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location filename="../src/modules/partition/gui/PartitionLabelsView.cpp" line="195"/>
         <source>Swap</source>
-        <translation>Odkládací místo</translation>
+        <comment>@label</comment>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location filename="../src/modules/partition/gui/PartitionLabelsView.cpp" line="199"/>
         <source>New partition for %1</source>
-        <translation>Nový oddíl pro %1</translation>
+        <comment>@label</comment>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location filename="../src/modules/partition/gui/PartitionLabelsView.cpp" line="203"/>
         <source>New partition</source>
-        <translation>Nový oddíl</translation>
+        <comment>@label</comment>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location filename="../src/modules/partition/gui/PartitionLabelsView.cpp" line="228"/>
@@ -2857,38 +2943,45 @@ Instalátor bude ukončen a všechny změny budou ztraceny.</translation>
         <location filename="../src/modules/partition/core/PartitionModel.cpp" line="157"/>
         <location filename="../src/modules/partition/core/PartitionModel.cpp" line="201"/>
         <source>Free Space</source>
-        <translation>Volné místo</translation>
+        <comment>@title</comment>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location filename="../src/modules/partition/core/PartitionModel.cpp" line="161"/>
         <location filename="../src/modules/partition/core/PartitionModel.cpp" line="205"/>
-        <source>New partition</source>
-        <translation>Nový oddíl</translation>
+        <source>New Partition</source>
+        <comment>@title</comment>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location filename="../src/modules/partition/core/PartitionModel.cpp" line="307"/>
         <source>Name</source>
-        <translation>Název</translation>
+        <comment>@title</comment>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location filename="../src/modules/partition/core/PartitionModel.cpp" line="309"/>
         <source>File System</source>
-        <translation>Souborový systém</translation>
+        <comment>@title</comment>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location filename="../src/modules/partition/core/PartitionModel.cpp" line="311"/>
         <source>File System Label</source>
+        <comment>@title</comment>
         <translation type="unfinished"/>
     </message>
     <message>
         <location filename="../src/modules/partition/core/PartitionModel.cpp" line="313"/>
         <source>Mount Point</source>
-        <translation>Přípojný bod</translation>
+        <comment>@title</comment>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location filename="../src/modules/partition/core/PartitionModel.cpp" line="315"/>
         <source>Size</source>
-        <translation>Velikost</translation>
+        <comment>@title</comment>
+        <translation type="unfinished"/>
     </message>
 </context>
 <context>
@@ -2975,16 +3068,6 @@ Instalátor bude ukončen a všechny změny budou ztraceny.</translation>
 <context>
     <name>PartitionViewStep</name>
     <message>
-        <location filename="../src/modules/partition/PartitionViewStep.cpp" line="56"/>
-        <source>Gathering system information...</source>
-        <translation>Sbírají se informace o oddílu...</translation>
-    </message>
-    <message>
-        <location filename="../src/modules/partition/PartitionViewStep.cpp" line="107"/>
-        <source>Partitions</source>
-        <translation>Oddíly</translation>
-    </message>
-    <message>
         <location filename="../src/modules/partition/PartitionViewStep.cpp" line="250"/>
         <source>Unsafe partition actions are enabled.</source>
         <translation type="unfinished"/>
@@ -2998,16 +3081,6 @@ Instalátor bude ukončen a všechny změny budou ztraceny.</translation>
         <location filename="../src/modules/partition/PartitionViewStep.cpp" line="256"/>
         <source>No partitions will be changed.</source>
         <translation type="unfinished"/>
-    </message>
-    <message>
-        <location filename="../src/modules/partition/PartitionViewStep.cpp" line="296"/>
-        <source>Current:</source>
-        <translation>Nynější:</translation>
-    </message>
-    <message>
-        <location filename="../src/modules/partition/PartitionViewStep.cpp" line="314"/>
-        <source>After:</source>
-        <translation>Po:</translation>
     </message>
     <message>
         <location filename="../src/modules/partition/PartitionViewStep.cpp" line="542"/>
@@ -3061,6 +3134,30 @@ Instalátor bude ukončen a všechny změny budou ztraceny.</translation>
         <translation type="unfinished"/>
     </message>
     <message>
+        <location filename="../src/modules/partition/PartitionViewStep.cpp" line="56"/>
+        <source>Gathering system information…</source>
+        <comment>@status</comment>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location filename="../src/modules/partition/PartitionViewStep.cpp" line="107"/>
+        <source>Partitions</source>
+        <comment>@label</comment>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location filename="../src/modules/partition/PartitionViewStep.cpp" line="296"/>
+        <source>Current:</source>
+        <comment>@label</comment>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location filename="../src/modules/partition/PartitionViewStep.cpp" line="314"/>
+        <source>After:</source>
+        <comment>@label</comment>
+        <translation type="unfinished"/>
+    </message>
+    <message>
         <location filename="../src/modules/partition/PartitionViewStep.cpp" line="566"/>
         <source>You can continue without setting up an EFI system partition but your system may fail to start.</source>
         <translation type="unfinished"/>
@@ -3105,7 +3202,8 @@ Instalátor bude ukončen a všechny změny budou ztraceny.</translation>
     <name>PreserveFiles</name>
     <message>
         <location filename="../src/modules/preservefiles/PreserveFiles.cpp" line="56"/>
-        <source>Saving files for later ...</source>
+        <source>Saving files for later…</source>
+        <comment>@status</comment>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -3197,11 +3295,6 @@ Výstup:
         <translation>Výchozí</translation>
     </message>
     <message>
-        <location filename="../src/modules/partition/gui/PartitionLabelsView.cpp" line="39"/>
-        <source>Unpartitioned space or unknown partition table</source>
-        <translation>Místo nerozdělené do oddílů nebo neznámá tabulka oddílů</translation>
-    </message>
-    <message>
         <location filename="../src/modules/partition/gui/PartitionDialogHelpers.cpp" line="44"/>
         <source>(no mount point)</source>
         <translation>(žádný přípojný bod)</translation>
@@ -3212,26 +3305,12 @@ Výstup:
         <translation type="unfinished"/>
     </message>
     <message>
-        <location filename="../src/modules/machineid/Workers.cpp" line="64"/>
-        <location filename="../src/modules/machineid/Workers.cpp" line="72"/>
-        <location filename="../src/modules/machineid/Workers.cpp" line="76"/>
-        <location filename="../src/modules/machineid/Workers.cpp" line="93"/>
-        <source>File not found</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <location filename="../src/modules/machineid/Workers.cpp" line="65"/>
-        <source>Path &lt;pre&gt;%1&lt;/pre&gt; must be an absolute path.</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
         <location filename="../src/modules/machineid/MachineIdJob.cpp" line="101"/>
         <source>Directory not found</source>
         <translation type="unfinished"/>
     </message>
     <message>
         <location filename="../src/modules/machineid/MachineIdJob.cpp" line="102"/>
-        <location filename="../src/modules/machineid/Workers.cpp" line="94"/>
         <source>Could not create new random file &lt;pre&gt;%1&lt;/pre&gt;.</source>
         <translation type="unfinished"/>
     </message>
@@ -3269,6 +3348,12 @@ Výstup:
         <comment>@partition info</comment>
         <translation type="unfinished"/>
     </message>
+    <message>
+        <location filename="../src/modules/partition/gui/PartitionLabelsView.cpp" line="39"/>
+        <source>Unpartitioned space or unknown partition table</source>
+        <comment>@info</comment>
+        <translation type="unfinished"/>
+    </message>
 </context>
 <context>
     <name>Recommended</name>
@@ -3284,12 +3369,14 @@ Výstup:
     <message>
         <location filename="../src/modules/partition/jobs/RemoveVolumeGroupJob.cpp" line="26"/>
         <location filename="../src/modules/partition/jobs/RemoveVolumeGroupJob.cpp" line="38"/>
-        <source>Remove Volume Group named %1.</source>
+        <source>Removing Volume Group named %1…</source>
+        <comment>@status</comment>
         <translation type="unfinished"/>
     </message>
     <message>
         <location filename="../src/modules/partition/jobs/RemoveVolumeGroupJob.cpp" line="32"/>
-        <source>Remove Volume Group named &lt;strong&gt;%1&lt;/strong&gt;.</source>
+        <source>Removing Volume Group named &lt;strong&gt;%1&lt;/strong&gt;…</source>
+        <comment>@status</comment>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -3316,22 +3403,25 @@ Výstup:
 <context>
     <name>ResizePartitionJob</name>
     <message>
-        <location filename="../src/modules/partition/jobs/ResizePartitionJob.cpp" line="41"/>
-        <source>Resize partition %1.</source>
-        <translation>Změnit velikost oddílu %1.</translation>
-    </message>
-    <message>
-        <location filename="../src/modules/partition/jobs/ResizePartitionJob.cpp" line="47"/>
-        <source>Resize &lt;strong&gt;%2MiB&lt;/strong&gt; partition &lt;strong&gt;%1&lt;/strong&gt; to &lt;strong&gt;%3MiB&lt;/strong&gt;.</source>
+        <location filename="../src/modules/partition/jobs/ResizePartitionJob.cpp" line="39"/>
+        <source>Resize partition %1</source>
+        <comment>@title</comment>
         <translation type="unfinished"/>
     </message>
     <message>
-        <location filename="../src/modules/partition/jobs/ResizePartitionJob.cpp" line="57"/>
-        <source>Resizing %2MiB partition %1 to %3MiB.</source>
+        <location filename="../src/modules/partition/jobs/ResizePartitionJob.cpp" line="45"/>
+        <source>Resize &lt;strong&gt;%2MiB&lt;/strong&gt; partition &lt;strong&gt;%1&lt;/strong&gt; to &lt;strong&gt;%3MiB&lt;/strong&gt;</source>
+        <comment>@info</comment>
         <translation type="unfinished"/>
     </message>
     <message>
-        <location filename="../src/modules/partition/jobs/ResizePartitionJob.cpp" line="74"/>
+        <location filename="../src/modules/partition/jobs/ResizePartitionJob.cpp" line="54"/>
+        <source>Resizing %2MiB partition %1 to %3MiB…</source>
+        <comment>@status</comment>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location filename="../src/modules/partition/jobs/ResizePartitionJob.cpp" line="70"/>
         <source>The installer failed to resize partition %1 on disk &apos;%2&apos;.</source>
         <translation>Instalátoru se nepodařilo změnit velikost oddílu %1 na disku &apos;%2&apos;.</translation>
     </message>
@@ -3341,6 +3431,7 @@ Výstup:
     <message>
         <location filename="../src/modules/partition/gui/ResizeVolumeGroupDialog.cpp" line="30"/>
         <source>Resize Volume Group</source>
+        <comment>@title</comment>
         <translation type="unfinished"/>
     </message>
 </context>
@@ -3348,17 +3439,24 @@ Výstup:
     <name>ResizeVolumeGroupJob</name>
     <message>
         <location filename="../src/modules/partition/jobs/ResizeVolumeGroupJob.cpp" line="28"/>
-        <location filename="../src/modules/partition/jobs/ResizeVolumeGroupJob.cpp" line="46"/>
-        <source>Resize volume group named %1 from %2 to %3.</source>
+        <source>Resize volume group named %1 from %2 to %3</source>
+        <comment>@title</comment>
         <translation type="unfinished"/>
     </message>
     <message>
         <location filename="../src/modules/partition/jobs/ResizeVolumeGroupJob.cpp" line="37"/>
-        <source>Resize volume group named &lt;strong&gt;%1&lt;/strong&gt; from &lt;strong&gt;%2&lt;/strong&gt; to &lt;strong&gt;%3&lt;/strong&gt;.</source>
+        <source>Resize volume group named &lt;strong&gt;%1&lt;/strong&gt; from &lt;strong&gt;%2&lt;/strong&gt; to &lt;strong&gt;%3&lt;/strong&gt;</source>
+        <comment>@info</comment>
         <translation type="unfinished"/>
     </message>
     <message>
-        <location filename="../src/modules/partition/jobs/ResizeVolumeGroupJob.cpp" line="57"/>
+        <location filename="../src/modules/partition/jobs/ResizeVolumeGroupJob.cpp" line="47"/>
+        <source>Resizing volume group named %1 from %2 to %3…</source>
+        <comment>@status</comment>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location filename="../src/modules/partition/jobs/ResizeVolumeGroupJob.cpp" line="58"/>
         <source>The installer failed to resize a volume group named &apos;%1&apos;.</source>
         <translation type="unfinished"/>
     </message>
@@ -3375,13 +3473,15 @@ Výstup:
     <name>ScanningDialog</name>
     <message>
         <location filename="../src/modules/partition/gui/ScanningDialog.cpp" line="68"/>
-        <source>Scanning storage devices...</source>
-        <translation>Prohledávání úložného zařízení...</translation>
+        <source>Scanning storage devices…</source>
+        <comment>@status</comment>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location filename="../src/modules/partition/gui/ScanningDialog.cpp" line="68"/>
-        <source>Partitioning</source>
-        <translation>Zpracování oddílů</translation>
+        <source>Partitioning…</source>
+        <comment>@status</comment>
+        <translation type="unfinished"/>
     </message>
 </context>
 <context>
@@ -3398,8 +3498,9 @@ Výstup:
     </message>
     <message>
         <location filename="../src/modules/users/SetHostNameJob.cpp" line="48"/>
-        <source>Setting hostname %1.</source>
-        <translation>Nastavuje se název hostitelského počítače %1.</translation>
+        <source>Setting hostname %1…</source>
+        <comment>@status</comment>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location filename="../src/modules/users/SetHostNameJob.cpp" line="121"/>
@@ -3463,81 +3564,96 @@ Výstup:
     <name>SetPartFlagsJob</name>
     <message>
         <location filename="../src/modules/partition/jobs/SetPartitionFlagsJob.cpp" line="44"/>
-        <source>Set flags on partition %1.</source>
-        <translation>Nastavit příznaky na oddílu %1.</translation>
+        <source>Set flags on partition %1</source>
+        <comment>@title</comment>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location filename="../src/modules/partition/jobs/SetPartitionFlagsJob.cpp" line="50"/>
-        <source>Set flags on %1MiB %2 partition.</source>
+        <source>Set flags on %1MiB %2 partition</source>
+        <comment>@title</comment>
         <translation type="unfinished"/>
     </message>
     <message>
         <location filename="../src/modules/partition/jobs/SetPartitionFlagsJob.cpp" line="54"/>
-        <source>Set flags on new partition.</source>
-        <translation>Nastavit příznaky na novém oddílu.</translation>
+        <source>Set flags on new partition</source>
+        <comment>@title</comment>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location filename="../src/modules/partition/jobs/SetPartitionFlagsJob.cpp" line="65"/>
-        <source>Clear flags on partition &lt;strong&gt;%1&lt;/strong&gt;.</source>
-        <translation>Smazat příznaky na oddílu &lt;strong&gt;%1&lt;/strong&gt;.</translation>
+        <source>Clear flags on partition &lt;strong&gt;%1&lt;/strong&gt;</source>
+        <comment>@info</comment>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location filename="../src/modules/partition/jobs/SetPartitionFlagsJob.cpp" line="71"/>
-        <source>Clear flags on %1MiB &lt;strong&gt;%2&lt;/strong&gt; partition.</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <location filename="../src/modules/partition/jobs/SetPartitionFlagsJob.cpp" line="89"/>
-        <source>Flag %1MiB &lt;strong&gt;%2&lt;/strong&gt; partition as &lt;strong&gt;%3&lt;/strong&gt;.</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <location filename="../src/modules/partition/jobs/SetPartitionFlagsJob.cpp" line="113"/>
-        <source>Clearing flags on %1MiB &lt;strong&gt;%2&lt;/strong&gt; partition.</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <location filename="../src/modules/partition/jobs/SetPartitionFlagsJob.cpp" line="132"/>
-        <source>Setting flags &lt;strong&gt;%3&lt;/strong&gt; on %1MiB &lt;strong&gt;%2&lt;/strong&gt; partition.</source>
+        <source>Clear flags on %1MiB &lt;strong&gt;%2&lt;/strong&gt; partition</source>
+        <comment>@info</comment>
         <translation type="unfinished"/>
     </message>
     <message>
         <location filename="../src/modules/partition/jobs/SetPartitionFlagsJob.cpp" line="75"/>
-        <source>Clear flags on new partition.</source>
-        <translation>Smazat příznaky na novém oddílu.</translation>
+        <source>Clear flags on new partition</source>
+        <comment>@info</comment>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location filename="../src/modules/partition/jobs/SetPartitionFlagsJob.cpp" line="80"/>
-        <source>Flag partition &lt;strong&gt;%1&lt;/strong&gt; as &lt;strong&gt;%2&lt;/strong&gt;.</source>
-        <translation>Příznak oddílu &lt;strong&gt;%1&lt;/strong&gt; stejný jako &lt;strong&gt;%2&lt;/strong&gt;.</translation>
+        <source>Set flags on partition &lt;strong&gt;%1&lt;/strong&gt; to &lt;strong&gt;%2&lt;/strong&gt;</source>
+        <comment>@info</comment>
+        <translation type="unfinished"/>
     </message>
     <message>
-        <location filename="../src/modules/partition/jobs/SetPartitionFlagsJob.cpp" line="96"/>
-        <source>Flag new partition as &lt;strong&gt;%1&lt;/strong&gt;.</source>
-        <translation>Označit příznakem nový oddíl jako &lt;strong&gt;%1&lt;/strong&gt;.</translation>
+        <location filename="../src/modules/partition/jobs/SetPartitionFlagsJob.cpp" line="88"/>
+        <source>Set flags on %1MiB &lt;strong&gt;%2&lt;/strong&gt; partition to &lt;strong&gt;%3&lt;/strong&gt;</source>
+        <comment>@info</comment>
+        <translation type="unfinished"/>
     </message>
     <message>
-        <location filename="../src/modules/partition/jobs/SetPartitionFlagsJob.cpp" line="107"/>
-        <source>Clearing flags on partition &lt;strong&gt;%1&lt;/strong&gt;.</source>
-        <translation>Čištění příznaků na oddílu &lt;strong&gt;%1&lt;/strong&gt;.</translation>
+        <location filename="../src/modules/partition/jobs/SetPartitionFlagsJob.cpp" line="94"/>
+        <source>Set flags on new partition to &lt;strong&gt;%1&lt;/strong&gt;</source>
+        <comment>@info</comment>
+        <translation type="unfinished"/>
     </message>
     <message>
-        <location filename="../src/modules/partition/jobs/SetPartitionFlagsJob.cpp" line="118"/>
-        <source>Clearing flags on new partition.</source>
-        <translation>Smazání příznaků na novém oddílu.</translation>
+        <location filename="../src/modules/partition/jobs/SetPartitionFlagsJob.cpp" line="105"/>
+        <source>Clearing flags on partition &lt;strong&gt;%1&lt;/strong&gt;…</source>
+        <comment>@status</comment>
+        <translation type="unfinished"/>
     </message>
     <message>
-        <location filename="../src/modules/partition/jobs/SetPartitionFlagsJob.cpp" line="123"/>
-        <source>Setting flags &lt;strong&gt;%2&lt;/strong&gt; on partition &lt;strong&gt;%1&lt;/strong&gt;.</source>
-        <translation>Nastavení příznaků &lt;strong&gt;%2&lt;/strong&gt; na oddílu &lt;strong&gt;%1&lt;/strong&gt;</translation>
+        <location filename="../src/modules/partition/jobs/SetPartitionFlagsJob.cpp" line="112"/>
+        <source>Clearing flags on %1MiB &lt;strong&gt;%2&lt;/strong&gt; partition…</source>
+        <comment>@status</comment>
+        <translation type="unfinished"/>
     </message>
     <message>
-        <location filename="../src/modules/partition/jobs/SetPartitionFlagsJob.cpp" line="139"/>
-        <source>Setting flags &lt;strong&gt;%1&lt;/strong&gt; on new partition.</source>
-        <translation>Nastavení příznaků &lt;strong&gt;%1&lt;/strong&gt; na novém oddílu.</translation>
+        <location filename="../src/modules/partition/jobs/SetPartitionFlagsJob.cpp" line="117"/>
+        <source>Clearing flags on new partition…</source>
+        <comment>@status</comment>
+        <translation type="unfinished"/>
     </message>
     <message>
-        <location filename="../src/modules/partition/jobs/SetPartitionFlagsJob.cpp" line="152"/>
+        <location filename="../src/modules/partition/jobs/SetPartitionFlagsJob.cpp" line="122"/>
+        <source>Setting flags &lt;strong&gt;%2&lt;/strong&gt; on partition &lt;strong&gt;%1&lt;/strong&gt;…</source>
+        <comment>@status</comment>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location filename="../src/modules/partition/jobs/SetPartitionFlagsJob.cpp" line="130"/>
+        <source>Setting flags &lt;strong&gt;%3&lt;/strong&gt; on %1MiB &lt;strong&gt;%2&lt;/strong&gt; partition…</source>
+        <comment>@status</comment>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location filename="../src/modules/partition/jobs/SetPartitionFlagsJob.cpp" line="136"/>
+        <source>Setting flags &lt;strong&gt;%1&lt;/strong&gt; on new partition…</source>
+        <comment>@status</comment>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location filename="../src/modules/partition/jobs/SetPartitionFlagsJob.cpp" line="149"/>
         <source>The installer failed to set flags on partition %1.</source>
         <translation>Instalátor nemohl nastavit příznaky na oddílu %1.</translation>
     </message>
@@ -3551,8 +3667,9 @@ Výstup:
     </message>
     <message>
         <location filename="../src/modules/users/SetPasswordJob.cpp" line="44"/>
-        <source>Setting password for user %1.</source>
-        <translation>Nastavuje se heslo pro uživatele %1.</translation>
+        <source>Setting password for user %1…</source>
+        <comment>@status</comment>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location filename="../src/modules/users/SetPasswordJob.cpp" line="80"/>
@@ -3625,7 +3742,8 @@ Výstup:
     <name>SetupGroupsJob</name>
     <message>
         <location filename="../src/modules/users/MiscJobs.cpp" line="181"/>
-        <source>Preparing groups.</source>
+        <source>Preparing groups…</source>
+        <comment>@status</comment>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -3644,7 +3762,8 @@ Výstup:
     <name>SetupSudoJob</name>
     <message>
         <location filename="../src/modules/users/MiscJobs.cpp" line="34"/>
-        <source>Configure &lt;pre&gt;sudo&lt;/pre&gt; users.</source>
+        <source>Configuring &lt;pre&gt;sudo&lt;/pre&gt; users…</source>
+        <comment>@status</comment>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -4017,11 +4136,6 @@ Výstup:
         <translation>P&amp;odpora</translation>
     </message>
     <message>
-        <location filename="../src/modules/welcome/WelcomePage.cpp" line="212"/>
-        <source>%1 support</source>
-        <translation>%1 podpora</translation>
-    </message>
-    <message>
         <location filename="../src/calamares/DebugWindow.cpp" line="235"/>
         <source>About %1 Setup</source>
         <comment>@title</comment>
@@ -4033,12 +4147,19 @@ Výstup:
         <comment>@title</comment>
         <translation type="unfinished"/>
     </message>
+    <message>
+        <location filename="../src/modules/welcome/WelcomePage.cpp" line="212"/>
+        <source>%1 Support</source>
+        <comment>@action</comment>
+        <translation type="unfinished"/>
+    </message>
 </context>
 <context>
     <name>WelcomeQmlViewStep</name>
     <message>
         <location filename="../src/modules/welcomeq/WelcomeQmlViewStep.cpp" line="40"/>
         <source>Welcome</source>
+        <comment>@title</comment>
         <translation type="unfinished"/>
     </message>
 </context>
@@ -4047,14 +4168,16 @@ Výstup:
     <message>
         <location filename="../src/modules/welcome/WelcomeViewStep.cpp" line="46"/>
         <source>Welcome</source>
-        <translation>Vítejte</translation>
+        <comment>@title</comment>
+        <translation type="unfinished"/>
     </message>
 </context>
 <context>
     <name>ZfsJob</name>
     <message>
         <location filename="../src/modules/zfs/ZfsJob.cpp" line="102"/>
-        <source>Create ZFS pools and datasets</source>
+        <source>Creating ZFS pools and datasets…</source>
+        <comment>@status</comment>
         <translation type="unfinished"/>
     </message>
     <message>

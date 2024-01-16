@@ -57,8 +57,9 @@
     <name>AutoMountManagementJob</name>
     <message>
         <location filename="../src/modules/partition/jobs/AutoMountManagementJob.cpp" line="22"/>
-        <source>Manage auto-mount settings</source>
-        <translation>Beheer instellingen voor automatisch koppelen</translation>
+        <source>Managing auto-mount settings…</source>
+        <comment>@status</comment>
+        <translation>Instellingen voor automatisch koppelen beheren...</translation>
     </message>
 </context>
 <context>
@@ -112,21 +113,25 @@
     <message>
         <location filename="../src/modules/partition/core/BootLoaderModel.cpp" line="60"/>
         <source>Master Boot Record of %1</source>
+        <comment>@info</comment>
         <translation>Master Boot Record van %1</translation>
     </message>
     <message>
         <location filename="../src/modules/partition/core/BootLoaderModel.cpp" line="93"/>
         <source>Boot Partition</source>
+        <comment>@info</comment>
         <translation>Bootpartitie</translation>
     </message>
     <message>
         <location filename="../src/modules/partition/core/BootLoaderModel.cpp" line="100"/>
         <source>System Partition</source>
+        <comment>@info</comment>
         <translation>Systeempartitie</translation>
     </message>
     <message>
         <location filename="../src/modules/partition/core/BootLoaderModel.cpp" line="131"/>
         <source>Do not install a boot loader</source>
+        <comment>@label</comment>
         <translation>Installeer geen boot loader</translation>
     </message>
     <message>
@@ -221,19 +226,19 @@
 <context>
     <name>Calamares::ExecutionViewStep</name>
     <message>
-        <location filename="../src/libcalamaresui/viewpages/ExecutionViewStep.cpp" line="76"/>
+        <location filename="../src/libcalamaresui/viewpages/ExecutionViewStep.cpp" line="77"/>
         <source>%p%</source>
         <comment>Progress percentage indicator: %p is where the number 0..100 is placed</comment>
         <translation>%p%</translation>
     </message>
     <message>
-        <location filename="../src/libcalamaresui/viewpages/ExecutionViewStep.cpp" line="116"/>
+        <location filename="../src/libcalamaresui/viewpages/ExecutionViewStep.cpp" line="117"/>
         <source>Set Up</source>
         <comment>@label</comment>
         <translation>Set Up</translation>
     </message>
     <message>
-        <location filename="../src/libcalamaresui/viewpages/ExecutionViewStep.cpp" line="116"/>
+        <location filename="../src/libcalamaresui/viewpages/ExecutionViewStep.cpp" line="117"/>
         <source>Install</source>
         <comment>@label</comment>
         <translation>Installeer</translation>
@@ -425,7 +430,7 @@
         <location filename="../src/libcalamares/modulesystem/RequirementsChecker.cpp" line="124"/>
         <source>(%n second(s))</source>
         <comment>@status</comment>
-        <translation type="unfinished"><numerusform></numerusform><numerusform></numerusform></translation>
+        <translation><numerusform>(%n second(s))</numerusform><numerusform>(%n seconde(n))</numerusform></translation>
     </message>
     <message>
         <location filename="../src/libcalamares/modulesystem/RequirementsChecker.cpp" line="129"/>
@@ -683,18 +688,27 @@ Het installeerprogramma zal stoppen en alle wijzigingen zullen verloren gaan.</t
     <name>ChangeFilesystemLabelJob</name>
     <message>
         <location filename="../src/modules/partition/jobs/ChangeFilesystemLabelJob.cpp" line="34"/>
-        <source>Set filesystem label on %1.</source>
+        <source>Set filesystem label on %1</source>
+        <comment>@title</comment>
         <translation>Zet bestandssysteemlabel op %1.</translation>
     </message>
     <message>
         <location filename="../src/modules/partition/jobs/ChangeFilesystemLabelJob.cpp" line="41"/>
-        <source>Set filesystem label &lt;strong&gt;%1&lt;/strong&gt; to partition &lt;strong&gt;%2&lt;/strong&gt;.</source>
+        <source>Set filesystem label &lt;strong&gt;%1&lt;/strong&gt; to partition &lt;strong&gt;%2&lt;/strong&gt;</source>
+        <comment>@info</comment>
         <translation>Zet bestandssysteemlabel &lt;strong&gt;%1&lt;/strong&gt; op partitie &lt;strong&gt;%2&lt;/strong&gt;.</translation>
     </message>
     <message>
-        <location filename="../src/modules/partition/jobs/ChangeFilesystemLabelJob.cpp" line="71"/>
-        <location filename="../src/modules/partition/jobs/ChangeFilesystemLabelJob.cpp" line="83"/>
+        <location filename="../src/modules/partition/jobs/ChangeFilesystemLabelJob.cpp" line="50"/>
+        <source>Setting filesystem label &lt;strong&gt;%1&lt;/strong&gt; to partition &lt;strong&gt;%2&lt;/strong&gt;…</source>
+        <comment>@status</comment>
+        <translation>Zet bestandssysteemlabel &lt;strong&gt;%1&lt;/strong&gt; op partitie &lt;strong&gt;%2&lt;/strong&gt;...</translation>
+    </message>
+    <message>
+        <location filename="../src/modules/partition/jobs/ChangeFilesystemLabelJob.cpp" line="72"/>
+        <location filename="../src/modules/partition/jobs/ChangeFilesystemLabelJob.cpp" line="84"/>
         <source>The installer failed to update partition table on disk &apos;%1&apos;.</source>
+        <comment>@info</comment>
         <translation>Installatieprogramma heeft gefaald om de partitietabel bij te werken op schijf &apos;%1&apos;.</translation>
     </message>
 </context>
@@ -709,61 +723,28 @@ Het installeerprogramma zal stoppen en alle wijzigingen zullen verloren gaan.</t
 <context>
     <name>ChoicePage</name>
     <message>
-        <location filename="../src/modules/partition/gui/ChoicePage.cpp" line="139"/>
-        <source>After:</source>
-        <translation>Na:</translation>
-    </message>
-    <message>
-        <location filename="../src/modules/partition/gui/ChoicePage.cpp" line="1059"/>
-        <source>%1 will be shrunk to %2MiB and a new %3MiB partition will be created for %4.</source>
-        <translation>%1 zal worden ingekrompen tot %2MiB en een nieuwe %3MiB partitie zal worden gecreëerd for %4.</translation>
-    </message>
-    <message>
-        <location filename="../src/modules/partition/gui/ChoicePage.cpp" line="1339"/>
-        <location filename="../src/modules/partition/gui/ChoicePage.cpp" line="1376"/>
-        <location filename="../src/modules/partition/gui/ChoicePage.cpp" line="1397"/>
-        <location filename="../src/modules/partition/gui/ChoicePage.cpp" line="1422"/>
+        <location filename="../src/modules/partition/gui/ChoicePage.cpp" line="1342"/>
+        <location filename="../src/modules/partition/gui/ChoicePage.cpp" line="1379"/>
+        <location filename="../src/modules/partition/gui/ChoicePage.cpp" line="1400"/>
+        <location filename="../src/modules/partition/gui/ChoicePage.cpp" line="1425"/>
         <source>&lt;strong&gt;Erase disk&lt;/strong&gt;&lt;br/&gt;This will &lt;font color=&quot;red&quot;&gt;delete&lt;/font&gt; all data currently present on the selected storage device.</source>
         <translation>&lt;strong&gt;Wis schijf&lt;/strong&gt;&lt;br/&gt;Dit zal alle data &lt;font color=&quot;red&quot;&gt;verwijderen&lt;/font&gt; welke momenteel aanwezig is op het geselecteerde opslag apparaat.</translation>
     </message>
     <message>
-        <location filename="../src/modules/partition/gui/ChoicePage.cpp" line="1343"/>
-        <location filename="../src/modules/partition/gui/ChoicePage.cpp" line="1372"/>
-        <location filename="../src/modules/partition/gui/ChoicePage.cpp" line="1393"/>
-        <location filename="../src/modules/partition/gui/ChoicePage.cpp" line="1418"/>
+        <location filename="../src/modules/partition/gui/ChoicePage.cpp" line="1346"/>
+        <location filename="../src/modules/partition/gui/ChoicePage.cpp" line="1375"/>
+        <location filename="../src/modules/partition/gui/ChoicePage.cpp" line="1396"/>
+        <location filename="../src/modules/partition/gui/ChoicePage.cpp" line="1421"/>
         <source>&lt;strong&gt;Install alongside&lt;/strong&gt;&lt;br/&gt;The installer will shrink a partition to make room for %1.</source>
         <translation>&lt;strong&gt;Installeer naast&lt;/strong&gt;&lt;br/&gt;Het installatie programma zal een partitie inkrimpen om ruimte te maken voor %1.</translation>
     </message>
     <message>
-        <location filename="../src/modules/partition/gui/ChoicePage.cpp" line="1347"/>
-        <location filename="../src/modules/partition/gui/ChoicePage.cpp" line="1380"/>
-        <location filename="../src/modules/partition/gui/ChoicePage.cpp" line="1401"/>
-        <location filename="../src/modules/partition/gui/ChoicePage.cpp" line="1426"/>
+        <location filename="../src/modules/partition/gui/ChoicePage.cpp" line="1350"/>
+        <location filename="../src/modules/partition/gui/ChoicePage.cpp" line="1383"/>
+        <location filename="../src/modules/partition/gui/ChoicePage.cpp" line="1404"/>
+        <location filename="../src/modules/partition/gui/ChoicePage.cpp" line="1429"/>
         <source>&lt;strong&gt;Replace a partition&lt;/strong&gt;&lt;br/&gt;Replaces a partition with %1.</source>
         <translation>&lt;strong&gt;Vervang een partitie&lt;/strong&gt;&lt;br/&gt;Vervangt een partitie met %1.</translation>
-    </message>
-    <message>
-        <location filename="../src/modules/partition/gui/ChoicePage.cpp" line="1690"/>
-        <source>Boot loader location:</source>
-        <translation>Bootloader locatie:</translation>
-    </message>
-    <message>
-        <location filename="../src/modules/partition/gui/ChoicePage.cpp" line="137"/>
-        <source>Select storage de&amp;vice:</source>
-        <translation>Kies een opslag de&amp;vice:</translation>
-    </message>
-    <message>
-        <location filename="../src/modules/partition/gui/ChoicePage.cpp" line="138"/>
-        <location filename="../src/modules/partition/gui/ChoicePage.cpp" line="1034"/>
-        <location filename="../src/modules/partition/gui/ChoicePage.cpp" line="1085"/>
-        <location filename="../src/modules/partition/gui/ChoicePage.cpp" line="1138"/>
-        <source>Current:</source>
-        <translation>Huidig:</translation>
-    </message>
-    <message>
-        <location filename="../src/modules/partition/gui/ChoicePage.cpp" line="896"/>
-        <source>Reuse %1 as home partition for %2.</source>
-        <translation>Hergebruik %1 als home partitie voor %2.</translation>
     </message>
     <message>
         <location filename="../src/modules/partition/gui/ChoicePage.cpp" line="1035"/>
@@ -771,87 +752,137 @@ Het installeerprogramma zal stoppen en alle wijzigingen zullen verloren gaan.</t
         <translation>&lt;strong&gt;Selecteer een partitie om in te krimpen, dan sleep de onderste balk om de grootte aan te passen&lt;/strong&gt;</translation>
     </message>
     <message>
-        <location filename="../src/modules/partition/gui/ChoicePage.cpp" line="1129"/>
+        <location filename="../src/modules/partition/gui/ChoicePage.cpp" line="137"/>
+        <source>Select storage de&amp;vice:</source>
+        <comment>@label</comment>
+        <translation>Kies een opslag de&amp;vice:</translation>
+    </message>
+    <message>
+        <location filename="../src/modules/partition/gui/ChoicePage.cpp" line="138"/>
+        <location filename="../src/modules/partition/gui/ChoicePage.cpp" line="1034"/>
+        <location filename="../src/modules/partition/gui/ChoicePage.cpp" line="1086"/>
+        <location filename="../src/modules/partition/gui/ChoicePage.cpp" line="1139"/>
+        <source>Current:</source>
+        <comment>@label</comment>
+        <translation>Huidig:</translation>
+    </message>
+    <message>
+        <location filename="../src/modules/partition/gui/ChoicePage.cpp" line="139"/>
+        <source>After:</source>
+        <comment>@label</comment>
+        <translation>Na:</translation>
+    </message>
+    <message>
+        <location filename="../src/modules/partition/gui/ChoicePage.cpp" line="896"/>
+        <source>Reuse %1 as home partition for %2</source>
+        <comment>@label</comment>
+        <translation>Hergebruik %1 als home partitie voor %2.</translation>
+    </message>
+    <message>
+        <location filename="../src/modules/partition/gui/ChoicePage.cpp" line="1059"/>
+        <source>%1 will be shrunk to %2MiB and a new %3MiB partition will be created for %4.</source>
+        <comment>@info, %1 is partition name, %4 is product name</comment>
+        <translation>%1 zal worden ingekrompen tot %2MiB en een nieuwe %3MiB partitie zal worden gecreëerd for %4.</translation>
+    </message>
+    <message>
+        <location filename="../src/modules/partition/gui/ChoicePage.cpp" line="1130"/>
         <source>&lt;strong&gt;Select a partition to install on&lt;/strong&gt;</source>
+        <comment>@label</comment>
         <translation>&lt;strong&gt;Selecteer een partitie om op te installeren&lt;/strong&gt;</translation>
     </message>
     <message>
-        <location filename="../src/modules/partition/gui/ChoicePage.cpp" line="1189"/>
+        <location filename="../src/modules/partition/gui/ChoicePage.cpp" line="1190"/>
         <source>An EFI system partition cannot be found anywhere on this system. Please go back and use manual partitioning to set up %1.</source>
+        <comment>@info, %1 is product name</comment>
         <translation>Een EFI systeem partitiie kan nergens gevonden worden op dit systeem.  Ga AUB terug en gebruik de handmatige schijfindeling om %1 op te zetten.</translation>
     </message>
     <message>
-        <location filename="../src/modules/partition/gui/ChoicePage.cpp" line="1197"/>
+        <location filename="../src/modules/partition/gui/ChoicePage.cpp" line="1199"/>
         <source>The EFI system partition at %1 will be used for starting %2.</source>
+        <comment>@info, %1 is partition path, %2 is product name</comment>
         <translation>De EFI systeem partitie op %1 zal gebruikt worden om %2 op te starten.</translation>
     </message>
     <message>
-        <location filename="../src/modules/partition/gui/ChoicePage.cpp" line="1205"/>
+        <location filename="../src/modules/partition/gui/ChoicePage.cpp" line="1208"/>
         <source>EFI system partition:</source>
+        <comment>@label</comment>
         <translation>EFI systeempartitie:</translation>
     </message>
     <message>
-        <location filename="../src/modules/partition/gui/ChoicePage.cpp" line="1334"/>
+        <location filename="../src/modules/partition/gui/ChoicePage.cpp" line="1337"/>
         <source>This storage device does not seem to have an operating system on it. What would you like to do?&lt;br/&gt;You will be able to review and confirm your choices before any change is made to the storage device.</source>
         <translation>Dit opslagapparaat heeft ogenschijnlijk geen besturingssysteem beschikbaar. Wat wil je doen?&lt;br/&gt;Je zult in staat zijn om te beoordelen en je keuzes te bevestigen voordat een wijziging wordt aangebracht aan het opslagapparaat.</translation>
     </message>
     <message>
-        <location filename="../src/modules/partition/gui/ChoicePage.cpp" line="1366"/>
+        <location filename="../src/modules/partition/gui/ChoicePage.cpp" line="1369"/>
         <source>This storage device has %1 on it. What would you like to do?&lt;br/&gt;You will be able to review and confirm your choices before any change is made to the storage device.</source>
         <translation>Dit opslagapparaat heeft %1 geinstalleerd. Wat wil je doen?&lt;br/&gt;Je zult in staat zijn om te beoordelen en je keuzes te bevestigen voordat een wijziging wordt aangebracht aan het opslagapparaat.</translation>
     </message>
     <message>
-        <location filename="../src/modules/partition/gui/ChoicePage.cpp" line="1388"/>
+        <location filename="../src/modules/partition/gui/ChoicePage.cpp" line="1391"/>
         <source>This storage device already has an operating system on it. What would you like to do?&lt;br/&gt;You will be able to review and confirm your choices before any change is made to the storage device.</source>
         <translation>Dit opslagapparaat heeft een besturingssysteem geinstalleerd. Wat wil je doen?&lt;br/&gt;Je zult in staat zijn om te beoordelen en je keuzes te bevestigen voordat een wijziging wordt aangebracht aan het opslagapparaat.</translation>
     </message>
     <message>
-        <location filename="../src/modules/partition/gui/ChoicePage.cpp" line="1413"/>
+        <location filename="../src/modules/partition/gui/ChoicePage.cpp" line="1416"/>
         <source>This storage device has multiple operating systems on it. What would you like to do?&lt;br/&gt;You will be able to review and confirm your choices before any change is made to the storage device.</source>
         <translation>Dit opslagapparaat heeft meerdere besturingssystemen geinstalleerd. Wat wil je doen?&lt;br/&gt;Je zult in staat zijn om te beoordelen en je keuzes te bevestigen voordat een wijziging wordt aangebracht aan het opslagapparaat.</translation>
     </message>
     <message>
-        <location filename="../src/modules/partition/gui/ChoicePage.cpp" line="1485"/>
+        <location filename="../src/modules/partition/gui/ChoicePage.cpp" line="1488"/>
         <source>This storage device already has an operating system on it, but the partition table &lt;strong&gt;%1&lt;/strong&gt; is different from the needed &lt;strong&gt;%2&lt;/strong&gt;.&lt;br/&gt;</source>
         <translation>Dit opslagapparaat heeft al een besturingssysteem, maar de partitietabel &lt;strong&gt;%1&lt;/strong&gt; is anders dan de benodigde &lt;strong&gt;%2&lt;/strong&gt;.&lt;br/&gt;</translation>
     </message>
     <message>
-        <location filename="../src/modules/partition/gui/ChoicePage.cpp" line="1508"/>
+        <location filename="../src/modules/partition/gui/ChoicePage.cpp" line="1512"/>
         <source>This storage device has one of its partitions &lt;strong&gt;mounted&lt;/strong&gt;.</source>
+        <comment>@info</comment>
         <translation>Dit opslagapparaat heeft een van zijn partities &lt;strong&gt;mounted&lt;/strong&gt;.</translation>
     </message>
     <message>
-        <location filename="../src/modules/partition/gui/ChoicePage.cpp" line="1513"/>
+        <location filename="../src/modules/partition/gui/ChoicePage.cpp" line="1517"/>
         <source>This storage device is a part of an &lt;strong&gt;inactive RAID&lt;/strong&gt; device.</source>
+        <comment>@info</comment>
         <translation>Dit opslagapparaat maakt deel uit van een &lt;strong&gt;inactief RAID&lt;/strong&gt; apparaat.</translation>
     </message>
     <message>
-        <location filename="../src/modules/partition/gui/ChoicePage.cpp" line="1628"/>
-        <source>No Swap</source>
+        <location filename="../src/modules/partition/gui/ChoicePage.cpp" line="1632"/>
+        <source>No swap</source>
+        <comment>@label</comment>
         <translation>Geen Swap</translation>
     </message>
     <message>
-        <location filename="../src/modules/partition/gui/ChoicePage.cpp" line="1637"/>
-        <source>Reuse Swap</source>
+        <location filename="../src/modules/partition/gui/ChoicePage.cpp" line="1641"/>
+        <source>Reuse swap</source>
+        <comment>@label</comment>
         <translation>Swap Hergebruiken</translation>
     </message>
     <message>
-        <location filename="../src/modules/partition/gui/ChoicePage.cpp" line="1640"/>
+        <location filename="../src/modules/partition/gui/ChoicePage.cpp" line="1644"/>
         <source>Swap (no Hibernate)</source>
+        <comment>@label</comment>
         <translation>Swap (geen Hibernate)</translation>
     </message>
     <message>
-        <location filename="../src/modules/partition/gui/ChoicePage.cpp" line="1643"/>
+        <location filename="../src/modules/partition/gui/ChoicePage.cpp" line="1647"/>
         <source>Swap (with Hibernate)</source>
+        <comment>@label</comment>
         <translation>Swap (met Hibernate)</translation>
     </message>
     <message>
-        <location filename="../src/modules/partition/gui/ChoicePage.cpp" line="1646"/>
+        <location filename="../src/modules/partition/gui/ChoicePage.cpp" line="1650"/>
         <source>Swap to file</source>
+        <comment>@label</comment>
         <translation>Swap to file</translation>
     </message>
     <message>
-        <location filename="../src/modules/partition/gui/ChoicePage.cpp" line="1659"/>
+        <location filename="../src/modules/partition/gui/ChoicePage.cpp" line="1694"/>
+        <source>Bootloader location:</source>
+        <comment>@label</comment>
+        <translation>Bootloader locatie:</translation>
+    </message>
+    <message>
+        <location filename="../src/modules/partition/gui/ChoicePage.cpp" line="1663"/>
         <source>&lt;strong&gt;Manual partitioning&lt;/strong&gt;&lt;br/&gt;You can create or resize partitions yourself.&lt;br/&gt;Having a GPT partition table and &lt;strong&gt;fat32 512Mb /boot partition is a must for UEFI installs&lt;/strong&gt;,&lt;br/&gt;either use an existing without formatting or create one.</source>
         <translation>&lt;strong&gt;Handmatige partitionering&lt;/strong&gt;&lt;br/&gt;Je kunt partities zelf creeren of aanpassen.&lt;br/&gt;Het hebben van een GPT partitietabel en &lt;strong&gt;fat32 512Mb /boot partitie is een must voor UEFI installaties&lt;/strong&gt;,&lt;br/&gt;ofwel gebruik maken van een bestaande, zonder formatteren of creeer.</translation>
     </message>
@@ -995,11 +1026,13 @@ Het installeerprogramma zal stoppen en alle wijzigingen zullen verloren gaan.</t
     <message>
         <location filename="../src/modules/partition/jobs/ClearMountsJob.cpp" line="371"/>
         <source>Clear mounts for partitioning operations on %1</source>
+        <comment>@title</comment>
         <translation>Wis mounts voor partitionering operaties op %1</translation>
     </message>
     <message>
         <location filename="../src/modules/partition/jobs/ClearMountsJob.cpp" line="377"/>
-        <source>Clearing mounts for partitioning operations on %1.</source>
+        <source>Clearing mounts for partitioning operations on %1…</source>
+        <comment>@status</comment>
         <translation>Wissen van mounts voor partitionering operaties op %1</translation>
     </message>
     <message>
@@ -1012,12 +1045,9 @@ Het installeerprogramma zal stoppen en alle wijzigingen zullen verloren gaan.</t
     <name>ClearTempMountsJob</name>
     <message>
         <location filename="../src/modules/partition/jobs/ClearTempMountsJob.cpp" line="33"/>
-        <source>Clear all temporary mounts.</source>
-        <translation>Ontruimd alle tijdelijke mounts.</translation>
-    </message>
-    <message>
         <location filename="../src/modules/partition/jobs/ClearTempMountsJob.cpp" line="40"/>
-        <source>Clearing all temporary mounts.</source>
+        <source>Clearing all temporary mounts…</source>
+        <comment>@status</comment>
         <translation>Ontruiming van alle tijdelijke mounts.</translation>
     </message>
     <message>
@@ -1087,17 +1117,18 @@ Het installeerprogramma zal stoppen en alle wijzigingen zullen verloren gaan.</t
         <translation>&lt;h1&gt;Welkom bij het %1 installatieprogramma&lt;/h1&gt;</translation>
     </message>
     <message>
-        <location filename="../src/modules/summary/Config.cpp" line="94"/>
+        <location filename="../src/modules/summary/Config.cpp" line="35"/>
         <source>Summary</source>
+        <comment>@label</comment>
         <translation>Samenvatting</translation>
     </message>
     <message>
-        <location filename="../src/modules/summary/Config.cpp" line="98"/>
+        <location filename="../src/modules/summary/Config.cpp" line="39"/>
         <source>This is an overview of what will happen once you start the setup procedure.</source>
         <translation>Dit is een overzicht van wat er zal gebeuren als je eenmaal de installatie procedure start.</translation>
     </message>
     <message>
-        <location filename="../src/modules/summary/Config.cpp" line="103"/>
+        <location filename="../src/modules/summary/Config.cpp" line="44"/>
         <source>This is an overview of what will happen once you start the install procedure.</source>
         <translation>Dit is een overzicht van wat er zal gebeuren als je eenmaal de installatie procedure start.</translation>
     </message>
@@ -1152,22 +1183,22 @@ Het installeerprogramma zal stoppen en alle wijzigingen zullen verloren gaan.</t
         <translation>OK!</translation>
     </message>
     <message>
-        <location filename="../src/modules/packagechooser/Config.cpp" line="111"/>
+        <location filename="../src/modules/packagechooser/Config.cpp" line="110"/>
         <source>Package Selection</source>
         <translation>Pakketten Selectie</translation>
     </message>
     <message>
-        <location filename="../src/modules/packagechooser/Config.cpp" line="113"/>
+        <location filename="../src/modules/packagechooser/Config.cpp" line="112"/>
         <source>Please pick a product from the list. The selected product will be installed.</source>
         <translation>Kies een product uit de lijst. Het geselecteerde product wordt geïnstalleerd.</translation>
     </message>
     <message>
-        <location filename="../src/modules/packagechooser/Config.cpp" line="242"/>
+        <location filename="../src/modules/packagechooser/Config.cpp" line="241"/>
         <source>Install option: &lt;strong&gt;%1&lt;/strong&gt;</source>
         <translation>Installatie option: &lt;strong&gt;%1&lt;/strong&gt;</translation>
     </message>
     <message>
-        <location filename="../src/modules/packagechooser/Config.cpp" line="242"/>
+        <location filename="../src/modules/packagechooser/Config.cpp" line="241"/>
         <source>None</source>
         <translation>Geen</translation>
     </message>
@@ -1239,13 +1270,13 @@ Het installeerprogramma zal stoppen en alle wijzigingen zullen verloren gaan.</t
     </message>
     <message>
         <location filename="../src/modules/locale/Config.cpp" line="410"/>
-        <source>The system language will be set to %1</source>
+        <source>The system language will be set to %1.</source>
         <comment>@info</comment>
         <translation>De systeemtaal wordt ingesteld op %1.</translation>
     </message>
     <message>
-        <location filename="../src/modules/locale/Config.cpp" line="417"/>
-        <source>The numbers and dates locale will be set to %1</source>
+        <location filename="../src/modules/locale/Config.cpp" line="416"/>
+        <source>The numbers and dates locale will be set to %1.</source>
         <comment>@info</comment>
         <translation>De landinstellingen voor cijfers en datums worden ingesteld op %1.</translation>
     </message>
@@ -1315,31 +1346,37 @@ Het installeerprogramma zal stoppen en alle wijzigingen zullen verloren gaan.</t
     <message>
         <location filename="../src/modules/partition/gui/CreatePartitionDialog.cpp" line="67"/>
         <source>En&amp;crypt</source>
+        <comment>@action</comment>
         <translation>En&amp;crypt</translation>
     </message>
     <message>
         <location filename="../src/modules/partition/gui/CreatePartitionDialog.cpp" line="195"/>
         <source>Logical</source>
+        <comment>@label</comment>
         <translation>Logisch</translation>
     </message>
     <message>
         <location filename="../src/modules/partition/gui/CreatePartitionDialog.cpp" line="200"/>
         <source>Primary</source>
+        <comment>@label</comment>
         <translation>Primair</translation>
     </message>
     <message>
         <location filename="../src/modules/partition/gui/CreatePartitionDialog.cpp" line="219"/>
         <source>GPT</source>
+        <comment>@label</comment>
         <translation>GPT</translation>
     </message>
     <message>
         <location filename="../src/modules/partition/gui/PartitionDialogHelpers.cpp" line="91"/>
         <source>Mountpoint already in use. Please select another one.</source>
+        <comment>@info</comment>
         <translation>Mountpoint al in gebruik. Gaarne een andere selecteren</translation>
     </message>
     <message>
         <location filename="../src/modules/partition/gui/PartitionDialogHelpers.cpp" line="96"/>
         <source>Mountpoint must start with a &lt;tt&gt;/&lt;/tt&gt;.</source>
+        <comment>@info</comment>
         <translation>Mountpoint moet met een &lt;tt&gt;/&lt;/tt&gt;beginnen.</translation>
     </message>
 </context>
@@ -1347,43 +1384,51 @@ Het installeerprogramma zal stoppen en alle wijzigingen zullen verloren gaan.</t
     <name>CreatePartitionJob</name>
     <message>
         <location filename="../src/modules/partition/jobs/CreatePartitionJob.cpp" line="181"/>
-        <source>Create new %1MiB partition on %3 (%2) with entries %4.</source>
+        <source>Create new %1MiB partition on %3 (%2) with entries %4</source>
+        <comment>@title</comment>
         <translation>Creëer nieuwe %1MiB partitie op %3 (%2) met bestandssysteem %4.</translation>
     </message>
     <message>
         <location filename="../src/modules/partition/jobs/CreatePartitionJob.cpp" line="189"/>
-        <source>Create new %1MiB partition on %3 (%2).</source>
+        <source>Create new %1MiB partition on %3 (%2)</source>
+        <comment>@title</comment>
         <translation>Maak een nieuwe %1MiB partitie op %3 (%2).</translation>
     </message>
     <message>
         <location filename="../src/modules/partition/jobs/CreatePartitionJob.cpp" line="196"/>
-        <source>Create new %2MiB partition on %4 (%3) with file system %1.</source>
+        <source>Create new %2MiB partition on %4 (%3) with file system %1</source>
+        <comment>@title</comment>
         <translation>Creëer nieuwe %2MiB partitie op %4 (%3) met bestandssysteem %1.</translation>
     </message>
     <message>
         <location filename="../src/modules/partition/jobs/CreatePartitionJob.cpp" line="212"/>
-        <source>Create new &lt;strong&gt;%1MiB&lt;/strong&gt; partition on &lt;strong&gt;%3&lt;/strong&gt; (%2) with entries &lt;em&gt;%4&lt;/em&gt;.</source>
+        <source>Create new &lt;strong&gt;%1MiB&lt;/strong&gt; partition on &lt;strong&gt;%3&lt;/strong&gt; (%2) with entries &lt;em&gt;%4&lt;/em&gt;</source>
+        <comment>@info</comment>
         <translation>Creëer nieuw &lt;strong&gt;%1MiB&lt;/strong&gt; partitie op &lt;strong&gt;%3&lt;/strong&gt; (%2) met bestandssysteem &lt;em&gt;%4&lt;/em&gt;.</translation>
     </message>
     <message>
-        <location filename="../src/modules/partition/jobs/CreatePartitionJob.cpp" line="221"/>
-        <source>Create new &lt;strong&gt;%1MiB&lt;/strong&gt; partition on &lt;strong&gt;%3&lt;/strong&gt; (%2).</source>
+        <location filename="../src/modules/partition/jobs/CreatePartitionJob.cpp" line="222"/>
+        <source>Create new &lt;strong&gt;%1MiB&lt;/strong&gt; partition on &lt;strong&gt;%3&lt;/strong&gt; (%2)</source>
+        <comment>@info</comment>
         <translation>Creëer​ nieuw &lt;strong&gt;%1MiB&lt;/strong&gt; partitie op &lt;strong&gt;%3&lt;/strong&gt; (%2).</translation>
     </message>
     <message>
-        <location filename="../src/modules/partition/jobs/CreatePartitionJob.cpp" line="228"/>
-        <source>Create new &lt;strong&gt;%2MiB&lt;/strong&gt; partition on &lt;strong&gt;%4&lt;/strong&gt; (%3) with file system &lt;strong&gt;%1&lt;/strong&gt;.</source>
+        <location filename="../src/modules/partition/jobs/CreatePartitionJob.cpp" line="229"/>
+        <source>Create new &lt;strong&gt;%2MiB&lt;/strong&gt; partition on &lt;strong&gt;%4&lt;/strong&gt; (%3) with file system &lt;strong&gt;%1&lt;/strong&gt;</source>
+        <comment>@info</comment>
         <translation>Creëer nieuwe &lt;strong&gt;%2MiB&lt;/strong&gt; partitie op &lt;strong&gt;%4&lt;/strong&gt; (%3) met bestandssysteem&lt;strong&gt;%1&lt;/strong&gt;.</translation>
     </message>
     <message>
-        <location filename="../src/modules/partition/jobs/CreatePartitionJob.cpp" line="252"/>
-        <location filename="../src/modules/partition/jobs/CreatePartitionJob.cpp" line="255"/>
-        <source>Creating new %1 partition on %2.</source>
+        <location filename="../src/modules/partition/jobs/CreatePartitionJob.cpp" line="254"/>
+        <location filename="../src/modules/partition/jobs/CreatePartitionJob.cpp" line="257"/>
+        <source>Creating new %1 partition on %2…</source>
+        <comment>@status</comment>
         <translation>Aanmaken van een nieuwe %1 partitie op %2.</translation>
     </message>
     <message>
-        <location filename="../src/modules/partition/jobs/CreatePartitionJob.cpp" line="272"/>
+        <location filename="../src/modules/partition/jobs/CreatePartitionJob.cpp" line="274"/>
         <source>The installer failed to create partition on disk &apos;%1&apos;.</source>
+        <comment>@info</comment>
         <translation>Het installatieprogramma kon geen partitie aanmaken op schijf &apos;%1&apos;.</translation>
     </message>
 </context>
@@ -1419,18 +1464,16 @@ Het installeerprogramma zal stoppen en alle wijzigingen zullen verloren gaan.</t
     <name>CreatePartitionTableJob</name>
     <message>
         <location filename="../src/modules/partition/jobs/CreatePartitionTableJob.cpp" line="41"/>
-        <source>Create new %1 partition table on %2.</source>
-        <translation>Maak een nieuwe %1 partitietabel op %2.</translation>
+        <location filename="../src/modules/partition/jobs/CreatePartitionTableJob.cpp" line="58"/>
+        <source>Creating new %1 partition table on %2…</source>
+        <comment>@status</comment>
+        <translation>Aanmaken van een nieuwe %1 partitietabel op %2.</translation>
     </message>
     <message>
         <location filename="../src/modules/partition/jobs/CreatePartitionTableJob.cpp" line="49"/>
-        <source>Create new &lt;strong&gt;%1&lt;/strong&gt; partition table on &lt;strong&gt;%2&lt;/strong&gt; (%3).</source>
+        <source>Creating new &lt;strong&gt;%1&lt;/strong&gt; partition table on &lt;strong&gt;%2&lt;/strong&gt; (%3)…</source>
+        <comment>@status</comment>
         <translation>Maak een nieuwe &lt;strong&gt;%1&lt;/strong&gt; partitietabel op &lt;strong&gt;%2&lt;/strong&gt; (%3).</translation>
-    </message>
-    <message>
-        <location filename="../src/modules/partition/jobs/CreatePartitionTableJob.cpp" line="58"/>
-        <source>Creating new %1 partition table on %2.</source>
-        <translation>Aanmaken van een nieuwe %1 partitietabel op %2.</translation>
     </message>
     <message>
         <location filename="../src/modules/partition/jobs/CreatePartitionTableJob.cpp" line="86"/>
@@ -1447,28 +1490,32 @@ Het installeerprogramma zal stoppen en alle wijzigingen zullen verloren gaan.</t
     </message>
     <message>
         <location filename="../src/modules/users/CreateUserJob.cpp" line="39"/>
-        <source>Create user &lt;strong&gt;%1&lt;/strong&gt;.</source>
+        <source>Create user &lt;strong&gt;%1&lt;/strong&gt;</source>
         <translation>Maak gebruiker &lt;strong&gt;%1&lt;/strong&gt;.</translation>
     </message>
     <message>
         <location filename="../src/modules/users/CreateUserJob.cpp" line="45"/>
         <location filename="../src/modules/users/CreateUserJob.cpp" line="137"/>
-        <source>Creating user %1</source>
+        <source>Creating user %1…</source>
+        <comment>@status</comment>
         <translation>Gebruiker %1 aanmaken</translation>
     </message>
     <message>
         <location filename="../src/modules/users/CreateUserJob.cpp" line="120"/>
-        <source>Preserving home directory</source>
+        <source>Preserving home directory…</source>
+        <comment>@status</comment>
         <translation>De homedirectory behouden</translation>
     </message>
     <message>
         <location filename="../src/modules/users/CreateUserJob.cpp" line="145"/>
         <source>Configuring user %1</source>
+        <comment>@status</comment>
         <translation>Gebruiker %1 configureren</translation>
     </message>
     <message>
         <location filename="../src/modules/users/CreateUserJob.cpp" line="153"/>
-        <source>Setting file permissions</source>
+        <source>Setting file permissions…</source>
+        <comment>@status</comment>
         <translation>Bestandsrechten instellen</translation>
     </message>
 </context>
@@ -1477,6 +1524,7 @@ Het installeerprogramma zal stoppen en alle wijzigingen zullen verloren gaan.</t
     <message>
         <location filename="../src/modules/partition/gui/CreateVolumeGroupDialog.cpp" line="28"/>
         <source>Create Volume Group</source>
+        <comment>@title</comment>
         <translation>Creër Volume Group</translation>
     </message>
 </context>
@@ -1484,18 +1532,16 @@ Het installeerprogramma zal stoppen en alle wijzigingen zullen verloren gaan.</t
     <name>CreateVolumeGroupJob</name>
     <message>
         <location filename="../src/modules/partition/jobs/CreateVolumeGroupJob.cpp" line="32"/>
-        <source>Create new volume group named %1.</source>
+        <location filename="../src/modules/partition/jobs/CreateVolumeGroupJob.cpp" line="44"/>
+        <source>Creating new volume group named %1…</source>
+        <comment>@status</comment>
         <translation>Maak een nieuwe volumegroep met de naam %1.</translation>
     </message>
     <message>
         <location filename="../src/modules/partition/jobs/CreateVolumeGroupJob.cpp" line="38"/>
-        <source>Create new volume group named &lt;strong&gt;%1&lt;/strong&gt;.</source>
-        <translation>Maak een nieuwe volumegroep met de naam &lt;strong&gt;%1&lt;/strong&gt;.</translation>
-    </message>
-    <message>
-        <location filename="../src/modules/partition/jobs/CreateVolumeGroupJob.cpp" line="44"/>
-        <source>Creating new volume group named %1.</source>
-        <translation>Maak een nieuwe volumegroep met de naam %1.</translation>
+        <source>Creating new volume group named &lt;strong&gt;%1&lt;/strong&gt;…</source>
+        <comment>@status</comment>
+        <translation>Maak een nieuwe volumegroep met de naam &lt;strong&gt;%1&lt;/strong&gt;...</translation>
     </message>
     <message>
         <location filename="../src/modules/partition/jobs/CreateVolumeGroupJob.cpp" line="51"/>
@@ -1508,13 +1554,15 @@ Het installeerprogramma zal stoppen en alle wijzigingen zullen verloren gaan.</t
     <message>
         <location filename="../src/modules/partition/jobs/DeactivateVolumeGroupJob.cpp" line="26"/>
         <location filename="../src/modules/partition/jobs/DeactivateVolumeGroupJob.cpp" line="38"/>
-        <source>Deactivate volume group named %1.</source>
-        <translation>Deactiveer volumegroep met de naam %1.</translation>
+        <source>Deactivating volume group named %1…</source>
+        <comment>@status</comment>
+        <translation>Deactiveer volumegroep met de naam %1...</translation>
     </message>
     <message>
         <location filename="../src/modules/partition/jobs/DeactivateVolumeGroupJob.cpp" line="32"/>
-        <source>Deactivate volume group named &lt;strong&gt;%1&lt;/strong&gt;.</source>
-        <translation>Deactiveer de volumegroep genaamd &lt;strong&gt;%1&lt;/strong&gt;.</translation>
+        <source>Deactivating volume group named &lt;strong&gt;%1&lt;/strong&gt;…</source>
+        <comment>@status</comment>
+        <translation>Deactiveer de volumegroep genaamd &lt;strong&gt;%1&lt;/strong&gt;...</translation>
     </message>
     <message>
         <location filename="../src/modules/partition/jobs/DeactivateVolumeGroupJob.cpp" line="46"/>
@@ -1526,18 +1574,16 @@ Het installeerprogramma zal stoppen en alle wijzigingen zullen verloren gaan.</t
     <name>DeletePartitionJob</name>
     <message>
         <location filename="../src/modules/partition/jobs/DeletePartitionJob.cpp" line="73"/>
-        <source>Delete partition %1.</source>
-        <translation>Verwijder partitie %1.</translation>
+        <location filename="../src/modules/partition/jobs/DeletePartitionJob.cpp" line="85"/>
+        <source>Deleting partition %1…</source>
+        <comment>@status</comment>
+        <translation>Verwijdering van partitie %1...</translation>
     </message>
     <message>
         <location filename="../src/modules/partition/jobs/DeletePartitionJob.cpp" line="79"/>
-        <source>Delete partition &lt;strong&gt;%1&lt;/strong&gt;.</source>
-        <translation>Verwijder partitie &lt;strong&gt;%1&lt;/strong&gt;.</translation>
-    </message>
-    <message>
-        <location filename="../src/modules/partition/jobs/DeletePartitionJob.cpp" line="85"/>
-        <source>Deleting partition %1.</source>
-        <translation>Verwijdering van partitie %1.</translation>
+        <source>Deleting partition &lt;strong&gt;%1&lt;/strong&gt;…</source>
+        <comment>@status</comment>
+        <translation>Verwijder partitie &lt;strong&gt;%1&lt;/strong&gt;...</translation>
     </message>
     <message>
         <location filename="../src/modules/partition/jobs/DeletePartitionJob.cpp" line="99"/>
@@ -1713,11 +1759,13 @@ Het installeerprogramma zal stoppen en alle wijzigingen zullen verloren gaan.</t
         <location filename="../src/modules/partition/gui/EncryptWidget.cpp" line="153"/>
         <location filename="../src/modules/partition/gui/EncryptWidget.cpp" line="168"/>
         <source>Please enter the same passphrase in both boxes.</source>
+        <comment>@tooltip</comment>
         <translation>Gaarne hetzelfde wachtwoord in beide vakken invullen.</translation>
     </message>
     <message>
         <location filename="../src/modules/partition/gui/EncryptWidget.cpp" line="158"/>
-        <source>Password must be a minimum of %1 characters</source>
+        <source>Password must be a minimum of %1 characters.</source>
+        <comment>@tooltip</comment>
         <translation>Wachtwoord moet minimaal %1 tekens bevatten</translation>
     </message>
 </context>
@@ -1739,57 +1787,68 @@ Het installeerprogramma zal stoppen en alle wijzigingen zullen verloren gaan.</t
     <message>
         <location filename="../src/modules/partition/jobs/FillGlobalStorageJob.cpp" line="179"/>
         <source>Set partition information</source>
+        <comment>@title</comment>
         <translation>Instellen partitie-informatie</translation>
     </message>
     <message>
         <location filename="../src/modules/partition/jobs/FillGlobalStorageJob.cpp" line="208"/>
         <source>Install %1 on &lt;strong&gt;new&lt;/strong&gt; %2 system partition with features &lt;em&gt;%3&lt;/em&gt;</source>
+        <comment>@info</comment>
         <translation>Installeer %1 op &lt;strong&gt;nieuw&lt;/strong&gt; %2 systeem partitie met kenmerken &lt;em&gt;%3&lt;/em&gt;</translation>
     </message>
     <message>
-        <location filename="../src/modules/partition/jobs/FillGlobalStorageJob.cpp" line="216"/>
-        <source>Install %1 on &lt;strong&gt;new&lt;/strong&gt; %2 system partition.</source>
+        <location filename="../src/modules/partition/jobs/FillGlobalStorageJob.cpp" line="217"/>
+        <source>Install %1 on &lt;strong&gt;new&lt;/strong&gt; %2 system partition</source>
+        <comment>@info</comment>
         <translation>Installeer %1 op &lt;strong&gt;nieuw&lt;/strong&gt; %2 systeem partitie.</translation>
     </message>
     <message>
-        <location filename="../src/modules/partition/jobs/FillGlobalStorageJob.cpp" line="225"/>
-        <source>Set up &lt;strong&gt;new&lt;/strong&gt; %2 partition with mount point &lt;strong&gt;%1&lt;/strong&gt; and features &lt;em&gt;%3&lt;/em&gt;.</source>
+        <location filename="../src/modules/partition/jobs/FillGlobalStorageJob.cpp" line="226"/>
+        <source>Set up &lt;strong&gt;new&lt;/strong&gt; %2 partition with mount point &lt;strong&gt;%1&lt;/strong&gt; and features &lt;em&gt;%3&lt;/em&gt;</source>
+        <comment>@info</comment>
         <translation>Set up &lt;strong&gt;nieuwe&lt;/strong&gt; %2 partitie met aankoppelingspunt &lt;strong&gt;%1&lt;/strong&gt; en kenmerken &lt;em&gt;%3&lt;/em&gt;.</translation>
     </message>
     <message>
-        <location filename="../src/modules/partition/jobs/FillGlobalStorageJob.cpp" line="233"/>
-        <source>Set up &lt;strong&gt;new&lt;/strong&gt; %2 partition with mount point &lt;strong&gt;%1&lt;/strong&gt;%3.</source>
+        <location filename="../src/modules/partition/jobs/FillGlobalStorageJob.cpp" line="235"/>
+        <source>Set up &lt;strong&gt;new&lt;/strong&gt; %2 partition with mount point &lt;strong&gt;%1&lt;/strong&gt;%3</source>
+        <comment>@info</comment>
         <translation>Set up &lt;strong&gt;nieuwe&lt;/strong&gt; %2 partitie met aanknopingspunt &lt;strong&gt;%1&lt;/strong&gt; %3.</translation>
     </message>
     <message>
-        <location filename="../src/modules/partition/jobs/FillGlobalStorageJob.cpp" line="247"/>
-        <source>Install %2 on %3 system partition &lt;strong&gt;%1&lt;/strong&gt; with features &lt;em&gt;%4&lt;/em&gt;.</source>
-        <translation>Installeer %2 on %3 systeem partitie &lt;strong&gt;%1&lt;/strong&gt; met kenmerken &lt;em&gt;%4&lt;/em&gt;.</translation>
+        <location filename="../src/modules/partition/jobs/FillGlobalStorageJob.cpp" line="250"/>
+        <source>Install %2 on %3 system partition &lt;strong&gt;%1&lt;/strong&gt; with features &lt;em&gt;%4&lt;/em&gt;</source>
+        <comment>@info</comment>
+        <translation>Installeer %2 on %3 systeem partitie &lt;strong&gt;%1&lt;/strong&gt; met kenmerken &lt;em&gt;%4&lt;/em&gt;</translation>
     </message>
     <message>
-        <location filename="../src/modules/partition/jobs/FillGlobalStorageJob.cpp" line="266"/>
-        <source>Set up %3 partition &lt;strong&gt;%1&lt;/strong&gt; with mount point &lt;strong&gt;%2&lt;/strong&gt; and features &lt;em&gt;%4&lt;/em&gt;.</source>
-        <translation>Set up %3 partitie &lt;strong&gt;%1&lt;/strong&gt; met aankoppelingspunt &lt;strong&gt;%2&lt;/strong&gt; en kenmereken &lt;em&gt;%4&lt;/em&gt;.</translation>
+        <location filename="../src/modules/partition/jobs/FillGlobalStorageJob.cpp" line="260"/>
+        <source>Install %2 on %3 system partition &lt;strong&gt;%1&lt;/strong&gt;</source>
+        <comment>@info</comment>
+        <translation>Installeer %2 op %3 systeem partitie &lt;strong&gt;%1&lt;/strong&gt;</translation>
     </message>
     <message>
-        <location filename="../src/modules/partition/jobs/FillGlobalStorageJob.cpp" line="275"/>
-        <source>Set up %3 partition &lt;strong&gt;%1&lt;/strong&gt; with mount point &lt;strong&gt;%2&lt;/strong&gt;%4.</source>
-        <translation>Set up %3 partitie &lt;strong&gt;%1&lt;/strong&gt; met aanknopingspunt &lt;strong&gt;%2&lt;/strong&gt; %4.</translation>
+        <location filename="../src/modules/partition/jobs/FillGlobalStorageJob.cpp" line="270"/>
+        <source>Set up %3 partition &lt;strong&gt;%1&lt;/strong&gt; with mount point &lt;strong&gt;%2&lt;/strong&gt; and features &lt;em&gt;%4&lt;/em&gt;</source>
+        <comment>@info</comment>
+        <translation>Set up %3 partitie &lt;strong&gt;%1&lt;/strong&gt; met aankoppelingspunt &lt;strong&gt;%2&lt;/strong&gt; en kenmerken &lt;em&gt;%4&lt;/em&gt;</translation>
     </message>
     <message>
-        <location filename="../src/modules/partition/jobs/FillGlobalStorageJob.cpp" line="256"/>
-        <source>Install %2 on %3 system partition &lt;strong&gt;%1&lt;/strong&gt;.</source>
-        <translation>Installeer %2 op %3 systeem partitie &lt;strong&gt;%1&lt;/strong&gt;.</translation>
+        <location filename="../src/modules/partition/jobs/FillGlobalStorageJob.cpp" line="280"/>
+        <source>Set up %3 partition &lt;strong&gt;%1&lt;/strong&gt; with mount point &lt;strong&gt;%2&lt;/strong&gt;%4…</source>
+        <comment>@info</comment>
+        <translation>Set up %3 partitie &lt;strong&gt;%1&lt;/strong&gt; met aanknopingspunt &lt;strong&gt;%2&lt;/strong&gt; %4...</translation>
     </message>
     <message>
-        <location filename="../src/modules/partition/jobs/FillGlobalStorageJob.cpp" line="290"/>
-        <source>Install boot loader on &lt;strong&gt;%1&lt;/strong&gt;.</source>
-        <translation>Installeer de boot loader op &lt;strong&gt;%1&lt;/strong&gt;.</translation>
+        <location filename="../src/modules/partition/jobs/FillGlobalStorageJob.cpp" line="296"/>
+        <source>Install boot loader on &lt;strong&gt;%1&lt;/strong&gt;…</source>
+        <comment>@info</comment>
+        <translation>Installeer de boot loader op &lt;strong&gt;%1&lt;/strong&gt;...</translation>
     </message>
     <message>
-        <location filename="../src/modules/partition/jobs/FillGlobalStorageJob.cpp" line="299"/>
-        <source>Setting up mount points.</source>
-        <translation>Opzetten van mount points.</translation>
+        <location filename="../src/modules/partition/jobs/FillGlobalStorageJob.cpp" line="305"/>
+        <source>Setting up mount points…</source>
+        <comment>@status</comment>
+        <translation>Opzetten van mount points...</translation>
     </message>
 </context>
 <context>
@@ -1857,24 +1916,27 @@ Het installeerprogramma zal stoppen en alle wijzigingen zullen verloren gaan.</t
     <name>FormatPartitionJob</name>
     <message>
         <location filename="../src/modules/partition/jobs/FormatPartitionJob.cpp" line="39"/>
-        <source>Format partition %1 (file system: %2, size: %3 MiB) on %4.</source>
-        <translation>Formateer partitie %1 (bestandssysteem: %2, grootte: %3 MiB) op %4.</translation>
+        <source>Format partition %1 (file system: %2, size: %3 MiB) on %4</source>
+        <comment>@title</comment>
+        <translation>Formatteer partitie %1 (bestandssysteem: %2, grootte: %3 MiB) op %4</translation>
     </message>
     <message>
         <location filename="../src/modules/partition/jobs/FormatPartitionJob.cpp" line="49"/>
-        <source>Format &lt;strong&gt;%3MiB&lt;/strong&gt; partition &lt;strong&gt;%1&lt;/strong&gt; with file system &lt;strong&gt;%2&lt;/strong&gt;.</source>
-        <translation>Formatteer &lt;strong&gt;%3MiB&lt;/strong&gt; partitie &lt;strong&gt;%1&lt;/strong&gt; met bestandssysteem &lt;strong&gt;%2&lt;/strong&gt;.</translation>
+        <source>Format &lt;strong&gt;%3MiB&lt;/strong&gt; partition &lt;strong&gt;%1&lt;/strong&gt; with file system &lt;strong&gt;%2&lt;/strong&gt;</source>
+        <comment>@info</comment>
+        <translation>Formatteer &lt;strong&gt;%3MiB&lt;/strong&gt; partitie &lt;strong&gt;%1&lt;/strong&gt; met bestandssysteem &lt;strong&gt;%2&lt;/strong&gt;</translation>
     </message>
     <message>
-        <location filename="../src/modules/partition/jobs/FormatPartitionJob.cpp" line="61"/>
+        <location filename="../src/modules/partition/jobs/FormatPartitionJob.cpp" line="62"/>
         <source>%1 (%2)</source>
         <comment>partition label %1 (device path %2)</comment>
         <translation>%1 (%2)</translation>
     </message>
     <message>
-        <location filename="../src/modules/partition/jobs/FormatPartitionJob.cpp" line="63"/>
-        <source>Formatting partition %1 with file system %2.</source>
-        <translation>Formatteren van partitie %1 met file systeem %2.</translation>
+        <location filename="../src/modules/partition/jobs/FormatPartitionJob.cpp" line="64"/>
+        <source>Formatting partition %1 with file system %2…</source>
+        <comment>@status</comment>
+        <translation>Formatteren van partitie %1 met file systeem %2...</translation>
     </message>
     <message>
         <location filename="../src/modules/partition/jobs/FormatPartitionJob.cpp" line="73"/>
@@ -2332,6 +2394,24 @@ Het installeerprogramma zal stoppen en alle wijzigingen zullen verloren gaan.</t
         <location filename="../src/modules/machineid/MachineIdJob.cpp" line="72"/>
         <source>No root mount point is set for MachineId.</source>
         <translation>Er is geen root-koppelpunt ingesteld voor MachineId.</translation>
+    </message>
+    <message>
+        <location filename="../src/modules/machineid/Workers.cpp" line="63"/>
+        <location filename="../src/modules/machineid/Workers.cpp" line="71"/>
+        <location filename="../src/modules/machineid/Workers.cpp" line="75"/>
+        <location filename="../src/modules/machineid/Workers.cpp" line="92"/>
+        <source>File not found</source>
+        <translation>Bestand niet gevonden</translation>
+    </message>
+    <message>
+        <location filename="../src/modules/machineid/Workers.cpp" line="64"/>
+        <source>Path &lt;pre&gt;%1&lt;/pre&gt; must be an absolute path.</source>
+        <translation>Pad &lt;pre&gt;%1&lt;/pre&gt; moet een absoluut pad zijn.</translation>
+    </message>
+    <message>
+        <location filename="../src/modules/machineid/Workers.cpp" line="93"/>
+        <source>Could not create new random file &lt;pre&gt;%1&lt;/pre&gt;.</source>
+        <translation>Kan geen nieuw willekeurig bestand maken &lt;pre&gt;%1&lt;/pre&gt;.</translation>
     </message>
 </context>
 <context>
@@ -2835,31 +2915,37 @@ Het installeerprogramma zal stoppen en alle wijzigingen zullen verloren gaan.</t
     <message>
         <location filename="../src/modules/partition/gui/PartitionLabelsView.cpp" line="182"/>
         <source>Home</source>
+        <comment>@label</comment>
         <translation>Home</translation>
     </message>
     <message>
         <location filename="../src/modules/partition/gui/PartitionLabelsView.cpp" line="186"/>
         <source>Boot</source>
+        <comment>@label</comment>
         <translation>Boot</translation>
     </message>
     <message>
         <location filename="../src/modules/partition/gui/PartitionLabelsView.cpp" line="191"/>
         <source>EFI system</source>
+        <comment>@label</comment>
         <translation>EFI systeem</translation>
     </message>
     <message>
         <location filename="../src/modules/partition/gui/PartitionLabelsView.cpp" line="195"/>
         <source>Swap</source>
+        <comment>@label</comment>
         <translation>Swap</translation>
     </message>
     <message>
         <location filename="../src/modules/partition/gui/PartitionLabelsView.cpp" line="199"/>
         <source>New partition for %1</source>
+        <comment>@label</comment>
         <translation>Nieuwe partitie op %1</translation>
     </message>
     <message>
         <location filename="../src/modules/partition/gui/PartitionLabelsView.cpp" line="203"/>
         <source>New partition</source>
+        <comment>@label</comment>
         <translation>Nieuwe partitie</translation>
     </message>
     <message>
@@ -2875,37 +2961,44 @@ Het installeerprogramma zal stoppen en alle wijzigingen zullen verloren gaan.</t
         <location filename="../src/modules/partition/core/PartitionModel.cpp" line="157"/>
         <location filename="../src/modules/partition/core/PartitionModel.cpp" line="201"/>
         <source>Free Space</source>
+        <comment>@title</comment>
         <translation>Vrije ruimte</translation>
     </message>
     <message>
         <location filename="../src/modules/partition/core/PartitionModel.cpp" line="161"/>
         <location filename="../src/modules/partition/core/PartitionModel.cpp" line="205"/>
-        <source>New partition</source>
-        <translation>Nieuwe partitie</translation>
+        <source>New Partition</source>
+        <comment>@title</comment>
+        <translation>Nieuwe Partitie</translation>
     </message>
     <message>
         <location filename="../src/modules/partition/core/PartitionModel.cpp" line="307"/>
         <source>Name</source>
+        <comment>@title</comment>
         <translation>Naam</translation>
     </message>
     <message>
         <location filename="../src/modules/partition/core/PartitionModel.cpp" line="309"/>
         <source>File System</source>
+        <comment>@title</comment>
         <translation>Bestandssysteem</translation>
     </message>
     <message>
         <location filename="../src/modules/partition/core/PartitionModel.cpp" line="311"/>
         <source>File System Label</source>
+        <comment>@title</comment>
         <translation>Bestandssysteemlabel</translation>
     </message>
     <message>
         <location filename="../src/modules/partition/core/PartitionModel.cpp" line="313"/>
         <source>Mount Point</source>
+        <comment>@title</comment>
         <translation>Aankoppelpunt</translation>
     </message>
     <message>
         <location filename="../src/modules/partition/core/PartitionModel.cpp" line="315"/>
         <source>Size</source>
+        <comment>@title</comment>
         <translation>Grootte</translation>
     </message>
 </context>
@@ -2993,16 +3086,6 @@ Het installeerprogramma zal stoppen en alle wijzigingen zullen verloren gaan.</t
 <context>
     <name>PartitionViewStep</name>
     <message>
-        <location filename="../src/modules/partition/PartitionViewStep.cpp" line="56"/>
-        <source>Gathering system information...</source>
-        <translation>Informatie verzamelen over het systeem...</translation>
-    </message>
-    <message>
-        <location filename="../src/modules/partition/PartitionViewStep.cpp" line="107"/>
-        <source>Partitions</source>
-        <translation>Partities</translation>
-    </message>
-    <message>
         <location filename="../src/modules/partition/PartitionViewStep.cpp" line="250"/>
         <source>Unsafe partition actions are enabled.</source>
         <translation>Onveilige partitieacties zijn ingeschakeld.</translation>
@@ -3016,16 +3099,6 @@ Het installeerprogramma zal stoppen en alle wijzigingen zullen verloren gaan.</t
         <location filename="../src/modules/partition/PartitionViewStep.cpp" line="256"/>
         <source>No partitions will be changed.</source>
         <translation>Er worden geen partities gewijzigd.</translation>
-    </message>
-    <message>
-        <location filename="../src/modules/partition/PartitionViewStep.cpp" line="296"/>
-        <source>Current:</source>
-        <translation>Huidig:</translation>
-    </message>
-    <message>
-        <location filename="../src/modules/partition/PartitionViewStep.cpp" line="314"/>
-        <source>After:</source>
-        <translation>Naderhand:</translation>
     </message>
     <message>
         <location filename="../src/modules/partition/PartitionViewStep.cpp" line="542"/>
@@ -3079,6 +3152,30 @@ Het installeerprogramma zal stoppen en alle wijzigingen zullen verloren gaan.</t
         <translation>Het bestandssysteem moet flag &lt;strong&gt;%1&lt;/strong&gt; zetten.</translation>
     </message>
     <message>
+        <location filename="../src/modules/partition/PartitionViewStep.cpp" line="56"/>
+        <source>Gathering system information…</source>
+        <comment>@status</comment>
+        <translation>Systeeminformatie verzamelen...</translation>
+    </message>
+    <message>
+        <location filename="../src/modules/partition/PartitionViewStep.cpp" line="107"/>
+        <source>Partitions</source>
+        <comment>@label</comment>
+        <translation>Partities</translation>
+    </message>
+    <message>
+        <location filename="../src/modules/partition/PartitionViewStep.cpp" line="296"/>
+        <source>Current:</source>
+        <comment>@label</comment>
+        <translation>Huidig:</translation>
+    </message>
+    <message>
+        <location filename="../src/modules/partition/PartitionViewStep.cpp" line="314"/>
+        <source>After:</source>
+        <comment>@label</comment>
+        <translation>Na:</translation>
+    </message>
+    <message>
         <location filename="../src/modules/partition/PartitionViewStep.cpp" line="566"/>
         <source>You can continue without setting up an EFI system partition but your system may fail to start.</source>
         <translation>Je kunt doorgaan zonder een EFI-systeempartitie in te stellen, maar je systeem start mogelijk niet op.</translation>
@@ -3123,8 +3220,9 @@ Het installeerprogramma zal stoppen en alle wijzigingen zullen verloren gaan.</t
     <name>PreserveFiles</name>
     <message>
         <location filename="../src/modules/preservefiles/PreserveFiles.cpp" line="56"/>
-        <source>Saving files for later ...</source>
-        <translation>Bestanden opslaan voor later ...</translation>
+        <source>Saving files for later…</source>
+        <comment>@status</comment>
+        <translation>Bestanden opslaan voor later...</translation>
     </message>
     <message>
         <location filename="../src/modules/preservefiles/PreserveFiles.cpp" line="64"/>
@@ -3215,11 +3313,6 @@ Output:
         <translation>Standaard</translation>
     </message>
     <message>
-        <location filename="../src/modules/partition/gui/PartitionLabelsView.cpp" line="39"/>
-        <source>Unpartitioned space or unknown partition table</source>
-        <translation>Niet gepartitioneerde ruimte of onbekende partitietabel</translation>
-    </message>
-    <message>
         <location filename="../src/modules/partition/gui/PartitionDialogHelpers.cpp" line="44"/>
         <source>(no mount point)</source>
         <translation>(geen aankoppelpunt)</translation>
@@ -3230,26 +3323,12 @@ Output:
         <translation>%1 (%2)</translation>
     </message>
     <message>
-        <location filename="../src/modules/machineid/Workers.cpp" line="64"/>
-        <location filename="../src/modules/machineid/Workers.cpp" line="72"/>
-        <location filename="../src/modules/machineid/Workers.cpp" line="76"/>
-        <location filename="../src/modules/machineid/Workers.cpp" line="93"/>
-        <source>File not found</source>
-        <translation>Bestand niet gevonden</translation>
-    </message>
-    <message>
-        <location filename="../src/modules/machineid/Workers.cpp" line="65"/>
-        <source>Path &lt;pre&gt;%1&lt;/pre&gt; must be an absolute path.</source>
-        <translation>Pad &lt;pre&gt;%1&lt;/pre&gt; moet een absoluut pad zijn.</translation>
-    </message>
-    <message>
         <location filename="../src/modules/machineid/MachineIdJob.cpp" line="101"/>
         <source>Directory not found</source>
         <translation>Directory niet gevonden</translation>
     </message>
     <message>
         <location filename="../src/modules/machineid/MachineIdJob.cpp" line="102"/>
-        <location filename="../src/modules/machineid/Workers.cpp" line="94"/>
         <source>Could not create new random file &lt;pre&gt;%1&lt;/pre&gt;.</source>
         <translation>Kan geen nieuw willekeurig bestand maken &lt;pre&gt;%1&lt;/pre&gt;.</translation>
     </message>
@@ -3287,6 +3366,12 @@ Output:
         <comment>@partition info</comment>
         <translation>swap</translation>
     </message>
+    <message>
+        <location filename="../src/modules/partition/gui/PartitionLabelsView.cpp" line="39"/>
+        <source>Unpartitioned space or unknown partition table</source>
+        <comment>@info</comment>
+        <translation>Niet gepartitioneerde ruimte of onbekende partitietabel</translation>
+    </message>
 </context>
 <context>
     <name>Recommended</name>
@@ -3302,13 +3387,15 @@ Output:
     <message>
         <location filename="../src/modules/partition/jobs/RemoveVolumeGroupJob.cpp" line="26"/>
         <location filename="../src/modules/partition/jobs/RemoveVolumeGroupJob.cpp" line="38"/>
-        <source>Remove Volume Group named %1.</source>
-        <translation>Verwijder Volume Groep genaamd %1.</translation>
+        <source>Removing Volume Group named %1…</source>
+        <comment>@status</comment>
+        <translation>Verwijder Volume Groep genaamd %1...</translation>
     </message>
     <message>
         <location filename="../src/modules/partition/jobs/RemoveVolumeGroupJob.cpp" line="32"/>
-        <source>Remove Volume Group named &lt;strong&gt;%1&lt;/strong&gt;.</source>
-        <translation>Verwijder Volume Groep genaamd &lt;strong&gt;%1&lt;/strong&gt;.</translation>
+        <source>Removing Volume Group named &lt;strong&gt;%1&lt;/strong&gt;…</source>
+        <comment>@status</comment>
+        <translation>Verwijder Volume Groep genaamd &lt;strong&gt;%1&lt;/strong&gt;...</translation>
     </message>
     <message>
         <location filename="../src/modules/partition/jobs/RemoveVolumeGroupJob.cpp" line="46"/>
@@ -3335,22 +3422,25 @@ Output:
 <context>
     <name>ResizePartitionJob</name>
     <message>
-        <location filename="../src/modules/partition/jobs/ResizePartitionJob.cpp" line="41"/>
-        <source>Resize partition %1.</source>
-        <translation>Pas de grootte van partitie %1 aan.</translation>
+        <location filename="../src/modules/partition/jobs/ResizePartitionJob.cpp" line="39"/>
+        <source>Resize partition %1</source>
+        <comment>@title</comment>
+        <translation>Pas de grootte van partitie %1 aan</translation>
     </message>
     <message>
-        <location filename="../src/modules/partition/jobs/ResizePartitionJob.cpp" line="47"/>
-        <source>Resize &lt;strong&gt;%2MiB&lt;/strong&gt; partition &lt;strong&gt;%1&lt;/strong&gt; to &lt;strong&gt;%3MiB&lt;/strong&gt;.</source>
-        <translation>Verander grootte &lt;strong&gt;%2MiB&lt;/strong&gt; partitie &lt;strong&gt;%1&lt;/strong&gt; naar &lt;strong&gt;%3MiB&lt;/strong&gt;.</translation>
+        <location filename="../src/modules/partition/jobs/ResizePartitionJob.cpp" line="45"/>
+        <source>Resize &lt;strong&gt;%2MiB&lt;/strong&gt; partition &lt;strong&gt;%1&lt;/strong&gt; to &lt;strong&gt;%3MiB&lt;/strong&gt;</source>
+        <comment>@info</comment>
+        <translation>Verander grootte &lt;strong&gt;%2MiB&lt;/strong&gt; partitie &lt;strong&gt;%1&lt;/strong&gt; naar &lt;strong&gt;%3MiB&lt;/strong&gt;</translation>
     </message>
     <message>
-        <location filename="../src/modules/partition/jobs/ResizePartitionJob.cpp" line="57"/>
-        <source>Resizing %2MiB partition %1 to %3MiB.</source>
-        <translation>Aanpassen van %2MiB partitie %1 naar %3MiB.</translation>
+        <location filename="../src/modules/partition/jobs/ResizePartitionJob.cpp" line="54"/>
+        <source>Resizing %2MiB partition %1 to %3MiB…</source>
+        <comment>@status</comment>
+        <translation>Aanpassen van %2MiB partitie %1 naar %3MiB...</translation>
     </message>
     <message>
-        <location filename="../src/modules/partition/jobs/ResizePartitionJob.cpp" line="74"/>
+        <location filename="../src/modules/partition/jobs/ResizePartitionJob.cpp" line="70"/>
         <source>The installer failed to resize partition %1 on disk &apos;%2&apos;.</source>
         <translation>Installatieprogramma heeft gefaald in het aanpassen van de grootte van partitie %1 op schrijf %2&apos;.</translation>
     </message>
@@ -3360,24 +3450,32 @@ Output:
     <message>
         <location filename="../src/modules/partition/gui/ResizeVolumeGroupDialog.cpp" line="30"/>
         <source>Resize Volume Group</source>
-        <translation>Resize Volume Group</translation>
+        <comment>@title</comment>
+        <translation>Resize Volume Groep</translation>
     </message>
 </context>
 <context>
     <name>ResizeVolumeGroupJob</name>
     <message>
         <location filename="../src/modules/partition/jobs/ResizeVolumeGroupJob.cpp" line="28"/>
-        <location filename="../src/modules/partition/jobs/ResizeVolumeGroupJob.cpp" line="46"/>
-        <source>Resize volume group named %1 from %2 to %3.</source>
-        <translation>Resize volume groep genaamd %1 van %2 naar %3.</translation>
+        <source>Resize volume group named %1 from %2 to %3</source>
+        <comment>@title</comment>
+        <translation>Resize volume groep genaamd %1 van %2 naar %3</translation>
     </message>
     <message>
         <location filename="../src/modules/partition/jobs/ResizeVolumeGroupJob.cpp" line="37"/>
-        <source>Resize volume group named &lt;strong&gt;%1&lt;/strong&gt; from &lt;strong&gt;%2&lt;/strong&gt; to &lt;strong&gt;%3&lt;/strong&gt;.</source>
-        <translation>Resize volume groep genaamd &lt;strong&gt;%1&lt;/strong&gt; van &lt;strong&gt;%2&lt;/strong&gt; naar &lt;strong&gt;%3&lt;/strong&gt;.</translation>
+        <source>Resize volume group named &lt;strong&gt;%1&lt;/strong&gt; from &lt;strong&gt;%2&lt;/strong&gt; to &lt;strong&gt;%3&lt;/strong&gt;</source>
+        <comment>@info</comment>
+        <translation>Resize volume groep genaamd &lt;strong&gt;%1&lt;/strong&gt; van &lt;strong&gt;%2&lt;/strong&gt; naar &lt;strong&gt;%3&lt;/strong&gt;</translation>
     </message>
     <message>
-        <location filename="../src/modules/partition/jobs/ResizeVolumeGroupJob.cpp" line="57"/>
+        <location filename="../src/modules/partition/jobs/ResizeVolumeGroupJob.cpp" line="47"/>
+        <source>Resizing volume group named %1 from %2 to %3…</source>
+        <comment>@status</comment>
+        <translation>Resize volume groep genaamd %1 van %2 naar %3...</translation>
+    </message>
+    <message>
+        <location filename="../src/modules/partition/jobs/ResizeVolumeGroupJob.cpp" line="58"/>
         <source>The installer failed to resize a volume group named &apos;%1&apos;.</source>
         <translation>Het installatieprogramma kan de grootte van volume groep genaamd &apos;%1&apos; niet wijzigen.</translation>
     </message>
@@ -3394,13 +3492,15 @@ Output:
     <name>ScanningDialog</name>
     <message>
         <location filename="../src/modules/partition/gui/ScanningDialog.cpp" line="68"/>
-        <source>Scanning storage devices...</source>
-        <translation>Scannen opslagapparaten ...</translation>
+        <source>Scanning storage devices…</source>
+        <comment>@status</comment>
+        <translation>Scannen opslagapparaten...</translation>
     </message>
     <message>
         <location filename="../src/modules/partition/gui/ScanningDialog.cpp" line="68"/>
-        <source>Partitioning</source>
-        <translation>Partitionering</translation>
+        <source>Partitioning…</source>
+        <comment>@status</comment>
+        <translation>Partitionering...</translation>
     </message>
 </context>
 <context>
@@ -3417,8 +3517,9 @@ Output:
     </message>
     <message>
         <location filename="../src/modules/users/SetHostNameJob.cpp" line="48"/>
-        <source>Setting hostname %1.</source>
-        <translation>Instellen hostname %1</translation>
+        <source>Setting hostname %1…</source>
+        <comment>@status</comment>
+        <translation>Instellen hostname %1...</translation>
     </message>
     <message>
         <location filename="../src/modules/users/SetHostNameJob.cpp" line="121"/>
@@ -3482,81 +3583,96 @@ Output:
     <name>SetPartFlagsJob</name>
     <message>
         <location filename="../src/modules/partition/jobs/SetPartitionFlagsJob.cpp" line="44"/>
-        <source>Set flags on partition %1.</source>
-        <translation>Set flags op partitie %1.</translation>
+        <source>Set flags on partition %1</source>
+        <comment>@title</comment>
+        <translation>Set flags op partitie %1</translation>
     </message>
     <message>
         <location filename="../src/modules/partition/jobs/SetPartitionFlagsJob.cpp" line="50"/>
-        <source>Set flags on %1MiB %2 partition.</source>
-        <translation>Set flags op %1MiB %2 partitie.</translation>
+        <source>Set flags on %1MiB %2 partition</source>
+        <comment>@title</comment>
+        <translation>Set flags op %1MiB %2 partitie</translation>
     </message>
     <message>
         <location filename="../src/modules/partition/jobs/SetPartitionFlagsJob.cpp" line="54"/>
-        <source>Set flags on new partition.</source>
-        <translation>Set flags op nieuwe partitie.</translation>
+        <source>Set flags on new partition</source>
+        <comment>@title</comment>
+        <translation>Set flags op nieuwe partitie</translation>
     </message>
     <message>
         <location filename="../src/modules/partition/jobs/SetPartitionFlagsJob.cpp" line="65"/>
-        <source>Clear flags on partition &lt;strong&gt;%1&lt;/strong&gt;.</source>
-        <translation>Wis flags op partitie &lt;strong&gt;%1&lt;/strong&gt;.</translation>
+        <source>Clear flags on partition &lt;strong&gt;%1&lt;/strong&gt;</source>
+        <comment>@info</comment>
+        <translation>Wis flags op partitie &lt;strong&gt;%1&lt;/strong&gt;</translation>
     </message>
     <message>
         <location filename="../src/modules/partition/jobs/SetPartitionFlagsJob.cpp" line="71"/>
-        <source>Clear flags on %1MiB &lt;strong&gt;%2&lt;/strong&gt; partition.</source>
-        <translation>Wis flags op %1MiB &lt;strong&gt;%2&lt;/strong&gt; partitie.</translation>
-    </message>
-    <message>
-        <location filename="../src/modules/partition/jobs/SetPartitionFlagsJob.cpp" line="89"/>
-        <source>Flag %1MiB &lt;strong&gt;%2&lt;/strong&gt; partition as &lt;strong&gt;%3&lt;/strong&gt;.</source>
-        <translation>Flag %1MiB &lt;strong&gt;%2&lt;/strong&gt; partitie als &lt;strong&gt;%3&lt;/strong&gt;.</translation>
-    </message>
-    <message>
-        <location filename="../src/modules/partition/jobs/SetPartitionFlagsJob.cpp" line="113"/>
-        <source>Clearing flags on %1MiB &lt;strong&gt;%2&lt;/strong&gt; partition.</source>
-        <translation>Flags wissen op %1MiB &lt;strong&gt;%2&lt;/strong&gt; partitie.</translation>
-    </message>
-    <message>
-        <location filename="../src/modules/partition/jobs/SetPartitionFlagsJob.cpp" line="132"/>
-        <source>Setting flags &lt;strong&gt;%3&lt;/strong&gt; on %1MiB &lt;strong&gt;%2&lt;/strong&gt; partition.</source>
-        <translation>Instellen flags &lt;strong&gt;%3&lt;/strong&gt; op %1MiB &lt;strong&gt;%2&lt;/strong&gt; partitie.</translation>
+        <source>Clear flags on %1MiB &lt;strong&gt;%2&lt;/strong&gt; partition</source>
+        <comment>@info</comment>
+        <translation>Wis flags op %1MiB &lt;strong&gt;%2&lt;/strong&gt; partitie</translation>
     </message>
     <message>
         <location filename="../src/modules/partition/jobs/SetPartitionFlagsJob.cpp" line="75"/>
-        <source>Clear flags on new partition.</source>
-        <translation>Wis flags op nieuwe partitie.</translation>
+        <source>Clear flags on new partition</source>
+        <comment>@info</comment>
+        <translation>Wis flags op nieuwe partitie</translation>
     </message>
     <message>
         <location filename="../src/modules/partition/jobs/SetPartitionFlagsJob.cpp" line="80"/>
-        <source>Flag partition &lt;strong&gt;%1&lt;/strong&gt; as &lt;strong&gt;%2&lt;/strong&gt;.</source>
-        <translation>Flag partitie &lt;strong&gt;%1&lt;/strong&gt; als &lt;strong&gt;%2&lt;/strong&gt;.</translation>
+        <source>Set flags on partition &lt;strong&gt;%1&lt;/strong&gt; to &lt;strong&gt;%2&lt;/strong&gt;</source>
+        <comment>@info</comment>
+        <translation>Set flags op partitie &lt;strong&gt;%1&lt;/strong&gt; to &lt;strong&gt;%2&lt;/strong&gt;</translation>
     </message>
     <message>
-        <location filename="../src/modules/partition/jobs/SetPartitionFlagsJob.cpp" line="96"/>
-        <source>Flag new partition as &lt;strong&gt;%1&lt;/strong&gt;.</source>
-        <translation>Flag nieuwe partitie als &lt;strong&gt;%1&lt;/strong&gt;.</translation>
+        <location filename="../src/modules/partition/jobs/SetPartitionFlagsJob.cpp" line="88"/>
+        <source>Set flags on %1MiB &lt;strong&gt;%2&lt;/strong&gt; partition to &lt;strong&gt;%3&lt;/strong&gt;</source>
+        <comment>@info</comment>
+        <translation>Set flags op %1MiB &lt;strong&gt;%2&lt;/strong&gt; partitie naar &lt;strong&gt;%3&lt;/strong&gt;</translation>
     </message>
     <message>
-        <location filename="../src/modules/partition/jobs/SetPartitionFlagsJob.cpp" line="107"/>
-        <source>Clearing flags on partition &lt;strong&gt;%1&lt;/strong&gt;.</source>
-        <translation>Flags wissen op partitie &lt;strong&gt;%1&lt;/strong&gt;.</translation>
+        <location filename="../src/modules/partition/jobs/SetPartitionFlagsJob.cpp" line="94"/>
+        <source>Set flags on new partition to &lt;strong&gt;%1&lt;/strong&gt;</source>
+        <comment>@info</comment>
+        <translation>Set flags op nieuwe partitie naar &lt;strong&gt;%1&lt;/strong&gt;</translation>
     </message>
     <message>
-        <location filename="../src/modules/partition/jobs/SetPartitionFlagsJob.cpp" line="118"/>
-        <source>Clearing flags on new partition.</source>
-        <translation>Flags wissen op nieuwe partitie.</translation>
+        <location filename="../src/modules/partition/jobs/SetPartitionFlagsJob.cpp" line="105"/>
+        <source>Clearing flags on partition &lt;strong&gt;%1&lt;/strong&gt;…</source>
+        <comment>@status</comment>
+        <translation>Flags wissen op partitie &lt;strong&gt;%1&lt;/strong&gt;...</translation>
     </message>
     <message>
-        <location filename="../src/modules/partition/jobs/SetPartitionFlagsJob.cpp" line="123"/>
-        <source>Setting flags &lt;strong&gt;%2&lt;/strong&gt; on partition &lt;strong&gt;%1&lt;/strong&gt;.</source>
-        <translation>Instellen van flag &lt;strong&gt;%2&lt;/strong&gt; op partitie &lt;strong&gt;%1&lt;/strong&gt;.</translation>
+        <location filename="../src/modules/partition/jobs/SetPartitionFlagsJob.cpp" line="112"/>
+        <source>Clearing flags on %1MiB &lt;strong&gt;%2&lt;/strong&gt; partition…</source>
+        <comment>@status</comment>
+        <translation>Flags wissen op %1MiB &lt;strong&gt;%2&lt;/strong&gt; partitie...</translation>
     </message>
     <message>
-        <location filename="../src/modules/partition/jobs/SetPartitionFlagsJob.cpp" line="139"/>
-        <source>Setting flags &lt;strong&gt;%1&lt;/strong&gt; on new partition.</source>
-        <translation>Instellen flags &lt;strong&gt;%1&lt;/strong&gt; op nieuwe partitie.</translation>
+        <location filename="../src/modules/partition/jobs/SetPartitionFlagsJob.cpp" line="117"/>
+        <source>Clearing flags on new partition…</source>
+        <comment>@status</comment>
+        <translation>Flags wissen op nieuwe partitie...</translation>
     </message>
     <message>
-        <location filename="../src/modules/partition/jobs/SetPartitionFlagsJob.cpp" line="152"/>
+        <location filename="../src/modules/partition/jobs/SetPartitionFlagsJob.cpp" line="122"/>
+        <source>Setting flags &lt;strong&gt;%2&lt;/strong&gt; on partition &lt;strong&gt;%1&lt;/strong&gt;…</source>
+        <comment>@status</comment>
+        <translation>Instellen van flags &lt;strong&gt;%2&lt;/strong&gt; op partitie &lt;strong&gt;%1&lt;/strong&gt;...</translation>
+    </message>
+    <message>
+        <location filename="../src/modules/partition/jobs/SetPartitionFlagsJob.cpp" line="130"/>
+        <source>Setting flags &lt;strong&gt;%3&lt;/strong&gt; on %1MiB &lt;strong&gt;%2&lt;/strong&gt; partition…</source>
+        <comment>@status</comment>
+        <translation>Instellen flags &lt;strong&gt;%3&lt;/strong&gt; op %1MiB &lt;strong&gt;%2&lt;/strong&gt; partitie...</translation>
+    </message>
+    <message>
+        <location filename="../src/modules/partition/jobs/SetPartitionFlagsJob.cpp" line="136"/>
+        <source>Setting flags &lt;strong&gt;%1&lt;/strong&gt; on new partition…</source>
+        <comment>@status</comment>
+        <translation>Instellen flags &lt;strong&gt;%1&lt;/strong&gt; op nieuwe partitie...</translation>
+    </message>
+    <message>
+        <location filename="../src/modules/partition/jobs/SetPartitionFlagsJob.cpp" line="149"/>
         <source>The installer failed to set flags on partition %1.</source>
         <translation>Het installatieprogramma kon geen flag instellen op partitie &apos;%1&apos;.</translation>
     </message>
@@ -3570,8 +3686,9 @@ Output:
     </message>
     <message>
         <location filename="../src/modules/users/SetPasswordJob.cpp" line="44"/>
-        <source>Setting password for user %1.</source>
-        <translation>Instellen wachtwoord voor gebruiker %1</translation>
+        <source>Setting password for user %1…</source>
+        <comment>@status</comment>
+        <translation>Instellen wachtwoord voor gebruiker %1...</translation>
     </message>
     <message>
         <location filename="../src/modules/users/SetPasswordJob.cpp" line="80"/>
@@ -3644,8 +3761,9 @@ Output:
     <name>SetupGroupsJob</name>
     <message>
         <location filename="../src/modules/users/MiscJobs.cpp" line="181"/>
-        <source>Preparing groups.</source>
-        <translation>Groepen voorbereiden.</translation>
+        <source>Preparing groups…</source>
+        <comment>@status</comment>
+        <translation>Groepen voorbereiden...</translation>
     </message>
     <message>
         <location filename="../src/modules/users/MiscJobs.cpp" line="193"/>
@@ -3663,8 +3781,9 @@ Output:
     <name>SetupSudoJob</name>
     <message>
         <location filename="../src/modules/users/MiscJobs.cpp" line="34"/>
-        <source>Configure &lt;pre&gt;sudo&lt;/pre&gt; users.</source>
-        <translation>Configureer &lt;pre&gt;sudo&lt;/pre&gt; gebruikers.</translation>
+        <source>Configuring &lt;pre&gt;sudo&lt;/pre&gt; users…</source>
+        <comment>@status</comment>
+        <translation>Configureer &lt;pre&gt;sudo&lt;/pre&gt; gebruikers...</translation>
     </message>
     <message>
         <location filename="../src/modules/users/MiscJobs.cpp" line="70"/>
@@ -4036,11 +4155,6 @@ Output:
         <translation>&amp;Support</translation>
     </message>
     <message>
-        <location filename="../src/modules/welcome/WelcomePage.cpp" line="212"/>
-        <source>%1 support</source>
-        <translation>%1 support</translation>
-    </message>
-    <message>
         <location filename="../src/calamares/DebugWindow.cpp" line="235"/>
         <source>About %1 Setup</source>
         <comment>@title</comment>
@@ -4052,12 +4166,19 @@ Output:
         <comment>@title</comment>
         <translation>Informatie %1 installeer programma</translation>
     </message>
+    <message>
+        <location filename="../src/modules/welcome/WelcomePage.cpp" line="212"/>
+        <source>%1 Support</source>
+        <comment>@action</comment>
+        <translation>%1 Support</translation>
+    </message>
 </context>
 <context>
     <name>WelcomeQmlViewStep</name>
     <message>
         <location filename="../src/modules/welcomeq/WelcomeQmlViewStep.cpp" line="40"/>
         <source>Welcome</source>
+        <comment>@title</comment>
         <translation>Welkom</translation>
     </message>
 </context>
@@ -4066,6 +4187,7 @@ Output:
     <message>
         <location filename="../src/modules/welcome/WelcomeViewStep.cpp" line="46"/>
         <source>Welcome</source>
+        <comment>@title</comment>
         <translation>Welkom</translation>
     </message>
 </context>
@@ -4073,8 +4195,9 @@ Output:
     <name>ZfsJob</name>
     <message>
         <location filename="../src/modules/zfs/ZfsJob.cpp" line="102"/>
-        <source>Create ZFS pools and datasets</source>
-        <translation>ZFS-pools en datasets maken</translation>
+        <source>Creating ZFS pools and datasets…</source>
+        <comment>@status</comment>
+        <translation>ZFS-pools en datasets maken...</translation>
     </message>
     <message>
         <location filename="../src/modules/zfs/ZfsJob.cpp" line="162"/>
