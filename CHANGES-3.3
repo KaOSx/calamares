@@ -7,6 +7,44 @@ contributors are listed. Note that Calamares does not have a historical
 changelog -- this log starts with version 3.3.0. See CHANGES-3.2 for
 the history of the 3.2 series (2018-05 - 2022-08).
 
+# 3.3.2 (unreleased)
+
+This release contains contributions from (alphabetically by first name):
+ - nobody, yet!
+
+## Core ##
+
+## Modules ##
+
+
+# 3.3.1 (2024-01-15)
+
+This release sets `BUILD_APPDATA` and `BUILD_APSTREAM` to default to **OFF**,
+where previously they defaulted to **ON**. When enabled, the dependencies for
+both features are required -- previously they would silently switch off if
+the dependencies were not found. Distributions are strongly advised to check
+their package-building instructions.
+
+This release contains contributions from (alphabetically by first name):
+ - Adriaan de Groot
+ - Aleksey Samoilov
+ - Emir Sari
+ - Simon Quigley
+
+## Core ##
+ - There has been internal code re-organization (e.g. not using functions
+   named `tr()`) to help translation tools.
+ - Strings everywhere have been given more context. (thanks Emir)
+ - In CMake, "view" is no longer accepted as an alias of the module
+   type "viewmodule" in function `calamares_add_plugin()`.
+ - Plain Ubuntu builds have been added to the CI roster. (thanks Simon)
+ - Commands that run in the target system (in the chroot) no longer
+   use the TMP-related environment variables from the host. #2269
+
+## Modules ##
+ - The *displaymanager* module configuration for `greetd` has some more
+   options now. (thanks Aleksey)
+
 
 # 3.3.0 (2023-12-12)
 

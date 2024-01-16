@@ -47,7 +47,7 @@
 
 cmake_minimum_required(VERSION 3.16 FATAL_ERROR)
 
-set(CALAMARES_VERSION 3.3.0)
+set(CALAMARES_VERSION 3.3.1)
 set(CALAMARES_RELEASE_MODE ON) # Set to ON during a release
 
 if(CMAKE_SCRIPT_MODE_FILE)
@@ -504,6 +504,7 @@ endif()
 
 set(CALAMARES_TRANSLATION_LANGUAGES en ${_tx_complete} ${_tx_good} ${_tx_ok})
 list(SORT CALAMARES_TRANSLATION_LANGUAGES)
+list(REMOVE_DUPLICATES CALAMARES_TRANSLATION_LANGUAGES)
 
 add_subdirectory(lang) # i18n tools
 

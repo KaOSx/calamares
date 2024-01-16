@@ -10,9 +10,9 @@ set(_extra_src "")
 ### OPTIONAL AppData XML support in PackageModel
 #
 #
-option(BUILD_APPDATA "Support appdata: items in PackageChooser (requires QtXml)" ON)
+option(BUILD_APPDATA "Support appdata: items in PackageChooser (requires QtXml)" OFF)
 if(BUILD_APPDATA)
-    find_package(${qtname} COMPONENTS Xml)
+    find_package(${qtname} REQUIRED COMPONENTS Xml)
     if(TARGET ${qtname}::Xml)
         add_definitions(-DHAVE_APPDATA)
         list(APPEND _extra_libraries ${qtname}::Xml)
@@ -23,23 +23,7 @@ endif()
 ### OPTIONAL AppStream support in PackageModel
 #
 #
-option(BUILD_APPSTREAM "Support appstream: items in PackageChooser (requires libappstream-qt)" ON)
-if(BUILD_APPSTREAM)
-    find_package(AppStreamQt)
-    set_package_properties(
-        AppStreamQt
-        PROPERTIES
-        DESCRIPTION "Support for AppStream (cache) data"
-        URL "https://github.com/ximion/appstream"
-        PURPOSE "AppStream provides package data"
-        TYPE OPTIONAL
-    )
-    if(AppStreamQt_FOUND)
-        add_definitions(-DHAVE_APPSTREAM_VERSION=${AppStreamQt_VERSION_MAJOR})
-        list(APPEND _extra_libraries AppStreamQt)
-        list(APPEND _extra_src ItemAppStream.cpp)
-    endif()
-endif()
+include(AppStreamHelper)
 
 calamares_add_plugin(packagechooser
     TYPE viewmodule
@@ -58,6 +42,11 @@ calamares_add_plugin(packagechooser
         ${_extra_libraries}
     SHARED_LIB
 )
+
+if(AppStreamQt_FOUND)
+    target_link_libraries(calamares_viewmodule_packagechooser PRIVATE calamares::appstreamqt)
+    target_sources(calamares_viewmodule_packagechooser PRIVATE ItemAppStream.cpp)
+endif()
 
 calamares_add_test(
     packagechoosertest

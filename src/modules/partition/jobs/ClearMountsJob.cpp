@@ -368,13 +368,13 @@ ClearMountsJob::ClearMountsJob( Device* device )
 QString
 ClearMountsJob::prettyName() const
 {
-    return tr( "Clear mounts for partitioning operations on %1" ).arg( m_deviceNode );
+    return tr( "Clear mounts for partitioning operations on %1", "@title" ).arg( m_deviceNode );
 }
 
 QString
 ClearMountsJob::prettyStatusMessage() const
 {
-    return tr( "Clearing mounts for partitioning operations on %1." ).arg( m_deviceNode );
+    return tr( "Clearing mounts for partitioning operations on %1…", "@status" ).arg( m_deviceNode );
 }
 
 Calamares::JobResult
