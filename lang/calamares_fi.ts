@@ -20,11 +20,11 @@
             for %3&lt;/strong&gt;&lt;br/&gt;&lt;br/&gt;
             Copyright 2014-2017 Teo Mrnjavac &amp;lt;teo@kde.org&amp;gt;&lt;br/&gt;
             Copyright 2017-2022 Adriaan de Groot &amp;lt;groot@kde.org&amp;gt;&lt;br/&gt;
-            Thanks to &lt;a href=&apos;https://calamares.io/team/&apos;&gt;the Calamares team&lt;/a&gt;
-            and the &lt;a href=&apos;https://www.transifex.com/kaos/kaos/&apos;&gt;KaOS
-            translators team&lt;/a&gt;.&lt;br/&gt;&lt;br/&gt;
+            Kiitos &lt;a href=&apos;https://calamares.io/team/&apos;&gt;Calamares tiimille&lt;/a&gt;,
+            sekä &lt;a href=&apos;https://www.transifex.com/kaos/kaos/&apos;&gt;KaOS
+            kääntät tiimille&lt;/a&gt;.&lt;br/&gt;&lt;br/&gt;
             &lt;a href=&apos;https://calamares.io/&apos;&gt;Calamares&lt;/a&gt;
-            development is sponsored by &lt;br/&gt;
+            kehitystyötä sponsoroi &lt;br/&gt;
             &lt;a href=&apos;http://www.blue-systems.com/&apos;&gt;Blue Systems&lt;/a&gt; -
             Liberating Software.</translation>
     </message>
@@ -39,7 +39,7 @@
     <message>
         <location filename="../src/libcalamares/CalamaresAbout.cpp" line="20"/>
         <source>Thanks to &lt;a href=&quot;https://calamares.io/team/&quot;&gt;the Calamares team&lt;/a&gt; and the &lt;a href=&quot;https://app.transifex.com/calamares/calamares/&quot;&gt;Calamares translators team&lt;/a&gt;.</source>
-        <translation>Kiitos &lt;a href=&quot;https://calamares.io/team/&quot;&gt;Calamares-tiimille&lt;/a&gt; ja &lt;a href=&quot;https://app.transifex.com/calamares/calamares/&quot;&gt;Calamaresin kääntäjien tiimille&lt;/a&gt;.</translation>
+        <translation>Kiitos &lt;a href=&quot;https://calamares.io/team/&quot;&gt;Calamaresin tiimille&lt;/a&gt; ja &lt;a href=&quot;https://app.transifex.com/calamares/calamares/&quot;&gt;Calamaresin kääntäjätiimille.&lt;/a&gt;.</translation>
     </message>
     <message>
         <location filename="../src/libcalamares/CalamaresAbout.cpp" line="25"/>
@@ -59,7 +59,7 @@
         <location filename="../src/modules/partition/jobs/AutoMountManagementJob.cpp" line="22"/>
         <source>Managing auto-mount settings…</source>
         <comment>@status</comment>
-        <translation type="unfinished"/>
+        <translation>Automaattisen kiinnityksen asetusten hallinta…</translation>
     </message>
 </context>
 <context>
@@ -87,7 +87,7 @@
     <message>
         <location filename="../src/modules/packagechooserq/BIOS.qml" line="173"/>
         <source>Please select a bootloader option for your install, or leave the default option, &lt;strong&gt;GRUB 2&lt;/strong&gt;.</source>
-        <translation>Valitse asennuksellesi käynnistyslatain tai jätä oletus, &lt;strong&gt;GRUB 2&lt;/strong&gt;.</translation>
+        <translation>Valitse asennukselle käynnistyslatain tai jätä oletus, &lt;strong&gt;GRUB 2&lt;/strong&gt;.</translation>
     </message>
 </context>
 <context>
@@ -95,17 +95,17 @@
     <message>
         <location filename="../src/modules/partition/gui/BootInfoWidget.cpp" line="60"/>
         <source>The &lt;strong&gt;boot environment&lt;/strong&gt; of this system.&lt;br&gt;&lt;br&gt;Older x86 systems only support &lt;strong&gt;BIOS&lt;/strong&gt;.&lt;br&gt;Modern systems usually use &lt;strong&gt;EFI&lt;/strong&gt;, but may also show up as BIOS if started in compatibility mode.</source>
-        <translation>Järjestelmän &lt;strong&gt;käynnistysympäristö.&lt;/strong&gt; &lt;br&gt;&lt;br&gt;Vanhemmat x86-järjestelmät tukevat vain &lt;strong&gt;BIOS&lt;/strong&gt;-järjestelmää.&lt;br&gt;Nykyaikaiset järjestelmät käyttävät yleensä &lt;strong&gt;EFI&lt;/strong&gt;ä, mutta voivat myös näkyä BIOS-tilassa, jos ne käynnistetään yhteensopivuustilassa.</translation>
+        <translation>Järjestelmän &lt;strong&gt;käynnistysympäristö.&lt;/strong&gt; &lt;br&gt;&lt;br&gt;Vanhemmat x86-koneet tukevat vain &lt;strong&gt;BIOS&lt;/strong&gt; tapaa.&lt;br&gt;Nykyaikaiset tietokoneet käyttävät yleensä &lt;strong&gt;EFI&lt;/strong&gt;, mutta voivat toimia myös BIOS:lla, jos käynnistetään yhteensopivuustilassa.</translation>
     </message>
     <message>
         <location filename="../src/modules/partition/gui/BootInfoWidget.cpp" line="70"/>
         <source>This system was started with an &lt;strong&gt;EFI&lt;/strong&gt; boot environment.&lt;br&gt;&lt;br&gt;To configure startup from an EFI environment, this installer must deploy a boot loader application, like &lt;strong&gt;GRUB&lt;/strong&gt; or &lt;strong&gt;systemd-boot&lt;/strong&gt; on an &lt;strong&gt;EFI System Partition&lt;/strong&gt;. This is automatic, unless you choose manual partitioning, in which case you must choose it or create it on your own.</source>
-        <translation>Tämä järjestelmä käynnistettiin &lt;strong&gt;EFI&lt;/strong&gt;-käynnistysympäristössä.&lt;br&gt;&lt;br&gt;Jos haluat määrittää EFI-ympäristön, tämän asennuksen on asennettava käynnistylatain, kuten &lt;strong&gt;GRUB&lt;/strong&gt; tai &lt;strong&gt;systemd-boot&lt;/strong&gt;, &lt;strong&gt;EFI-järjestelmäosioon&lt;/strong&gt;. Tämä on automaattinen oletus, ellet valitse manuaalista osiointia, jolloin sinun on valittava asetukset itse.</translation>
+        <translation>Tämä tietokone käynnistettiin &lt;strong&gt;EFI&lt;/strong&gt; käynnistysympäristössä.&lt;br&gt;&lt;br&gt;Jos haluat määrittää EFI:n niin asennuksen on asennettava käynnistylatain, kuten &lt;strong&gt;GRUB&lt;/strong&gt; tai &lt;strong&gt;systemd-boot&lt;/strong&gt;, &lt;strong&gt;EFI&lt;/strong&gt; osion. Tämä on oletuksena, ellet valitse manuaalista osiointia, jolloin sinun on valittava asetukset.</translation>
     </message>
     <message>
         <location filename="../src/modules/partition/gui/BootInfoWidget.cpp" line="82"/>
         <source>This system was started with a &lt;strong&gt;BIOS&lt;/strong&gt; boot environment.&lt;br&gt;&lt;br&gt;To configure startup from a BIOS environment, this installer must install a boot loader, like &lt;strong&gt;GRUB&lt;/strong&gt;, either at the beginning of a partition or on the &lt;strong&gt;Master Boot Record&lt;/strong&gt; near the beginning of the partition table (preferred). This is automatic, unless you choose manual partitioning, in which case you must set it up on your own.</source>
-        <translation>Tämä järjestelmä käynnistettiin &lt;strong&gt;BIOS&lt;/strong&gt;-käynnistysympäristössä.&lt;br&gt;&lt;br&gt;Jos haluat määrittää käynnistämisen BIOS-ympäristöstä, tämän asennusohjelman on asennettava käynnistyslatain, kuten&lt;strong&gt;GRUB&lt;/strong&gt;, joko osion alkuun tai &lt;strong&gt;pääkäynnistyslohkoon (MBR)&lt;/strong&gt; ,joka on osiotaulukon alussa (suositus). Tämä on automaattista, ellet valitset manuaalista osiointia, jolloin sinun on valittava asetukset itse.</translation>
+        <translation>Tämä tietokone käynnistettiin &lt;strong&gt;BIOS&lt;/strong&gt; käynnistysympäristössä.&lt;br&gt;&lt;br&gt;Jos haluat määrittää BIOS:n niin asennuksen on asennettava käynnistyslatain, kuten&lt;strong&gt;GRUB&lt;/strong&gt;, joko osion alkuun tai &lt;strong&gt;Master Boot Record&lt;/strong&gt; joka on osiotaulun alussa (suositus). Tämä on oletuksena, ellet valitset manuaalista osiointia, jolloin sinun on valittava asetukset.</translation>
     </message>
 </context>
 <context>
@@ -114,25 +114,25 @@
         <location filename="../src/modules/partition/core/BootLoaderModel.cpp" line="60"/>
         <source>Master Boot Record of %1</source>
         <comment>@info</comment>
-        <translation type="unfinished"/>
+        <translation>Master Boot Record %1</translation>
     </message>
     <message>
         <location filename="../src/modules/partition/core/BootLoaderModel.cpp" line="93"/>
         <source>Boot Partition</source>
         <comment>@info</comment>
-        <translation type="unfinished"/>
+        <translation>Käynnistysosio</translation>
     </message>
     <message>
         <location filename="../src/modules/partition/core/BootLoaderModel.cpp" line="100"/>
         <source>System Partition</source>
         <comment>@info</comment>
-        <translation type="unfinished"/>
+        <translation>Järjestelmäosio</translation>
     </message>
     <message>
         <location filename="../src/modules/partition/core/BootLoaderModel.cpp" line="131"/>
         <source>Do not install a boot loader</source>
         <comment>@label</comment>
-        <translation type="unfinished"/>
+        <translation>Älä asenna käynnistyslatainta</translation>
     </message>
     <message>
         <location filename="../src/modules/partition/core/BootLoaderModel.cpp" line="148"/>
@@ -690,26 +690,26 @@ Asennusohjelma sulkeutuu ja kaikki muutoksesi katoavat.</translation>
         <location filename="../src/modules/partition/jobs/ChangeFilesystemLabelJob.cpp" line="34"/>
         <source>Set filesystem label on %1</source>
         <comment>@title</comment>
-        <translation type="unfinished"/>
+        <translation>Aseta tiedostojärjestelmän nimi %1</translation>
     </message>
     <message>
         <location filename="../src/modules/partition/jobs/ChangeFilesystemLabelJob.cpp" line="41"/>
         <source>Set filesystem label &lt;strong&gt;%1&lt;/strong&gt; to partition &lt;strong&gt;%2&lt;/strong&gt;</source>
         <comment>@info</comment>
-        <translation type="unfinished"/>
+        <translation>Aseta tiedostojärjestelmän nimi  &lt;strong&gt;%1&lt;/strong&gt; osioon &lt;strong&gt;%2&lt;/strong&gt;</translation>
     </message>
     <message>
         <location filename="../src/modules/partition/jobs/ChangeFilesystemLabelJob.cpp" line="50"/>
         <source>Setting filesystem label &lt;strong&gt;%1&lt;/strong&gt; to partition &lt;strong&gt;%2&lt;/strong&gt;…</source>
         <comment>@status</comment>
-        <translation type="unfinished"/>
+        <translation>Asetetaan tiedostojärjestelmän nimi &lt;strong&gt;%1&lt;/strong&gt; osioon &lt;strong&gt;%2&lt;/strong&gt;…</translation>
     </message>
     <message>
         <location filename="../src/modules/partition/jobs/ChangeFilesystemLabelJob.cpp" line="72"/>
         <location filename="../src/modules/partition/jobs/ChangeFilesystemLabelJob.cpp" line="84"/>
         <source>The installer failed to update partition table on disk &apos;%1&apos;.</source>
         <comment>@info</comment>
-        <translation type="unfinished"/>
+        <translation>Asentaja ei pystynyt päivittämään osiotaulua levyllä &quot;%1&quot;.</translation>
     </message>
 </context>
 <context>
@@ -728,7 +728,7 @@ Asennusohjelma sulkeutuu ja kaikki muutoksesi katoavat.</translation>
         <location filename="../src/modules/partition/gui/ChoicePage.cpp" line="1400"/>
         <location filename="../src/modules/partition/gui/ChoicePage.cpp" line="1425"/>
         <source>&lt;strong&gt;Erase disk&lt;/strong&gt;&lt;br/&gt;This will &lt;font color=&quot;red&quot;&gt;delete&lt;/font&gt; all data currently present on the selected storage device.</source>
-        <translation>&lt;strong&gt;Tyhjennä levy&lt;/strong&gt;&lt;br/&gt;Tämä &lt;font color=&quot;red&quot;&gt;poistaa&lt;/font&gt; kaikki tiedot valitusta kiintolevystä.</translation>
+        <translation>&lt;strong&gt;Tyhjennä kiintolevy&lt;/strong&gt;&lt;br/&gt;Tämä &lt;font color=&quot;red&quot;&gt;poistaa&lt;/font&gt; kaikki tiedot valitusta kiintolevystä.</translation>
     </message>
     <message>
         <location filename="../src/modules/partition/gui/ChoicePage.cpp" line="1346"/>
@@ -755,7 +755,7 @@ Asennusohjelma sulkeutuu ja kaikki muutoksesi katoavat.</translation>
         <location filename="../src/modules/partition/gui/ChoicePage.cpp" line="137"/>
         <source>Select storage de&amp;vice:</source>
         <comment>@label</comment>
-        <translation type="unfinished"/>
+        <translation>Valitse kiintole&amp;vy:</translation>
     </message>
     <message>
         <location filename="../src/modules/partition/gui/ChoicePage.cpp" line="138"/>
@@ -764,49 +764,49 @@ Asennusohjelma sulkeutuu ja kaikki muutoksesi katoavat.</translation>
         <location filename="../src/modules/partition/gui/ChoicePage.cpp" line="1139"/>
         <source>Current:</source>
         <comment>@label</comment>
-        <translation type="unfinished"/>
+        <translation>Nykyinen:</translation>
     </message>
     <message>
         <location filename="../src/modules/partition/gui/ChoicePage.cpp" line="139"/>
         <source>After:</source>
         <comment>@label</comment>
-        <translation type="unfinished"/>
+        <translation>Jälkeen:</translation>
     </message>
     <message>
         <location filename="../src/modules/partition/gui/ChoicePage.cpp" line="896"/>
         <source>Reuse %1 as home partition for %2</source>
         <comment>@label</comment>
-        <translation type="unfinished"/>
+        <translation>Käytä %1 uudelleen kotiosiona %2:lle</translation>
     </message>
     <message>
         <location filename="../src/modules/partition/gui/ChoicePage.cpp" line="1059"/>
         <source>%1 will be shrunk to %2MiB and a new %3MiB partition will be created for %4.</source>
         <comment>@info, %1 is partition name, %4 is product name</comment>
-        <translation type="unfinished"/>
+        <translation>%1 pienennetään %2MiB ja uusi %3MiB osio tehdään %4:lle.</translation>
     </message>
     <message>
         <location filename="../src/modules/partition/gui/ChoicePage.cpp" line="1130"/>
         <source>&lt;strong&gt;Select a partition to install on&lt;/strong&gt;</source>
         <comment>@label</comment>
-        <translation type="unfinished"/>
+        <translation>&lt;strong&gt;Valitse osio, johon haluat asentaa&lt;/strong&gt;</translation>
     </message>
     <message>
         <location filename="../src/modules/partition/gui/ChoicePage.cpp" line="1190"/>
         <source>An EFI system partition cannot be found anywhere on this system. Please go back and use manual partitioning to set up %1.</source>
         <comment>@info, %1 is product name</comment>
-        <translation type="unfinished"/>
+        <translation>EFI-osiota ei löydy tästä järjestelmästä. Palaa takaisin ja käytä manuaalista osiointia määrittääksesi %1:n.</translation>
     </message>
     <message>
         <location filename="../src/modules/partition/gui/ChoicePage.cpp" line="1199"/>
         <source>The EFI system partition at %1 will be used for starting %2.</source>
         <comment>@info, %1 is partition path, %2 is product name</comment>
-        <translation type="unfinished"/>
+        <translation>EFI-osiota %1 käytetään %2 käynnistämiseen.</translation>
     </message>
     <message>
         <location filename="../src/modules/partition/gui/ChoicePage.cpp" line="1208"/>
         <source>EFI system partition:</source>
         <comment>@label</comment>
-        <translation type="unfinished"/>
+        <translation>EFI-osio:</translation>
     </message>
     <message>
         <location filename="../src/modules/partition/gui/ChoicePage.cpp" line="1337"/>
@@ -837,54 +837,54 @@ Asennusohjelma sulkeutuu ja kaikki muutoksesi katoavat.</translation>
         <location filename="../src/modules/partition/gui/ChoicePage.cpp" line="1512"/>
         <source>This storage device has one of its partitions &lt;strong&gt;mounted&lt;/strong&gt;.</source>
         <comment>@info</comment>
-        <translation type="unfinished"/>
+        <translation>Yksi tämän kiintolevyn osioista on &lt;strong&gt;kiinnitetty&lt;/strong&gt; käyttöön.</translation>
     </message>
     <message>
         <location filename="../src/modules/partition/gui/ChoicePage.cpp" line="1517"/>
         <source>This storage device is a part of an &lt;strong&gt;inactive RAID&lt;/strong&gt; device.</source>
         <comment>@info</comment>
-        <translation type="unfinished"/>
+        <translation>Tämä kiintolevy on osa passiivista &lt;strong&gt;RAID&lt;/strong&gt; levypakkaa.</translation>
     </message>
     <message>
         <location filename="../src/modules/partition/gui/ChoicePage.cpp" line="1632"/>
         <source>No swap</source>
         <comment>@label</comment>
-        <translation type="unfinished"/>
+        <translation>Swap pois</translation>
     </message>
     <message>
         <location filename="../src/modules/partition/gui/ChoicePage.cpp" line="1641"/>
         <source>Reuse swap</source>
         <comment>@label</comment>
-        <translation type="unfinished"/>
+        <translation>Swap uusiokäyttö</translation>
     </message>
     <message>
         <location filename="../src/modules/partition/gui/ChoicePage.cpp" line="1644"/>
         <source>Swap (no Hibernate)</source>
         <comment>@label</comment>
-        <translation type="unfinished"/>
+        <translation>Swap (ilman lepotilaa)</translation>
     </message>
     <message>
         <location filename="../src/modules/partition/gui/ChoicePage.cpp" line="1647"/>
         <source>Swap (with Hibernate)</source>
         <comment>@label</comment>
-        <translation type="unfinished"/>
+        <translation>Swap (lepotilan kanssa)</translation>
     </message>
     <message>
         <location filename="../src/modules/partition/gui/ChoicePage.cpp" line="1650"/>
         <source>Swap to file</source>
         <comment>@label</comment>
-        <translation type="unfinished"/>
+        <translation>Swap tiedostona</translation>
     </message>
     <message>
         <location filename="../src/modules/partition/gui/ChoicePage.cpp" line="1694"/>
         <source>Bootloader location:</source>
         <comment>@label</comment>
-        <translation type="unfinished"/>
+        <translation>Käynnistyslataimen paikka:</translation>
     </message>
     <message>
         <location filename="../src/modules/partition/gui/ChoicePage.cpp" line="1663"/>
         <source>&lt;strong&gt;Manual partitioning&lt;/strong&gt;&lt;br/&gt;You can create or resize partitions yourself.&lt;br/&gt;Having a GPT partition table and &lt;strong&gt;fat32 512Mb /boot partition is a must for UEFI installs&lt;/strong&gt;,&lt;br/&gt;either use an existing without formatting or create one.</source>
-        <translation>&lt;strong&gt;Manuaalinen osiointi&lt;/strong&gt;&lt;br/&gt;Voit itse luoda osioita tai muuttaa niiden kokoa.&lt;br/&gt;GPT-osiotaulukko &lt;strong&gt;ja fat32 512Mb /boot ovat välttämättömiä UEFI asennukseen&lt;/strong&gt;,&lt;br/&gt;voit käyttää joko olemassa olevaa ilman alustusta tai luoda uuden.</translation>
+        <translation>&lt;strong&gt;Manuaalinen osiointi&lt;/strong&gt;&lt;br/&gt;Voit itse luoda osioita tai muuttaa niiden kokoa.&lt;br/&gt;GPT-taulukko &lt;strong&gt;ja fat32 512Mb /boot ovat välttämättömiä UEFI asennuksessa&lt;/strong&gt;,&lt;br/&gt;voit käyttää joko olemassa olevaa ilman alustusta tai luoda uuden.</translation>
     </message>
 </context>
 <context>
@@ -893,12 +893,12 @@ Asennusohjelma sulkeutuu ja kaikki muutoksesi katoavat.</translation>
         <location filename="../src/modules/partitionq/ChoicePageQml.cpp" line="157"/>
         <location filename="../src/modules/partitionq/ChoicePageQml.cpp" line="191"/>
         <source>No swap</source>
-        <translation>Swap ei</translation>
+        <translation>Swap pois</translation>
     </message>
     <message>
         <location filename="../src/modules/partitionq/ChoicePageQml.cpp" line="163"/>
         <source>Reuse swap</source>
-        <translation>Swap käytä uudellen</translation>
+        <translation>Swap uusiokäyttö</translation>
     </message>
     <message>
         <location filename="../src/modules/partitionq/ChoicePageQml.cpp" line="169"/>
@@ -942,7 +942,7 @@ Asennusohjelma sulkeutuu ja kaikki muutoksesi katoavat.</translation>
         <location filename="../src/modules/partitionq/ChoicePageQml.cpp" line="761"/>
         <location filename="../src/modules/partitionq/ChoicePageQml.cpp" line="788"/>
         <source>&lt;strong&gt;Erase disk&lt;/strong&gt;&lt;br/&gt;This will &lt;font color=&quot;red&quot;&gt;delete&lt;/font&gt; all data currently present on the selected storage device.</source>
-        <translation>&lt;strong&gt;Tyhjennä levy&lt;/strong&gt;&lt;br/&gt;Tämä &lt;font color=&quot;red&quot;&gt;poistaa&lt;/font&gt; kaikki tiedot valitusta kiintolevystä.</translation>
+        <translation>&lt;strong&gt;Tyhjennä kiintolevy&lt;/strong&gt;&lt;br/&gt;Tämä &lt;font color=&quot;red&quot;&gt;poistaa&lt;/font&gt; kaikki tiedot valitusta kiintolevystä.</translation>
     </message>
     <message>
         <location filename="../src/modules/partitionq/ChoicePageQml.cpp" line="707"/>
@@ -983,7 +983,7 @@ Asennusohjelma sulkeutuu ja kaikki muutoksesi katoavat.</translation>
     <message>
         <location filename="../src/modules/partitionq/ChoicePageQml.cpp" line="874"/>
         <source>This storage device has one of its partitions &lt;strong&gt;mounted&lt;/strong&gt;.</source>
-        <translation>Tähän kiintolevyyn on &lt;strong&gt;liitetty&lt;/strong&gt; yksi osioista.</translation>
+        <translation>Tähän kiintolevyyn on &lt;strong&gt;kinnitetty&lt;/strong&gt; yksi osioista.</translation>
     </message>
     <message>
         <location filename="../src/modules/partitionq/ChoicePageQml.cpp" line="879"/>
@@ -1001,7 +1001,7 @@ Asennusohjelma sulkeutuu ja kaikki muutoksesi katoavat.</translation>
     <message>
         <location filename="../src/modules/partition/jobs/ClearMountsJob.cpp" line="272"/>
         <source>Successfully unmounted %1.</source>
-        <translation>Poistettu onnistuneesti %1.</translation>
+        <translation>%1 irrotettu onnistuneesti.</translation>
     </message>
     <message>
         <location filename="../src/modules/partition/jobs/ClearMountsJob.cpp" line="279"/>
@@ -1027,18 +1027,18 @@ Asennusohjelma sulkeutuu ja kaikki muutoksesi katoavat.</translation>
         <location filename="../src/modules/partition/jobs/ClearMountsJob.cpp" line="371"/>
         <source>Clear mounts for partitioning operations on %1</source>
         <comment>@title</comment>
-        <translation type="unfinished"/>
+        <translation>Poista kaikki kiinnitykset osiointia varten %1:ssä</translation>
     </message>
     <message>
         <location filename="../src/modules/partition/jobs/ClearMountsJob.cpp" line="377"/>
         <source>Clearing mounts for partitioning operations on %1…</source>
         <comment>@status</comment>
-        <translation type="unfinished"/>
+        <translation>Poistetaan kiinnitykset osiointia varten kohteessa % 1…</translation>
     </message>
     <message>
         <location filename="../src/modules/partition/jobs/ClearMountsJob.cpp" line="396"/>
         <source>Cleared all mounts for %1</source>
-        <translation>Kaikki liitokset poistettu kohteesta %1</translation>
+        <translation>Kaikki kiinnitykset on poistettu kohteesta %1</translation>
     </message>
 </context>
 <context>
@@ -1048,12 +1048,12 @@ Asennusohjelma sulkeutuu ja kaikki muutoksesi katoavat.</translation>
         <location filename="../src/modules/partition/jobs/ClearTempMountsJob.cpp" line="40"/>
         <source>Clearing all temporary mounts…</source>
         <comment>@status</comment>
-        <translation type="unfinished"/>
+        <translation>Kaikki tilapäiset kiinnitykset poistetaan…</translation>
     </message>
     <message>
         <location filename="../src/modules/partition/jobs/ClearTempMountsJob.cpp" line="70"/>
         <source>Cleared all temporary mounts.</source>
-        <translation>Poistettu kaikki väliaikaiset liitokset.</translation>
+        <translation>Poistettu kaikki väliaikaiset kiinnitykset.</translation>
     </message>
 </context>
 <context>
@@ -1122,7 +1122,7 @@ Asennus voi jatkua, mutta jotkin toiminnot saattavat olla pois käytöstä.</tra
         <location filename="../src/modules/summary/Config.cpp" line="35"/>
         <source>Summary</source>
         <comment>@label</comment>
-        <translation type="unfinished"/>
+        <translation>Yhteenveto</translation>
     </message>
     <message>
         <location filename="../src/modules/summary/Config.cpp" line="39"/>
@@ -1256,13 +1256,13 @@ Asennus voi jatkua, mutta jotkin toiminnot saattavat olla pois käytöstä.</tra
         <location filename="../src/modules/keyboard/Config.cpp" line="505"/>
         <source>Keyboard model has been set to %1&lt;br/&gt;.</source>
         <comment>@label, %1 is keyboard model, as in Apple Magic Keyboard</comment>
-        <translation>Näppäimistöksi on asetetaan %1&lt;br/&gt;.</translation>
+        <translation>Näppäimistöksi on asetettu %1&lt;br/&gt;.</translation>
     </message>
     <message>
         <location filename="../src/modules/keyboard/Config.cpp" line="512"/>
         <source>Keyboard layout has been set to %1/%2.</source>
         <comment>@label, %1 is layout, %2 is layout variant</comment>
-        <translation>Näppäimistön asettelu asetetaan %1/%2.</translation>
+        <translation>Näppäimistön asettelu on asetettu %1/%2.</translation>
     </message>
     <message>
         <location filename="../src/modules/locale/Config.cpp" line="373"/>
@@ -1274,13 +1274,13 @@ Asennus voi jatkua, mutta jotkin toiminnot saattavat olla pois käytöstä.</tra
         <location filename="../src/modules/locale/Config.cpp" line="410"/>
         <source>The system language will be set to %1.</source>
         <comment>@info</comment>
-        <translation type="unfinished"/>
+        <translation>Järjestelmän kieleksi asetetaan %1.</translation>
     </message>
     <message>
         <location filename="../src/modules/locale/Config.cpp" line="416"/>
         <source>The numbers and dates locale will be set to %1.</source>
         <comment>@info</comment>
-        <translation type="unfinished"/>
+        <translation>Numeroiden ja päivämäärien maa-asetukseksi asetetaan %1.</translation>
     </message>
 </context>
 <context>
@@ -1338,7 +1338,7 @@ Asennus voi jatkua, mutta jotkin toiminnot saattavat olla pois käytöstä.</tra
     <message>
         <location filename="../src/modules/partition/gui/CreatePartitionDialog.ui" line="165"/>
         <source>&amp;Mount Point:</source>
-        <translation>&amp;Liitoskohta:</translation>
+        <translation>&amp;Kiinnitys:</translation>
     </message>
     <message>
         <location filename="../src/modules/partition/gui/CreatePartitionDialog.ui" line="42"/>
@@ -1349,37 +1349,37 @@ Asennus voi jatkua, mutta jotkin toiminnot saattavat olla pois käytöstä.</tra
         <location filename="../src/modules/partition/gui/CreatePartitionDialog.cpp" line="67"/>
         <source>En&amp;crypt</source>
         <comment>@action</comment>
-        <translation type="unfinished"/>
+        <translation>Sa&amp;laa</translation>
     </message>
     <message>
         <location filename="../src/modules/partition/gui/CreatePartitionDialog.cpp" line="195"/>
         <source>Logical</source>
         <comment>@label</comment>
-        <translation type="unfinished"/>
+        <translation>Looginen</translation>
     </message>
     <message>
         <location filename="../src/modules/partition/gui/CreatePartitionDialog.cpp" line="200"/>
         <source>Primary</source>
         <comment>@label</comment>
-        <translation type="unfinished"/>
+        <translation>Ensisijainen</translation>
     </message>
     <message>
         <location filename="../src/modules/partition/gui/CreatePartitionDialog.cpp" line="219"/>
         <source>GPT</source>
         <comment>@label</comment>
-        <translation type="unfinished"/>
+        <translation>GPT</translation>
     </message>
     <message>
         <location filename="../src/modules/partition/gui/PartitionDialogHelpers.cpp" line="91"/>
         <source>Mountpoint already in use. Please select another one.</source>
         <comment>@info</comment>
-        <translation type="unfinished"/>
+        <translation>Kiinnitys on käytössä. Valitse toinen.</translation>
     </message>
     <message>
         <location filename="../src/modules/partition/gui/PartitionDialogHelpers.cpp" line="96"/>
         <source>Mountpoint must start with a &lt;tt&gt;/&lt;/tt&gt;.</source>
         <comment>@info</comment>
-        <translation type="unfinished"/>
+        <translation>Kiinnitys tulee alkaa kirjaimella &lt;tt&gt;/&lt;/tt&gt;.</translation>
     </message>
 </context>
 <context>
@@ -1388,50 +1388,50 @@ Asennus voi jatkua, mutta jotkin toiminnot saattavat olla pois käytöstä.</tra
         <location filename="../src/modules/partition/jobs/CreatePartitionJob.cpp" line="181"/>
         <source>Create new %1MiB partition on %3 (%2) with entries %4</source>
         <comment>@title</comment>
-        <translation type="unfinished"/>
+        <translation>Luo uusi %1MiB osio kohteeseen %3 (%2), jossa on %4</translation>
     </message>
     <message>
         <location filename="../src/modules/partition/jobs/CreatePartitionJob.cpp" line="189"/>
         <source>Create new %1MiB partition on %3 (%2)</source>
         <comment>@title</comment>
-        <translation type="unfinished"/>
+        <translation>Luo uusi %1MiB osio kohteeseen %3 (%2)</translation>
     </message>
     <message>
         <location filename="../src/modules/partition/jobs/CreatePartitionJob.cpp" line="196"/>
         <source>Create new %2MiB partition on %4 (%3) with file system %1</source>
         <comment>@title</comment>
-        <translation type="unfinished"/>
+        <translation>Luo uusi %2MiB osio %4 (%3) tiedostojärjestelmällä %1</translation>
     </message>
     <message>
         <location filename="../src/modules/partition/jobs/CreatePartitionJob.cpp" line="212"/>
         <source>Create new &lt;strong&gt;%1MiB&lt;/strong&gt; partition on &lt;strong&gt;%3&lt;/strong&gt; (%2) with entries &lt;em&gt;%4&lt;/em&gt;</source>
         <comment>@info</comment>
-        <translation type="unfinished"/>
+        <translation>Luo uusi &lt;strong&gt;%1MiB&lt;/strong&gt; osio kohteeseen &lt;strong&gt;%3&lt;/strong&gt; (%2) jossa on &lt;em&gt;%4&lt;/em&gt;</translation>
     </message>
     <message>
         <location filename="../src/modules/partition/jobs/CreatePartitionJob.cpp" line="222"/>
         <source>Create new &lt;strong&gt;%1MiB&lt;/strong&gt; partition on &lt;strong&gt;%3&lt;/strong&gt; (%2)</source>
         <comment>@info</comment>
-        <translation type="unfinished"/>
+        <translation>Luo uusi &lt;strong&gt;%1MiB&lt;/strong&gt; osio kohteeseen &lt;strong&gt;%3&lt;/strong&gt; (%2)</translation>
     </message>
     <message>
         <location filename="../src/modules/partition/jobs/CreatePartitionJob.cpp" line="229"/>
         <source>Create new &lt;strong&gt;%2MiB&lt;/strong&gt; partition on &lt;strong&gt;%4&lt;/strong&gt; (%3) with file system &lt;strong&gt;%1&lt;/strong&gt;</source>
         <comment>@info</comment>
-        <translation type="unfinished"/>
+        <translation>Luo uusi &lt;strong&gt;%2Mib&lt;/strong&gt; osio &lt;strong&gt;%4&lt;/strong&gt; (%3) tiedostojärjestelmällä &lt;strong&gt;%1&lt;/strong&gt;</translation>
     </message>
     <message>
         <location filename="../src/modules/partition/jobs/CreatePartitionJob.cpp" line="254"/>
         <location filename="../src/modules/partition/jobs/CreatePartitionJob.cpp" line="257"/>
         <source>Creating new %1 partition on %2…</source>
         <comment>@status</comment>
-        <translation type="unfinished"/>
+        <translation>Luodaan uutta %1 osiota %2…</translation>
     </message>
     <message>
         <location filename="../src/modules/partition/jobs/CreatePartitionJob.cpp" line="274"/>
         <source>The installer failed to create partition on disk &apos;%1&apos;.</source>
         <comment>@info</comment>
-        <translation type="unfinished"/>
+        <translation>Asentaja ei pystynyt luomaan osiota levylle &quot;%1&quot;.</translation>
     </message>
 </context>
 <context>
@@ -1469,13 +1469,13 @@ Asennus voi jatkua, mutta jotkin toiminnot saattavat olla pois käytöstä.</tra
         <location filename="../src/modules/partition/jobs/CreatePartitionTableJob.cpp" line="58"/>
         <source>Creating new %1 partition table on %2…</source>
         <comment>@status</comment>
-        <translation type="unfinished"/>
+        <translation>Luodaan uutta %1 osiotaulua kohteeseen %2…</translation>
     </message>
     <message>
         <location filename="../src/modules/partition/jobs/CreatePartitionTableJob.cpp" line="49"/>
         <source>Creating new &lt;strong&gt;%1&lt;/strong&gt; partition table on &lt;strong&gt;%2&lt;/strong&gt; (%3)…</source>
         <comment>@status</comment>
-        <translation type="unfinished"/>
+        <translation>Luodaan uutta &lt;strong&gt;%1&lt;/strong&gt; osiotaulua kohteeseen &lt;strong&gt;%2&lt;/strong&gt; (%3)…</translation>
     </message>
     <message>
         <location filename="../src/modules/partition/jobs/CreatePartitionTableJob.cpp" line="86"/>
@@ -1493,32 +1493,32 @@ Asennus voi jatkua, mutta jotkin toiminnot saattavat olla pois käytöstä.</tra
     <message>
         <location filename="../src/modules/users/CreateUserJob.cpp" line="39"/>
         <source>Create user &lt;strong&gt;%1&lt;/strong&gt;</source>
-        <translation type="unfinished"/>
+        <translation>Luo käyttäjä &lt;strong&gt;%1&lt;/strong&gt;</translation>
     </message>
     <message>
         <location filename="../src/modules/users/CreateUserJob.cpp" line="45"/>
         <location filename="../src/modules/users/CreateUserJob.cpp" line="137"/>
         <source>Creating user %1…</source>
         <comment>@status</comment>
-        <translation type="unfinished"/>
+        <translation>Luodaan käyttäjää %1…</translation>
     </message>
     <message>
         <location filename="../src/modules/users/CreateUserJob.cpp" line="120"/>
         <source>Preserving home directory…</source>
         <comment>@status</comment>
-        <translation type="unfinished"/>
+        <translation>Kotihakemistoa säilytetään…</translation>
     </message>
     <message>
         <location filename="../src/modules/users/CreateUserJob.cpp" line="145"/>
         <source>Configuring user %1</source>
         <comment>@status</comment>
-        <translation type="unfinished"/>
+        <translation>Määritetään käyttäjää %1</translation>
     </message>
     <message>
         <location filename="../src/modules/users/CreateUserJob.cpp" line="153"/>
         <source>Setting file permissions…</source>
         <comment>@status</comment>
-        <translation type="unfinished"/>
+        <translation>Asetetaan tiedoston käyttöoikeuksia…</translation>
     </message>
 </context>
 <context>
@@ -1527,7 +1527,7 @@ Asennus voi jatkua, mutta jotkin toiminnot saattavat olla pois käytöstä.</tra
         <location filename="../src/modules/partition/gui/CreateVolumeGroupDialog.cpp" line="28"/>
         <source>Create Volume Group</source>
         <comment>@title</comment>
-        <translation type="unfinished"/>
+        <translation>Luo taltioryhmä</translation>
     </message>
 </context>
 <context>
@@ -1537,13 +1537,13 @@ Asennus voi jatkua, mutta jotkin toiminnot saattavat olla pois käytöstä.</tra
         <location filename="../src/modules/partition/jobs/CreateVolumeGroupJob.cpp" line="44"/>
         <source>Creating new volume group named %1…</source>
         <comment>@status</comment>
-        <translation type="unfinished"/>
+        <translation>Luodaan uutta taltioryhmää nimeltä %1…</translation>
     </message>
     <message>
         <location filename="../src/modules/partition/jobs/CreateVolumeGroupJob.cpp" line="38"/>
         <source>Creating new volume group named &lt;strong&gt;%1&lt;/strong&gt;…</source>
         <comment>@status</comment>
-        <translation type="unfinished"/>
+        <translation>Luodaan uutta taltioryhmää nimeltä &lt;strong&gt;%1&lt;/strong&gt;…</translation>
     </message>
     <message>
         <location filename="../src/modules/partition/jobs/CreateVolumeGroupJob.cpp" line="51"/>
@@ -1558,13 +1558,13 @@ Asennus voi jatkua, mutta jotkin toiminnot saattavat olla pois käytöstä.</tra
         <location filename="../src/modules/partition/jobs/DeactivateVolumeGroupJob.cpp" line="38"/>
         <source>Deactivating volume group named %1…</source>
         <comment>@status</comment>
-        <translation type="unfinished"/>
+        <translation>Poistetaan taltioryhmää nimeltä %1…</translation>
     </message>
     <message>
         <location filename="../src/modules/partition/jobs/DeactivateVolumeGroupJob.cpp" line="32"/>
         <source>Deactivating volume group named &lt;strong&gt;%1&lt;/strong&gt;…</source>
         <comment>@status</comment>
-        <translation type="unfinished"/>
+        <translation>Poistetaan taltioryhmää nimeltä &lt;strong&gt;%1&lt;/strong&gt;…</translation>
     </message>
     <message>
         <location filename="../src/modules/partition/jobs/DeactivateVolumeGroupJob.cpp" line="46"/>
@@ -1579,13 +1579,13 @@ Asennus voi jatkua, mutta jotkin toiminnot saattavat olla pois käytöstä.</tra
         <location filename="../src/modules/partition/jobs/DeletePartitionJob.cpp" line="85"/>
         <source>Deleting partition %1…</source>
         <comment>@status</comment>
-        <translation type="unfinished"/>
+        <translation>Poistetaan osiota %1…</translation>
     </message>
     <message>
         <location filename="../src/modules/partition/jobs/DeletePartitionJob.cpp" line="79"/>
         <source>Deleting partition &lt;strong&gt;%1&lt;/strong&gt;…</source>
         <comment>@status</comment>
-        <translation type="unfinished"/>
+        <translation>Poistetaan osiota &lt;strong&gt;%1&lt;/strong&gt;…</translation>
     </message>
     <message>
         <location filename="../src/modules/partition/jobs/DeletePartitionJob.cpp" line="99"/>
@@ -1692,7 +1692,7 @@ Asennus voi jatkua, mutta jotkin toiminnot saattavat olla pois käytöstä.</tra
     <message>
         <location filename="../src/modules/partition/gui/EditExistingPartitionDialog.ui" line="103"/>
         <source>&amp;Mount Point:</source>
-        <translation>&amp;Liitoskohta:</translation>
+        <translation>&amp;Kiinnitys:</translation>
     </message>
     <message>
         <location filename="../src/modules/partition/gui/EditExistingPartitionDialog.ui" line="129"/>
@@ -1762,13 +1762,13 @@ Asennus voi jatkua, mutta jotkin toiminnot saattavat olla pois käytöstä.</tra
         <location filename="../src/modules/partition/gui/EncryptWidget.cpp" line="168"/>
         <source>Please enter the same passphrase in both boxes.</source>
         <comment>@tooltip</comment>
-        <translation type="unfinished"/>
+        <translation>Anna sama salasana molempiin kenttiin.</translation>
     </message>
     <message>
         <location filename="../src/modules/partition/gui/EncryptWidget.cpp" line="158"/>
         <source>Password must be a minimum of %1 characters.</source>
         <comment>@tooltip</comment>
-        <translation type="unfinished"/>
+        <translation>Salasanassa on oltava vähintään %1 merkkiä.</translation>
     </message>
 </context>
 <context>
@@ -1790,67 +1790,67 @@ Asennus voi jatkua, mutta jotkin toiminnot saattavat olla pois käytöstä.</tra
         <location filename="../src/modules/partition/jobs/FillGlobalStorageJob.cpp" line="179"/>
         <source>Set partition information</source>
         <comment>@title</comment>
-        <translation type="unfinished"/>
+        <translation>Aseta osion tiedot</translation>
     </message>
     <message>
         <location filename="../src/modules/partition/jobs/FillGlobalStorageJob.cpp" line="208"/>
         <source>Install %1 on &lt;strong&gt;new&lt;/strong&gt; %2 system partition with features &lt;em&gt;%3&lt;/em&gt;</source>
         <comment>@info</comment>
-        <translation type="unfinished"/>
+        <translation>Asenna %1  &lt;strong&gt;uuteen&lt;/strong&gt; %2 järjestelmäosioon ominaisuuksilla &lt;em&gt;%3&lt;/em&gt;</translation>
     </message>
     <message>
         <location filename="../src/modules/partition/jobs/FillGlobalStorageJob.cpp" line="217"/>
         <source>Install %1 on &lt;strong&gt;new&lt;/strong&gt; %2 system partition</source>
         <comment>@info</comment>
-        <translation type="unfinished"/>
+        <translation>Asenna %1 &lt;strong&gt;uuteen&lt;/strong&gt; %2 järjestelmäosioon</translation>
     </message>
     <message>
         <location filename="../src/modules/partition/jobs/FillGlobalStorageJob.cpp" line="226"/>
         <source>Set up &lt;strong&gt;new&lt;/strong&gt; %2 partition with mount point &lt;strong&gt;%1&lt;/strong&gt; and features &lt;em&gt;%3&lt;/em&gt;</source>
         <comment>@info</comment>
-        <translation type="unfinished"/>
+        <translation>Aseta &lt;strong&gt;uusi&lt;/strong&gt; %2 osio kiinnityksellä &lt;strong&gt;%1&lt;/strong&gt; ja ominaisuuksilla &lt;em&gt;%3&lt;/em&gt;</translation>
     </message>
     <message>
         <location filename="../src/modules/partition/jobs/FillGlobalStorageJob.cpp" line="235"/>
         <source>Set up &lt;strong&gt;new&lt;/strong&gt; %2 partition with mount point &lt;strong&gt;%1&lt;/strong&gt;%3</source>
         <comment>@info</comment>
-        <translation type="unfinished"/>
+        <translation>Aseta &lt;strong&gt;uusi&lt;/strong&gt; %2 osio kiinnityksellä &lt;strong&gt;%1&lt;/strong&gt;%3</translation>
     </message>
     <message>
         <location filename="../src/modules/partition/jobs/FillGlobalStorageJob.cpp" line="250"/>
         <source>Install %2 on %3 system partition &lt;strong&gt;%1&lt;/strong&gt; with features &lt;em&gt;%4&lt;/em&gt;</source>
         <comment>@info</comment>
-        <translation type="unfinished"/>
+        <translation>Asenna %2 %3 järjestelmäosioon &lt;strong&gt;%1&lt;/strong&gt;, jossa on ominaisuudet &lt;em&gt;%4&lt;/em&gt;</translation>
     </message>
     <message>
         <location filename="../src/modules/partition/jobs/FillGlobalStorageJob.cpp" line="260"/>
         <source>Install %2 on %3 system partition &lt;strong&gt;%1&lt;/strong&gt;</source>
         <comment>@info</comment>
-        <translation type="unfinished"/>
+        <translation>Asenna %2 %3 järjestelmäosioon &lt;strong&gt;%1&lt;/strong&gt;</translation>
     </message>
     <message>
         <location filename="../src/modules/partition/jobs/FillGlobalStorageJob.cpp" line="270"/>
         <source>Set up %3 partition &lt;strong&gt;%1&lt;/strong&gt; with mount point &lt;strong&gt;%2&lt;/strong&gt; and features &lt;em&gt;%4&lt;/em&gt;</source>
         <comment>@info</comment>
-        <translation type="unfinished"/>
+        <translation>Aseta %3 osio &lt;strong&gt;%1&lt;/strong&gt; kiinnityksellä &lt;strong&gt;%2&lt;/strong&gt; ja ominaisuuksilla &lt;em&gt;%4&lt;/em&gt;</translation>
     </message>
     <message>
         <location filename="../src/modules/partition/jobs/FillGlobalStorageJob.cpp" line="280"/>
         <source>Set up %3 partition &lt;strong&gt;%1&lt;/strong&gt; with mount point &lt;strong&gt;%2&lt;/strong&gt;%4…</source>
         <comment>@info</comment>
-        <translation type="unfinished"/>
+        <translation>Aseta %3 osio &lt;strong&gt;%1&lt;/strong&gt; kiinnityksellä &lt;strong&gt;%2&lt;/strong&gt;%4.</translation>
     </message>
     <message>
         <location filename="../src/modules/partition/jobs/FillGlobalStorageJob.cpp" line="296"/>
         <source>Install boot loader on &lt;strong&gt;%1&lt;/strong&gt;…</source>
         <comment>@info</comment>
-        <translation type="unfinished"/>
+        <translation>Asenna käynnistyslatain kohteeseen &lt;strong&gt;%1&lt;/strong&gt;…</translation>
     </message>
     <message>
         <location filename="../src/modules/partition/jobs/FillGlobalStorageJob.cpp" line="305"/>
         <source>Setting up mount points…</source>
         <comment>@status</comment>
-        <translation type="unfinished"/>
+        <translation>Asennetaan kiinnitykset…</translation>
     </message>
 </context>
 <context>
@@ -1920,13 +1920,13 @@ Asennus voi jatkua, mutta jotkin toiminnot saattavat olla pois käytöstä.</tra
         <location filename="../src/modules/partition/jobs/FormatPartitionJob.cpp" line="39"/>
         <source>Format partition %1 (file system: %2, size: %3 MiB) on %4</source>
         <comment>@title</comment>
-        <translation type="unfinished"/>
+        <translation>Alusta osio %1 (tiedostojärjestelmä: %2, koko: %3 MiB) kohteessa %4</translation>
     </message>
     <message>
         <location filename="../src/modules/partition/jobs/FormatPartitionJob.cpp" line="49"/>
         <source>Format &lt;strong&gt;%3MiB&lt;/strong&gt; partition &lt;strong&gt;%1&lt;/strong&gt; with file system &lt;strong&gt;%2&lt;/strong&gt;</source>
         <comment>@info</comment>
-        <translation type="unfinished"/>
+        <translation>Alusta &lt;strong&gt;%3MiB&lt;/strong&gt; osio &lt;strong&gt;%1&lt;/strong&gt; tiedostojärjestelmällä &lt;strong&gt;%2</translation>
     </message>
     <message>
         <location filename="../src/modules/partition/jobs/FormatPartitionJob.cpp" line="62"/>
@@ -1938,7 +1938,7 @@ Asennus voi jatkua, mutta jotkin toiminnot saattavat olla pois käytöstä.</tra
         <location filename="../src/modules/partition/jobs/FormatPartitionJob.cpp" line="64"/>
         <source>Formatting partition %1 with file system %2…</source>
         <comment>@status</comment>
-        <translation type="unfinished"/>
+        <translation>Alustetaan osiota %1 tiedostojärjestelmällä %2…</translation>
     </message>
     <message>
         <location filename="../src/modules/partition/jobs/FormatPartitionJob.cpp" line="73"/>
@@ -2170,7 +2170,7 @@ Asennus voi jatkua, mutta jotkin toiminnot saattavat olla pois käytöstä.</tra
     <message>
         <location filename="../src/modules/luksopenswaphookcfg/LOSHJob.cpp" line="95"/>
         <source>No rootMountPoint is set.</source>
-        <translation>Ei ole asetettu rootMountPoint</translation>
+        <translation>Ei ole rootMountPoint määritettynä.</translation>
     </message>
     <message>
         <location filename="../src/modules/luksopenswaphookcfg/LOSHJob.cpp" line="100"/>
@@ -2395,7 +2395,7 @@ Asennus voi jatkua, mutta jotkin toiminnot saattavat olla pois käytöstä.</tra
     <message>
         <location filename="../src/modules/machineid/MachineIdJob.cpp" line="72"/>
         <source>No root mount point is set for MachineId.</source>
-        <translation>Koneen tunnukselle ei ole asetettu root kiinnityskohtaa.</translation>
+        <translation>Kiinnitystä root ei ole määritetty MachineId:lle.</translation>
     </message>
     <message>
         <location filename="../src/modules/machineid/Workers.cpp" line="63"/>
@@ -2403,17 +2403,17 @@ Asennus voi jatkua, mutta jotkin toiminnot saattavat olla pois käytöstä.</tra
         <location filename="../src/modules/machineid/Workers.cpp" line="75"/>
         <location filename="../src/modules/machineid/Workers.cpp" line="92"/>
         <source>File not found</source>
-        <translation type="unfinished"/>
+        <translation>Tiedostoa ei löytynyt</translation>
     </message>
     <message>
         <location filename="../src/modules/machineid/Workers.cpp" line="64"/>
         <source>Path &lt;pre&gt;%1&lt;/pre&gt; must be an absolute path.</source>
-        <translation type="unfinished"/>
+        <translation>Polun &lt;pre&gt;%1&lt;/pre&gt; on oltava absoluuttinen polku.</translation>
     </message>
     <message>
         <location filename="../src/modules/machineid/Workers.cpp" line="93"/>
         <source>Could not create new random file &lt;pre&gt;%1&lt;/pre&gt;.</source>
-        <translation type="unfinished"/>
+        <translation>Uutta satunnaista tiedostoa &lt;pre&gt;%1&lt;/pre&gt; ei voitu luoda.</translation>
     </message>
 </context>
 <context>
@@ -2430,8 +2430,8 @@ Asennus voi jatkua, mutta jotkin toiminnot saattavat olla pois käytöstä.</tra
             and timezone settings for you. You can fine-tune the suggested settings below. Search the map by dragging
             to move and using the +/- buttons to zoom in/out or use mouse scrolling for zooming.</source>
         <comment>@info</comment>
-        <translation>Valitse sijainti kartalla, jotta asentaja voi ehdottaa maa- ja aikavyöhyke-asetukset.
-             Voit hienosäätää alla olevia asetuksia. Etsi kartalta vetämällä ja suurenna/pienennä +/- -painikkeella tai käytä
+        <translation>Valitse sijainti kartalla, jotta asentaja voi ehdottaa maa ja aikavyöhykkeen asetuksia.
+             Voit hienosäätää alla olevia asetuksia. Etsi kartalta vetämällä tai painikkeilla suurenna/pienennä +/- tai käytä
 hiiren vieritystä skaalaamiseen.</translation>
     </message>
 </context>
@@ -2806,7 +2806,7 @@ hiiren vieritystä skaalaamiseen.</translation>
     <message>
         <location filename="../src/modules/keyboard/KeyboardPage.ui" line="146"/>
         <source>Type here to test your keyboard</source>
-        <translation>Kirjoita tähän testaksesi näppäimistöäsi.</translation>
+        <translation>Kirjoita tähän testaksesi näppäimistöä.</translation>
     </message>
     <message>
         <location filename="../src/modules/keyboard/KeyboardPage.ui" line="153"/>
@@ -2830,7 +2830,7 @@ hiiren vieritystä skaalaamiseen.</translation>
     <message>
         <location filename="../src/modules/users/page_usersetup.ui" line="325"/>
         <source>Choose a password to keep your account safe.</source>
-        <translation>Valitse salasana pitääksesi tilisi turvallisena.</translation>
+        <translation>Valitse salasana ja pidä tilisi turvallisena.</translation>
     </message>
     <message>
         <location filename="../src/modules/users/page_usersetup.ui" line="349"/>
@@ -2918,37 +2918,37 @@ hiiren vieritystä skaalaamiseen.</translation>
         <location filename="../src/modules/partition/gui/PartitionLabelsView.cpp" line="182"/>
         <source>Home</source>
         <comment>@label</comment>
-        <translation type="unfinished"/>
+        <translation>Home</translation>
     </message>
     <message>
         <location filename="../src/modules/partition/gui/PartitionLabelsView.cpp" line="186"/>
         <source>Boot</source>
         <comment>@label</comment>
-        <translation type="unfinished"/>
+        <translation>Boot</translation>
     </message>
     <message>
         <location filename="../src/modules/partition/gui/PartitionLabelsView.cpp" line="191"/>
         <source>EFI system</source>
         <comment>@label</comment>
-        <translation type="unfinished"/>
+        <translation>EFI</translation>
     </message>
     <message>
         <location filename="../src/modules/partition/gui/PartitionLabelsView.cpp" line="195"/>
         <source>Swap</source>
         <comment>@label</comment>
-        <translation type="unfinished"/>
+        <translation>Swap</translation>
     </message>
     <message>
         <location filename="../src/modules/partition/gui/PartitionLabelsView.cpp" line="199"/>
         <source>New partition for %1</source>
         <comment>@label</comment>
-        <translation type="unfinished"/>
+        <translation>Uusi osio %1</translation>
     </message>
     <message>
         <location filename="../src/modules/partition/gui/PartitionLabelsView.cpp" line="203"/>
         <source>New partition</source>
         <comment>@label</comment>
-        <translation type="unfinished"/>
+        <translation>Uusi osio</translation>
     </message>
     <message>
         <location filename="../src/modules/partition/gui/PartitionLabelsView.cpp" line="228"/>
@@ -2964,44 +2964,44 @@ hiiren vieritystä skaalaamiseen.</translation>
         <location filename="../src/modules/partition/core/PartitionModel.cpp" line="201"/>
         <source>Free Space</source>
         <comment>@title</comment>
-        <translation type="unfinished"/>
+        <translation>Vapaa tila</translation>
     </message>
     <message>
         <location filename="../src/modules/partition/core/PartitionModel.cpp" line="161"/>
         <location filename="../src/modules/partition/core/PartitionModel.cpp" line="205"/>
         <source>New Partition</source>
         <comment>@title</comment>
-        <translation type="unfinished"/>
+        <translation>Uusi osio</translation>
     </message>
     <message>
         <location filename="../src/modules/partition/core/PartitionModel.cpp" line="307"/>
         <source>Name</source>
         <comment>@title</comment>
-        <translation type="unfinished"/>
+        <translation>Nimi</translation>
     </message>
     <message>
         <location filename="../src/modules/partition/core/PartitionModel.cpp" line="309"/>
         <source>File System</source>
         <comment>@title</comment>
-        <translation type="unfinished"/>
+        <translation>Tiedostojärjestelmä</translation>
     </message>
     <message>
         <location filename="../src/modules/partition/core/PartitionModel.cpp" line="311"/>
         <source>File System Label</source>
         <comment>@title</comment>
-        <translation type="unfinished"/>
+        <translation>Tiedostojärjestelmän nimi</translation>
     </message>
     <message>
         <location filename="../src/modules/partition/core/PartitionModel.cpp" line="313"/>
         <source>Mount Point</source>
         <comment>@title</comment>
-        <translation type="unfinished"/>
+        <translation>Kiinnitys</translation>
     </message>
     <message>
         <location filename="../src/modules/partition/core/PartitionModel.cpp" line="315"/>
         <source>Size</source>
         <comment>@title</comment>
-        <translation type="unfinished"/>
+        <translation>Koko</translation>
     </message>
 </context>
 <context>
@@ -3135,7 +3135,7 @@ hiiren vieritystä skaalaamiseen.</translation>
     <message>
         <location filename="../src/modules/partition/PartitionViewStep.cpp" line="550"/>
         <source>The filesystem must be mounted on &lt;strong&gt;%1&lt;/strong&gt;.</source>
-        <translation>Tiedostojärjestelmä on asennettava &lt;strong&gt;%1&lt;/strong&gt;.</translation>
+        <translation>Tiedostojärjestelmän on oltava kiinnitettynä kohteeseen %1. &lt;strong&gt;%1&lt;/strong&gt;.</translation>
     </message>
     <message>
         <location filename="../src/modules/partition/PartitionViewStep.cpp" line="551"/>
@@ -3157,25 +3157,25 @@ hiiren vieritystä skaalaamiseen.</translation>
         <location filename="../src/modules/partition/PartitionViewStep.cpp" line="56"/>
         <source>Gathering system information…</source>
         <comment>@status</comment>
-        <translation type="unfinished"/>
+        <translation>Kerätään järjestelmän tietoja…</translation>
     </message>
     <message>
         <location filename="../src/modules/partition/PartitionViewStep.cpp" line="107"/>
         <source>Partitions</source>
         <comment>@label</comment>
-        <translation type="unfinished"/>
+        <translation>Osiointi</translation>
     </message>
     <message>
         <location filename="../src/modules/partition/PartitionViewStep.cpp" line="296"/>
         <source>Current:</source>
         <comment>@label</comment>
-        <translation type="unfinished"/>
+        <translation>Nykyinen:</translation>
     </message>
     <message>
         <location filename="../src/modules/partition/PartitionViewStep.cpp" line="314"/>
         <source>After:</source>
         <comment>@label</comment>
-        <translation type="unfinished"/>
+        <translation>Jälkeen:</translation>
     </message>
     <message>
         <location filename="../src/modules/partition/PartitionViewStep.cpp" line="566"/>
@@ -3224,7 +3224,7 @@ hiiren vieritystä skaalaamiseen.</translation>
         <location filename="../src/modules/preservefiles/PreserveFiles.cpp" line="56"/>
         <source>Saving files for later…</source>
         <comment>@status</comment>
-        <translation type="unfinished"/>
+        <translation>Tallennetaan tiedostoja myöhempää käyttöä varten…</translation>
     </message>
     <message>
         <location filename="../src/modules/preservefiles/PreserveFiles.cpp" line="64"/>
@@ -3317,7 +3317,7 @@ Ulostulo:
     <message>
         <location filename="../src/modules/partition/gui/PartitionDialogHelpers.cpp" line="44"/>
         <source>(no mount point)</source>
-        <translation>(ei liitoskohtaa)</translation>
+        <translation>(ei kiinnitystä)</translation>
     </message>
     <message>
         <location filename="../src/libcalamares/locale/Translation.cpp" line="170"/>
@@ -3372,7 +3372,7 @@ Ulostulo:
         <location filename="../src/modules/partition/gui/PartitionLabelsView.cpp" line="39"/>
         <source>Unpartitioned space or unknown partition table</source>
         <comment>@info</comment>
-        <translation type="unfinished"/>
+        <translation>Osiotamaton tila tai tuntematon osiotaulu</translation>
     </message>
 </context>
 <context>
@@ -3392,13 +3392,13 @@ Asennus voi jatkua, mutta jotkin toiminnot saattavat olla pois käytöstä.&lt;/
         <location filename="../src/modules/partition/jobs/RemoveVolumeGroupJob.cpp" line="38"/>
         <source>Removing Volume Group named %1…</source>
         <comment>@status</comment>
-        <translation type="unfinished"/>
+        <translation>Poistetaan taltioryhmää nimeltä %1…</translation>
     </message>
     <message>
         <location filename="../src/modules/partition/jobs/RemoveVolumeGroupJob.cpp" line="32"/>
         <source>Removing Volume Group named &lt;strong&gt;%1&lt;/strong&gt;…</source>
         <comment>@status</comment>
-        <translation type="unfinished"/>
+        <translation>Poistetaan taltioryhmää nimeltä &lt;strong&gt;%1&lt;/strong&gt;…</translation>
     </message>
     <message>
         <location filename="../src/modules/partition/jobs/RemoveVolumeGroupJob.cpp" line="46"/>
@@ -3429,19 +3429,19 @@ Asennus voi jatkua, mutta jotkin toiminnot saattavat olla pois käytöstä.&lt;/
         <location filename="../src/modules/partition/jobs/ResizePartitionJob.cpp" line="39"/>
         <source>Resize partition %1</source>
         <comment>@title</comment>
-        <translation type="unfinished"/>
+        <translation>Muuta osion %1 kokoa</translation>
     </message>
     <message>
         <location filename="../src/modules/partition/jobs/ResizePartitionJob.cpp" line="45"/>
         <source>Resize &lt;strong&gt;%2MiB&lt;/strong&gt; partition &lt;strong&gt;%1&lt;/strong&gt; to &lt;strong&gt;%3MiB&lt;/strong&gt;</source>
         <comment>@info</comment>
-        <translation type="unfinished"/>
+        <translation>Muuta&lt;strong&gt; %2MiB&lt;/strong&gt; osion &lt;strong&gt;%1&lt;/strong&gt; kooksi &lt;strong&gt;%3MiB&lt;/strong&gt;</translation>
     </message>
     <message>
         <location filename="../src/modules/partition/jobs/ResizePartitionJob.cpp" line="54"/>
         <source>Resizing %2MiB partition %1 to %3MiB…</source>
         <comment>@status</comment>
-        <translation type="unfinished"/>
+        <translation>Muutetaan %2MiB osion %1 kokoa %3MiB:ksi…</translation>
     </message>
     <message>
         <location filename="../src/modules/partition/jobs/ResizePartitionJob.cpp" line="70"/>
@@ -3455,7 +3455,7 @@ Asennus voi jatkua, mutta jotkin toiminnot saattavat olla pois käytöstä.&lt;/
         <location filename="../src/modules/partition/gui/ResizeVolumeGroupDialog.cpp" line="30"/>
         <source>Resize Volume Group</source>
         <comment>@title</comment>
-        <translation type="unfinished"/>
+        <translation>Muuta taltioryhmän kokoa</translation>
     </message>
 </context>
 <context>
@@ -3464,19 +3464,19 @@ Asennus voi jatkua, mutta jotkin toiminnot saattavat olla pois käytöstä.&lt;/
         <location filename="../src/modules/partition/jobs/ResizeVolumeGroupJob.cpp" line="28"/>
         <source>Resize volume group named %1 from %2 to %3</source>
         <comment>@title</comment>
-        <translation type="unfinished"/>
+        <translation>Muuta taltioryhmän %1 kokoa %2:sta %3:ksi</translation>
     </message>
     <message>
         <location filename="../src/modules/partition/jobs/ResizeVolumeGroupJob.cpp" line="37"/>
         <source>Resize volume group named &lt;strong&gt;%1&lt;/strong&gt; from &lt;strong&gt;%2&lt;/strong&gt; to &lt;strong&gt;%3&lt;/strong&gt;</source>
         <comment>@info</comment>
-        <translation type="unfinished"/>
+        <translation>Muuta taltioryhmän &lt;strong&gt;%1&lt;/strong&gt; kokoa &lt;strong&gt;%2&lt;/strong&gt;:sta &lt;strong&gt;%3&lt;/strong&gt;:ksi</translation>
     </message>
     <message>
         <location filename="../src/modules/partition/jobs/ResizeVolumeGroupJob.cpp" line="47"/>
         <source>Resizing volume group named %1 from %2 to %3…</source>
         <comment>@status</comment>
-        <translation type="unfinished"/>
+        <translation>Muutetaan taltioryhmän %1 kokoa %2 kokoon %3…</translation>
     </message>
     <message>
         <location filename="../src/modules/partition/jobs/ResizeVolumeGroupJob.cpp" line="58"/>
@@ -3498,13 +3498,13 @@ Asennus voi jatkua, mutta jotkin toiminnot saattavat olla pois käytöstä.&lt;/
         <location filename="../src/modules/partition/gui/ScanningDialog.cpp" line="68"/>
         <source>Scanning storage devices…</source>
         <comment>@status</comment>
-        <translation type="unfinished"/>
+        <translation>Etsitään kiintolevyjä…</translation>
     </message>
     <message>
         <location filename="../src/modules/partition/gui/ScanningDialog.cpp" line="68"/>
         <source>Partitioning…</source>
         <comment>@status</comment>
-        <translation type="unfinished"/>
+        <translation>Osioidaan…</translation>
     </message>
 </context>
 <context>
@@ -3523,7 +3523,7 @@ Asennus voi jatkua, mutta jotkin toiminnot saattavat olla pois käytöstä.&lt;/
         <location filename="../src/modules/users/SetHostNameJob.cpp" line="48"/>
         <source>Setting hostname %1…</source>
         <comment>@status</comment>
-        <translation type="unfinished"/>
+        <translation>Asetetaan hostname %1…</translation>
     </message>
     <message>
         <location filename="../src/modules/users/SetHostNameJob.cpp" line="121"/>
@@ -3589,91 +3589,91 @@ Asennus voi jatkua, mutta jotkin toiminnot saattavat olla pois käytöstä.&lt;/
         <location filename="../src/modules/partition/jobs/SetPartitionFlagsJob.cpp" line="44"/>
         <source>Set flags on partition %1</source>
         <comment>@title</comment>
-        <translation type="unfinished"/>
+        <translation>Aseta liput osioon %1</translation>
     </message>
     <message>
         <location filename="../src/modules/partition/jobs/SetPartitionFlagsJob.cpp" line="50"/>
         <source>Set flags on %1MiB %2 partition</source>
         <comment>@title</comment>
-        <translation type="unfinished"/>
+        <translation>Aseta liput %1MiB %2 osioon</translation>
     </message>
     <message>
         <location filename="../src/modules/partition/jobs/SetPartitionFlagsJob.cpp" line="54"/>
         <source>Set flags on new partition</source>
         <comment>@title</comment>
-        <translation type="unfinished"/>
+        <translation>Aseta liput uuteen osioon</translation>
     </message>
     <message>
         <location filename="../src/modules/partition/jobs/SetPartitionFlagsJob.cpp" line="65"/>
         <source>Clear flags on partition &lt;strong&gt;%1&lt;/strong&gt;</source>
         <comment>@info</comment>
-        <translation type="unfinished"/>
+        <translation>Poista liput osiosta &lt;strong&gt;%1&lt;/strong&gt;</translation>
     </message>
     <message>
         <location filename="../src/modules/partition/jobs/SetPartitionFlagsJob.cpp" line="71"/>
         <source>Clear flags on %1MiB &lt;strong&gt;%2&lt;/strong&gt; partition</source>
         <comment>@info</comment>
-        <translation type="unfinished"/>
+        <translation>Poista liput %1MiB &lt;strong&gt;%2&lt;/strong&gt; osiosta</translation>
     </message>
     <message>
         <location filename="../src/modules/partition/jobs/SetPartitionFlagsJob.cpp" line="75"/>
         <source>Clear flags on new partition</source>
         <comment>@info</comment>
-        <translation type="unfinished"/>
+        <translation>Poista liput uudessa osiossa</translation>
     </message>
     <message>
         <location filename="../src/modules/partition/jobs/SetPartitionFlagsJob.cpp" line="80"/>
         <source>Set flags on partition &lt;strong&gt;%1&lt;/strong&gt; to &lt;strong&gt;%2&lt;/strong&gt;</source>
         <comment>@info</comment>
-        <translation type="unfinished"/>
+        <translation>Aseta osion &lt;strong&gt;%1&lt;/strong&gt; liput arvoon &lt;strong&gt;%2&lt;/strong&gt;</translation>
     </message>
     <message>
         <location filename="../src/modules/partition/jobs/SetPartitionFlagsJob.cpp" line="88"/>
         <source>Set flags on %1MiB &lt;strong&gt;%2&lt;/strong&gt; partition to &lt;strong&gt;%3&lt;/strong&gt;</source>
         <comment>@info</comment>
-        <translation type="unfinished"/>
+        <translation>Aseta %1MiB &lt;strong&gt;%2&lt;/strong&gt; osion liput arvoon &lt;strong&gt;%3&lt;/strong&gt;</translation>
     </message>
     <message>
         <location filename="../src/modules/partition/jobs/SetPartitionFlagsJob.cpp" line="94"/>
         <source>Set flags on new partition to &lt;strong&gt;%1&lt;/strong&gt;</source>
         <comment>@info</comment>
-        <translation type="unfinished"/>
+        <translation>Aseta uuden osion liput arvoon &lt;strong&gt;%1&lt;/strong&gt;</translation>
     </message>
     <message>
         <location filename="../src/modules/partition/jobs/SetPartitionFlagsJob.cpp" line="105"/>
         <source>Clearing flags on partition &lt;strong&gt;%1&lt;/strong&gt;…</source>
         <comment>@status</comment>
-        <translation type="unfinished"/>
+        <translation>Poistetaan lippuja osiosta &lt;strong&gt;%1&lt;/strong&gt;…</translation>
     </message>
     <message>
         <location filename="../src/modules/partition/jobs/SetPartitionFlagsJob.cpp" line="112"/>
         <source>Clearing flags on %1MiB &lt;strong&gt;%2&lt;/strong&gt; partition…</source>
         <comment>@status</comment>
-        <translation type="unfinished"/>
+        <translation>Poistetaan lippuja %1MiB &lt;strong&gt;%2&lt;/strong&gt; osiosta…</translation>
     </message>
     <message>
         <location filename="../src/modules/partition/jobs/SetPartitionFlagsJob.cpp" line="117"/>
         <source>Clearing flags on new partition…</source>
         <comment>@status</comment>
-        <translation type="unfinished"/>
+        <translation>Poistetaan uuden osion lippuja…</translation>
     </message>
     <message>
         <location filename="../src/modules/partition/jobs/SetPartitionFlagsJob.cpp" line="122"/>
         <source>Setting flags &lt;strong&gt;%2&lt;/strong&gt; on partition &lt;strong&gt;%1&lt;/strong&gt;…</source>
         <comment>@status</comment>
-        <translation type="unfinished"/>
+        <translation>Asetetaan lippuja &lt;strong&gt;%2&lt;/strong&gt; osiolle &lt;strong&gt;%1&lt;/strong&gt;…</translation>
     </message>
     <message>
         <location filename="../src/modules/partition/jobs/SetPartitionFlagsJob.cpp" line="130"/>
         <source>Setting flags &lt;strong&gt;%3&lt;/strong&gt; on %1MiB &lt;strong&gt;%2&lt;/strong&gt; partition…</source>
         <comment>@status</comment>
-        <translation type="unfinished"/>
+        <translation>Asetetaan lippuja &lt;strong&gt;%3&lt;/strong&gt; %1MiB &lt;strong&gt;%2&lt;/strong&gt; osioon…</translation>
     </message>
     <message>
         <location filename="../src/modules/partition/jobs/SetPartitionFlagsJob.cpp" line="136"/>
         <source>Setting flags &lt;strong&gt;%1&lt;/strong&gt; on new partition…</source>
         <comment>@status</comment>
-        <translation type="unfinished"/>
+        <translation>Asetetaan lippuja &lt;strong&gt;%1&lt;/strong&gt; uuteen osioon…</translation>
     </message>
     <message>
         <location filename="../src/modules/partition/jobs/SetPartitionFlagsJob.cpp" line="149"/>
@@ -3692,7 +3692,7 @@ Asennus voi jatkua, mutta jotkin toiminnot saattavat olla pois käytöstä.&lt;/
         <location filename="../src/modules/users/SetPasswordJob.cpp" line="44"/>
         <source>Setting password for user %1…</source>
         <comment>@status</comment>
-        <translation type="unfinished"/>
+        <translation>Asetetaan salasanaa käyttäjälle %1…</translation>
     </message>
     <message>
         <location filename="../src/modules/users/SetPasswordJob.cpp" line="80"/>
@@ -3767,7 +3767,7 @@ Asennus voi jatkua, mutta jotkin toiminnot saattavat olla pois käytöstä.&lt;/
         <location filename="../src/modules/users/MiscJobs.cpp" line="181"/>
         <source>Preparing groups…</source>
         <comment>@status</comment>
-        <translation type="unfinished"/>
+        <translation>Valmistellaan ryhmiä…</translation>
     </message>
     <message>
         <location filename="../src/modules/users/MiscJobs.cpp" line="193"/>
@@ -3787,17 +3787,17 @@ Asennus voi jatkua, mutta jotkin toiminnot saattavat olla pois käytöstä.&lt;/
         <location filename="../src/modules/users/MiscJobs.cpp" line="34"/>
         <source>Configuring &lt;pre&gt;sudo&lt;/pre&gt; users…</source>
         <comment>@status</comment>
-        <translation type="unfinished"/>
+        <translation>Määritetään &lt;pre&gt;sudo&lt;/pre&gt; käyttäjiä…</translation>
     </message>
     <message>
         <location filename="../src/modules/users/MiscJobs.cpp" line="70"/>
         <source>Cannot chmod sudoers file.</source>
-        <translation>Ei voida tehdä käyttöoikeuden muutosta sudoers-tiedostolle.</translation>
+        <translation>Chmod sudoers -tiedostoa ei voi tehdä.</translation>
     </message>
     <message>
         <location filename="../src/modules/users/MiscJobs.cpp" line="75"/>
         <source>Cannot create sudoers file for writing.</source>
-        <translation>Ei voida luoda sudoers-tiedostoa kirjoitettavaksi.</translation>
+        <translation>Sudoers-tiedostoa ei voitu luoda kirjoittamista varten.</translation>
     </message>
 </context>
 <context>
@@ -3842,7 +3842,7 @@ Asennus voi jatkua, mutta jotkin toiminnot saattavat olla pois käytöstä.&lt;/
     <message>
         <location filename="../src/modules/packagechooserq/UEFI.qml" line="37"/>
         <source>Systemd-boot is a UEFI boot manager which executes configured EFI images. The default entry is selected by a configured pattern (glob) or an on-screen menu and is simple to configure.</source>
-        <translation>Systemd-boot on UEFI:lle käynnistymisen hallintaohjelma, joka tekee määrittelyjä EFI:lle. Oletusarvo valitaan määritetyllä (glob) tai näyttövalikosta, ja on helppo määrittää.</translation>
+        <translation>Systemd-boot on käynnistymisen hallintaohjelma UEFI:lle, joka tekee määritykset EFI:lle. Oletus valitaan määritetystä mallista (glob) tai valikosta näytöllä, sekä on helppo määrittää.</translation>
     </message>
     <message>
         <location filename="../src/modules/packagechooserq/UEFI.qml" line="50"/>
@@ -3852,7 +3852,7 @@ Asennus voi jatkua, mutta jotkin toiminnot saattavat olla pois käytöstä.&lt;/
     <message>
         <location filename="../src/modules/packagechooserq/UEFI.qml" line="103"/>
         <source>rEFInd is a fork of the earlier rEFIt boot manager. It is designed to be platform-neutral and to simplify booting multiple operating systems.</source>
-        <translation>rEFInd on työsetty aikaisemmasta rEFIt boot manager:sta. Tämä on suunniteltu alustaneutraaliksi ja helpottamaan useiden käyttöjärjestelmien käynnistämistä.</translation>
+        <translation>Uusi rEFInd on työsetty aikaisemmasta rEFIt käynnistyksen hallinnasta. Suunniteltu alustaneutraaliksi ja helpottaa useiden käyttöjärjestelmien käynnistämistä rinnakkain.</translation>
     </message>
     <message>
         <location filename="../src/modules/packagechooserq/UEFI.qml" line="116"/>
@@ -3872,7 +3872,7 @@ Asennus voi jatkua, mutta jotkin toiminnot saattavat olla pois käytöstä.&lt;/
     <message>
         <location filename="../src/modules/packagechooserq/UEFI.qml" line="236"/>
         <source>Please select a bootloader option for your install, or leave the default option, &lt;strong&gt;systemd-boot&lt;/strong&gt;.</source>
-        <translation>Valitse asennuksellesi käynnistyslatain tai jätä vaihtoehto oletuksena &lt;strong&gt;systemd-boot&lt;/strong&gt;.</translation>
+        <translation>Valitse asennukselle käynnistyslatain tai jätä oletusvaihtoehto &lt;strong&gt;systemd-boot&lt;/strong&gt;.</translation>
     </message>
 </context>
 <context>
@@ -3880,7 +3880,7 @@ Asennus voi jatkua, mutta jotkin toiminnot saattavat olla pois käytöstä.&lt;/
     <message>
         <location filename="../src/modules/usersq/UserInput.qml" line="52"/>
         <source>Pick your user name and credentials to login and perform admin tasks</source>
-        <translation>Valitse käyttäjänimi kirjautumiseen ja järjestelmänvalvojan tehtävien suorittamiseen</translation>
+        <translation>Valitse käyttäjänimi ja tunnistetiedot, joilla voit kirjautua tietokoneeseen</translation>
     </message>
     <message>
         <location filename="../src/modules/usersq/UserInput.qml" line="66"/>
@@ -3950,7 +3950,7 @@ Asennus voi jatkua, mutta jotkin toiminnot saattavat olla pois käytöstä.&lt;/
     <message>
         <location filename="../src/modules/usersq/UserInput.qml" line="288"/>
         <source>Choose a password to keep your account safe.</source>
-        <translation>Valitse salasana pitääksesi tilisi turvallisena.</translation>
+        <translation>Valitse salasana ja pidä tilisi turvallisena.</translation>
     </message>
     <message>
         <location filename="../src/modules/usersq/UserInput.qml" line="312"/>
@@ -3980,22 +3980,22 @@ Asennus voi jatkua, mutta jotkin toiminnot saattavat olla pois käytöstä.&lt;/
     <message>
         <location filename="../src/modules/usersq/UserInput.qml" line="403"/>
         <source>Choose a root password to keep your account safe.</source>
-        <translation>Valitse root-salasana, jotta tilisi pysyy turvassa.</translation>
+        <translation>Valitse root salasana ja pidä tilisi turvallisena.</translation>
     </message>
     <message>
         <location filename="../src/modules/usersq/UserInput.qml" line="428"/>
         <source>Root Password</source>
-        <translation>Root-salasana</translation>
+        <translation>Root salasana</translation>
     </message>
     <message>
         <location filename="../src/modules/usersq/UserInput.qml" line="441"/>
         <source>Repeat Root Password</source>
-        <translation>Toista Root-salasana</translation>
+        <translation>Toista root salasana</translation>
     </message>
     <message>
         <location filename="../src/modules/usersq/UserInput.qml" line="459"/>
         <source>Enter the same password twice, so that it can be checked for typing errors.</source>
-        <translation>Syötä sama salasana kahdesti, jotta se voidaan tarkistaa kirjoitusvirheiden varalta.</translation>
+        <translation>Kirjoita sama salasana kahdesti, jotta se voidaan tarkistaa kirjoitusvirheiden varalta.</translation>
     </message>
     <message>
         <location filename="../src/modules/usersq/UserInput.qml" line="495"/>
@@ -4010,7 +4010,7 @@ Asennus voi jatkua, mutta jotkin toiminnot saattavat olla pois käytöstä.&lt;/
     <message>
         <location filename="../src/modules/usersq/UserInput.qml" line="513"/>
         <source>When this box is checked, password-strength checking is done and you will not be able to use a weak password.</source>
-        <translation>Kun tämä valintaruutu on valittu, salasanan vahvuus tarkistetaan, etkä voi käyttää heikkoa salasanaa.</translation>
+        <translation>Kun tämä ruutu on valittuna, salasanan vahvuus tarkistetaan, etkä voi käyttää heikkoa salasanaa.</translation>
     </message>
 </context>
 <context>
@@ -4018,12 +4018,12 @@ Asennus voi jatkua, mutta jotkin toiminnot saattavat olla pois käytöstä.&lt;/
     <message>
         <location filename="../src/modules/users/UsersPage.cpp" line="189"/>
         <source>&lt;small&gt;If more than one person will use this computer, you can create multiple accounts after setup.&lt;/small&gt;</source>
-        <translation>&lt;small&gt;Jos useampi kuin yksi henkilö käyttää tätä tietokonetta, voit luoda useita tilejä asennuksen jälkeen.&lt;/small&gt;</translation>
+        <translation>&lt;small&gt;Jos useampi henkilö käyttää tätä samaa tietokonetta, voit luoda useita tilejä asennuksen jälkeen.&lt;/small&gt;</translation>
     </message>
     <message>
         <location filename="../src/modules/users/UsersPage.cpp" line="195"/>
         <source>&lt;small&gt;If more than one person will use this computer, you can create multiple accounts after installation.&lt;/small&gt;</source>
-        <translation>&lt;small&gt;Jos useampi kuin yksi henkilö käyttää tätä tietokonetta, voit luoda useita tilejä asennuksen jälkeen.&lt;/small&gt;</translation>
+        <translation>&lt;small&gt;Jos useampi henkilö käyttää tätä samaa tietokonetta, voit luoda useita tilejä asennuksen jälkeen.&lt;/small&gt;</translation>
     </message>
 </context>
 <context>
@@ -4092,7 +4092,7 @@ Asennus voi jatkua, mutta jotkin toiminnot saattavat olla pois käytöstä.&lt;/
     <message>
         <location filename="../src/modules/partition/gui/VolumeGroupBaseDialog.ui" line="86"/>
         <source>Total Size:</source>
-        <translation>Yhteensä koko:</translation>
+        <translation>Yhteensä:</translation>
     </message>
     <message>
         <location filename="../src/modules/partition/gui/VolumeGroupBaseDialog.ui" line="106"/>
@@ -4121,7 +4121,7 @@ Asennus voi jatkua, mutta jotkin toiminnot saattavat olla pois käytöstä.&lt;/
     <message>
         <location filename="../src/modules/welcome/WelcomePage.ui" line="140"/>
         <source>Open donations website</source>
-        <translation>Avaa lahjoitussivusto</translation>
+        <translation>Avaa lahjoitukset verkkosivu</translation>
     </message>
     <message>
         <location filename="../src/modules/welcome/WelcomePage.ui" line="143"/>
@@ -4131,7 +4131,7 @@ Asennus voi jatkua, mutta jotkin toiminnot saattavat olla pois käytöstä.&lt;/
     <message>
         <location filename="../src/modules/welcome/WelcomePage.ui" line="153"/>
         <source>Open help and support website</source>
-        <translation>Avaa ohje- ja tukisivusto</translation>
+        <translation>Avaa ohjeet ja tukisivusto</translation>
     </message>
     <message>
         <location filename="../src/modules/welcome/WelcomePage.ui" line="166"/>
@@ -4174,7 +4174,7 @@ Asennus voi jatkua, mutta jotkin toiminnot saattavat olla pois käytöstä.&lt;/
         <location filename="../src/modules/welcome/WelcomePage.cpp" line="212"/>
         <source>%1 Support</source>
         <comment>@action</comment>
-        <translation type="unfinished"/>
+        <translation>%1 tuki</translation>
     </message>
 </context>
 <context>
@@ -4183,7 +4183,7 @@ Asennus voi jatkua, mutta jotkin toiminnot saattavat olla pois käytöstä.&lt;/
         <location filename="../src/modules/welcomeq/WelcomeQmlViewStep.cpp" line="40"/>
         <source>Welcome</source>
         <comment>@title</comment>
-        <translation type="unfinished"/>
+        <translation>Tervetuloa</translation>
     </message>
 </context>
 <context>
@@ -4192,7 +4192,7 @@ Asennus voi jatkua, mutta jotkin toiminnot saattavat olla pois käytöstä.&lt;/
         <location filename="../src/modules/welcome/WelcomeViewStep.cpp" line="46"/>
         <source>Welcome</source>
         <comment>@title</comment>
-        <translation type="unfinished"/>
+        <translation>Tervetuloa</translation>
     </message>
 </context>
 <context>
@@ -4201,7 +4201,7 @@ Asennus voi jatkua, mutta jotkin toiminnot saattavat olla pois käytöstä.&lt;/
         <location filename="../src/modules/zfs/ZfsJob.cpp" line="102"/>
         <source>Creating ZFS pools and datasets…</source>
         <comment>@status</comment>
-        <translation type="unfinished"/>
+        <translation>Luodaan ZFS-pooleja ja tietojoukkoa…</translation>
     </message>
     <message>
         <location filename="../src/modules/zfs/ZfsJob.cpp" line="162"/>
@@ -4451,8 +4451,8 @@ Asennus voi jatkua, mutta jotkin toiminnot saattavat olla pois käytöstä.&lt;/
         <location filename="../src/modules/packagechooserq/packagechooserq.qml" line="45"/>
         <source>LibreOffice is a powerful and free office suite, used by millions of people around the world. It includes several applications that make it the most versatile Free and Open Source office suite on the market.&lt;br/&gt;
                     Default option.</source>
-        <translation>LibreOffice on tehokas ja ilmainen toimistopaketti, jota käyttävät miljoonat ihmiset ympäri maailmaa. Sisältää useita sovelluksia, joka tekee siitä markkinoiden monipuolisimman avoimen lähdekoodin toimistopaketin.&lt;br/&gt;
-                    Oletusvalinta.</translation>
+        <translation>LibreOffice on tehokas ja ilmainen toimistopaketti, jota käyttävät miljoonat ihmiset ympäri maailmaa. Sisältää useita sovelluksia, jotka tekevät siitä markkinoiden monipuolisimman ilmaisen ja avoimen lähdekoodin toimistopaketin.&lt;br/&gt;
+                    Tämä valinta on oletuksena.</translation>
     </message>
     <message>
         <location filename="../src/modules/packagechooserq/packagechooserq.qml" line="59"/>
@@ -4472,7 +4472,7 @@ Asennus voi jatkua, mutta jotkin toiminnot saattavat olla pois käytöstä.&lt;/
     <message>
         <location filename="../src/modules/packagechooserq/packagechooserq.qml" line="180"/>
         <source>Create a minimal Plasma Desktop install, remove all extra applications and decide later on what you would like to add to your system. Examples of what won&apos;t be on such an install, there will be no Office Suite, no media players, no image viewer or print support.  It will be just a desktop, file browser, package manager, text editor and simple web-browser.</source>
-        <translation>Luo minimaalinen Plasma Desktop asennus, poista kaikki ylimääräiset sovellukset ja päätä myöhemmin, mitä lisäät järjestelmääsi. Tällaisessa asennuksessa ei ole, ei ole toimistopakettia, mediasoittimia, kuvien katseluohjelmaa tai tulostintukea. Vain työpöytä, tiedostoselain, paketinhallinta, tekstieditori ja verkkoselain.</translation>
+        <translation>Luo minimaalinen Plasma Desktop asennus. Poistaa kaikki ylimääräiset sovellukset ja voit päätä myöhemmin, mitä lisäät järjestelmääsi. Minimaalisessa asennuksessa ei ole toimistopakettia, mediasoittimia, kuvien katseluohjelmaa tai tulostintukea. Vain työpöytä, tiedostohallinta, paketinhallinta, tekstieditori ja internet selain.</translation>
     </message>
     <message>
         <location filename="../src/modules/packagechooserq/packagechooserq.qml" line="193"/>
@@ -4482,7 +4482,7 @@ Asennus voi jatkua, mutta jotkin toiminnot saattavat olla pois käytöstä.&lt;/
     <message>
         <location filename="../src/modules/packagechooserq/packagechooserq.qml" line="245"/>
         <source>Please select an option for your install, or use the default: LibreOffice included.</source>
-        <translation>Valitse asennuksen vaihtoehto tai käytä oletusta: LibreOffice sisältyy toimitukseen.</translation>
+        <translation>Valitse asennuksessa vaihtoehtoja tai käytä oletusta: LibreOffice sisältyy toimitukseen.</translation>
     </message>
 </context>
 <context>
@@ -4499,16 +4499,16 @@ Asennus voi jatkua, mutta jotkin toiminnot saattavat olla pois käytöstä.&lt;/
                                     - Be a low-latency audio server with features like PulseAudio and/or JACK&lt;br/&gt;
                                     - A video capture server that can manage hardware video capture devices.&lt;br/&gt;
                                     - A central hub where video can be made available for other applications.</source>
-        <translation>&lt;b&gt;Pipewire&lt;/b&gt; on alusta asti suunniteltu multimedia kehitysalusta, jonka tavoitteena on tarjota:&lt;br/&gt;
-                                    - Graafinen käsittely, joka tukee &quot;feedback loop&quot; ja &quot;atomic graph&quot; päivityksiä.&lt;br/&gt;
-                                    - Joustava ja laajennettava mediaformaattien neuvottelu ja puskurin allokointi.&lt;br/&gt;
-                                    - Tuki prosessin ulkopuolisille prosessoinneille, joilla on minimaalinen kuormitus.&lt;br/&gt;
+        <translation>&lt;b&gt;Pipewire&lt;/b&gt; on alusta asti suunniteltu multimediaa varten, jonka tavoitteena on tarjota:&lt;br/&gt;
+                                    - Graafinen käsittely, joka tukee &quot;feedback loop&quot; ja &quot;atomic graph&quot; päivitystä.&lt;br/&gt;
+                                    - Joustava, sekä laajennettava mediaformaatin neuvottelu ja puskurin allokointi.&lt;br/&gt;
+                                    - Tuki prosessin ulkopuolisille prosessoinneille minimaalisella kuormalla.&lt;br/&gt;
                                     - Reaaliaikaiset laajennukset.&lt;br/&gt;
-                                    - Erittäin pieni latenssi sekä äänen että videon käsittelyssä.&lt;br/&gt;&lt;br/&gt;
-                                Kehysalustaa käytetään modulaarisen taustapalvelun rakentamiseen, joka voidaan määrittää:&lt;br/&gt;
-                                    - Matalan latenssin äänipalvelin, jossa ominaisuudet, kuten PulseAudio ja/tai JACK&lt;br/&gt;
-                                    - Videonsieppauspalvelin, joka voi hallita laitteistopohjaista kaappauslaitteita.&lt;br/&gt;
-                                    - Jakopaikka, jossa video voidaan asettaa saataville muille sovelluksille.</translation>
+                                    - Erittäin pieni latenssi äänen sekä videon käsittelyssä.&lt;br/&gt;&lt;br/&gt;
+                                Alustaa käytetään modulaariseen taustapalvelun rakentamiseen, joka voidaan määrittää:&lt;br/&gt;
+                                    - Matalan latenssin äänipalvelin, jossa on samat ominaisuudet kuin PulseAudio tai JACK&lt;br/&gt;
+                                    - Videota kaappava palvelin, joka osaa hallita laitepohjaista kaappauslaitteita.&lt;br/&gt;
+                                    - Keskitin, jossa video voidaan asettaa saataville muille sovelluksille.</translation>
     </message>
     <message>
         <location filename="../src/modules/packagechooserq/packagechooserq@audio.qml" line="67"/>
@@ -4519,8 +4519,8 @@ Asennus voi jatkua, mutta jotkin toiminnot saattavat olla pois käytöstä.&lt;/
         <location filename="../src/modules/packagechooserq/packagechooserq@audio.qml" line="120"/>
         <source>&lt;b&gt;PulseAudio&lt;/b&gt; is a sound server, originally created to overcome the limitations of the Enlightened Sound Daemon (EsounD).&lt;br/&gt;
                     It performs advanced operations on sound data as it passes between your application and hardware. Things like transferring audio to a different machine, changing the sample format or channel count, or mixing several sounds into one input/output, are easily achieved using PulseAudio.</source>
-        <translation>&lt;b&gt;PulseAudio&lt;/b&gt; äänipalvelin, joka luotiin alun perin voittamaan Enlightened Sound Daemonin rajoitukset (EsounD).&lt;br/&gt;
-                    Se suorittaa toimintoja äänidatalle, kun se kulkee sovelluksen ja laitteiston välillä. Asiat, kuten äänen siirtäminen toiselle koneelle, ääninäyte formaatin tai kanavamäärän muuttaminen tai useiden äänien sekoittaminen yhdeksi sisääntuloksi/lähdöksi, onnistuu helposti PulseAudion avulla.</translation>
+        <translation>&lt;b&gt;PulseAudio&lt;/b&gt; on äänipalvelin, joka tehtiin alun perin poistamaan Enlightened Sound Daemon rajoitukset (EsounD).&lt;br/&gt;
+                    Se suorittaa edistyneitä toimintoja äänelle kun se kulkee sovelluksen ja laitteiston välillä. Sellaiset asiat, kuten äänen siirtäminen toiselle koneelle, formaatin tai kanavamäärän muuttaminen tai useiden äänien sekoittaminen yhdeksi tuloksi/lähdöksi, onnistuvat helposti PulseAudion avulla.</translation>
     </message>
     <message>
         <location filename="../src/modules/packagechooserq/packagechooserq@audio.qml" line="134"/>
@@ -4530,7 +4530,7 @@ Asennus voi jatkua, mutta jotkin toiminnot saattavat olla pois käytöstä.&lt;/
     <message>
         <location filename="../src/modules/packagechooserq/packagechooserq@audio.qml" line="187"/>
         <source>Please select an audio option for your install, or leave the default &lt;strong&gt;Pipewire&lt;/strong&gt;.</source>
-        <translation>Valitse asennuksesi vaihtoehto äänelle tai jätä oletus &lt;strong&gt; Pipewire &lt;/strong&gt;.</translation>
+        <translation>Valitse asennukselle vaihtoehto äänelle tai jätä oletus &lt;strong&gt; Pipewire &lt;/strong&gt;.</translation>
     </message>
 </context>
 <context>
@@ -4663,7 +4663,7 @@ Asennus voi jatkua, mutta jotkin toiminnot saattavat olla pois käytöstä.&lt;/
     <message>
         <location filename="../src/branding/kaos_branding/show.qml" line="73"/>
         <source>After creating your chosen disk setup in the first 10 % the full copying of the ISO will take the longest of this install phase and will run until approximately 45%.</source>
-        <translation>Kun olet luonut valitsemasi levyasetukset on ensimmäinen 10 % tehty. ISO-levykuvan koko kopiointi vie eniten aikaa tästä asennusvaiheesta noin 45 %.</translation>
+        <translation>Kun olet luonut valitsemasi levyasetukset on ensimmäinen 10 % tehty. ISO-levykuvan koko kopiointi vie eniten aikaa 45 % asennuksesta.</translation>
     </message>
     <message>
         <location filename="../src/branding/kaos_branding/show.qml" line="76"/>
@@ -4673,7 +4673,7 @@ Asennus voi jatkua, mutta jotkin toiminnot saattavat olla pois käytöstä.&lt;/
     <message>
         <location filename="../src/branding/kaos_branding/show.qml" line="77"/>
         <source>Once the ISO is copied some 25 post-install modules will run. This includes setting user specific options, removing Live Session only packages and adjusting hardware setup.</source>
-        <translation>Kun ISO on kopioitu, suoritetaan  noin 25 asennuksen jälkeistä moduulia. Tähän sisältyy käyttäjäkohtaisten vaihtoehtojen asettaminen, live -istunnon poistaminen ja laitteiston asetusten säätäminen.</translation>
+        <translation>Kun ISO on kopioitu, suoritetaan noin 25 asennuksen jälkeistä moduulia. Tähän sisältyy käyttäjäkohtaisten valintojen asettaminen, live-istunnon poistaminen ja laitteiston asetusten säätäminen.</translation>
     </message>
     <message>
         <location filename="../src/branding/kaos_branding/show.qml" line="80"/>
@@ -4713,7 +4713,7 @@ Asennus voi jatkua, mutta jotkin toiminnot saattavat olla pois käytöstä.&lt;/
     <message>
         <location filename="../src/branding/kaos_branding/show.qml" line="91"/>
         <source>Qt/KDE specific internet applications include the Falkon web-browser, KDE Connect for device Synchronization, Kaidan for chat and NeoChat, the Matrix client.</source>
-        <translation>Qt/KDE-spesifisiä ohjelmia ovat Falkon internetselain, KDE Connect puhelimen synkronointiin, Kaidan chatille ja Matrix:lle NeoChat.</translation>
+        <translation>Qt/KDE-spesifisiä ohjelmia ovat Falkon internetselain, KDE Connect puhelimen synkronointiin, Kaidan chatille ja NeoChat Matrix:lle.</translation>
     </message>
     <message>
         <location filename="../src/branding/kaos_branding/show.qml" line="94"/>
@@ -4723,12 +4723,12 @@ Asennus voi jatkua, mutta jotkin toiminnot saattavat olla pois käytöstä.&lt;/
     <message>
         <location filename="../src/branding/kaos_branding/show.qml" line="95"/>
         <source>May using KaOS be a pleasant experience for you.</source>
-        <translation>KaOS voi olla sinulle miellyttävä kokemus.</translation>
+        <translation>KaOS voi olla sinulle hyvä valintaja miellyttävä kokemus.</translation>
     </message>
     <message>
         <location filename="../src/branding/kaos_branding/show.qml" line="96"/>
         <source>Don&apos;t hesitate to give your opinion about KaOS in the Forum</source>
-        <translation>Älä epäröi kertoa mielipidettäsi KaOS-foorumilla</translation>
+        <translation>Liity keskusteluun ja kerro mielipiteesi KaOS foorumilla</translation>
     </message>
     <message>
         <location filename="../src/branding/default/show.qml" line="55"/>
