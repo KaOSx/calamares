@@ -3,7 +3,7 @@
 #
 # === This file is part of Calamares - <http://github.com/calamares> ===
 #
-#   Copyright 2014-2023, Anke Boersma <demm@kaosx.us>
+#   Copyright 2014-2024, Anke Boersma <demm@kaosx.us>
 #
 #   Calamares is free software: you can redistribute it and/or modify
 #   it under the terms of the GNU General Public License as published by
@@ -68,8 +68,8 @@ def run():
             text = sddm_conf.readlines()
         with open(sddm_conf_path, 'w') as sddm_conf:
             for line in text:
-                if re.match('Session=plasmawayland.desktop', line):
-                    line = 'Session=plasma.desktop'
+                if re.match('Session=plasma.desktop', line):
+                    line = 'Session=plasmax11.desktop'
                 sddm_conf.write(line)
 
     elif os.path.exists('/var/log/nvidia-prime'):
@@ -97,8 +97,8 @@ def run():
             text = sddm_conf.readlines()
         with open(sddm_conf_path, 'w') as sddm_conf:
             for line in text:
-                if re.match('Session=plasmawayland.desktop', line):
-                    line = 'Session=plasma.desktop'
+                if re.match('Session=plasma.desktop', line):
+                    line = 'Session=plasmax11.desktop'
                 sddm_conf.write(line)
 
     elif os.path.exists('/var/log/nvidia-390xx'):
@@ -123,8 +123,8 @@ def run():
             text = sddm_conf.readlines()
         with open(sddm_conf_path, 'w') as sddm_conf:
             for line in text:
-                if re.match('Session=plasmawayland.desktop', line):
-                    line = 'Session=plasma.desktop'
+                if re.match('Session=plasma.desktop', line):
+                    line = 'Session=plasmax11.desktop'
                 sddm_conf.write(line)
 
     elif os.path.exists('/var/log/nvidia-470xx'):
@@ -149,8 +149,8 @@ def run():
             text = sddm_conf.readlines()
         with open(sddm_conf_path, 'w') as sddm_conf:
             for line in text:
-                if re.match('Session=plasmawayland.desktop', line):
-                    line = 'Session=plasma.desktop'
+                if re.match('Session=plasma.desktop', line):
+                    line = 'Session=plasmax11.desktop'
                 sddm_conf.write(line)
 
     print('done setting up hardware')
