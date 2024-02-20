@@ -123,10 +123,10 @@ navigation: qml,right
 strings:
     productName:         KaOS
     shortProductName:    KaOS
-    version:             2024.01
+    version:             2024.03
     shortVersion:        KaOS
-    versionedName:       KaOS 2024.01
-    shortVersionedName:  KaOS 2024.01
+    versionedName:       KaOS 2024.03
+    shortVersionedName:  KaOS 2024.03
     bootloaderEntryName: KaOS
     productUrl:          https://kaosx.us/
     supportUrl:          https://kaosx.us/docs/
