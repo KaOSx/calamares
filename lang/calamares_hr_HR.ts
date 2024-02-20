@@ -15,7 +15,18 @@
             development is sponsored by &lt;br/&gt;
             &lt;a href='http://www.blue-systems.com/'&gt;Blue Systems&lt;/a&gt; -
             Liberating Software.</source>
-        <translation type="unfinished"/>
+        <translation>&lt;h1&gt;%1&lt;/h1&gt;&lt;br/&gt;
+            &lt;strong&gt;%2&lt;br/&gt;
+          za %3&lt;/strong&gt;&lt;br/&gt;&lt;br/&gt;
+            Autorska prava 2014-2017 Teo Mrnjavac &amp;lt;teo@kde.org&amp;gt;&lt;br/&gt;
+           Autorska prava 2017-2022 Adriaan de Groot &amp;lt;groot@kde.org&amp;gt;&lt;br/&gt;
+            Hvala &lt;/a&gt;Calamares timu&lt;/a&gt;
+           i &lt;a href=&apos;https://www.transifex.com/kaos/kaos/&apos;&gt;KaOS
+           prevoditeljskom timu&lt;/a&gt;.&lt;br/&gt;&lt;br/&gt;
+            &lt;a href=&apos;https://calamares.io/&apos;&gt;Calamares&lt;/a&gt;
+            razvoj sponzorira &lt;br/&gt;
+            &lt;a href=&apos;http://www.blue-systems.com/&apos;&gt;Blue Systems&lt;/a&gt; -
+            Liberating Software.</translation>
     </message>
 </context>
 <context>
@@ -23,23 +34,23 @@
     <message>
         <location filename="../src/libcalamares/CalamaresAbout.cpp" line="17"/>
         <source>&lt;h1&gt;%1&lt;/h1&gt;&lt;br/&gt;&lt;strong&gt;%2&lt;br/&gt; for %3&lt;/strong&gt;&lt;br/&gt;&lt;br/&gt;</source>
-        <translation type="unfinished"/>
+        <translation>&lt;h1&gt;%1&lt;/h1&gt;&lt;br/&gt;&lt;strong&gt;%2&lt;br/&gt; za %3&lt;/strong&gt;&lt;br/&gt;&lt;br/&gt;</translation>
     </message>
     <message>
         <location filename="../src/libcalamares/CalamaresAbout.cpp" line="20"/>
         <source>Thanks to &lt;a href=&quot;https://calamares.io/team/&quot;&gt;the Calamares team&lt;/a&gt; and the &lt;a href=&quot;https://app.transifex.com/calamares/calamares/&quot;&gt;Calamares translators team&lt;/a&gt;.</source>
-        <translation type="unfinished"/>
+        <translation>Hvala &lt;a href=&quot;https://calamares.io/team/&quot;&gt;Calamares timu&lt;/a&gt; i &lt;a href=&quot;https://app.transifex.com/calamares/calamares/&quot;&gt;Calamares prevoditeljskom timu&lt;/a&gt;.</translation>
     </message>
     <message>
         <location filename="../src/libcalamares/CalamaresAbout.cpp" line="25"/>
         <source>&lt;a href=&quot;https://calamares.io/&quot;&gt;Calamares&lt;/a&gt; development is sponsored by &lt;br/&gt;&lt;a href=&quot;http://www.blue-systems.com/&quot;&gt;Blue Systems&lt;/a&gt; - Liberating Software.</source>
-        <translation type="unfinished"/>
+        <translation>&lt;a href=&quot;https://calamares.io/&quot;&gt;Calamares&lt;/a&gt; razvoj sponzorira &lt;br/&gt;&lt;a href=&quot;http://www.blue-systems.com/&quot;&gt;Blue Systems&lt;/a&gt; - Liberating Software.</translation>
     </message>
     <message>
         <location filename="../src/libcalamares/CalamaresAbout.cpp" line="40"/>
         <source>Copyright %1-%2 %3 &amp;lt;%4&amp;gt;&lt;br/&gt;</source>
         <extracomment>Copyright year-year Name &lt;email-address&gt;</extracomment>
-        <translation type="unfinished"/>
+        <translation>Autorska prava %1-%2 %3 &amp;lt;%4&amp;gt;&lt;br/&gt;</translation>
     </message>
 </context>
 <context>
@@ -61,7 +72,7 @@
     <message>
         <location filename="../src/modules/packagechooserq/BIOS.qml" line="54"/>
         <source>GRUB</source>
-        <translation type="unfinished"/>
+        <translation>GRUB</translation>
     </message>
     <message>
         <location filename="../src/modules/packagechooserq/BIOS.qml" line="108"/>
@@ -157,18 +168,18 @@
     <message>
         <location filename="../src/calamares/DebugWindow.ui" line="61"/>
         <source>Type:</source>
-        <translation type="unfinished"/>
+        <translation>Vrsta:</translation>
     </message>
     <message>
         <location filename="../src/calamares/DebugWindow.ui" line="68"/>
         <location filename="../src/calamares/DebugWindow.ui" line="82"/>
         <source>none</source>
-        <translation type="unfinished"/>
+        <translation>nijedan</translation>
     </message>
     <message>
         <location filename="../src/calamares/DebugWindow.ui" line="75"/>
         <source>Interface:</source>
-        <translation type="unfinished"/>
+        <translation>Sučelje:`</translation>
     </message>
     <message>
         <location filename="../src/calamares/DebugWindow.ui" line="115"/>
@@ -230,7 +241,7 @@
         <location filename="../src/libcalamaresui/viewpages/ExecutionViewStep.cpp" line="117"/>
         <source>Install</source>
         <comment>@label</comment>
-        <translation type="unfinished"/>
+        <translation>Instaliraj</translation>
     </message>
 </context>
 <context>
@@ -398,7 +409,7 @@
         <location filename="../src/libcalamaresui/viewpages/QmlViewStep.cpp" line="286"/>
         <source>Loading failed.</source>
         <comment>@info</comment>
-        <translation type="unfinished"/>
+        <translation>Neuspjelo učitavanje.</translation>
     </message>
 </context>
 <context>
@@ -465,17 +476,17 @@ Instalacijski program će prestati sa radom i sve promjene će biti izgubljene.<
     <message>
         <location filename="../src/libcalamaresui/ViewManager.cpp" line="90"/>
         <source>&amp;Yes</source>
-        <translation type="unfinished"/>
+        <translation>&amp;Da</translation>
     </message>
     <message>
         <location filename="../src/libcalamaresui/ViewManager.cpp" line="91"/>
         <source>&amp;No</source>
-        <translation type="unfinished"/>
+        <translation>&amp;Ne</translation>
     </message>
     <message>
         <location filename="../src/libcalamaresui/ViewManager.cpp" line="92"/>
         <source>&amp;Close</source>
-        <translation type="unfinished"/>
+        <translation>&amp;Zatvori</translation>
     </message>
     <message>
         <location filename="../src/libcalamaresui/ViewManager.cpp" line="156"/>
@@ -487,13 +498,13 @@ Instalacijski program će prestati sa radom i sve promjene će biti izgubljene.<
         <location filename="../src/libcalamaresui/ViewManager.cpp" line="156"/>
         <source>Installation Failed</source>
         <comment>@title</comment>
-        <translation type="unfinished"/>
+        <translation>Neuspjela instalacija</translation>
     </message>
     <message>
         <location filename="../src/libcalamaresui/ViewManager.cpp" line="159"/>
         <source>Error</source>
         <comment>@title</comment>
-        <translation type="unfinished"/>
+        <translation>Greška</translation>
     </message>
     <message>
         <location filename="../src/libcalamaresui/ViewManager.cpp" line="184"/>
@@ -523,7 +534,7 @@ Instalacijski program će prestati sa radom i sve promjene će biti izgubljene.<
         <location filename="../src/libcalamaresui/ViewManager.cpp" line="333"/>
         <source>Continue with Installation?</source>
         <comment>@title</comment>
-        <translation type="unfinished"/>
+        <translation>Nastaviti sa instalacijom?</translation>
     </message>
     <message>
         <location filename="../src/libcalamaresui/ViewManager.cpp" line="335"/>
@@ -547,13 +558,13 @@ Instalacijski program će prestati sa radom i sve promjene će biti izgubljene.<
         <location filename="../src/libcalamaresui/ViewManager.cpp" line="341"/>
         <source>&amp;Install Now</source>
         <comment>@button</comment>
-        <translation type="unfinished"/>
+        <translation>&amp;Instaliraj sada</translation>
     </message>
     <message>
         <location filename="../src/libcalamaresui/ViewManager.cpp" line="348"/>
         <source>Go &amp;Back</source>
         <comment>@button</comment>
-        <translation type="unfinished"/>
+        <translation>Idi &amp;natrag</translation>
     </message>
     <message>
         <location filename="../src/libcalamaresui/ViewManager.cpp" line="395"/>
@@ -565,7 +576,7 @@ Instalacijski program će prestati sa radom i sve promjene će biti izgubljene.<
         <location filename="../src/libcalamaresui/ViewManager.cpp" line="395"/>
         <source>&amp;Install</source>
         <comment>@button</comment>
-        <translation type="unfinished"/>
+        <translation>&amp;Instaliraj</translation>
     </message>
     <message>
         <location filename="../src/libcalamaresui/ViewManager.cpp" line="397"/>
@@ -577,7 +588,7 @@ Instalacijski program će prestati sa radom i sve promjene će biti izgubljene.<
         <location filename="../src/libcalamaresui/ViewManager.cpp" line="398"/>
         <source>The installation is complete. Close the installer.</source>
         <comment>@tooltip</comment>
-        <translation type="unfinished"/>
+        <translation>Instalacija je završena. Zatvorite instalacijski program.</translation>
     </message>
     <message>
         <location filename="../src/libcalamaresui/ViewManager.cpp" line="400"/>
@@ -595,25 +606,25 @@ Instalacijski program će prestati sa radom i sve promjene će biti izgubljene.<
         <location filename="../src/libcalamaresui/ViewManager.cpp" line="411"/>
         <source>&amp;Next</source>
         <comment>@button</comment>
-        <translation type="unfinished"/>
+        <translation>&amp;Slijedeće </translation>
     </message>
     <message>
         <location filename="../src/libcalamaresui/ViewManager.cpp" line="416"/>
         <source>&amp;Back</source>
         <comment>@button</comment>
-        <translation type="unfinished"/>
+        <translation>&amp;Natrag</translation>
     </message>
     <message>
         <location filename="../src/libcalamaresui/ViewManager.cpp" line="422"/>
         <source>&amp;Done</source>
         <comment>@button</comment>
-        <translation type="unfinished"/>
+        <translation>&amp;Završeno</translation>
     </message>
     <message>
         <location filename="../src/libcalamaresui/ViewManager.cpp" line="441"/>
         <source>&amp;Cancel</source>
         <comment>@button</comment>
-        <translation type="unfinished"/>
+        <translation>&amp;Otkaži</translation>
     </message>
     <message>
         <location filename="../src/libcalamaresui/ViewManager.cpp" line="513"/>
@@ -625,7 +636,7 @@ Instalacijski program će prestati sa radom i sve promjene će biti izgubljene.<
         <location filename="../src/libcalamaresui/ViewManager.cpp" line="513"/>
         <source>Cancel Installation?</source>
         <comment>@title</comment>
-        <translation type="unfinished"/>
+        <translation>Otkazati instalaciju?</translation>
     </message>
 </context>
 <context>
@@ -701,7 +712,7 @@ Instalacijski program će prestati sa radom i sve promjene će biti izgubljene.<
     <message>
         <location filename="../src/modules/welcome/checker/CheckerContainer.cpp" line="38"/>
         <source>Gathering system information...</source>
-        <translation type="unfinished"/>
+        <translation>Skupljanje informacija o sustavu...</translation>
     </message>
 </context>
 <context>
@@ -712,7 +723,7 @@ Instalacijski program će prestati sa radom i sve promjene će biti izgubljene.<
         <location filename="../src/modules/partition/gui/ChoicePage.cpp" line="1400"/>
         <location filename="../src/modules/partition/gui/ChoicePage.cpp" line="1425"/>
         <source>&lt;strong&gt;Erase disk&lt;/strong&gt;&lt;br/&gt;This will &lt;font color=&quot;red&quot;&gt;delete&lt;/font&gt; all data currently present on the selected storage device.</source>
-        <translation type="unfinished"/>
+        <translation>&lt;strong&gt;Izbriši disk&lt;/strong&gt;&lt;br/&gt;Ovo će &lt;font color=&quot;red&quot;&gt;izbrisati&lt;/font&gt; sve podatke trenutno prisutne na odabranom uređaju za pohranu.</translation>
     </message>
     <message>
         <location filename="../src/modules/partition/gui/ChoicePage.cpp" line="1346"/>
@@ -748,13 +759,13 @@ Instalacijski program će prestati sa radom i sve promjene će biti izgubljene.<
         <location filename="../src/modules/partition/gui/ChoicePage.cpp" line="1139"/>
         <source>Current:</source>
         <comment>@label</comment>
-        <translation type="unfinished"/>
+        <translation>Trenutni:</translation>
     </message>
     <message>
         <location filename="../src/modules/partition/gui/ChoicePage.cpp" line="139"/>
         <source>After:</source>
         <comment>@label</comment>
-        <translation type="unfinished"/>
+        <translation>Poslije:</translation>
     </message>
     <message>
         <location filename="../src/modules/partition/gui/ChoicePage.cpp" line="896"/>

@@ -34,12 +34,12 @@
     <message>
         <location filename="../src/libcalamares/CalamaresAbout.cpp" line="17"/>
         <source>&lt;h1&gt;%1&lt;/h1&gt;&lt;br/&gt;&lt;strong&gt;%2&lt;br/&gt; for %3&lt;/strong&gt;&lt;br/&gt;&lt;br/&gt;</source>
-        <translation>&lt;h1&gt;%1&lt;/h1&gt;&lt;br/&gt;&lt;strong&gt;%2&lt;br/&gt; on %3&lt;/strong&gt;&lt;br/&gt;&lt;br/&gt;</translation>
+        <translation>&lt;h1&gt;%1&lt;/h1&gt;&lt;br/&gt;&lt;strong&gt;%2&lt;br/&gt; %3&lt;/strong&gt;&lt;br/&gt;&lt;br/&gt;</translation>
     </message>
     <message>
         <location filename="../src/libcalamares/CalamaresAbout.cpp" line="20"/>
         <source>Thanks to &lt;a href=&quot;https://calamares.io/team/&quot;&gt;the Calamares team&lt;/a&gt; and the &lt;a href=&quot;https://app.transifex.com/calamares/calamares/&quot;&gt;Calamares translators team&lt;/a&gt;.</source>
-        <translation>Kiitos &lt;a href=&quot;https://calamares.io/team/&quot;&gt;Calamaresin tiimille&lt;/a&gt; ja &lt;a href=&quot;https://app.transifex.com/calamares/calamares/&quot;&gt;Calamaresin kääntäjätiimille.&lt;/a&gt;.</translation>
+        <translation>Kiitos &lt;a href=&quot;https://calamares.io/team/&quot;&gt;Calamares tiimille&lt;/a&gt; ja &lt;a href=&quot;https://app.transifex.com/calamares/calamares/&quot;&gt;Calamares kääntäjäjille.&lt;/a&gt;.</translation>
     </message>
     <message>
         <location filename="../src/libcalamares/CalamaresAbout.cpp" line="25"/>
@@ -551,7 +551,7 @@ Asennusohjelma sulkeutuu ja kaikki muutoksesi katoavat.</translation>
         <location filename="../src/libcalamaresui/ViewManager.cpp" line="338"/>
         <source>The %1 installer is about to make changes to your disk in order to install %2.&lt;br/&gt;&lt;strong&gt;You will not be able to undo these changes.&lt;/strong&gt;</source>
         <comment>%1 is short product name, %2 is short product name with version</comment>
-        <translation>Asennusohjelman %1 on tehtävä muutoksia asemalle, jotta %2 voidaan asentaa.&lt;br/&gt;&lt;strong&gt;Et voi kumota näitä muutoksia.&lt;/strong&gt;</translation>
+        <translation>%1 asennusohjelma tekee muutoksia asemalle, jotta %2 voidaan asentaa.&lt;br/&gt;&lt;strong&gt;Et voi kumota muutoksia myöhemmin.&lt;/strong&gt;</translation>
     </message>
     <message>
         <location filename="../src/libcalamaresui/ViewManager.cpp" line="341"/>
@@ -764,7 +764,7 @@ Asennusohjelma sulkeutuu ja kaikki muutoksesi katoavat.</translation>
         <location filename="../src/modules/partition/gui/ChoicePage.cpp" line="1139"/>
         <source>Current:</source>
         <comment>@label</comment>
-        <translation>Nykyinen:</translation>
+        <translation>Nyt:</translation>
     </message>
     <message>
         <location filename="../src/modules/partition/gui/ChoicePage.cpp" line="139"/>
@@ -1096,7 +1096,7 @@ Asennus voi jatkua, mutta jotkin toiminnot saattavat olla pois käytöstä.</tra
     <message>
         <location filename="../src/modules/welcome/Config.cpp" line="80"/>
         <source>This program will ask you some questions and set up %2 on your computer.</source>
-        <translation>Tämä ohjelma kysyy joitakin kysymyksiä liittyen järjestelmään %2 ja asentaa sen tietokoneeseen.</translation>
+        <translation>Asennusohjelma kysyy joitakin kysymyksiä liittyen %2 ja asentaa sen tietokoneelle.</translation>
     </message>
     <message>
         <location filename="../src/modules/welcome/Config.cpp" line="264"/>
@@ -1280,7 +1280,7 @@ Asennus voi jatkua, mutta jotkin toiminnot saattavat olla pois käytöstä.</tra
         <location filename="../src/modules/locale/Config.cpp" line="416"/>
         <source>The numbers and dates locale will be set to %1.</source>
         <comment>@info</comment>
-        <translation>Numeroiden ja päivämäärien maa-asetukseksi asetetaan %1.</translation>
+        <translation>Numeroiden ja päivämäärien asetukseksi asetetaan %1.</translation>
     </message>
 </context>
 <context>
@@ -1870,7 +1870,7 @@ Asennus voi jatkua, mutta jotkin toiminnot saattavat olla pois käytöstä.</tra
         <location filename="../src/modules/finished/FinishedPage.cpp" line="79"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;When this box is checked, your system will restart immediately when you click on &lt;span style=&quot;font-style:italic;&quot;&gt;Done&lt;/span&gt; or close the setup program.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <comment>@tooltip</comment>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Kun tämä valintaruutu on valittu, järjestelmä käynnistyy heti, kun napsautat  &lt;span style=&quot;font-style:italic;&quot;&gt;Valmis&lt;/span&gt; -painiketta tai suljet asennusohjelman.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Kun ruutu on valittuna, tietokone käynnistyy heti, kun painat painiketta &lt;span style=&quot;font-style:italic;&quot;&gt;Valmis&lt;/span&gt; tai suljet asennusohjelman.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../src/modules/finished/FinishedPage.cpp" line="87"/>
@@ -2430,9 +2430,9 @@ Asennus voi jatkua, mutta jotkin toiminnot saattavat olla pois käytöstä.</tra
             and timezone settings for you. You can fine-tune the suggested settings below. Search the map by dragging
             to move and using the +/- buttons to zoom in/out or use mouse scrolling for zooming.</source>
         <comment>@info</comment>
-        <translation>Valitse sijainti kartalla, jotta asentaja voi ehdottaa maa ja aikavyöhykkeen asetuksia.
-             Voit hienosäätää alla olevia asetuksia. Etsi kartalta vetämällä tai painikkeilla suurenna/pienennä +/- tai käytä
-hiiren vieritystä skaalaamiseen.</translation>
+        <translation>Valitse sijainti kartalla ja asennusohjelma ehdottaa sinulle maa ja aikavyöhykkeen asetuksia.
+             Voit hienosäätää alla olevia asetuksia. Etsi kartalla vetämällä tai painamalla +/- painikkeita.
+Voit myös käyttää hiiren rullaa skaalaamiseen.</translation>
     </message>
 </context>
 <context>
@@ -3169,7 +3169,7 @@ hiiren vieritystä skaalaamiseen.</translation>
         <location filename="../src/modules/partition/PartitionViewStep.cpp" line="296"/>
         <source>Current:</source>
         <comment>@label</comment>
-        <translation>Nykyinen:</translation>
+        <translation>Nyt:</translation>
     </message>
     <message>
         <location filename="../src/modules/partition/PartitionViewStep.cpp" line="314"/>
@@ -4312,7 +4312,7 @@ Asennus voi jatkua, mutta jotkin toiminnot saattavat olla pois käytöstä.&lt;/
         <source>%1 has been installed on your computer.&lt;br/&gt;
             You may now restart into your new system, or continue using the Live environment.</source>
         <translation>%1 on asennettu tietokoneellesi.&lt;br/&gt;
-            Voit käynnistää nyt uuteen järjestelmään tai jatkaa Live-ympäristön käyttöä. </translation>
+            Voit käynnistää tietokoneen uudelleen tai jatkaa Live-ympäristön käyttöä.</translation>
     </message>
     <message>
         <location filename="../src/modules/finishedq/finishedq.qml" line="66"/>
@@ -4322,14 +4322,14 @@ Asennus voi jatkua, mutta jotkin toiminnot saattavat olla pois käytöstä.&lt;/
     <message>
         <location filename="../src/modules/finishedq/finishedq.qml" line="73"/>
         <source>Restart System</source>
-        <translation>Käynnistä järjestelmä</translation>
+        <translation>Käynnistä tietokone</translation>
     </message>
     <message>
         <location filename="../src/modules/finishedq/finishedq.qml" line="94"/>
         <source>&lt;p&gt;A full log of the install is available as installation.log in the home directory of the Live user.&lt;br/&gt;
             This log is copied to %1 of the target system.&lt;/p&gt;</source>
-        <translation>&lt;p&gt;Täydellinen asennusloki install.log löytyy asennusmedian live-käyttäjän kotihakemistosta&lt;br/&gt;
-            Tämä loki kopioidaan myös kohdejärjestelmän kansioon %1.&lt;/p&gt;</translation>
+        <translation>&lt;p&gt;Asennusloki install.log löytyy asennusmedialta live-käyttäjän kotihakemistosta&lt;br/&gt;
+            Tämä loki kopioidaan myös tietokoneelle kansioon %1.&lt;/p&gt;</translation>
     </message>
 </context>
 <context>
@@ -4592,7 +4592,7 @@ Asennus voi jatkua, mutta jotkin toiminnot saattavat olla pois käytöstä.&lt;/
     <message>
         <location filename="../src/modules/partitionq/partitionq.qml" line="490"/>
         <source>Current</source>
-        <translation>Nykyinen</translation>
+        <translation>Nyt</translation>
     </message>
     <message>
         <location filename="../src/modules/partitionq/partitionq.qml" line="547"/>
@@ -4708,7 +4708,7 @@ Asennus voi jatkua, mutta jotkin toiminnot saattavat olla pois käytöstä.&lt;/
     <message>
         <location filename="../src/branding/kaos_branding/show.qml" line="90"/>
         <source>internet</source>
-        <translation>intrernet</translation>
+        <translation>internet</translation>
     </message>
     <message>
         <location filename="../src/branding/kaos_branding/show.qml" line="91"/>
@@ -4747,13 +4747,13 @@ Asennus voi jatkua, mutta jotkin toiminnot saattavat olla pois käytöstä.&lt;/
         <location filename="../src/modules/welcomeq/welcomeq.qml" line="35"/>
         <source>&lt;h3&gt;Welcome to the %1 &lt;quote&gt;%2&lt;/quote&gt; installer&lt;/h3&gt;
             &lt;p&gt;This program will ask you some questions and set up %1 on your computer.&lt;/p&gt;</source>
-        <translation>&lt;h3&gt;Tervetuloa %1 &lt;quote&gt;%2&lt;/quote&gt; -asentajaan&lt;/h3&gt;
-            &lt;p&gt;Tämä ohjelma esittää sinulle joitain kysymyksiä liittyen järjestelmään %1 ja asentaa sen tietokoneellesi.&lt;/p&gt;</translation>
+        <translation>&lt;h3&gt;Tervetuloa %1 &lt;quote&gt;%2&lt;/quote&gt; asennusohjelmaan&lt;/h3&gt;
+            &lt;p&gt;Asennusohjelma esittää sinulle joitain kysymyksiä liittyen %1 ja asentaa sen tietokoneelle.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../src/modules/welcomeq/welcomeq.qml" line="126"/>
         <source>Current Language:&amp;nbsp;</source>
-        <translation>Nykyinen kieli:&amp;nbsp;</translation>
+        <translation>Nyt kielenä:&amp;nbsp;</translation>
     </message>
     <message>
         <location filename="../src/modules/welcomeq/welcomeq.qml" line="154"/>

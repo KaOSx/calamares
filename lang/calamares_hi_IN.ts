@@ -109,13 +109,13 @@
         <location filename="../src/modules/partition/core/BootLoaderModel.cpp" line="93"/>
         <source>Boot Partition</source>
         <comment>@info</comment>
-        <translation type="unfinished"/>
+        <translation>बूट विभाजन</translation>
     </message>
     <message>
         <location filename="../src/modules/partition/core/BootLoaderModel.cpp" line="100"/>
         <source>System Partition</source>
         <comment>@info</comment>
-        <translation type="unfinished"/>
+        <translation>सिस्टम विभाजन</translation>
     </message>
     <message>
         <location filename="../src/modules/partition/core/BootLoaderModel.cpp" line="131"/>
@@ -386,7 +386,7 @@
         <location filename="../src/libcalamaresui/viewpages/QmlViewStep.cpp" line="73"/>
         <source>Loading…</source>
         <comment>@status</comment>
-        <translation type="unfinished"/>
+        <translation>लोड हो रहा है ...</translation>
     </message>
     <message>
         <location filename="../src/libcalamaresui/viewpages/QmlViewStep.cpp" line="100"/>
