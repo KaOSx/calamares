@@ -1,6 +1,6 @@
 /* === This file is part of Calamares - <https://calamares.io> ===
  *
- *   SPDX-FileCopyrightText: 2020 - 2023 Anke Boersma <demm@kaosx.us>
+ *   SPDX-FileCopyrightText: 2020 - 2024 Anke Boersma <demm@kaosx.us>
  *   SPDX-FileCopyrightText: 2020 Adriaan de Groot <groot@kde.org>
  *   SPDX-License-Identifier: GPL-3.0-or-later
  *
@@ -29,15 +29,18 @@ Rectangle {
         horizontalAlignment: TextEdit.AlignHCenter
         width: parent.width
         font.pointSize: 11
-        textFormat: Text.RichText
+        textFormat: Text.MarkdownText
         antialiasing: true
         activeFocusOnPress: false
         wrapMode: Text.WordWrap
 
-        property var requirementsText: qsTr("<p>This computer does not satisfy the minimum requirements for installing %1.<br/>
-        Installation cannot continue.</p>").arg(Branding.string(Branding.VersionedName))
-        property var recommendationsText: qsTr("<p>This computer does not satisfy some of the recommended requirements for setting up %1.<br/>
-        Setup can continue, but some features might be disabled.</p>").arg(Branding.string(Branding.VersionedName))
+        property var requirementsText: qsTr("This computer does not satisfy the minimum requirements for installing %1.
+
+Installation cannot continue.").arg(Branding.string(Branding.VersionedName))
+
+        property var recommendationsText: qsTr("This computer does not satisfy some of the recommended requirements for setting up %1.
+
+Setup can continue, but some features might be disabled.</p>").arg(Branding.string(Branding.VersionedName))
 
         text: config.requirementsModel.satisfiedMandatory ? recommendationsText : requirementsText
     }
