@@ -70,6 +70,8 @@ def run():
             for line in text:
                 if re.match('Session=plasma.desktop', line):
                     line = 'Session=plasmax11.desktop'
+                elif re.match('DisplayServer=wayland', line):
+                    line = 'DisplayServer=x11'
                 sddm_conf.write(line)
 
     elif os.path.exists('/var/log/nvidia-prime'):
@@ -99,6 +101,8 @@ def run():
             for line in text:
                 if re.match('Session=plasma.desktop', line):
                     line = 'Session=plasmax11.desktop'
+                elif re.match('DisplayServer=wayland', line):
+                    line = 'DisplayServer=x11'
                 sddm_conf.write(line)
 
     elif os.path.exists('/var/log/nvidia-390xx'):
@@ -125,6 +129,8 @@ def run():
             for line in text:
                 if re.match('Session=plasma.desktop', line):
                     line = 'Session=plasmax11.desktop'
+                elif re.match('DisplayServer=wayland', line):
+                    line = 'DisplayServer=x11'
                 sddm_conf.write(line)
 
     elif os.path.exists('/var/log/nvidia-470xx'):
@@ -151,6 +157,8 @@ def run():
             for line in text:
                 if re.match('Session=plasma.desktop', line):
                     line = 'Session=plasmax11.desktop'
+                elif re.match('DisplayServer=wayland', line):
+                    line = 'DisplayServer=x11'
                 sddm_conf.write(line)
 
     print('done setting up hardware')
