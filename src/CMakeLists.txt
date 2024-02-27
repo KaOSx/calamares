@@ -14,7 +14,7 @@ include(CalamaresAddTranslations)
 add_subdirectory(libcalamares)
 add_subdirectory(libcalamaresui)
 
-add_subdirectory(qml)
+add_subdirectory(qml/calamares)
 
 # application
 add_subdirectory(calamares)
