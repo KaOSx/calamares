@@ -7,14 +7,79 @@ contributors are listed. Note that Calamares does not have a historical
 changelog -- this log starts with version 3.3.0. See CHANGES-3.2 for
 the history of the 3.2 series (2018-05 - 2022-08).
 
-# 3.3.2 (unreleased)
+# 3.3.4 (2024-02-27)
+
+In this release, process jobmodules -- a particular kind of module
+recognizable by `type: job` and `interface: process` in the descriptor
+file -- undergo a large change to resemble *shellprocess* more.
+
+Users of process jobmodules are encouraged to double-check the Functionality
+of those modules in this release.
 
 This release contains contributions from (alphabetically by first name):
- - nobody, yet!
+ - Adriaan de Groot
+ - Victor Fuentes
 
 ## Core ##
+ - Process jobs (a job type provided by Calamares core) now share more
+   code with *contextualprocess* and *shellprocess* jobs. The execution
+   mechanism is the same, and always invokes the shell, whether the command
+   runs in the host or in the target system. It is no longer necessary to
+   add `/bin/sh` in the *command* key -- this is always present.
 
 ## Modules ##
+ - *contextualprocess* and *shellprocess* can now set environment variables
+   as part of the configuration. See *shellprocess* documentation for details.
+   This is optional, and does not do anything that could not already be done
+   by putting `export VAR=value ;` in front of the command before.
+ - *partition* fixed a bug with an uninitialized variable. (thanks Victor)
+ - *shellprocess* (and therefore also *contextualprocess* and process
+   jobmodules) now substitutes `${LANG}` in commands with the language
+   selected in the user-interface of Calamares.
+
+
+# 3.3.3 (2024-02-24)
+
+This release contains contributions from (alphabetically by first name):
+ - Adriaan de Groot
+ - Anke Boersma
+
+Translations have been updated (3.3.2 skipped that step).
+
+## Core ##
+ - Core libraries *libcalamares* and *libcalamaresui* now build with
+   hidden visibility by default, as a step towards ABI stability.
+ - A runtime crash caused by (mis?)use of Qt UniqueConnection which
+   shows up in Debug builds was resolved.
+
+## Modules ##
+ - *interactiveterminal* can use konsole in Qt6 too. (thanks Anke)
+ - *plasmalnf* module ported to Plasma 6. (thanks Anke)
+ - *welcomeq* example extended to include Markdown syntax. (thanks Anke)
+
+
+# 3.3.2 (2024-02-19)
+
+This release contains contributions from (alphabetically by first name):
+ - Aaron Rainbolt
+ - Adriaan de Groot
+ - Anke Boersma
+ - Evan James
+ - Jonathan Riddell
+ - Lukas Märdian
+ - Tj
+
+## Core ##
+ - Slideshow support code (QML) now ported to Qt6 and made available
+   as two separate directories of support-code. (thanks Jon)
+ - Compatibility with Qt versions prior to 5.15.5 has been removed.
+
+## Modules ##
+ - *fstab* bug fixed where BTRFS messes up the partition layout. (thanks Tj)
+ - *networkcfg* on NetPlan-enabled systems, configure NetworkManager
+   with the live-system's NetPlan settings. (thanks Lukas)
+ - *partition* module can now also define unencrypted partitions
+   when encryption is used. (thanks Aaron)
 
 
 # 3.3.1 (2024-01-15)

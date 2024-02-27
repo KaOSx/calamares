@@ -47,7 +47,7 @@
 
 cmake_minimum_required(VERSION 3.16 FATAL_ERROR)
 
-set(CALAMARES_VERSION 3.3.2)
+set(CALAMARES_VERSION 3.3.4)
 set(CALAMARES_RELEASE_MODE ON) # Set to ON during a release
 
 if(CMAKE_SCRIPT_MODE_FILE)
@@ -82,7 +82,7 @@ option(INSTALL_COMPLETION "Install shell completions" OFF)
 option(INSTALL_CONFIG "Install configuration files" OFF)
 # When adding WITH_* that affects the ABI offered by libcalamares,
 # also update libcalamares/CalamaresConfig.h.in
-option(WITH_PYBIND11 "Use bundled pybind11 instead o Boost::Python" ON)
+option(WITH_PYBIND11 "Use bundled pybind11 instead of Boost::Python" ON)
 option(WITH_PYTHON "Enable Python modules API." ON)
 option(WITH_QML "Enable QML UI options." ON)
 option(WITH_QT6 "Use Qt6 instead of Qt5" OFF)
@@ -451,9 +451,11 @@ if(NOT Python_Development_FOUND)
     message(STATUS "Disabling Python modules")
     set(WITH_PYTHON OFF)
     set(WITH_PYBIND11 OFF)
+    set(WITH_BOOST_PYTHON OFF)
 endif()
 
 if(WITH_PYTHON AND NOT WITH_PYBIND11)
+    set(WITH_BOOST_PYTHON ON)
     find_package(boost_python)
     if(NOT TARGET Boost::python)
         find_package(Boost ${BOOSTPYTHON_VERSION} COMPONENTS python)
@@ -466,12 +468,16 @@ if(WITH_PYTHON AND NOT WITH_PYBIND11)
         set(Boost_FOUND ON)
     endif()
 endif()
+add_feature_info(python WITH_PYTHON "Enable Python-modules")
+add_feature_info(python-pybind11 WITH_PYBIND11 "Python-modules through pybind11")
+add_feature_info(python-boost WITH_BOOST_PYTHON "Python-modules through Boost::Python")
 
 # Now we know the state of the ABI-options, copy them into "Calamares_"
 # prefixed variables, to match how the variables would-be-named
 # when building out-of-tree.
-set(Calamares_WITH_PYBIND11 ${WITH_PYBIND11})
 set(Calamares_WITH_PYTHON ${WITH_PYTHON})
+set(Calamares_WITH_PYBIND11 ${WITH_PYBIND11})
+set(Calamares_WITH_BOOST_PYTHON ${WITH_BOOST_PYTHON})
 set(Calamares_WITH_QML ${WITH_QML})
 set(Calamares_WITH_QT6 ${WITH_QT6})
 
@@ -503,6 +509,10 @@ if(tx_errors)
 endif()
 
 set(CALAMARES_TRANSLATION_LANGUAGES en ${_tx_complete} ${_tx_good} ${_tx_ok})
+if(NOT CALAMARES_RELEASE_MODE)
+    # Outside of release mode, enable all the languages
+    list(APPEND CALAMARES_TRANSLATION_LANGUAGES ${_tx_incomplete})
+endif()
 list(SORT CALAMARES_TRANSLATION_LANGUAGES)
 list(REMOVE_DUPLICATES CALAMARES_TRANSLATION_LANGUAGES)
 
@@ -707,6 +717,7 @@ endif()
 get_directory_property(SKIPPED_MODULES DIRECTORY src/modules DEFINITION LIST_SKIPPED_MODULES)
 calamares_explain_skipped_modules( ${SKIPPED_MODULES} )
 
+feature_summary(WHAT ENABLED_FEATURES DESCRIPTION "The following features are enabled" QUIET_ON_EMPTY)
 feature_summary(WHAT DISABLED_FEATURES DESCRIPTION "The following features have been disabled:" QUIET_ON_EMPTY)
 feature_summary(
     WHAT OPTIONAL_PACKAGES_NOT_FOUND

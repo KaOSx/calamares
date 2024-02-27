@@ -549,9 +549,9 @@ ChoicePage::applyActionChoice( InstallChoice choice )
                 this );
         }
         connect( m_beforePartitionBarsView->selectionModel(),
-                 SIGNAL( currentRowChanged( QModelIndex, QModelIndex ) ),
+                 &QItemSelectionModel::currentRowChanged,
                  this,
-                 SLOT( onPartitionToReplaceSelected( QModelIndex, QModelIndex ) ),
+                 &ChoicePage::onPartitionToReplaceSelected,
                  Qt::UniqueConnection );
 
         // Maintain the selection for replace
@@ -582,9 +582,9 @@ ChoicePage::applyActionChoice( InstallChoice choice )
         }
 
         connect( m_beforePartitionBarsView->selectionModel(),
-                 SIGNAL( currentRowChanged( QModelIndex, QModelIndex ) ),
+                 &QItemSelectionModel::currentRowChanged,
                  this,
-                 SLOT( doAlongsideSetupSplitter( QModelIndex, QModelIndex ) ),
+                 &ChoicePage::doAlongsideSetupSplitter,
                  Qt::UniqueConnection );
         break;
     case InstallChoice::NoChoice:
@@ -1057,8 +1057,7 @@ ChoicePage::updateActionChoicePreview( InstallChoice choice )
                      Q_UNUSED( path )
                      sizeLabel->setText(
                          tr( "%1 will be shrunk to %2MiB and a new "
-                             "%3MiB partition will be created for %4.",
-                             "@info, %1 is partition name, %4 is product name" )
+                             "%3MiB partition will be created for %4.", "@info, %1 is partition name, %4 is product name" )
                              .arg( m_beforePartitionBarsView->selectionModel()->currentIndex().data().toString() )
                              .arg( Calamares::BytesToMiB( size ) )
                              .arg( Calamares::BytesToMiB( sizeNext ) )
@@ -1189,16 +1188,14 @@ ChoicePage::setupEfiSystemPartitionSelector()
     {
         m_efiLabel->setText( tr( "An EFI system partition cannot be found anywhere "
                                  "on this system. Please go back and use manual "
-                                 "partitioning to set up %1.",
-                                 "@info, %1 is product name" )
+                                 "partitioning to set up %1.", "@info, %1 is product name" )
                                  .arg( Calamares::Branding::instance()->shortProductName() ) );
         updateNextEnabled();
     }
     else if ( efiSystemPartitions.count() == 1 )  //probably most usual situation
     {
         m_efiLabel->setText( tr( "The EFI system partition at %1 will be used for "
-                                 "starting %2.",
-                                 "@info, %1 is partition path, %2 is product name" )
+                                 "starting %2.", "@info, %1 is partition path, %2 is product name" )
                                  .arg( efiSystemPartitions.first()->partitionPath() )
                                  .arg( Calamares::Branding::instance()->shortProductName() ) );
     }
@@ -1508,8 +1505,7 @@ ChoicePage::setupActions()
     {
         if ( atLeastOneIsMounted )
         {
-            m_messageLabel->setText(
-                tr( "This storage device has one of its partitions <strong>mounted</strong>.", "@info" ) );
+            m_messageLabel->setText( tr( "This storage device has one of its partitions <strong>mounted</strong>.", "@info" ) );
         }
         else
         {
