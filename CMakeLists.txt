@@ -47,7 +47,7 @@
 
 cmake_minimum_required(VERSION 3.16 FATAL_ERROR)
 
-set(CALAMARES_VERSION 3.3.4)
+set(CALAMARES_VERSION 3.3.5)
 set(CALAMARES_RELEASE_MODE ON) # Set to ON during a release
 
 if(CMAKE_SCRIPT_MODE_FILE)
