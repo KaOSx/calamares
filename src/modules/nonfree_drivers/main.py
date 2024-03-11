@@ -68,8 +68,8 @@ def run():
             text = sddm_conf.readlines()
         with open(sddm_conf_path, 'w') as sddm_conf:
             for line in text:
-                if re.match('Session=plasma.desktop', line):
-                    line = 'Session=plasmax11.desktop'
+                if re.match('Session=plasma', line):
+                    line = 'Session=plasmax11'
                 elif re.match('DisplayServer=wayland', line):
                     line = 'DisplayServer=x11'
                 sddm_conf.write(line)
@@ -99,8 +99,8 @@ def run():
             text = sddm_conf.readlines()
         with open(sddm_conf_path, 'w') as sddm_conf:
             for line in text:
-                if re.match('Session=plasma.desktop', line):
-                    line = 'Session=plasmax11.desktop'
+                if re.match('Session=plasma', line):
+                    line = 'Session=plasmax11'
                 elif re.match('DisplayServer=wayland', line):
                     line = 'DisplayServer=x11'
                 sddm_conf.write(line)
@@ -127,8 +127,8 @@ def run():
             text = sddm_conf.readlines()
         with open(sddm_conf_path, 'w') as sddm_conf:
             for line in text:
-                if re.match('Session=plasma.desktop', line):
-                    line = 'Session=plasmax11.desktop'
+                if re.match('Session=plasma', line):
+                    line = 'Session=plasmax11'
                 elif re.match('DisplayServer=wayland', line):
                     line = 'DisplayServer=x11'
                 sddm_conf.write(line)
@@ -155,8 +155,8 @@ def run():
             text = sddm_conf.readlines()
         with open(sddm_conf_path, 'w') as sddm_conf:
             for line in text:
-                if re.match('Session=plasma.desktop', line):
-                    line = 'Session=plasmax11.desktop'
+                if re.match('Session=plasma', line):
+                    line = 'Session=plasmax11'
                 elif re.match('DisplayServer=wayland', line):
                     line = 'DisplayServer=x11'
                 sddm_conf.write(line)
