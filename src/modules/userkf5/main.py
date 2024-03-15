@@ -37,7 +37,6 @@ def run():
         '.config',
         '.local/share/applications/',
         '.local/share/konqueror',
-        '.local/share/konsole',
         '.config/autostart',
         '.config/plasma-workspace/env',
         '.config/Kvantum'
@@ -67,8 +66,7 @@ def run():
         ('plasmarc', '.config/'),
         ('plasmashellrc', '.config/'),
         ('startupconfig', '.config/'),
-        ('startupconfigkeys', '.config/'),
-        ('Shell.profile', '.local/share/konsole/')
+        ('startupconfigkeys', '.config/')
     ]
 
     for f,  d in distro_settings:
