@@ -71,7 +71,7 @@ Column {
         }
 
         // Needs to move to localeq.conf, each distribution will need their own account
-        xhr.open("GET", "http://api.geonames.org/timezoneJSON?lat=" + latC + "&lng=" + lonC + "&username=demm")
+        xhr.open("GET", "https://api.geonames.org/timezoneJSON?lat=" + latC + "&lng=" + lonC + "&username=demm")
         xhr.send()
     }
 
@@ -81,7 +81,8 @@ Column {
 
         Plugin {
             id: mapPlugin
-            preferred: ["osm", "esri"] // "esri", "here", "itemsoverlay", "mapbox", "mapboxgl",  "osm"
+            //preferred: ["osm", "esri"] // "esri", "here", "itemsoverlay", "mapbox", "mapboxgl",  "osm"
+            name: "osm"
         }
 
         Map {
@@ -98,7 +99,7 @@ Column {
 
             GeocodeModel {
                 id: geocodeModel
-                plugin:  Plugin { name: "osm" }
+                plugin:  mapPlugin // { name: "osm" }
                 autoUpdate: true
                 query: Address {
                     id: address
@@ -153,6 +154,30 @@ Column {
 
                     console.log(coordinate.latitude, coordinate.longitude)
                 }
+            }
+
+            WheelHandler {
+            id: wheel
+            acceptedDevices: Qt.platform.pluginName === "cocoa" || Qt.platform.pluginName === "wayland"
+                             ? PointerDevice.Mouse | PointerDevice.TouchPad
+                             : PointerDevice.Mouse
+            rotationScale: 1/120
+            property: "zoomLevel"
+            }
+            DragHandler {
+                id: drag
+                target: null
+                onTranslationChanged: (delta) => map.pan(-delta.x, -delta.y)
+            }
+            Shortcut {
+                enabled: map.zoomLevel < map.maximumZoomLevel
+                sequence: StandardKey.ZoomIn
+                onActivated: map.zoomLevel = Math.round(map.zoomLevel + 1)
+            }
+            Shortcut {
+                enabled: map.zoomLevel > map.minimumZoomLevel
+                sequence: StandardKey.ZoomOut
+                onActivated: map.zoomLevel = Math.round(map.zoomLevel - 1)
             }
         }
 
