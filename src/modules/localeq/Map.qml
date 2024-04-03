@@ -1,14 +1,14 @@
 /* === This file is part of Calamares - <https://github.com/calamares> ===
  *
- *   Copyright 2020 - 2023, Anke Boersma <demm@kaosx.us>
+ *   Copyright 2020 - 2024, Anke Boersma <demm@kaosx.us>
  *
  *   Calamares is Free Software: see the License-Identifier above.
  *
  */
 
-import QtQuick 2.10
-import QtQuick.Controls 2.10
-import QtQuick.Window 2.14
+import QtQuick
+import QtQuick.Controls
+import QtQuick.Window
 import QtQuick.Layouts
 
 import org.kde.kirigami as Kirigami
@@ -71,7 +71,7 @@ Column {
         }
 
         // Needs to move to localeq.conf, each distribution will need their own account
-        xhr.open("GET", "https://api.geonames.org/timezoneJSON?lat=" + latC + "&lng=" + lonC + "&username=demm")
+        xhr.open("GET", "http://api.geonames.org/timezoneJSON?lat=" + latC + "&lng=" + lonC + "&username=demm")
         xhr.send()
     }
 
@@ -89,12 +89,12 @@ Column {
             id: map
             anchors.fill: parent
             plugin: mapPlugin
-            activeMapType: supportedMapTypes[0]
+            activeMapType: supportedMapTypes[5]
             //might be desirable to set zoom level configurable?
-            zoomLevel: 7
+            zoomLevel: 8
             bearing: 0
             tilt: 0
-            copyrightsVisible : true
+            copyrightsVisible : false
             fieldOfView : 0
 
             GeocodeModel {
@@ -187,10 +187,10 @@ Column {
             anchors.bottomMargin: 5
             anchors.rightMargin: 10
 
-            MouseArea {
-                width: 32
-                height:32
-                cursorShape: Qt.PointingHandCursor
+            Button {
+                width: 40
+                height:40
+                //cursorShape: Qt.PointingHandCursor
                 Image {
                     source: "img/plus.png"
                     anchors.centerIn: parent
@@ -201,10 +201,10 @@ Column {
                 onClicked: map.zoomLevel++
             }
 
-            MouseArea {
-                width: 32
-                height:32
-                cursorShape: Qt.PointingHandCursor
+            Button {
+                width: 40
+                height:40
+                //cursorShape: Qt.PointingHandCursor
                 Image {
                     source: "img/minus.png"
                     anchors.centerIn: parent
