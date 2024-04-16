@@ -162,6 +162,16 @@ UsersPage::UsersPage( Config* config, QWidget* parent )
             config, &Config::requireStrongPasswordsChanged, ui->checkBoxRequireStrongPassword, &QCheckBox::setChecked );
     }
 
+    // Active Directory is not checked or enabled by default
+    ui->useADCheckbox->setVisible( m_config->getActiveDirectoryEnabled() );
+    onActiveDirectoryToggled( false );
+
+    connect( ui->useADCheckbox, &QCheckBox::toggled, this, &UsersPage::onActiveDirectoryToggled );
+    connect( ui->domainField, &QLineEdit::textChanged, config, &Config::setActiveDirectoryDomain );
+    connect( ui->domainAdminField, &QLineEdit::textChanged, config, &Config::setActiveDirectoryAdminUsername );
+    connect( ui->domainPasswordField, &QLineEdit::textChanged, config, &Config::setActiveDirectoryAdminPassword );
+    connect( ui->ipAddressField, &QLineEdit::textChanged, config, &Config::setActiveDirectoryIP );
+
     CALAMARES_RETRANSLATE_SLOT( &UsersPage::retranslate );
 
     onReuseUserPasswordChanged( m_config->reuseUserPasswordForRoot() );
@@ -282,4 +292,19 @@ UsersPage::onReuseUserPasswordChanged( const int checked )
     ui->labelRootPasswordError->setVisible( visible );
     ui->textBoxRootPassword->setVisible( visible );
     ui->textBoxVerifiedRootPassword->setVisible( visible );
+}
+
+void
+UsersPage::onActiveDirectoryToggled( bool checked )
+{
+    ui->domainLabel->setVisible( checked );
+    ui->domainField->setVisible( checked );
+    ui->domainAdminLabel->setVisible( checked );
+    ui->domainAdminField->setVisible( checked );
+    ui->domainPasswordField->setVisible( checked );
+    ui->domainPasswordLabel->setVisible( checked );
+    ui->ipAddressField->setVisible( checked );
+    ui->ipAddressLabel->setVisible( checked );
+
+    m_config->setActiveDirectoryUsed( checked );
 }

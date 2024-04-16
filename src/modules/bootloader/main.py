@@ -125,22 +125,27 @@ def is_zfs_root(partition):
     return partition["mountPoint"] == "/" and partition["fs"] == "zfs"
 
 
+def have_program_in_target(program : str):
+    """Returns @c True if @p program is in path in the target"""
+    return libcalamares.utils.target_env_call(["/usr/bin/which", program]) == 0
+
+
 def get_kernel_params(uuid):
+    # Configured kernel parameters (default "quiet"), if plymouth installed, add splash
+    # screen parameter and then "rw".
     kernel_params = libcalamares.job.configuration.get("kernelParams", ["quiet"])
+    if have_program_in_target("plymouth"):
+        kernel_params.append("splash")
     kernel_params.append("rw")
 
+    use_systemd_naming = have_program_in_target("dracut") or (libcalamares.utils.target_env_call(["/usr/bin/grep", "-q", "^HOOKS.*systemd", "/etc/mkinitcpio.conf"]) == 0)
+
     partitions = libcalamares.globalstorage.value("partitions")
+
+    cryptdevice_params = []
     swap_uuid = ""
     swap_outer_mappername = None
     swap_outer_uuid = None
-
-    cryptdevice_params = []
-
-    has_dracut = libcalamares.utils.target_env_call(["sh", "-c", "which dracut"]) == 0
-    uses_systemd_hook = libcalamares.utils.target_env_call(["sh", "-c",
-                                                            "grep -q \"^HOOKS.*systemd\" /etc/mkinitcpio.conf"]) == 0
-    use_systemd_naming = has_dracut or uses_systemd_hook
-
 
     # Take over swap settings:
     #  - unencrypted swap partition sets swap_uuid

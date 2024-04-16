@@ -226,6 +226,10 @@ public:
     bool permitWeakPasswords() const { return m_permitWeakPasswords; }
     /// Current setting for "require strong password"?
     bool requireStrongPasswords() const { return m_requireStrongPasswords; }
+    /// Is Active Directory enabled in the config file?
+    bool getActiveDirectoryEnabled() const;
+    /// Is it both enabled and activated by user choice (checkbox)?
+    bool getActiveDirectoryUsed() const;
 
     const QList< GroupDescription >& defaultGroups() const { return m_defaultGroups; }
     /** @brief the names of all the groups for the current user
@@ -292,6 +296,12 @@ public Q_SLOTS:
     void setRootPassword( const QString& );
     void setRootPasswordSecondary( const QString& );
 
+    void setActiveDirectoryUsed( bool used );
+    void setActiveDirectoryAdminUsername( const QString& );
+    void setActiveDirectoryAdminPassword( const QString& );
+    void setActiveDirectoryDomain( const QString& );
+    void setActiveDirectoryIP( const QString& );
+
 signals:
     void userShellChanged( const QString& );
     void autoLoginGroupChanged( const QString& );
@@ -342,6 +352,13 @@ private:
     bool m_customHostName = false;
 
     bool m_isReady = false;  ///< Used to reduce readyChanged signals
+
+    bool m_activeDirectory = false;
+    bool m_activeDirectoryUsed = false;
+    QString m_activeDirectoryAdminUsername;
+    QString m_activeDirectoryAdminPassword;
+    QString m_activeDirectoryDomain;
+    QString m_activeDirectoryIP;
 
     HostNameAction m_hostnameAction = HostNameAction::EtcHostname;
     bool m_writeEtcHosts = false;
