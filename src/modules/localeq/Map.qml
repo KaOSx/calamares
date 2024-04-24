@@ -20,16 +20,18 @@ Column {
     width: parent.width
 
     //Needs to come from .conf/geoip
-    property var configCity: "New York"
+    /*property var configCity: "New York"
     property var configCountry: "USA"
     property var configTimezone: "America/New York"
     property var geoipCity: "" //"Amsterdam"
     property var geoipCountry: "" //"Netherlands"
-    property var geoipTimezone: "" //"Europe/Amsterdam"
+    property var geoipTimezone: "" //"Europe/Amsterdam"*/
     // vars that will stay once connected
-    property var cityName: (geoipCity != "") ? geoipCity : configCity
+    /*property var cityName: (geoipCity != "") ? geoipCity : configCity
     property var countryName: (geoipCountry != "") ? geoipCountry : configCountry
-    property var timeZone: (geoipTimezone != "") ? geoipTimezone : configTimezone
+    property var timeZone: (geoipTimezone != "") ? geoipTimezone : configTimezone*/
+    property var cityName: ""
+    property var countryName: ""
 
     function getIp() {
         var xhr = new XMLHttpRequest
@@ -53,6 +55,11 @@ Column {
         xhr.open("GET", "https://get.geojs.io/v1/ip/geo.json")
         // Execute the request
         xhr.send()
+    }
+
+    function getIpOffline() {
+        cityName = config.currentLocation.zone
+        countryName = config.currentLocation.countryCode
     }
 
     function getTz() {
@@ -91,7 +98,7 @@ Column {
             plugin: mapPlugin
             activeMapType: supportedMapTypes[5]
             //might be desirable to set zoom level configurable?
-            zoomLevel: 8
+            zoomLevel: 6
             bearing: 0
             tilt: 0
             copyrightsVisible : false
@@ -101,11 +108,12 @@ Column {
                 id: geocodeModel
                 plugin:  mapPlugin // { name: "osm" }
                 autoUpdate: true
-                query: Address {
+                /*query: Address {
                     id: address
                     city: cityName
                     country: countryName
-                }
+                }*/
+                query: cityName, countryName
 
                 onLocationsChanged: {
                     if (count ) {
@@ -242,7 +250,7 @@ Column {
                     anchors.centerIn: parent
                 }
 
-                Component.onCompleted: getIp();
+                //Component.onCompleted: getIp();
             }
         }
 

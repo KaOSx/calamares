@@ -37,6 +37,8 @@ Copyright 2014-2017 Teo Mrnjavac, teo@kde.org
 
 Copyright 2017-2022 Adriaan de Groot, groot@kde.org
 
+Copyright 2014-2024 Anke Boersma, demm@kaosx.us
+
 Thanks to [the Calamares team](href='https://calamares.io/team/)
 
 and the [KaOS translators team](href='https://www.transifex.com/kaos/kaos/)." )
