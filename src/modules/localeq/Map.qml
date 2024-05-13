@@ -96,7 +96,7 @@ Column {
             id: map
             anchors.fill: parent
             plugin: mapPlugin
-            activeMapType: supportedMapTypes[5]
+            activeMapType: supportedMapTypes[0]
             //might be desirable to set zoom level configurable?
             zoomLevel: 6
             bearing: 0
@@ -244,8 +244,8 @@ Column {
 
                 Text {
                     id: tzText
-                    text: tzText.text
-                    //text: qsTr("Timezone: %1").arg(config.currentTimezoneName)
+                    //text: tzText.text
+                    text: qsTr("Timezone: %1").arg(config.currentTimezoneName)
                     color: Kirigami.Theme.textColor
                     anchors.centerIn: parent
                 }

@@ -54,13 +54,13 @@ Page {
         getInt();
     }
 
-    /*function onActivate() {
+    function onActivate() {
         /* If you want the map to follow Calamares's GeoIP
          * lookup or configuration, call the update function
-         * here, and disable the one at onCompleted in Map.qml.
+         * here, and disable the one at onCompleted in Map.qml.*/
 
         if (Network.hasInternet) { image.item.getIpOffline() }
-    }*/
+    }
 
     Loader {
         id: image
