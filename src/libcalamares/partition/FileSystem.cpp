@@ -41,7 +41,6 @@ prettyNameForFileSystemType( FileSystem::Type t )
     case FileSystem::Fat32:
     case FileSystem::Ntfs:
     case FileSystem::Xfs:
-    case FileSystem::Bcachefs:
     case FileSystem::Jfs:
     case FileSystem::Hfs:
     case FileSystem::Ufs:
