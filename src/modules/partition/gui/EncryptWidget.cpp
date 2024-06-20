@@ -70,6 +70,18 @@ EncryptWidget::EncryptWidget( QWidget* parent )
     CALAMARES_RETRANSLATE_SLOT( &EncryptWidget::retranslate );
 }
 
+bool
+EncryptWidget::isEncryptionCheckboxChecked()
+{
+    return m_ui->m_encryptCheckBox->isChecked();
+}
+
+void
+EncryptWidget::setEncryptionCheckbox( bool preCheckEncrypt )
+{
+    m_ui->m_encryptCheckBox->setChecked( preCheckEncrypt );
+}
+
 void
 EncryptWidget::reset( bool checkVisible )
 {
@@ -155,7 +167,8 @@ EncryptWidget::updateState( const bool notify )
         else if ( m_filesystem == FileSystem::Zfs && p1.length() < ZFS_MIN_LENGTH )
         {
             applyPixmap( m_ui->m_iconLabel, Calamares::StatusError );
-            m_ui->m_iconLabel->setToolTip( tr( "Password must be a minimum of %1 characters.", "@tooltip" ).arg( ZFS_MIN_LENGTH ) );
+            m_ui->m_iconLabel->setToolTip(
+                tr( "Password must be a minimum of %1 characters.", "@tooltip" ).arg( ZFS_MIN_LENGTH ) );
         }
         else if ( p1 == p2 )
         {
@@ -169,15 +182,10 @@ EncryptWidget::updateState( const bool notify )
         }
     }
 
-    Encryption newState = state();
-
-    if ( newState != m_state )
+    m_state = state();
+    if ( notify )
     {
-        m_state = newState;
-        if ( notify )
-        {
-            Q_EMIT stateChanged( m_state );
-        }
+        Q_EMIT stateChanged( m_state );
     }
 }
 

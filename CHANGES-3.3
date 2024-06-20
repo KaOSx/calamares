@@ -7,11 +7,47 @@ contributors are listed. Note that Calamares does not have a historical
 changelog -- this log starts with version 3.3.0. See CHANGES-3.2 for
 the history of the 3.2 series (2018-05 - 2022-08).
 
-# 3.3.6 (unreleased)
+# 3.3.7 (2024-06-20)
+
+This release contains contributions from (alphabetically by first name):
+ - Adriaan de Groot
+ - Eugene San
+ - Evan James
+ - Ivan Borzenkov
+ - Sohrab Behdani
+ - Vincent Penvern
+ - Vladislav Nepogodin
+
+## Core ##
+ - Updated clang-formatting
+ - Some C++20 future-proofing (thanks Vladislav)
+ - CommandList (used by *contextualprocess* and *shellprocess*) now supports
+   globalstorage keys as substitutable variables.
+
+## Modules ##
+ - *contextualprocess* see *shellprocess*.
+ - *fstab* module does not add an encryption keyfile if it does
+   not exist. (thanks Eugene)
+ - *initcpiocfg* has some new configuration settings to more carefully
+   adjust hooks for initcpio.
+ - *keyboard* module handles Persian (fa) layout better. (thanks Sohrab)
+ - *keyboard* module handles other non-ascii layout better. (thanks Ivan)
+ - *partition* module did not filter out invalid fstab entries;
+   they were not written, either, so no net change.
+ - *partition* module now has a configurable default check-state
+   for the encryption checkbox. (thanks Vincent)
+ - *shellprocess* commands now support globalstorage variables, which
+   are written as `${gs[key]}`, where `key` is a dotted string that
+   selects the globalstorage key to use (like in *contextualprocess*
+   variable-selectors) and `${gs[` and `]}` are literal characters.
+
+
+# 3.3.6 (2024-04-16)
+
 This release contains contributions from (alphabetically by first name):
  - Adriaan de Groot
  - Anke Boersma
- - Eugene Sam
+ - Eugene San
  - Evan James
  - Harald Sitter
  - Mike Stemle
@@ -19,16 +55,18 @@ This release contains contributions from (alphabetically by first name):
  - Simon Quigley
 
 ## Core ##
-- Various Qt6-related fixes.
+ - Various Qt6-related fixes.
+ - Calamares now prevents sleep and suspend while the installation is
+   running, so that unattended installs do not accidentally fall asleep.
 
 ## Modules ##
-  - *bootloader* Adds "splash" to kernel parameters if plymouth is present.
-    (thanks Eugene)
-  - *locale* Now picks the correct timezone for Dubai, Muscat, Tehran.
-  - *plymouthcfg* Use plymouth-set-default-theme to avoid issues with
-    configuration. (thanks Peter)
-  - *users* module now supports enrolling in Active Directory, if enabled.
-    (thanks Simon)
+ - *bootloader* Adds "splash" to kernel parameters if plymouth is present.
+   (thanks Eugene)
+ - *locale* Now picks the correct timezone for Dubai, Muscat, Tehran.
+ - *plymouthcfg* Use plymouth-set-default-theme to avoid issues with
+   configuration. (thanks Peter)
+ - *users* module now supports enrolling in Active Directory, if enabled.
+   (thanks Simon)
 
 
 # 3.3.5 (2024-03-03)

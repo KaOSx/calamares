@@ -254,30 +254,25 @@ lookForFstabEntries( const QString& partitionPath )
 
         if ( fstabFile.open( QIODevice::ReadOnly | QIODevice::Text ) )
         {
-            const QStringList fstabLines = QString::fromLocal8Bit( fstabFile.readAll() ).split( '\n' );
-
-            for ( const QString& rawLine : fstabLines )
-            {
-                fstabEntries.append( FstabEntry::fromEtcFstab( rawLine ) );
-            }
+            const auto fstabLines = QString::fromLocal8Bit( fstabFile.readAll() ).split( '\n' );
             fstabFile.close();
-            const int lineCount = fstabEntries.count();
-            std::remove_if(
-                fstabEntries.begin(), fstabEntries.end(), []( const FstabEntry& x ) { return !x.isValid(); } );
-            cDebug() << Logger::SubEntry << "got" << fstabEntries.count() << "fstab entries from" << lineCount
+
+            const auto fstabEntries = Calamares::fromEtcFstabContents( fstabLines );
+            cDebug() << Logger::SubEntry << "got" << fstabEntries.count() << "fstab entries from" << fstabLines.count()
                      << "lines in" << fstabFile.fileName();
+            return fstabEntries;
         }
         else
         {
             cWarning() << "Could not read fstab from mounted fs";
+            return {};
         }
     }
     else
     {
         cWarning() << "Could not mount existing fs";
+        return {};
     }
-
-    return fstabEntries;
 }
 
 static QString
@@ -581,12 +576,7 @@ efiFilesystemMinimumSize()
         uefisys_part_sizeB = v > 0 ? v : 0;
     }
     // There is a lower limit of what can be configured
-    if ( uefisys_part_sizeB < efiSpecificationHardMinimumSize )
-    {
-        uefisys_part_sizeB = efiSpecificationHardMinimumSize;
-    }
-    return uefisys_part_sizeB;
-    return efiSpecificationHardMinimumSize;
+    return std::max( uefisys_part_sizeB, efiSpecificationHardMinimumSize );
 }
 
 QString
@@ -646,36 +636,3 @@ canonicalFilesystemName( const QString& fsName, FileSystem::Type* fsType )
 }
 
 }  // namespace PartUtils
-
-/* Implementation of methods for FstabEntry, from OsproberEntry.h */
-
-bool
-FstabEntry::isValid() const
-{
-    return !partitionNode.isEmpty() && !mountPoint.isEmpty() && !fsType.isEmpty();
-}
-
-FstabEntry
-FstabEntry::fromEtcFstab( const QString& rawLine )
-{
-    QString line = rawLine.simplified();
-    if ( line.startsWith( '#' ) )
-    {
-        return FstabEntry { QString(), QString(), QString(), QString(), 0, 0 };
-    }
-
-    QStringList splitLine = line.split( ' ' );
-    if ( splitLine.length() != 6 )
-    {
-        return FstabEntry { QString(), QString(), QString(), QString(), 0, 0 };
-    }
-
-    return FstabEntry {
-        splitLine.at( 0 ),  // path, or UUID, or LABEL, etc.
-        splitLine.at( 1 ),  // mount point
-        splitLine.at( 2 ),  // fs type
-        splitLine.at( 3 ),  // options
-        splitLine.at( 4 ).toInt(),  //dump
-        splitLine.at( 5 ).toInt()  //pass
-    };
-}

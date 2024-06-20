@@ -185,7 +185,6 @@ ChoicePage::init( PartitionCoreModule* core )
     setModelToComboBox( m_drivesCombo, core->deviceModel() );
 
     connect( m_drivesCombo, qOverload< int >( &QComboBox::currentIndexChanged ), this, &ChoicePage::applyDeviceChoice );
-
     connect( m_encryptWidget, &EncryptWidget::stateChanged, this, &ChoicePage::onEncryptWidgetStateChanged );
     connect( m_reuseHomeCheckBox, &QCheckBox::stateChanged, this, &ChoicePage::onHomeCheckBoxStateChanged );
 
@@ -468,6 +467,8 @@ ChoicePage::onActionChanged()
         {
             m_encryptWidget->setFilesystem( FileSystem::typeForName( m_replaceFsTypesChoiceComboBox->currentText() ) );
         }
+
+        m_encryptWidget->setEncryptionCheckbox( m_config->preCheckEncryption() );
     }
 
     Device* currd = selectedDevice();
@@ -679,7 +680,11 @@ ChoicePage::onLeave()
 {
     if ( m_config->installChoice() == InstallChoice::Alongside )
     {
-        doAlongsideApply();
+        if ( m_afterPartitionSplitterWidget->splitPartitionSize() >= 0
+             && m_afterPartitionSplitterWidget->newPartitionSize() >= 0 )
+        {
+            doAlongsideApply();
+        }
     }
 
     if ( m_isEfi
@@ -1057,7 +1062,8 @@ ChoicePage::updateActionChoicePreview( InstallChoice choice )
                      Q_UNUSED( path )
                      sizeLabel->setText(
                          tr( "%1 will be shrunk to %2MiB and a new "
-                             "%3MiB partition will be created for %4.", "@info, %1 is partition name, %4 is product name" )
+                             "%3MiB partition will be created for %4.",
+                             "@info, %1 is partition name, %4 is product name" )
                              .arg( m_beforePartitionBarsView->selectionModel()->currentIndex().data().toString() )
                              .arg( Calamares::BytesToMiB( size ) )
                              .arg( Calamares::BytesToMiB( sizeNext ) )
@@ -1188,14 +1194,16 @@ ChoicePage::setupEfiSystemPartitionSelector()
     {
         m_efiLabel->setText( tr( "An EFI system partition cannot be found anywhere "
                                  "on this system. Please go back and use manual "
-                                 "partitioning to set up %1.", "@info, %1 is product name" )
+                                 "partitioning to set up %1.",
+                                 "@info, %1 is product name" )
                                  .arg( Calamares::Branding::instance()->shortProductName() ) );
         updateNextEnabled();
     }
     else if ( efiSystemPartitions.count() == 1 )  //probably most usual situation
     {
         m_efiLabel->setText( tr( "The EFI system partition at %1 will be used for "
-                                 "starting %2.", "@info, %1 is partition path, %2 is product name" )
+                                 "starting %2.",
+                                 "@info, %1 is partition path, %2 is product name" )
                                  .arg( efiSystemPartitions.first()->partitionPath() )
                                  .arg( Calamares::Branding::instance()->shortProductName() ) );
     }
@@ -1505,7 +1513,8 @@ ChoicePage::setupActions()
     {
         if ( atLeastOneIsMounted )
         {
-            m_messageLabel->setText( tr( "This storage device has one of its partitions <strong>mounted</strong>.", "@info" ) );
+            m_messageLabel->setText(
+                tr( "This storage device has one of its partitions <strong>mounted</strong>.", "@info" ) );
         }
         else
         {
@@ -1575,7 +1584,10 @@ ChoicePage::calculateNextEnabled() const
         }
     }
 
-    if ( m_config->installChoice() != InstallChoice::Manual && m_encryptWidget->isVisible() )
+    // You can have an invisible encryption checkbox, which is
+    // still checked -- then do the encryption.
+    if ( m_config->installChoice() != InstallChoice::Manual
+         && ( m_encryptWidget->isVisible() || m_encryptWidget->isEncryptionCheckboxChecked() ) )
     {
         switch ( m_encryptWidget->state() )
         {

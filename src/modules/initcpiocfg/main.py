@@ -97,7 +97,7 @@ def get_host_initcpio():
     the lines from that file, or an empty list if it does
     not exist.
     """
-    hostfile = "/etc/mkinitcpio.conf"
+    hostfile = libcalamares.job.configuration.get("source", None) or "/etc/mkinitcpio.conf"
     try:
         with open(hostfile, "r") as mkinitcpio_file:
             mklins = [x.strip() for x in mkinitcpio_file.readlines()]
@@ -167,6 +167,13 @@ def find_initcpio_features(partitions, root_mount_point):
         hooks.insert(0, "base")
         hooks.append("keymap")
         hooks.append("consolefont")
+
+    hooks_map = libcalamares.job.configuration.get("hooks", None)
+    if not hooks_map:
+        hooks_map = dict()
+    hooks_prepend = hooks_map.get("prepend", None) or []
+    hooks_append = hooks_map.get("append", None) or []
+    hooks_remove = hooks_map.get("remove", None) or []
 
     modules = []
     files = []
@@ -239,6 +246,9 @@ def find_initcpio_features(partitions, root_mount_point):
         modules.append("crc32c-intel" if cpuinfo().is_intel else "crc32c")
     else:
         hooks.append("fsck")
+
+    # Modify according to the keys in the configuration
+    hooks = [h for h in (hooks_prepend + hooks + hooks_append) if h not in hooks_remove]
 
     return hooks, modules, files, binaries
 
