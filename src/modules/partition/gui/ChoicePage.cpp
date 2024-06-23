@@ -467,8 +467,6 @@ ChoicePage::onActionChanged()
         {
             m_encryptWidget->setFilesystem( FileSystem::typeForName( m_replaceFsTypesChoiceComboBox->currentText() ) );
         }
-
-        m_encryptWidget->setEncryptionCheckbox( m_config->preCheckEncryption() );
     }
 
     Device* currd = selectedDevice();
@@ -1586,8 +1584,7 @@ ChoicePage::calculateNextEnabled() const
 
     // You can have an invisible encryption checkbox, which is
     // still checked -- then do the encryption.
-    if ( m_config->installChoice() != InstallChoice::Manual
-         && ( m_encryptWidget->isVisible() || m_encryptWidget->isEncryptionCheckboxChecked() ) )
+    if ( m_config->installChoice() != InstallChoice::Manual && m_encryptWidget->isVisible() )
     {
         switch ( m_encryptWidget->state() )
         {
