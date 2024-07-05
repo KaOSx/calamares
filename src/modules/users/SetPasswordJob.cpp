@@ -64,6 +64,7 @@ SetPasswordJob::make_salt( int length )
         cWarning() << "Entropy data for salt is low-quality.";
     }
 
+    /* PR 2348 moved to yescrypt $y$, keep $6$ here, since pam/shadow are not set to yescrypt*/
     salt_string.insert( 0, "$6$" );
     salt_string.append( '$' );
     return salt_string;
