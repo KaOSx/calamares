@@ -37,6 +37,7 @@
 #                       - SCHEMA_TESTING (requires Python, see ci/configvalidator.py)
 #                       - TESTING (standard CMake option)
 #   DEBUG_<foo>     : special developer flags for debugging.
+#   PYTHONLIBS_VERSION : if set on the command-line, use a specific Python version
 #
 # Example usage:
 #
@@ -47,8 +48,8 @@
 
 cmake_minimum_required(VERSION 3.16 FATAL_ERROR)
 
-set(CALAMARES_VERSION 3.3.8)
-set(CALAMARES_RELEASE_MODE ON) # Set to ON during a release
+set(CALAMARES_VERSION 3.3.10)
+set(CALAMARES_RELEASE_MODE OFF) # Set to ON during a release
 
 if(CMAKE_SCRIPT_MODE_FILE)
     include(${CMAKE_CURRENT_LIST_DIR}/CMakeModules/ExtendedVersion.cmake)
@@ -100,6 +101,14 @@ option(BUILD_CRASH_REPORTING "Enable crash reporting with KCrash." ON)
 #    partition configuration. Lists known KPMCore FS types.
 #  - DEBUG_PARTITION_UNSAFE (see partition/CMakeLists.txt)
 #  - DEBUG_PARTITION_BAIL_OUT (see partition/CMakeLists.txt)
+
+# Special handling for Python versions:
+#  - If you set PYTHONLIBS_VERSION on the command-line, then
+#    that **exact** version will be searched for, and no other.
+#  - If you do not set PYTHONLIBS_VERSION on the command-line,
+#    any suitable version will be found -- but this can fail if
+#    you have multiple Python versions installed, only some of
+#    which include the development headers.
 
 ### USE_*
 #
@@ -163,6 +172,22 @@ set( _tx_ok sv )
 ### Required versions
 #
 # See DEPENDENCIES section below.
+
+# The default build is with Qt5, but that is increasingly not the
+# version installed-by-default on Linux systems. Upgrade the default
+# if Qt5 isn't available but Qt6 is. This also saves messing around
+# with special CMake flags for every script (e.g. ci/RELEASE.sh and
+# ci/abicheck.sh).
+if(NOT WITH_QT6)
+    find_package(Qt5Core QUIET)
+    if(NOT TARGET Qt5::Core)
+        find_package(Qt6Core QUIET)
+        if(TARGET Qt6::Core)
+            message(STATUS "Default Qt version (Qt5) not found, upgrading build to Qt6")
+            set(WITH_QT6 ON)
+        endif()
+    endif()
+endif()
 if(WITH_QT6)
     message(STATUS "Building Calamares with Qt6")
     set(qtname "Qt6")
@@ -188,7 +213,12 @@ else()
 endif()
 
 set(BOOSTPYTHON_VERSION 1.72.0)
-set(PYTHONLIBS_VERSION 3.6)
+if(DEFINED PYTHONLIBS_VERSION)
+    set(PYTHONLIBS_EXTRA "EXACT")
+else()
+    set(PYTHONLIBS_VERSION 3.6)
+    set(PYTHONLIBS_EXTRA "")
+endif()
 set(YAMLCPP_VERSION 0.5.1)
 
 ### CMAKE SETUP
@@ -196,23 +226,15 @@ set(YAMLCPP_VERSION 0.5.1)
 set(CMAKE_MODULE_PATH "${CMAKE_SOURCE_DIR}/CMakeModules")
 
 # Enable IN_LIST
-if(POLICY CMP0057)
-    cmake_policy(SET CMP0057 NEW)
-endif()
+cmake_policy(SET CMP0057 NEW)
 # Let ``AUTOMOC`` and ``AUTOUIC`` process ``GENERATED`` files.
-if(POLICY CMP0071)
-    cmake_policy(SET CMP0071 NEW)
-endif()
+cmake_policy(SET CMP0071 NEW)
 # Recognize more macros to trigger automoc
-if(NOT CMAKE_VERSION VERSION_LESS "3.10.0")
-    list(
-        APPEND
-        CMAKE_AUTOMOC_MACRO_NAMES
+list(APPEND CMAKE_AUTOMOC_MACRO_NAMES
         "K_PLUGIN_FACTORY_WITH_JSON"
         "K_EXPORT_PLASMA_DATAENGINE_WITH_JSON"
         "K_EXPORT_PLASMA_RUNNER"
-    )
-endif()
+)
 
 # CMake Modules
 include(CMakePackageConfigHelpers)
@@ -400,7 +422,7 @@ if(NOT TARGET ${kfname}::Crash)
     set(BUILD_CRASH_REPORTING OFF)
 endif()
 
-find_package(Python ${PYTHONLIBS_VERSION} COMPONENTS Interpreter Development)
+find_package(Python ${PYTHONLIBS_VERSION} ${PYTHONLIBS_EXTRA} COMPONENTS Interpreter Development)
 set_package_properties(
     Python
     PROPERTIES
@@ -706,7 +728,7 @@ add_custom_target(uninstall COMMAND ${CMAKE_COMMAND} -P ${CMAKE_CURRENT_BINARY_D
 # The module support files -- .desc files, .conf files -- are copied into the build
 # directory so that it is possible to run `calamares -d` from there. Copy the
 # top-level settings.conf as well, into the build directory.
-if( settings.conf IS_NEWER_THAN ${CMAKE_BINARY_DIR}/settings.conf )
+if(settings.conf IS_NEWER_THAN ${CMAKE_BINARY_DIR}/settings.conf)
     configure_file(settings.conf ${CMAKE_BINARY_DIR}/settings.conf COPYONLY)
 endif()
 

@@ -7,6 +7,71 @@ contributors are listed. Note that Calamares does not have a historical
 changelog -- this log starts with version 3.3.0. See CHANGES-3.2 for
 the history of the 3.2 series (2018-05 - 2022-08).
 
+# 3.3.10 (unreleased)
+
+This release contains contributions from (alphabetically by given name):
+ - Nobody yet
+
+## Core ##
+ - Nothing yet
+
+## Modules ##
+ - Nothing yet
+
+
+# 3.3.9 (2024-08-12)
+
+Please note that if you are using the *luksbootkeyfile* module,
+it must be placed before the *fstab* module in settings.conf.  If it comes
+after, then the keyfile will be missing from crypttab and the user will be
+asked for their password multiple times.
+
+This release contains contributions from (alphabetically by given name):
+ - Adriaan de Groot
+ - Evan James
+ - Luca Matei Pintilie
+
+## Core ##
+ - Improved schemas for configuration files
+ - Support for Interlingue in Qt 6.7
+
+## Modules ##
+ - Placed *luksbootkeyfile* before *fstab* in the example `settings.conf` (#2356, Evan)
+ - *packages* module `xbcs` package manager now logs progress messages (#2359, Luca)
+ - *partition* module mentions creating a swap file in its summary (#2320, Adriaan)
+
+
+# 3.3.8 (2024-07-02)
+
+The *partition* bug described below was reported by jghodd, then carefully
+described and made reproducible by Joe Kamprad, examined by Evan James
+and repaired by Adriaan de Groot. Many thanks to all who participated.
+
+This release contains contributions from (alphabetically by first name):
+ - Adriaan de Groot
+ - Evan James
+ - Lorenzo Faletra
+ - Tj
+ - Victor Fuentes
+
+## Core ##
+ - nothing in particular
+
+## Modules ##
+ - *contextualprocess* see *shellprocess*.
+ - *mount* module now correctly mounts luks and luks2-encrypted swap. (thanks Victor)
+ - *partition* avoids a crash with specific checkbox-presets. (thanks Evan)
+ - *partition* had a bug where manual partitioning on MBR systems might
+   skip the installation of a bootloader, even though the visible bootloader
+   combo-box showed that it would be installed. (see #2318)
+ - *partition* could calculate an incorrect partition size when installing to
+   very specific partition sizes, and now leaves a few more sectors for secondary
+   GPT tables. (thanks Tj)
+ - *shellprocess* now supports a *verbose* key (globally and per-command) which logs
+   command output line-by-line.
+ - *users* module defaults password salt to *yescrypt*. (thanks Lorenzo)
+
+
 # 3.3.7 (2024-06-20)
 
 This release contains contributions from (alphabetically by first name):
