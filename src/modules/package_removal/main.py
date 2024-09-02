@@ -100,21 +100,19 @@ def run():
     packages = libcalamares.globalstorage.value("packagechooser_packagechooserq")
 
     if packages == 'no_office_suite':
-        print('Removing LibreOffice')
+        print('Removing LibreOffice and Calligra')
         libcalamares.utils.target_env_call(
-                ['pacman', '-Rns', '--noconfirm', 'libreoffice'])
+                ['pacman', '-Rns', '--noconfirm', 'libreoffice', 'calligra'])
 
     if packages == 'calligra':
-        print('Installing Calligra')
+        print('Calligra selected')
         libcalamares.utils.target_env_call(
             ['pacman', '-Rns', '--noconfirm', 'libreoffice'])
-        libcalamares.utils.target_env_call(
-            ['pacman', '-U', '--noconfirm',
-                '/opt/kdeos/pkgs/calligra*',
-                '/opt/kdeos/pkgs/libspnav'])
 
     if packages == 'libreoffice':
         print('LibreOffice selected')
+        libcalamares.utils.target_env_call(
+            ['pacman', '-Rns', '--noconfirm', 'calligra'])
 
     if packages == 'minimal_install':
         print('Minimal Install')
@@ -147,7 +145,8 @@ def run():
                 'pyqt5-python3',
                 'kpat',
                 'neochat',
-                'libreoffice']
+                'libreoffice',
+                'calligra']
         for pkg in pkgs:
             try:
                 libcalamares.utils.target_env_call(
