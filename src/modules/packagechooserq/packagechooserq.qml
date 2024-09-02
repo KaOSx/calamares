@@ -1,6 +1,6 @@
 /* === This file is part of Calamares - <https://calamares.io> ===
  *
- *   SPDX-FileCopyrightText: 2021 Anke Boersma <demm@kaosx.us>
+ *   SPDX-FileCopyrightText: 2021 - 2024 Anke Boersma <demm@kaosx.us>
  *   SPDX-License-Identifier: GPL-3.0-or-later
  *
  *   Calamares is Free Software: see the License-Identifier above.
@@ -12,239 +12,122 @@ import io.calamares.ui 1.0
 
 import QtQuick
 import QtQuick.Controls
+import QtQuick.Controls as QQC2
 import QtQuick.Layouts
+import org.kde.kirigami as Kirigami
 
-Item {
-    width:  parent.width
-    height: parent.height
+Kirigami.ScrollablePage {
 
-    Rectangle {
-        anchors.fill: parent
-        color: "#f2f2f2"
+    width: 860 //parent.width
+    height: 640 //parent.height
 
-        ButtonGroup {
-            id: switchGroup
+    Kirigami.Theme.backgroundColor: "#EFF0F1"
+
+    header: Kirigami.Heading {
+        Layout.fillWidth: true
+        height: 60
+        horizontalAlignment: Qt.AlignHCenter
+        verticalAlignment: Qt.AlignVCenter
+        color: Kirigami.Theme.textColor
+        font.weight: Font.Medium
+        font.pointSize: 12
+        text: "Please select an option for your install, or leave the default, Calligra"
+
+    }
+
+    ButtonGroup {
+        id: radioGroup
+    }
+
+    Kirigami.CardsListView {
+        id: view
+        model: installModel
+
+        ListModel {
+            id: installModel
+
+            ListElement {
+                name: "Calligra"
+                configName: "calligra"
+                desc: "Calligra Suite is an office and graphic art suite by KDE. It contains applications for word processing, spreadsheets, presentation, vector graphics, and editing databases. <b>Default</b>"
+                iconProp: "calligragemini"
+            }
+            ListElement {
+                name: "LibreOffice"
+                configName: "libreoffice"
+                desc: "LibreOffice is a powerful and free office suite, used by millions of people around the world. It includes several applications that make it the most versatile Free and Open Source office suite on the market."
+                iconProp: "libreoffice-starcenter"
+            }
+            ListElement {
+                name: "No Office Suite"
+                configName: "no_office_suite"
+                desc: "If you don't want to install an office suite, just select No Office Suite. You can always add one (or more) later on your installed system as the need arrives."
+                iconProp: "applications-graphics"
+            }
+            ListElement {
+                name: "Minimal Install"
+                configName: "minimal_install"
+                desc: "Create a minimal Plasma Desktop install, remove all extra applications and decide later on what you would like to add to your system. Examples of what won't be on such an install, there will be no Office Suite, no media players, no image viewer or print support.  It will be just a desktop, file browser, package manager, text editor and simple web-browser."
+                iconProp: "preferences-desktop"
+            }
         }
 
-        Column {
-            id: column
-            anchors.centerIn: parent
-            spacing: 5
-
-            Rectangle {
-                //id: rectangle
-                width: 700
-                height: 150
-                color: "#ffffff"
-                radius: 10
-                border.width: 0
-                Text {
-                    width: 450
-                    height: 104
-                    anchors.centerIn: parent
-                    text: qsTr("LibreOffice is a powerful and free office suite, used by millions of people around the world. It includes several applications that make it the most versatile Free and Open Source office suite on the market.<br/>
-                    Default option.")
-                    font.pointSize: 10
-                    anchors.verticalCenterOffset: -10
-                    anchors.horizontalCenterOffset: 100
-                    wrapMode: Text.WordWrap
-                }
-
-                Switch {
-                    id: element2
-                    x: 500
-                    y: 110
-                    width: 187
-                    height: 14
-                    text: qsTr("LibreOffice")
-                    checked: true
-                    hoverEnabled: true
-                    ButtonGroup.group: switchGroup
-
-                    indicator: Rectangle {
-                        implicitWidth: 40
-                        implicitHeight: 14
-                        radius: 10
-                        color: element2.checked ? "#3498db" : "#B9B9B9"
-                        border.color: element2.checked ? "#3498db" : "#cccccc"
-
-                        Rectangle {
-                            x: element2.checked ? parent.width - width : 0
-                            y: (parent.height - height) / 2
-                            width: 20
-                            height: 20
-                            radius: 10
-                            color: element2.down ? "#cccccc" : "#ffffff"
-                            border.color: element2.checked ? (element2.down ? "#3498db" : "#3498db") : "#999999"
+        delegate: Kirigami.AbstractCard {
+            id: delegate
+        required property string name
+        required property string configName
+        required property string desc
+        required property string iconProp
+            //NOTE: never put a Layout as contentItem as it will cause binding loops
+            //SEE: https://bugreports.qt.io/browse/QTBUG-66826
+            contentItem: Item {
+                implicitWidth: delegateLayout.implicitWidth
+                implicitHeight: delegateLayout.implicitHeight
+                GridLayout {
+                    id: delegateLayout
+                    anchors {
+                        left: parent.left
+                        top: parent.top
+                        right: parent.right
+                        //IMPORTANT: never put the bottom margin
+                    }
+                    rowSpacing: Kirigami.Units.largeSpacing
+                    columnSpacing: Kirigami.Units.largeSpacing
+                    columns: width > Kirigami.Units.gridUnit * 20 ? 4 : 2
+                    Kirigami.Icon {
+                        source: delegate.iconProp
+                        Layout.fillHeight: true
+                        Layout.maximumHeight: Kirigami.Units.iconSizes.huge
+                        Layout.preferredWidth: height
+                    }
+                    ColumnLayout {
+                        Kirigami.Heading {
+                            level: 2
+                            Text{
+                                text: qsTr("Option: ")+ delegate.name
+                                font.pointSize: 14
+                            }
+                        }
+                        Kirigami.Separator {
+                            Layout.fillWidth: true
+                        }
+                        QQC2.Label {
+                            Layout.fillWidth: true
+                            wrapMode: Text.WordWrap
+                            text: qsTr(delegate.desc)
                         }
                     }
-
-                    onCheckedChanged: {
-                        if ( ! checked ) {
-                            print("L not used")
-                        }
-                        else {
-                            config.packageChoice = "libreoffice"
-                            print( config.packageChoice )
-                        }
+                    QQC2.RadioButton {
+                        Layout.alignment: Qt.AlignRight|Qt.AlignVCenter
+                        Layout.columnSpan: 2
+                        text: qsTr("Select")
+                        ButtonGroup.group: radioGroup
+                        checked: delegate.name == "Calligra" ? true : false
+                        onCheckedChanged: {
+                            config.packageChoice = delegate.configName
+                            print( config.packageChoice )}
+                            //print( delegate.configName )}
                     }
-                }
-
-                Image {
-                    id: image2
-                    x: 8
-                    y: 25
-                    height: 100
-                    fillMode: Image.PreserveAspectFit
-                    source: "images/libreoffice.jpg"
-                }
-            }
-
-            Rectangle {
-                width: 700
-                height: 150
-                radius: 10
-                border.width: 0
-                Text {
-                    width: 450
-                    height: 104
-                    anchors.centerIn: parent
-                    text: qsTr("If you don't want to install an office suite, just select No Office Suite. You can always add one (or more) later on your installed system as the need arrives.")
-                    font.pointSize: 10
-                    anchors.verticalCenterOffset: -10
-                    anchors.horizontalCenterOffset: 100
-                    wrapMode: Text.WordWrap
-                }
-
-                Switch {
-                    id: element1
-                    x: 500
-                    y: 110
-                    width: 187
-                    height: 14
-                    text: qsTr("No Office Suite")
-                    checked: false
-                    hoverEnabled: true
-                    ButtonGroup.group: switchGroup
-
-                    indicator: Rectangle {
-                        implicitWidth: 40
-                        implicitHeight: 14
-                        radius: 10
-                        color: element1.checked ? "#3498db" : "#B9B9B9"
-                        border.color: element1.checked ? "#3498db" : "#cccccc"
-
-                        Rectangle {
-                            x: element1.checked ? parent.width - width : 0
-                            y: (parent.height - height) / 2
-                            width: 20
-                            height: 20
-                            radius: 10
-                            color: element1.down ? "#cccccc" : "#ffffff"
-                            border.color: element1.checked ? (element1.down ? "#3498db" : "#3498db") : "#999999"
-                        }
-                    }
-
-                    onCheckedChanged: {
-                        if ( ! checked ) {
-                            print("not used")
-                        }
-                        else {
-                            print("No Office Suite")
-                            config.packageChoice = "no_office_suite"
-                        }
-                    }
-                }
-
-                Image {
-                    id: image
-                    x: 8
-                    y: 25
-                    height: 100
-                    fillMode: Image.PreserveAspectFit
-                    source: "images/no-selection.png"
-                }
-
-            }
-
-            Rectangle {
-                width: 700
-                height: 150
-                color: "#ffffff"
-                radius: 10
-                border.width: 0
-                Text {
-                    width: 450
-                    height: 104
-                    anchors.centerIn: parent
-                    text: qsTr("Create a minimal Plasma Desktop install, remove all extra applications and decide later on what you would like to add to your system. Examples of what won't be on such an install, there will be no Office Suite, no media players, no image viewer or print support.  It will be just a desktop, file browser, package manager, text editor and simple web-browser.")
-                    font.pointSize: 10
-                    anchors.verticalCenterOffset: -10
-                    anchors.horizontalCenterOffset: 100
-                    wrapMode: Text.WordWrap
-                }
-
-                Switch {
-                    id: element3
-                    x: 500
-                    y: 110
-                    width: 187
-                    height: 14
-                    text: qsTr("Minimal Install")
-                    checked: false
-                    hoverEnabled: true
-                    ButtonGroup.group: switchGroup
-
-                    indicator: Rectangle {
-                        implicitWidth: 40
-                        implicitHeight: 14
-                        radius: 10
-                        color: element3.checked ? "#3498db" : "#B9B9B9"
-                        border.color: element3.checked ? "#3498db" : "#cccccc"
-
-                        Rectangle {
-                            x: element3.checked ? parent.width - width : 0
-                            y: (parent.height - height) / 2
-                            width: 20
-                            height: 20
-                            radius: 10
-                            color: element3.down ? "#cccccc" : "#ffffff"
-                            border.color: element3.checked ? (element3.down ? "#3498db" : "#3498db") : "#999999"
-                        }
-                    }
-
-                    onCheckedChanged: {
-                        if ( ! checked ) {
-                            print("M not used")
-                        }
-                        else {
-                            print("minimal")
-                            config.packageChoice = "minimal_install"
-                        }
-                    }
-                }
-
-                Image {
-                    id: image3
-                    x: 8
-                    y: 25
-                    height: 100
-                    fillMode: Image.PreserveAspectFit
-                    source: "images/plasma.png"
-                }
-            }
-
-            Rectangle {
-                width: 700
-                height: 25
-                color: "#f2f2f2"
-                border.width: 0
-                Text {
-                    height: 25
-                    anchors.centerIn: parent
-                    text: qsTr("Please select an option for your install, or use the default: LibreOffice included.")
-                    font.pointSize: 10
-                    wrapMode: Text.WordWrap
                 }
             }
         }

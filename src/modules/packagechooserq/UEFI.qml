@@ -1,6 +1,6 @@
 /* === This file is part of Calamares - <https://calamares.io> ===
  *
- *   SPDX-FileCopyrightText: 2021 Anke Boersma <demm@kaosx.us>
+ *   SPDX-FileCopyrightText: 2021 - 2024 Anke Boersma <demm@kaosx.us>
  *   SPDX-License-Identifier: GPL-3.0-or-later
  *
  *   Calamares is Free Software: see the License-Identifier above.
@@ -12,230 +12,120 @@ import io.calamares.ui 1.0
 
 import QtQuick
 import QtQuick.Controls
+import QtQuick.Controls as QQC2
 import QtQuick.Layouts
+import org.kde.kirigami as Kirigami
 
-        Column {
-            id: column
-            anchors.centerIn: parent
-            spacing: 5
+Kirigami.ScrollablePage {
 
-            ButtonGroup {
-                id: switchGroup
+    width: 860 //parent.width
+    height: 640 //parent.height
+
+    Kirigami.Theme.backgroundColor: "#EFF0F1"
+    //Kirigami.Theme.textColor: "#1F1F1F"
+
+    header: Kirigami.Heading {
+        Layout.fillWidth: true
+        height: 60
+        horizontalAlignment: Qt.AlignHCenter
+        verticalAlignment: Qt.AlignVCenter
+        color: Kirigami.Theme.textColor
+        level: 2
+        text: "Please select a bootloader option for your install, or leave the default, systemd-boot"
+
+    }
+
+    ButtonGroup {
+        id: radioGroup
+    }
+
+    Kirigami.CardsListView {
+        id: view
+        //model: ["Calligra", "LibreOffice", "No", "Minimal"]
+        model: installModel
+
+        ListModel {
+            id: installModel
+
+            ListElement {
+                name: "Systemd Boot"
+                configName: "systemd-boot"
+                desc: "Systemd-boot is a UEFI boot manager which executes configured EFI images. The default entry is selected by a configured pattern (glob) or an on-screen menu and is simple to configure.."
+                iconProp: "amd"
             }
-
-            Rectangle {
-                //id: rectangle
-                width: 700
-                height: 150
-                color: "#ffffff"
-                radius: 10
-                border.width: 0
-                Text {
-                    width: 450
-                    height: 104
-                    anchors.centerIn: parent
-                    text: qsTr("Systemd-boot is a UEFI boot manager which executes configured EFI images. The default entry is selected by a configured pattern (glob) or an on-screen menu and is simple to configure.")
-                    font.pointSize: 10
-                    anchors.verticalCenterOffset: -10
-                    anchors.horizontalCenterOffset: 100
-                    wrapMode: Text.WordWrap
-                }
-
-                Switch {
-                    id: element2
-                    x: 500
-                    y: 110
-                    width: 187
-                    height: 14
-                    text: qsTr("Systemd-boot")
-                    checked: true
-                    hoverEnabled: true
-                    ButtonGroup.group: switchGroup
-
-                    indicator: Rectangle {
-                        implicitWidth: 40
-                        implicitHeight: 14
-                        radius: 10
-                        color: element2.checked ? "#3498db" : "#B9B9B9"
-                        border.color: element2.checked ? "#3498db" : "#cccccc"
-
-                        Rectangle {
-                            x: element2.checked ? parent.width - width : 0
-                            y: (parent.height - height) / 2
-                            width: 20
-                            height: 20
-                            radius: 10
-                            color: element2.down ? "#cccccc" : "#ffffff"
-                            border.color: element2.checked ? (element2.down ? "#3498db" : "#3498db") : "#999999"
-                        }
-                    }
-
-                    onCheckedChanged: {
-                        if ( ! checked ) {
-                            print("systemd not used")
-                        }
-                        else {
-                            config.packageChoice = "systemd-boot"
-                            print( config.packageChoice )
-                        }
-                    }
-                }
-
-                Image {
-                    id: image2
-                    x: 8
-                    y: 25
-                    height: 100
-                    fillMode: Image.PreserveAspectFit
-                    source: "images/systemd_boot.png"
-                }
+            ListElement {
+                name: "rEFInd"
+                configName: "refind"
+                desc: "rEFInd is a fork of the earlier rEFIt boot manager. It is designed to be platform-neutral and to simplify booting multiple operating systems."
+                iconProp: "asunder"
             }
-
-            Rectangle {
-                width: 700
-                height: 150
-                radius: 10
-                border.width: 0
-                Text {
-                    width: 450
-                    height: 104
-                    anchors.centerIn: parent
-                    text: qsTr("rEFInd is a fork of the earlier rEFIt boot manager. It is designed to be platform-neutral and to simplify booting multiple operating systems.")
-                    font.pointSize: 10
-                    anchors.verticalCenterOffset: -10
-                    anchors.horizontalCenterOffset: 100
-                    wrapMode: Text.WordWrap
-                }
-
-                Switch {
-                    id: element1
-                    x: 500
-                    y: 110
-                    width: 187
-                    height: 14
-                    text: qsTr("Refind")
-                    checked: false
-                    hoverEnabled: true
-                    ButtonGroup.group: switchGroup
-
-                    indicator: Rectangle {
-                        implicitWidth: 40
-                        implicitHeight: 14
-                        radius: 10
-                        color: element1.checked ? "#3498db" : "#B9B9B9"
-                        border.color: element1.checked ? "#3498db" : "#cccccc"
-
-                        Rectangle {
-                            x: element1.checked ? parent.width - width : 0
-                            y: (parent.height - height) / 2
-                            width: 20
-                            height: 20
-                            radius: 10
-                            color: element1.down ? "#cccccc" : "#ffffff"
-                            border.color: element1.checked ? (element1.down ? "#3498db" : "#3498db") : "#999999"
-                        }
-                    }
-
-                    onCheckedChanged: {
-                        if ( ! checked ) {
-                            print("refind not used")
-                        }
-                        else {
-                            print("Refind")
-                            config.packageChoice = "refind"
-                        }
-                    }
-                }
-
-                Image {
-                    id: image
-                    x: 8
-                    y: 25
-                    height: 100
-                    fillMode: Image.PreserveAspectFit
-                    source: "images/refind.png"
-                }
-
+            ListElement {
+                name: "No Bootloader"
+                configName: "no_bootloader"
+                desc: "No bootloader selected. Selecting no bootloader might result in an un-bootable system if you don't already have a bootloader were you can add this install to."
+                iconProp: "applications-graphics"
             }
+        }
 
-            Rectangle {
-                width: 700
-                height: 150
-                color: "#ffffff"
-                radius: 10
-                border.width: 0
-                Text {
-                    width: 450
-                    height: 104
-                    anchors.centerIn: parent
-                    text: qsTr("No bootloader selected. Selecting no bootloader might result in an un-bootable system, if you don't already have a bootloader were you can add this install to.")
-                    font.pointSize: 10
-                    anchors.verticalCenterOffset: -10
-                    anchors.horizontalCenterOffset: 100
-                    wrapMode: Text.WordWrap
-                }
-
-                Switch {
-                    id: element3
-                    x: 500
-                    y: 110
-                    width: 187
-                    height: 14
-                    text: qsTr("No bootloader")
-                    checked: false
-                    hoverEnabled: true
-                    ButtonGroup.group: switchGroup
-
-                    indicator: Rectangle {
-                        implicitWidth: 40
-                        implicitHeight: 14
-                        radius: 10
-                        color: element3.checked ? "#3498db" : "#B9B9B9"
-                        border.color: element3.checked ? "#3498db" : "#cccccc"
-
-                        Rectangle {
-                            x: element3.checked ? parent.width - width : 0
-                            y: (parent.height - height) / 2
-                            width: 20
-                            height: 20
-                            radius: 10
-                            color: element3.down ? "#cccccc" : "#ffffff"
-                            border.color: element3.checked ? (element3.down ? "#3498db" : "#3498db") : "#999999"
+        delegate: Kirigami.AbstractCard {
+            id: delegate
+        required property string name
+        required property string configName
+        required property string desc
+        required property string iconProp
+            //NOTE: never put a Layout as contentItem as it will cause binding loops
+            //SEE: https://bugreports.qt.io/browse/QTBUG-66826
+            contentItem: Item {
+                implicitWidth: delegateLayout.implicitWidth
+                implicitHeight: delegateLayout.implicitHeight
+                GridLayout {
+                    id: delegateLayout
+                    anchors {
+                        left: parent.left
+                        top: parent.top
+                        right: parent.right
+                        //IMPORTANT: never put the bottom margin
+                    }
+                    rowSpacing: Kirigami.Units.largeSpacing
+                    columnSpacing: Kirigami.Units.largeSpacing
+                    columns: width > Kirigami.Units.gridUnit * 20 ? 4 : 2
+                    Kirigami.Icon {
+                        source: delegate.iconProp
+                        Layout.fillHeight: true
+                        Layout.maximumHeight: Kirigami.Units.iconSizes.huge
+                        Layout.preferredWidth: height
+                    }
+                    ColumnLayout {
+                        Kirigami.Heading {
+                            level: 2
+                            Text{
+                                text: qsTr("Option: ")+ delegate.name
+                                font.pointSize: 14
+                                textFormat: Text.MarkdownText
+                            }
+                        }
+                        Kirigami.Separator {
+                            Layout.fillWidth: true
+                        }
+                        QQC2.Label {
+                            Layout.fillWidth: true
+                            wrapMode: Text.WordWrap
+                            text: qsTr(delegate.desc)
                         }
                     }
-
-                    onCheckedChanged: {
-                        if ( ! checked ) {
-                            print("no btl not checked")
-                        }
-                        else {
-                            print("no bootloader")
-                            config.packageChoice = "no_bootloader"
-                        }
+                    QQC2.RadioButton {
+                        Layout.alignment: Qt.AlignRight|Qt.AlignVCenter
+                        Layout.columnSpan: 2
+                        text: qsTr("Select")
+                        ButtonGroup.group: radioGroup
+                        checked: delegate.name == "Systemd Boot" ? true : false
+                        onCheckedChanged: {
+                            config.packageChoice = delegate.configName
+                            print( config.packageChoice )}
+                            //print( delegate.configName )}
                     }
-                }
-
-                Image {
-                    id: image3
-                    x: 8
-                    y: 25
-                    height: 100
-                    fillMode: Image.PreserveAspectFit
-                    source: "images/plasma.png"
-                }
-            }
-
-            Rectangle {
-                width: 700
-                height: 25
-                color: "#f2f2f2"
-                border.width: 0
-                Text {
-                    height: 25
-                    anchors.centerIn: parent
-                    text: qsTr("Please select a bootloader option for your install, or leave the default option, <strong>systemd-boot</strong>.")
-                    font.pointSize: 10
-                    wrapMode: Text.WordWrap
                 }
             }
         }
+    }
+}

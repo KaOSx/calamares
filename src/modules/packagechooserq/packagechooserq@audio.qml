@@ -1,6 +1,6 @@
 /* === This file is part of Calamares - <https://calamares.io> ===
  *
- *   SPDX-FileCopyrightText: 2022 Anke Boersma <demm@kaosx.us>
+ *   SPDX-FileCopyrightText: 2021 - 2024 Anke Boersma <demm@kaosx.us>
  *   SPDX-License-Identifier: GPL-3.0-or-later
  *
  *   Calamares is Free Software: see the License-Identifier above.
@@ -12,184 +12,126 @@ import io.calamares.ui 1.0
 
 import QtQuick
 import QtQuick.Controls
+import QtQuick.Controls as QQC2
 import QtQuick.Layouts
+import org.kde.kirigami as Kirigami
 
-Item {
-    width: parent.width
-    height: parent.height
+Kirigami.ScrollablePage {
 
-    Rectangle {
-        anchors.fill: parent
-        color: "#f2f2f2"
+    width: 860 //parent.width
+    height: 640 //parent.height
 
-        ButtonGroup {
-            id: switchGroup
+    Kirigami.Theme.backgroundColor: "#EFF0F1"
+    //Kirigami.Theme.textColor: "#1F1F1F"
+
+    header: Kirigami.Heading {
+        Layout.fillWidth: true
+        height: 60
+        horizontalAlignment: Qt.AlignHCenter
+        verticalAlignment: Qt.AlignVCenter
+        color: Kirigami.Theme.textColor
+        font.weight: Font.Medium
+        font.pointSize: 12
+        text: "Please select an audio option for your install, or leave the default, Pipewire"
+
+    }
+
+    ButtonGroup {
+        id: radioGroup
+    }
+
+    Kirigami.CardsListView {
+        id: view
+        //model: ["Calligra", "LibreOffice", "No", "Minimal"]
+        model: installModel
+
+        ListModel {
+            id: installModel
+
+            ListElement {
+                name: "Pipewire"
+                configName: "pipewire"
+                desc: "Pipewire is a multimedia framework designed from scratch that aims to provide:  
+ * Graph based processing with support for feedback loops and atomic graph updates.
+ * Flexible and extensible media format negotiation and buffer allocation.
+ * Support for out-of-process processing graphs with minimal overhead.
+ * Hard real-time capable plugins.
+ * Achieve very low-latency for both audio and video processing.
+
+The framework is used to build a modular daemon that can be configured to:
+ * Be a low-latency audio server with features like PulseAudio and/or JACK
+ * A video capture server that can manage hardware video capture devices.
+ * A central hub where video can be made available for other applications."
+                iconProp: "musique"
+            }
+            ListElement {
+                name: "PulseAudio"
+                configName: "pulsaudio"
+                desc: "PulseAudio is a sound server, originally created to overcome the limitations of the Enlightened Sound Daemon (EsounD).  
+It performs advanced operations on sound data as it passes between your application and hardware. Things like transferring audio to a different machine, changing the sample format or channel count, or mixing several sounds into one input/output, are easily achieved using PulseAudio"
+                iconProp: "musicbrainz"
+            }
         }
 
-        Column {
-            id: column
-            anchors.centerIn: parent
-            spacing: 5
-
-            Rectangle {
-                //id: rectangle
-                width: 800
-                height: 260
-                color: "#ffffff"
-                radius: 10
-                border.width: 0
-                Text {
-                    width: 600
-                    height: 250
-                    anchors.centerIn: parent
-                    text: qsTr("<b>Pipewire</b> is a multimedia framework designed from scratch that aims to provide:<br/>
-                                    - Graph based processing with support for feedback loops and atomic graph updates.<br/>
-                                    - Flexible and extensible media format negotiation and buffer allocation.<br/>
-                                    - Support for out-of-process processing graphs with minimal overhead.<br/>
-                                    - Hard real-time capable plugins.<br/>
-                                    - Achieve very low-latency for both audio and video processing.<br/><br/>
-                                The framework is used to build a modular daemon that can be configured to:<br/>
-                                    - Be a low-latency audio server with features like PulseAudio and/or JACK<br/>
-                                    - A video capture server that can manage hardware video capture devices.<br/>
-                                    - A central hub where video can be made available for other applications.")
-                    font.pointSize: 10
-                    anchors.verticalCenterOffset: 10
-                    anchors.horizontalCenterOffset: 100
-                    wrapMode: Text.WordWrap
-                }
-
-                Switch {
-                    id: element2
-                    x: 600
-                    y: 230
-                    width: 187
-                    height: 14
-                    text: qsTr("Pipewire")
-                    checked: true
-                    hoverEnabled: true
-                    ButtonGroup.group: switchGroup
-
-                    indicator: Rectangle {
-                        implicitWidth: 40
-                        implicitHeight: 14
-                        radius: 10
-                        color: element2.checked ? "#3498db" : "#B9B9B9"
-                        border.color: element2.checked ? "#3498db" : "#cccccc"
-
-                        Rectangle {
-                            x: element2.checked ? parent.width - width : 0
-                            y: (parent.height - height) / 2
-                            width: 20
-                            height: 20
-                            radius: 10
-                            color: element2.down ? "#cccccc" : "#ffffff"
-                            border.color: element2.checked ? (element2.down ? "#3498db" : "#3498db") : "#999999"
+        delegate: Kirigami.AbstractCard {
+            id: delegate
+        required property string name
+        required property string configName
+        required property string desc
+        required property string iconProp
+            //NOTE: never put a Layout as contentItem as it will cause binding loops
+            //SEE: https://bugreports.qt.io/browse/QTBUG-66826
+            contentItem: Item {
+                implicitWidth: delegateLayout.implicitWidth
+                implicitHeight: delegateLayout.implicitHeight
+                GridLayout {
+                    id: delegateLayout
+                    anchors {
+                        left: parent.left
+                        top: parent.top
+                        right: parent.right
+                        //IMPORTANT: never put the bottom margin
+                    }
+                    rowSpacing: Kirigami.Units.largeSpacing
+                    columnSpacing: Kirigami.Units.largeSpacing
+                    columns: width > Kirigami.Units.gridUnit * 20 ? 4 : 2
+                    Kirigami.Icon {
+                        source: delegate.iconProp
+                        Layout.fillHeight: true
+                        Layout.maximumHeight: Kirigami.Units.iconSizes.huge
+                        Layout.preferredWidth: height
+                    }
+                    ColumnLayout {
+                        Kirigami.Heading {
+                            level: 2
+                            Text{
+                                text: qsTr("Option: ")+ delegate.name
+                                font.pointSize: 14
+                                textFormat: Text.MarkdownText
+                            }
+                        }
+                        Kirigami.Separator {
+                            Layout.fillWidth: true
+                        }
+                        QQC2.Label {
+                            Layout.fillWidth: true
+                            wrapMode: Text.WordWrap
+                            text: qsTr(delegate.desc)
                         }
                     }
-
-                    onCheckedChanged: {
-                        if ( ! checked ) {
-                            print("Pipewire not used")
-                        }
-                        else {
-                            config.packageChoice = "pipewire"
-                            print( config.packageChoice )
-                        }
+                    QQC2.RadioButton {
+                        Layout.alignment: Qt.AlignRight|Qt.AlignVCenter
+                        Layout.columnSpan: 2
+                        text: qsTr("Select")
+                        ButtonGroup.group: radioGroup
+                        checked: delegate.name == "Pipewire" ? true : false
+                        onCheckedChanged: {
+                            config.packageChoice = delegate.configName
+                            print( config.packageChoice )}
+                            //print( delegate.configName )}
                     }
-                }
-
-                Image {
-                    id: image2
-                    x: 8
-                    y: 25
-                    height: 150
-                    fillMode: Image.PreserveAspectFit
-                    source: "images/pipewire.png"
-                }
-            }
-
-            Rectangle {
-                width: 800
-                height: 180
-                radius: 10
-                border.width: 0
-                Text {
-                    width: 600
-                    height: 160
-                    anchors.centerIn: parent
-                    text: qsTr("<b>PulseAudio</b> is a sound server, originally created to overcome the limitations of the Enlightened Sound Daemon (EsounD).<br/>
-                    It performs advanced operations on sound data as it passes between your application and hardware. Things like transferring audio to a different machine, changing the sample format or channel count, or mixing several sounds into one input/output, are easily achieved using PulseAudio.")
-                    font.pointSize: 10
-                    anchors.verticalCenterOffset: 10
-                    anchors.horizontalCenterOffset: 90
-                    wrapMode: Text.WordWrap
-                }
-
-                Switch {
-                    id: element1
-                    x: 600
-                    y: 150
-                    width: 187
-                    height: 14
-                    text: qsTr("Pulseaudio")
-                    checked: false
-                    hoverEnabled: true
-                    ButtonGroup.group: switchGroup
-
-                    indicator: Rectangle {
-                        implicitWidth: 40
-                        implicitHeight: 14
-                        radius: 10
-                        color: element1.checked ? "#3498db" : "#B9B9B9"
-                        border.color: element1.checked ? "#3498db" : "#cccccc"
-
-                        Rectangle {
-                            x: element1.checked ? parent.width - width : 0
-                            y: (parent.height - height) / 2
-                            width: 20
-                            height: 20
-                            radius: 10
-                            color: element1.down ? "#cccccc" : "#ffffff"
-                            border.color: element1.checked ? (element1.down ? "#3498db" : "#3498db") : "#999999"
-                        }
-                    }
-
-                    onCheckedChanged: {
-                        if ( ! checked ) {
-                            print("not used")
-                        }
-                        else {
-                            print("Pulse")
-                            config.packageChoice = "pulseaudio"
-                        }
-                    }
-                }
-
-                Image {
-                    id: image
-                    x: 20
-                    y: 25
-                    height: 130
-                    fillMode: Image.PreserveAspectFit
-                    source: "images/pulseaudio.png"
-                }
-
-            }
-
-            Rectangle {
-                width: 700
-                height: 50
-                color: "#f2f2f2"
-                border.width: 0
-                Text {
-                    height: 25
-                    anchors.centerIn: parent
-                    text: qsTr("Please select an audio option for your install, or leave the default <strong>Pipewire</strong>.")
-                    font.pointSize: 10
-                    wrapMode: Text.WordWrap
                 }
             }
         }
     }
-
 }
