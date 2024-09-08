@@ -30,7 +30,8 @@ Kirigami.ScrollablePage {
         horizontalAlignment: Qt.AlignHCenter
         verticalAlignment: Qt.AlignVCenter
         color: Kirigami.Theme.textColor
-        level: 2
+        font.weight: Font.Medium
+        font.pointSize: 12
         text: "Please select a bootloader option for your install, or leave the default, systemd-boot"
 
     }
