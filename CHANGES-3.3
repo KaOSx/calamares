@@ -7,7 +7,7 @@ contributors are listed. Note that Calamares does not have a historical
 changelog -- this log starts with version 3.3.0. See CHANGES-3.2 for
 the history of the 3.2 series (2018-05 - 2022-08).
 
-# 3.3.10 (unreleased)
+# 3.3.11 (unreleased)
 
 This release contains contributions from (alphabetically by given name):
  - Nobody yet
@@ -17,6 +17,30 @@ This release contains contributions from (alphabetically by given name):
 
 ## Modules ##
  - Nothing yet
+
+
+# 3.3.10 (2024-10-21)
+
+This release contains contributions from (alphabetically by given name):
+ - Aaron Rainbolt
+ - Adriaan de Groot
+ - Evan James
+ - Neal Gompa
+
+## Core ##
+ - Nothing yet
+
+## Modules ##
+ - *keyboard* Repaired summary messages with strange formatting. (#2364)
+ - *keyboard* Can update KDE Plasma configuration in Wayland. (thanks Neal, #2264)
+ - *locale* Repaired summary messages with strange formatting. (#2364)
+ - *partition* Module fixed unwanted behavior with the encryption checkbox. (thanks Aaron, #2376)
+ - *umount* Correctly unmounts the root filesystem of the target. (thanks Evan)
+ - *users* Supports a new `home_permissions` setting to override the
+   distro's `useradd` configuration of the umask. Supports octal and rwx-style
+   specifications of permissions. Other places that use permissions now also
+   support octal and rwx-style. (#2362)
+ - *welcome* Follows system styling colors (e.g. Dark Mode).
 
 
 # 3.3.9 (2024-08-12)

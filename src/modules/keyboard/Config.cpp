@@ -11,7 +11,6 @@
 #include "Config.h"
 
 #include "SetKeyboardLayoutJob.h"
-#include "keyboardwidget/keyboardpreview.h"
 
 #include "GlobalStorage.h"
 #include "JobQueue.h"
@@ -27,6 +26,7 @@
 #include <QGuiApplication>
 #include <QProcess>
 #include <QRegularExpression>
+#include <QStandardPaths>
 #include <QTimer>
 
 #include <QDBusConnection>
@@ -36,7 +36,7 @@
 /* Returns stringlist with suitable setxkbmap command-line arguments
  * to set the given @p model.
  */
-static inline QStringList
+static QStringList
 xkbmap_model_args( const QString& model )
 {
     QStringList r { "-model", model };
@@ -46,7 +46,7 @@ xkbmap_model_args( const QString& model )
 /* Returns stringlist with suitable setxkbmap command-line arguments
  * to set the given @p layout and @p variant.
  */
-static inline QStringList
+static QStringList
 xkbmap_layout_args( const QString& layout, const QString& variant )
 {
     QStringList r { "-layout", layout };
@@ -57,10 +57,10 @@ xkbmap_layout_args( const QString& layout, const QString& variant )
     return r;
 }
 
-static inline QStringList
-xkbmap_layout_args( const QStringList& layouts,
-                    const QStringList& variants,
-                    const QString& switchOption = "grp:alt_shift_toggle" )
+static QStringList
+xkbmap_layout_args_with_group_switch( const QStringList& layouts,
+                                      const QStringList& variants,
+                                      const QString& switchOption )
 {
     if ( layouts.size() != variants.size() )
     {
@@ -161,24 +161,16 @@ Config::Config( QObject* parent )
     , m_keyboardVariantsModel( new KeyboardVariantsModel( this ) )
     , m_KeyboardGroupSwitcherModel( new KeyboardGroupsSwitchersModel( this ) )
 {
-    m_setxkbmapTimer.setSingleShot( true );
+    m_applyTimer.setSingleShot( true );
+    connect( &m_applyTimer, &QTimer::timeout, this, &Config::apply );
 
     // Connect signals and slots
     connect( m_keyboardModelsModel,
              &KeyboardModelsModel::currentIndexChanged,
              [ & ]( int index )
              {
-                 // Set Xorg keyboard model
                  m_selectedModel = m_keyboardModelsModel->key( index );
-                 if ( m_useLocale1 )
-                 {
-                     locale1Apply();
-                 }
-                 else
-                 {
-                     QProcess::execute( "setxkbmap", xkbmap_model_args( m_selectedModel ) );
-                 }
-                 emit prettyStatusChanged();
+                 somethingChanged();
              } );
 
     connect( m_keyboardLayoutsModel,
@@ -195,16 +187,14 @@ Config::Config( QObject* parent )
              [ & ]( int index )
              {
                  m_selectedVariant = m_keyboardVariantsModel->key( index );
-                 xkbChanged();
-                 emit prettyStatusChanged();
+                 somethingChanged();
              } );
     connect( m_KeyboardGroupSwitcherModel,
              &KeyboardGroupsSwitchersModel::currentIndexChanged,
              [ & ]( int index )
              {
                  m_selectedGroup = m_KeyboardGroupSwitcherModel->key( index );
-                 xkbChanged();
-                 emit prettyStatusChanged();
+                 somethingChanged();
              } );
 
     // If the user picks something explicitly -- not a consequence of
@@ -224,30 +214,36 @@ Config::Config( QObject* parent )
 }
 
 void
-Config::xkbChanged()
+Config::somethingChanged()
 {
-    // Set Xorg keyboard layout + variant
-    if ( m_setxkbmapTimer.isActive() )
+    if ( m_applyTimer.isActive() )
     {
-        m_setxkbmapTimer.stop();
-        m_setxkbmapTimer.disconnect( this );
+        m_applyTimer.stop();
     }
-
-    if ( m_useLocale1 )
-    {
-        connect( &m_setxkbmapTimer, &QTimer::timeout, this, &Config::locale1Apply );
-    }
-    else
-    {
-        connect( &m_setxkbmapTimer, &QTimer::timeout, this, &Config::xkbApply );
-    }
-
-    m_setxkbmapTimer.start( QApplication::keyboardInputInterval() );
+    m_applyTimer.start( QApplication::keyboardInputInterval() );
     emit prettyStatusChanged();
 }
 
 void
-Config::locale1Apply()
+Config::apply()
+{
+    if ( m_configureXkb )
+    {
+        applyXkb();
+    }
+    if ( m_configureLocale1 )
+    {
+        applyLocale1();
+    }
+    if ( m_configureKWin )
+    {
+        applyKWin();
+    }
+    // Writing /etc/ files is not needed "live"
+}
+
+void
+Config::applyLocale1()
 {
     m_additionalLayoutInfo = getAdditionalLayoutInfo( m_selectedLayout );
 
@@ -283,10 +279,11 @@ Config::locale1Apply()
 }
 
 void
-Config::xkbApply()
+Config::applyXkb()
 {
     m_additionalLayoutInfo = getAdditionalLayoutInfo( m_selectedLayout );
 
+    QStringList basicArguments = xkbmap_model_args( m_selectedModel );
     if ( !m_additionalLayoutInfo.additionalLayout.isEmpty() )
     {
         if ( !m_selectedGroup.isEmpty() )
@@ -303,10 +300,11 @@ Config::xkbApply()
             m_additionalLayoutInfo.groupSwitcher = "grp:alt_shift_toggle";
         }
 
-        QProcess::execute( "setxkbmap",
-                           xkbmap_layout_args( { m_additionalLayoutInfo.additionalLayout, m_selectedLayout },
-                                               { m_additionalLayoutInfo.additionalVariant, m_selectedVariant },
-                                               m_additionalLayoutInfo.groupSwitcher ) );
+        basicArguments.append(
+            xkbmap_layout_args_with_group_switch( { m_additionalLayoutInfo.additionalLayout, m_selectedLayout },
+                                                  { m_additionalLayoutInfo.additionalVariant, m_selectedVariant },
+                                                  m_additionalLayoutInfo.groupSwitcher ) );
+        QProcess::execute( "setxkbmap", basicArguments );
 
         cDebug() << "xkbmap selection changed to: " << m_selectedLayout << '-' << m_selectedVariant << "(added "
                  << m_additionalLayoutInfo.additionalLayout << "-" << m_additionalLayoutInfo.additionalVariant
@@ -314,11 +312,91 @@ Config::xkbApply()
     }
     else
     {
-        QProcess::execute( "setxkbmap", xkbmap_layout_args( m_selectedLayout, m_selectedVariant ) );
+        basicArguments.append( xkbmap_layout_args( m_selectedLayout, m_selectedVariant ) );
+        QProcess::execute( "setxkbmap", basicArguments );
         cDebug() << "xkbmap selection changed to: " << m_selectedLayout << '-' << m_selectedVariant;
     }
-    m_setxkbmapTimer.disconnect( this );
+    m_applyTimer.stop();
 }
+
+// In a config-file's list of lines, replace lines <key>=<something> by <key>=<value>
+static void
+replaceKey( QStringList& content, const QString& key, const QString& value )
+{
+    for ( int i = 0; i < content.length(); ++i )
+    {
+        if ( content.at( i ).startsWith( key ) )
+        {
+            content[ i ] = key + value;
+        }
+    }
+}
+
+static bool
+rewriteKWin( const QString& path, const QString& model, const QString& layouts, const QString& variants )
+{
+    if ( !QFile::exists( path ) )
+    {
+        return false;
+    }
+
+    QFile config( path );
+    if ( !config.open( QIODevice::ReadOnly ) )
+    {
+        return false;
+    }
+    QStringList content = []( QFile& f )
+    {
+        QTextStream s( &f );
+        return s.readAll().split( '\n' );
+    }( config );
+    config.close();
+
+    if ( !config.open( QIODevice::WriteOnly ) )
+    {
+        return false;
+    }
+
+    replaceKey( content, QStringLiteral( "Model=" ), model );
+    replaceKey( content, QStringLiteral( "LayoutList=" ), layouts );
+    replaceKey( content, QStringLiteral( "VariantList=" ), variants );
+
+    config.write( content.join( '\n' ).toUtf8() );
+    config.close();
+
+    return true;
+}
+
+void
+Config::applyKWin()
+{
+    const auto paths = QStandardPaths::standardLocations( QStandardPaths::ConfigLocation );
+
+    auto join = [ &additional = m_additionalLayoutInfo.additionalLayout ]( const QString& s1, const QString& s2 )
+    { return additional.isEmpty() ? s1 : QStringLiteral( "%1,%2" ).arg( s1, s2 ); };
+
+    const QString layouts = join( m_selectedLayout, m_additionalLayoutInfo.additionalLayout );
+    const QString variants = join( m_selectedVariant, m_additionalLayoutInfo.additionalVariant );
+
+    bool updated = false;
+    for ( const auto& path : paths )
+    {
+        const QString candidate = path + QStringLiteral( "/kxkbrc" );
+        if ( rewriteKWin( candidate, m_selectedModel, layouts, variants ) )
+        {
+            updated = true;
+            break;
+        }
+    }
+
+    if ( updated )
+    {
+        auto kwin = QDBusMessage::createSignal(
+            QStringLiteral( "/Layouts" ), QStringLiteral( "org.kde.keyboard" ), QStringLiteral( "reloadConfig" ) );
+        QDBusConnection::sessionBus().send( kwin );
+    }
+}
+
 
 KeyboardModelsModel*
 Config::keyboardModels() const
@@ -455,7 +533,7 @@ Config::detectCurrentKeyboardLayout()
     QString currentVariant;
     QString currentModel;
 
-    if ( m_useLocale1 )
+    if ( m_configureLocale1 )
     {
         getCurrentKeyboardLayoutLocale1( currentLayout, currentVariant, currentModel );
     }
@@ -501,10 +579,10 @@ Config::detectCurrentKeyboardLayout()
 QString
 Config::prettyStatus() const
 {
-    QString status;
-    status
-        += tr( "Keyboard model has been set to %1<br/>.", "@label, %1 is keyboard model, as in Apple Magic Keyboard" )
-               .arg( m_keyboardModelsModel->label( m_keyboardModelsModel->currentIndex() ) );
+    QString status
+        = tr( "Keyboard model has been set to %1.", "@label, %1 is keyboard model, as in Apple Magic Keyboard" )
+              .arg( m_keyboardModelsModel->label( m_keyboardModelsModel->currentIndex() ) );
+    status += QStringLiteral( "<br/>" );
 
     QString layout = m_keyboardLayoutsModel->item( m_keyboardLayoutsModel->currentIndex() ).second.description;
     QString variant = m_keyboardVariantsModel->currentIndex() >= 0
@@ -527,8 +605,8 @@ Config::createJobs()
                                                   m_additionalLayoutInfo,
                                                   m_xOrgConfFileName,
                                                   m_convertedKeymapPath,
-                                                  m_writeEtcDefaultKeyboard,
-                                                  m_useLocale1 );
+                                                  m_configureEtcDefaultKeyboard,
+                                                  m_configureLocale1 );
     list.append( Calamares::job_ptr( j ) );
 
     return list;
@@ -718,8 +796,13 @@ Config::setConfigurationMap( const QVariantMap& configurationMap )
         m_xOrgConfFileName = xorgConfDefault;
     }
     m_convertedKeymapPath = getString( configurationMap, "convertedKeymapPath" );
-    m_writeEtcDefaultKeyboard = getBool( configurationMap, "writeEtcDefaultKeyboard", true );
-    m_useLocale1 = getBool( configurationMap, "useLocale1", !isX11 );
+    m_configureEtcDefaultKeyboard = getBool( configurationMap, "writeEtcDefaultKeyboard", true );
+    m_configureLocale1 = getBool( configurationMap, "useLocale1", !isX11 );
+
+    bool bogus = false;
+    const auto configureItems = getSubMap( configurationMap, "configure", bogus );
+    m_configureKWin = getBool( configureItems, "kwin", false );
+
     m_guessLayout = getBool( configurationMap, "guessLayout", true );
 }
 

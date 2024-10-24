@@ -259,6 +259,9 @@ public:
     const QStringList& forbiddenLoginNames() const;
     const QStringList& forbiddenHostNames() const;
 
+    int homePermissions() const { return m_homeDirPermissions; }
+    int homeUMask() const { return m_homeDirPermissions >= 0 ? ( ( ~m_homeDirPermissions ) & 0777 ) : -1; }
+
 public Q_SLOTS:
     /** @brief Sets the user's shell if possible
      *
@@ -368,6 +371,8 @@ private:
     QStringList m_forbiddenLoginNames;
 
     PasswordCheckList m_passwordChecks;
+
+    int m_homeDirPermissions = -1;
 };
 
 #endif

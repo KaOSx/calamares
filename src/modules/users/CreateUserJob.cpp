@@ -46,7 +46,7 @@ CreateUserJob::prettyStatusMessage() const
 }
 
 static Calamares::JobResult
-createUser( const QString& loginName, const QString& fullName, const QString& shell )
+createUser( const QString& loginName, const QString& fullName, const QString& shell, int umask )
 {
     QStringList useraddCommand;
 #ifdef __FreeBSD__
@@ -58,6 +58,7 @@ createUser( const QString& loginName, const QString& fullName, const QString& sh
     {
         useraddCommand << "-s" << shell;
     }
+    Q_UNUSED( umask )
 #else
     useraddCommand << "useradd"
                    << "-m"
@@ -67,6 +68,10 @@ createUser( const QString& loginName, const QString& fullName, const QString& sh
         useraddCommand << "-s" << shell;
     }
     useraddCommand << "-c" << fullName;
+    if ( umask >= 0 )
+    {
+        useraddCommand << "-K" << ( QStringLiteral( "UMASK=" ) + QString::number( umask, 8 ) );
+    }
     useraddCommand << loginName;
 #endif
 
@@ -136,7 +141,8 @@ CreateUserJob::exec()
 
     m_status = tr( "Creating user %1…", "@status" ).arg( m_config->loginName() );
     emit progress( 0.5 );
-    auto useraddResult = createUser( m_config->loginName(), m_config->fullName(), m_config->userShell() );
+    auto useraddResult
+        = createUser( m_config->loginName(), m_config->fullName(), m_config->userShell(), m_config->homeUMask() );
     if ( !useraddResult )
     {
         return useraddResult;

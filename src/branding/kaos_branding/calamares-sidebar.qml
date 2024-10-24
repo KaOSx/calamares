@@ -50,7 +50,7 @@ Rectangle {
                     anchors.horizontalCenter: parent.horizontalCenter
                     x: parent.x + 12;
                     color: Branding.styleString( index == ViewManager.currentStepIndex ? Branding.SidebarTextCurrent : Branding.SidebarText );
-                    text: display;
+                    text: qsTr(display);
                     font.pointSize : index == ViewManager.currentStepIndex ? 10 : 9
                 }
 
