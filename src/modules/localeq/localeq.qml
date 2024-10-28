@@ -32,21 +32,18 @@ Page {
         var requestURL = "https://example.org/";
         var xhr = new XMLHttpRequest;
 
-        xhr.onreadystatechange = function() {
+        xhr.onreadystatechange = function () {
             if (xhr.readyState === XMLHttpRequest.DONE) {
-
                 if (xhr.status !== 200) {
                     console.log("Disconnected!!");
-                    var connected = false
-                    hasInternet = connected
+                    var connected = false;
+                    hasInternet = connected;
                     return;
-                }
-
-                else {
+                } else {
                     console.log("Connected!!");
                 }
             }
-        }
+        };
         xhr.open("GET", requestURL, true);
         xhr.send();
     }
@@ -59,7 +56,9 @@ Page {
          * lookup or configuration, call the update function
          * here, and disable the one at onCompleted in Map.qml.*/
 
-        if (Network.hasInternet) { image.item.getIpOffline() }
+        if (Network.hasInternet) {
+            image.item.getIpOffline();
+        }
     }
 
     Loader {
@@ -75,7 +74,7 @@ Page {
 
     RowLayout {
         anchors.bottom: parent.bottom
-        anchors.bottomMargin : 20
+        anchors.bottomMargin: 20
         width: parent.width
         spacing: 50
 
@@ -100,11 +99,11 @@ Page {
                     Layout.fillWidth: true
                 }
                 Button {
-                    Layout.alignment: Qt.AlignRight|Qt.AlignVCenter
+                    Layout.alignment: Qt.AlignRight | Qt.AlignVCenter
                     Layout.columnSpan: 2
                     text: qsTr("Change", "@button")
                     onClicked: {
-                        drawerLanguage.open()
+                        drawerLanguage.open();
                     }
                 }
             }
@@ -130,11 +129,11 @@ Page {
                     Layout.fillWidth: true
                 }
                 Button {
-                    Layout.alignment: Qt.AlignRight|Qt.AlignVCenter
+                    Layout.alignment: Qt.AlignRight | Qt.AlignVCenter
                     Layout.columnSpan: 2
                     text: qsTr("Change", "@button")
                     onClicked: {
-                        drawerLocale.open()
+                        drawerLocale.open();
                     }
                 }
             }
@@ -169,8 +168,7 @@ Page {
                     Text {
                         anchors.fill: parent
                         wrapMode: Text.WordWrap
-                        text: qsTr("<h3>Languages</h3> </br>
-                        The system locale setting affects the language and character set for some command line user interface elements. The current setting is <strong>%1</strong>.", "@info").arg(config.currentLanguageCode)
+                        text: qsTr("<h3>Languages</h3> </br> " + "The system locale setting affects the language and character set for some" + " command line user interface elements. The current setting is <strong>%1" + "</strong>.", "@info").arg(config.currentLanguageCode)
                         font.pointSize: 10
                     }
                 }
@@ -201,13 +199,15 @@ Page {
                             anchors.fill: parent
                             cursorShape: Qt.PointingHandCursor
                             onClicked: {
-                                list1.currentIndex = index
-                                drawerLanguage.close()
+                                list1.currentIndex = index;
+                                drawerLanguage.close();
                             }
                         }
                     }
                 }
-                onCurrentItemChanged: { config.currentLanguageCode = model[currentIndex] } /* This works because model is a stringlist */
+                onCurrentItemChanged: {
+                    config.currentLanguageCode = model[currentIndex];
+                } /* This works because model is a stringlist */
             }
         }
     }
@@ -240,8 +240,7 @@ Page {
                     Text {
                         anchors.fill: parent
                         wrapMode: Text.WordWrap
-                        text: qsTr("<h3>Locales</h3> </br>
-                            The system locale setting affects the numbers and dates format. The current setting is <strong>%1</strong>.", "@info").arg(config.currentLCCode)
+                        text: qsTr("<h3>Locales</h3> </br>" + "The system locale setting affects the numbers and dates format." + "The current setting is <strong>%1</strong>.", "@info").arg(config.currentLCCode)
                         font.pointSize: 10
                     }
                 }
@@ -271,18 +270,20 @@ Page {
                             anchors.fill: parent
                             cursorShape: Qt.PointingHandCursor
                             onClicked: {
-                                list2.currentIndex = index
-                                drawerLocale.close()
+                                list2.currentIndex = index;
+                                drawerLocale.close();
                             }
                         }
                     }
                 }
-                onCurrentItemChanged: { config.currentLCCode = model[currentIndex]; } /* This works because model is a stringlist */
+                onCurrentItemChanged: {
+                    config.currentLCCode = model[currentIndex];
+                } /* This works because model is a stringlist */
             }
         }
     }
     Loader {
-        id:load
+        id: load
         anchors.fill: parent
     }
 }
