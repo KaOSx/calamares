@@ -17,7 +17,20 @@ Copyright 2014-2024 Anke Boersma, demm@kaosx.us
 Thanks to [the Calamares team](href='https://calamares.io/team/)
 
 and the [KaOS translators team](href=&apos;https://www.transifex.com/kaos/kaos/).</source>
-        <translation type="unfinished"/>
+        <translation># %1
+**%2**
+
+**%3**
+
+Copyright 2014-2017 Teo Mrnjavac, teo@kde.org
+
+Copyright 2017-2022 Adriaan de Groot, groot@kde.org
+
+Copyright 2014-2024 Anke Boersma, demm@kaosx.us
+
+Kiitos [the Calamares tiimille](href=&apos;https://calamares.io/team/)
+
+ja [KaOS kääntäjät tiimille](href=&apos;https://www.transifex.com/kaos/kaos/).</translation>
     </message>
 </context>
 <context>
@@ -45,13 +58,13 @@ and the [KaOS translators team](href=&apos;https://www.transifex.com/kaos/kaos/)
         <location filename="../src/modules/users/ActiveDirectoryJob.cpp" line="39"/>
         <source>Enroll system in Active Directory</source>
         <comment>@label</comment>
-        <translation type="unfinished"/>
+        <translation>Rekisteröi tietokone Active Directory:n</translation>
     </message>
     <message>
         <location filename="../src/modules/users/ActiveDirectoryJob.cpp" line="45"/>
         <source>Enrolling system in Active Directory…</source>
         <comment>@status</comment>
-        <translation type="unfinished"/>
+        <translation>Rekisteröidään tietokonetta Active Directory...</translation>
     </message>
 </context>
 <context>
@@ -60,7 +73,7 @@ and the [KaOS translators team](href=&apos;https://www.transifex.com/kaos/kaos/)
         <location filename="../src/modules/partition/jobs/AutoMountManagementJob.cpp" line="22"/>
         <source>Managing auto-mount settings…</source>
         <comment>@status</comment>
-        <translation>Automaattisen kiinnityksen asetusten hallinta…</translation>
+        <translation>Hallitaan automaattisen liitännän asetuksia…</translation>
     </message>
 </context>
 <context>
@@ -68,7 +81,7 @@ and the [KaOS translators team](href=&apos;https://www.transifex.com/kaos/kaos/)
     <message>
         <location filename="../src/modules/packagechooserq/BIOS.qml" line="41"/>
         <source>GRUB 2, the GRand Unified Bootloader is the reference implementation of the Free Software Foundation&apos;s Multiboot Specification, which provides a user the choice to boot one of multiple operating systems installed on a computer.</source>
-        <translation>GRUB 2, GRand Unified Bootloader, on Free Software Foundationin Multiboot Specification, joka tarjoaa käyttäjälle mahdollisuuden käynnistää useita käyttöjärjestelmiä samalla tietokoneella.</translation>
+        <translation>GRUB 2, GRand Unified Bootloader, on Free Software Foundation Multiboot Specification, joka tarjoaa mahdollisuuden käyttää useita käyttöjärjestelmiä samalla tietokoneella.</translation>
     </message>
     <message>
         <location filename="../src/modules/packagechooserq/BIOS.qml" line="54"/>
@@ -78,7 +91,7 @@ and the [KaOS translators team](href=&apos;https://www.transifex.com/kaos/kaos/)
     <message>
         <location filename="../src/modules/packagechooserq/BIOS.qml" line="108"/>
         <source>No bootloader selected. Selecting no bootloader might result in an un-bootable system, if you don&apos;t already have a bootloader were you can add this install to.</source>
-        <translation>Käynnistyslatainta ei ole valittu. Valitsemalla &quot;Ei käynnistyslatainta&quot; saattaa johtaa järjestelmään, joka ei voi käynnistyä. Jos sinulla ei vielä ole käynnistyslatainta, voit lisätä tämän asennuksen.</translation>
+        <translation>Käynnistyslatain ei ole valittuna. Valitsemalla &quot;Ei käynnistyslatainta&quot; saattaa johtaa järjestelmään, joka ei voi käynnistyä. Jos käynnistyslatainta ei ole, voit lisätä sen asennuksessa.</translation>
     </message>
     <message>
         <location filename="../src/modules/packagechooserq/BIOS.qml" line="121"/>
@@ -88,7 +101,7 @@ and the [KaOS translators team](href=&apos;https://www.transifex.com/kaos/kaos/)
     <message>
         <location filename="../src/modules/packagechooserq/BIOS.qml" line="173"/>
         <source>Please select a bootloader option for your install, or leave the default option, &lt;strong&gt;GRUB 2&lt;/strong&gt;.</source>
-        <translation>Valitse asennukselle käynnistyslatain tai jätä oletus, &lt;strong&gt;GRUB 2&lt;/strong&gt;.</translation>
+        <translation>Valitse käynnistyslatain tai jätä oletus, &lt;strong&gt;GRUB 2&lt;/strong&gt;.</translation>
     </message>
 </context>
 <context>
@@ -101,12 +114,12 @@ and the [KaOS translators team](href=&apos;https://www.transifex.com/kaos/kaos/)
     <message>
         <location filename="../src/modules/partition/gui/BootInfoWidget.cpp" line="70"/>
         <source>This system was started with an &lt;strong&gt;EFI&lt;/strong&gt; boot environment.&lt;br&gt;&lt;br&gt;To configure startup from an EFI environment, this installer must deploy a boot loader application, like &lt;strong&gt;GRUB&lt;/strong&gt; or &lt;strong&gt;systemd-boot&lt;/strong&gt; on an &lt;strong&gt;EFI System Partition&lt;/strong&gt;. This is automatic, unless you choose manual partitioning, in which case you must choose it or create it on your own.</source>
-        <translation>Tämä tietokone käynnistettiin &lt;strong&gt;EFI&lt;/strong&gt; käynnistysympäristössä.&lt;br&gt;&lt;br&gt;Jos haluat määrittää EFI:n niin asennuksen on asennettava käynnistylatain, kuten &lt;strong&gt;GRUB&lt;/strong&gt; tai &lt;strong&gt;systemd-boot&lt;/strong&gt;, &lt;strong&gt;EFI&lt;/strong&gt; osion. Tämä on oletuksena, ellet valitse manuaalista osiointia, jolloin sinun on valittava asetukset.</translation>
+        <translation>Tietokone käynnistettiin &lt;strong&gt;EFI&lt;/strong&gt; käynnistyksellä.&lt;br&gt;&lt;br&gt;Jos haluat määrittää EFI:n niin on asennettava käynnistylatain, kuten &lt;strong&gt;GRUB&lt;/strong&gt; tai &lt;strong&gt;Systemd-boot&lt;/strong&gt;, &lt;strong&gt;EFI&lt;/strong&gt; osioon. Tämä kaikki on oletuksena. Jos valitset manuaalisen osioinnin, sinun on valittava asetukset.</translation>
     </message>
     <message>
         <location filename="../src/modules/partition/gui/BootInfoWidget.cpp" line="82"/>
         <source>This system was started with a &lt;strong&gt;BIOS&lt;/strong&gt; boot environment.&lt;br&gt;&lt;br&gt;To configure startup from a BIOS environment, this installer must install a boot loader, like &lt;strong&gt;GRUB&lt;/strong&gt;, either at the beginning of a partition or on the &lt;strong&gt;Master Boot Record&lt;/strong&gt; near the beginning of the partition table (preferred). This is automatic, unless you choose manual partitioning, in which case you must set it up on your own.</source>
-        <translation>Tämä tietokone käynnistettiin &lt;strong&gt;BIOS&lt;/strong&gt; käynnistysympäristössä.&lt;br&gt;&lt;br&gt;Jos haluat määrittää BIOS:n niin asennuksen on asennettava käynnistyslatain, kuten&lt;strong&gt;GRUB&lt;/strong&gt;, joko osion alkuun tai &lt;strong&gt;Master Boot Record&lt;/strong&gt; joka on osiotaulun alussa (suositus). Tämä on oletuksena, ellet valitset manuaalista osiointia, jolloin sinun on valittava asetukset.</translation>
+        <translation>Tietokone käynnistettiin &lt;strong&gt;BIOS&lt;/strong&gt; käynnistyksellä.&lt;br&gt;&lt;br&gt;Jos haluat määrittää BIOS:n niin on asennettava käynnistyslatain, kuten&lt;strong&gt;GRUB&lt;/strong&gt;, joko osion alkuun tai &lt;strong&gt;Master Boot Record&lt;/strong&gt;, joka sijaitsee osiotaulun alussa (suositus). Tämä kaikki on oletuksena, Jos valitset manuaalisen osioinnin, sinun on valittava asetukset.</translation>
     </message>
 </context>
 <context>
@@ -133,7 +146,7 @@ and the [KaOS translators team](href=&apos;https://www.transifex.com/kaos/kaos/)
         <location filename="../src/modules/partition/core/BootLoaderModel.cpp" line="131"/>
         <source>Do not install a boot loader</source>
         <comment>@label</comment>
-        <translation>Älä asenna käynnistyslatainta</translation>
+        <translation>Ei käynnistyslatainta</translation>
     </message>
     <message>
         <location filename="../src/modules/partition/core/BootLoaderModel.cpp" line="148"/>
@@ -458,7 +471,7 @@ Linkki kopioitu leikepöydälle</translation>
     <message>
         <location filename="../src/libcalamaresui/utils/Paste.cpp" line="183"/>
         <source>Install Log Paste URL</source>
-        <translation>Asenna lokiliitoksen URL-osoite</translation>
+        <translation>Asennuksen Log Paste URL</translation>
     </message>
     <message>
         <location filename="../src/libcalamaresui/utils/Paste.cpp" line="165"/>
@@ -476,8 +489,8 @@ Asennusohjelma lopetetaan ja kaikki muutokset menetetään.</translation>
         <location filename="../src/libcalamaresui/ViewManager.cpp" line="527"/>
         <source>Do you really want to cancel the current install process?
 The installer will quit and all changes will be lost.</source>
-        <translation>Haluatko todella peruuttaa käynnissä olevan asennusprosessin? 
-Asennusohjelma sulkeutuu ja kaikki muutoksesi katoavat.</translation>
+        <translation>Haluatko peruuttaa käynnissä olevan asennuksen? 
+Asennusohjelma sulkeutuu ja kaikki muutokset menetetään.</translation>
     </message>
     <message>
         <location filename="../src/libcalamaresui/ViewManager.cpp" line="90"/>
@@ -504,7 +517,7 @@ Asennusohjelma sulkeutuu ja kaikki muutoksesi katoavat.</translation>
         <location filename="../src/libcalamaresui/ViewManager.cpp" line="156"/>
         <source>Installation Failed</source>
         <comment>@title</comment>
-        <translation>Asentaminen epäonnistui</translation>
+        <translation>Asennus epäonnistui</translation>
     </message>
     <message>
         <location filename="../src/libcalamaresui/ViewManager.cpp" line="159"/>
@@ -522,7 +535,7 @@ Asennusohjelma sulkeutuu ja kaikki muutoksesi katoavat.</translation>
         <location filename="../src/libcalamaresui/ViewManager.cpp" line="189"/>
         <source>%1 can not be installed. Calamares was unable to load all of the configured modules. This is a problem with the way Calamares is being used by the distribution.</source>
         <comment>@info</comment>
-        <translation>%1 ei voi asentaa. Calamares ei voinut ladata kaikkia määritettyjä moduuleja. Ongelma on siinä, miten jakelu käyttää Calamaresia.</translation>
+        <translation>%1 ei voi asentaa. Calamares ei voinut ladata kaikkia määritettyjä moduuleja. Ongelmana on miten asennettava jakelu käyttää Calamaresia.</translation>
     </message>
     <message>
         <location filename="../src/libcalamaresui/ViewManager.cpp" line="196"/>
@@ -546,13 +559,13 @@ Asennusohjelma sulkeutuu ja kaikki muutoksesi katoavat.</translation>
         <location filename="../src/libcalamaresui/ViewManager.cpp" line="339"/>
         <source>The %1 setup program is about to make changes to your disk in order to set up %2.&lt;br/&gt;&lt;strong&gt;You will not be able to undo these changes.&lt;/strong&gt;</source>
         <comment>%1 is short product name, %2 is short product name with version</comment>
-        <translation>%1-asennusohjelma on aikeissa tehdä muutoksia levylle, jotta voit määrittää kohteen %2.&lt;br/&gt;&lt;strong&gt;Et voi kumota näitä muutoksia.&lt;/strong&gt;</translation>
+        <translation>Asennusohjelma %1 on tekemässä muutoksia levyllesi asettaakseen %2. &lt;br/&gt;&lt;strong&gt;Näitä muutoksia ei voi kumota.&lt;/strong&gt;</translation>
     </message>
     <message>
         <location filename="../src/libcalamaresui/ViewManager.cpp" line="343"/>
         <source>The %1 installer is about to make changes to your disk in order to install %2.&lt;br/&gt;&lt;strong&gt;You will not be able to undo these changes.&lt;/strong&gt;</source>
         <comment>%1 is short product name, %2 is short product name with version</comment>
-        <translation>%1 asennusohjelma tekee muutoksia asemalle, jotta %2 voidaan asentaa.&lt;br/&gt;&lt;strong&gt;Et voi kumota muutoksia myöhemmin.&lt;/strong&gt;</translation>
+        <translation>Asentaja %1 on tekemässä muutoksia levyllesi asettaakseen %2. &lt;br/&gt;&lt;strong&gt;Muutoksia ei voi kumota.&lt;/strong&gt;</translation>
     </message>
     <message>
         <location filename="../src/libcalamaresui/ViewManager.cpp" line="348"/>
@@ -564,7 +577,7 @@ Asennusohjelma sulkeutuu ja kaikki muutoksesi katoavat.</translation>
         <location filename="../src/libcalamaresui/ViewManager.cpp" line="348"/>
         <source>&amp;Install Now</source>
         <comment>@button</comment>
-        <translation>&amp;Asenna nyt</translation>
+        <translation>&amp;Asenna</translation>
     </message>
     <message>
         <location filename="../src/libcalamaresui/ViewManager.cpp" line="355"/>
@@ -606,7 +619,7 @@ Asennusohjelma sulkeutuu ja kaikki muutoksesi katoavat.</translation>
         <location filename="../src/libcalamaresui/ViewManager.cpp" line="408"/>
         <source>Cancel the installation process without changing the system.</source>
         <comment>@tooltip</comment>
-        <translation>Peruuta asennusprosessi muuttamatta järjestelmää.</translation>
+        <translation>Peruuta asennus tekemättä muutoksia järjestelmään.</translation>
     </message>
     <message>
         <location filename="../src/libcalamaresui/ViewManager.cpp" line="418"/>
@@ -618,7 +631,7 @@ Asennusohjelma sulkeutuu ja kaikki muutoksesi katoavat.</translation>
         <location filename="../src/libcalamaresui/ViewManager.cpp" line="423"/>
         <source>&amp;Back</source>
         <comment>@button</comment>
-        <translation>&amp;Takaisin</translation>
+        <translation>&amp;Paluu</translation>
     </message>
     <message>
         <location filename="../src/libcalamaresui/ViewManager.cpp" line="429"/>
@@ -642,7 +655,7 @@ Asennusohjelma sulkeutuu ja kaikki muutoksesi katoavat.</translation>
         <location filename="../src/libcalamaresui/ViewManager.cpp" line="524"/>
         <source>Cancel Installation?</source>
         <comment>@title</comment>
-        <translation>Peruuta asennus?</translation>
+        <translation>Peruutetaanko asennus?</translation>
     </message>
 </context>
 <context>
@@ -682,7 +695,7 @@ Asennusohjelma sulkeutuu ja kaikki muutoksesi katoavat.</translation>
     <message>
         <location filename="../src/calamares/CalamaresWindow.cpp" line="406"/>
         <source>%1 Installer</source>
-        <translation>%1-asentaja</translation>
+        <translation>Asentaja %1</translation>
     </message>
 </context>
 <context>
@@ -737,7 +750,7 @@ Asennusohjelma sulkeutuu ja kaikki muutoksesi katoavat.</translation>
         <location filename="../src/modules/partition/gui/ChoicePage.cpp" line="1763"/>
         <location filename="../src/modules/partition/gui/ChoicePage.cpp" line="1785"/>
         <source>&lt;strong&gt;Install alongside&lt;/strong&gt;&lt;br/&gt;The installer will shrink a partition to make room for %1.</source>
-        <translation>&lt;strong&gt;Asenna nykyisen rinnalle&lt;/strong&gt;&lt;br/&gt;Asennusohjelma supistaa osiota tehdäkseen tilaa kohteelle %1.</translation>
+        <translation>&lt;strong&gt;Asenna nykyisen rinnalle&lt;/strong&gt;&lt;br/&gt;Asentaja supistaa osiota tehdäkseen tilaa %1.</translation>
     </message>
     <message>
         <location filename="../src/modules/partition/gui/ChoicePage.cpp" line="1728"/>
@@ -885,7 +898,7 @@ Asennusohjelma sulkeutuu ja kaikki muutoksesi katoavat.</translation>
     <message>
         <location filename="../src/modules/partition/gui/ChoicePage.cpp" line="1601"/>
         <source>&lt;strong&gt;Manual partitioning&lt;/strong&gt;&lt;br/&gt;You can create or resize partitions yourself.&lt;br/&gt;Having a GPT partition table and &lt;strong&gt;fat32 512Mb /boot partition is a must for UEFI installs&lt;/strong&gt;,&lt;br/&gt;either use an existing without formatting or create one.</source>
-        <translation>&lt;strong&gt;Manuaalinen osiointi&lt;/strong&gt;&lt;br/&gt;Voit itse luoda osioita tai muuttaa niiden kokoa.&lt;br/&gt;GPT-taulukko &lt;strong&gt;ja fat32 512Mb /boot ovat välttämättömiä UEFI asennuksessa&lt;/strong&gt;,&lt;br/&gt;voit käyttää joko olemassa olevaa ilman alustusta tai luoda uuden.</translation>
+        <translation>&lt;strong&gt;Manuaalinen osiointi&lt;/strong&gt;&lt;br/&gt;Voit itse luoda osioita tai muuttaa niiden kokoa.&lt;br/&gt;GPT-taulukko &lt;strong&gt;ja fat32 512Mb /boot ovat välttämättömiä UEFI;n kanssa&lt;/strong&gt;,&lt;br/&gt;käyttää olemassa olevaa ilman alustusta tai luo uusi.</translation>
     </message>
 </context>
 <context>
@@ -951,7 +964,7 @@ Asennusohjelma sulkeutuu ja kaikki muutoksesi katoavat.</translation>
         <location filename="../src/modules/partitionq/ChoicePageQml.cpp" line="757"/>
         <location filename="../src/modules/partitionq/ChoicePageQml.cpp" line="784"/>
         <source>&lt;strong&gt;Install alongside&lt;/strong&gt;&lt;br/&gt;The installer will shrink a partition to make room for %1.</source>
-        <translation>&lt;strong&gt;Asenna nykyisen rinnalle&lt;/strong&gt;&lt;br/&gt;Asennusohjelma supistaa osiota tehdäkseen tilaa kohteelle %1.</translation>
+        <translation>&lt;strong&gt;Asenna nykyisen rinnalle&lt;/strong&gt;&lt;br/&gt;Asentaja supistaa osiota tehdäkseen tilaa %1.</translation>
     </message>
     <message>
         <location filename="../src/modules/partitionq/ChoicePageQml.cpp" line="711"/>
@@ -1080,8 +1093,7 @@ Asennusohjelma sulkeutuu ja kaikki muutoksesi katoavat.</translation>
     <message>
         <location filename="../src/modules/welcome/Config.cpp" line="60"/>
         <source>This computer does not satisfy the minimum requirements for installing %1.&lt;br/&gt;Installation cannot continue.</source>
-        <translation>Tämä tietokone ei täytä vähittäisvaatimuksia asennukseen %1.&lt;br/&gt;
-        Asennusta ei voida jatkaa.</translation>
+        <translation>Tietokone ei täytä minimivaatimuksia %1 asentamiseen. &lt;br/&gt;Asennusta ei voi jatkaa.</translation>
     </message>
     <message>
         <location filename="../src/modules/welcome/Config.cpp" line="66"/>
@@ -1091,13 +1103,12 @@ Asennusohjelma sulkeutuu ja kaikki muutoksesi katoavat.</translation>
     <message>
         <location filename="../src/modules/welcome/Config.cpp" line="70"/>
         <source>This computer does not satisfy some of the recommended requirements for installing %1.&lt;br/&gt;Installation can continue, but some features might be disabled.</source>
-        <translation>Tämä tietokone ei täytä joitakin suositeltuja vaatimuksia %1.
-Asennus voi jatkua, mutta jotkin toiminnot saattavat olla pois käytöstä.</translation>
+        <translation>Tietokone ei täytä joitakin suositeltuja vaatimuksia %1. &lt;br/&gt;Asennus voi jatkaa, mutta jotkin toiminnot saattavat jäädä pois.</translation>
     </message>
     <message>
         <location filename="../src/modules/welcome/Config.cpp" line="80"/>
         <source>This program will ask you some questions and set up %2 on your computer.</source>
-        <translation>Asennusohjelma kysyy joitakin kysymyksiä liittyen %2 ja asentaa sen tietokoneelle.</translation>
+        <translation>Tämä ohjelma kysyy sinulta kysymyksiä ja määrittää %2 tietokoneellesi.</translation>
     </message>
     <message>
         <location filename="../src/modules/welcome/Config.cpp" line="264"/>
@@ -1112,12 +1123,12 @@ Asennus voi jatkua, mutta jotkin toiminnot saattavat olla pois käytöstä.</tra
     <message>
         <location filename="../src/modules/welcome/Config.cpp" line="269"/>
         <source>&lt;h1&gt;Welcome to the Calamares installer for %1&lt;/h1&gt;</source>
-        <translation>&lt;h1&gt;Tervetuloa Calamares-asentajaan %1&lt;/h1&gt;</translation>
+        <translation>&lt;h1&gt;Tervetuloa asentamaan Calamares %1&lt;/h1&gt;</translation>
     </message>
     <message>
         <location filename="../src/modules/welcome/Config.cpp" line="270"/>
         <source>&lt;h1&gt;Welcome to the %1 installer&lt;/h1&gt;</source>
-        <translation>&lt;h1&gt;Tervetuloa %1-asentajaan&lt;/h1&gt;</translation>
+        <translation>&lt;h1&gt;Tervetuloa asentamaan %1&lt;/h1&gt;</translation>
     </message>
     <message>
         <location filename="../src/modules/summary/Config.cpp" line="35"/>
@@ -1133,7 +1144,7 @@ Asennus voi jatkua, mutta jotkin toiminnot saattavat olla pois käytöstä.</tra
     <message>
         <location filename="../src/modules/summary/Config.cpp" line="44"/>
         <source>This is an overview of what will happen once you start the install procedure.</source>
-        <translation>Tämä on yleiskuva siitä, mitä tapahtuu asennuksen aloittamisen jälkeen.</translation>
+        <translation>Yleiskuva siitä, mitä tapahtuu asennuksen aloittamisen jälkeen.</translation>
     </message>
     <message>
         <location filename="../src/modules/users/Config.cpp" line="237"/>
@@ -1178,7 +1189,7 @@ Asennus voi jatkua, mutta jotkin toiminnot saattavat olla pois käytöstä.</tra
     <message>
         <location filename="../src/modules/users/Config.cpp" line="598"/>
         <source>Your passwords do not match!</source>
-        <translation>Salasanasi eivät täsmää!</translation>
+        <translation>Salasanat ei täsmää!</translation>
     </message>
     <message>
         <location filename="../src/modules/users/Config.cpp" line="612"/>
@@ -1193,12 +1204,12 @@ Asennus voi jatkua, mutta jotkin toiminnot saattavat olla pois käytöstä.</tra
     <message>
         <location filename="../src/modules/packagechooser/Config.cpp" line="112"/>
         <source>Please pick a product from the list. The selected product will be installed.</source>
-        <translation>Ole hyvä ja valitse tuote luettelosta. Valittu tuote asennetaan.</translation>
+        <translation>Ole hyvä ja valitse luettelosta. Valittu tuote asennetaan.</translation>
     </message>
     <message>
         <location filename="../src/modules/packagechooser/Config.cpp" line="241"/>
         <source>Install option: &lt;strong&gt;%1&lt;/strong&gt;</source>
-        <translation>Asennuksen vaihtoehto: &lt;strong&gt;%1&lt;/strong&gt;</translation>
+        <translation>Asennusvaihtoehto: &lt;strong&gt;%1&lt;/strong&gt;</translation>
     </message>
     <message>
         <location filename="../src/modules/packagechooser/Config.cpp" line="241"/>
@@ -1215,7 +1226,7 @@ Asennus voi jatkua, mutta jotkin toiminnot saattavat olla pois käytöstä.</tra
         <location filename="../src/modules/finished/Config.cpp" line="143"/>
         <source>Installation Failed</source>
         <comment>@title</comment>
-        <translation>Asentaminen epäonnistui</translation>
+        <translation>Asennus epäonnistui</translation>
     </message>
     <message>
         <location filename="../src/modules/finished/Config.cpp" line="145"/>
@@ -1227,7 +1238,7 @@ Asennus voi jatkua, mutta jotkin toiminnot saattavat olla pois käytöstä.</tra
         <location filename="../src/modules/finished/Config.cpp" line="146"/>
         <source>The installation of %1 did not complete successfully.</source>
         <comment>@info</comment>
-        <translation>Asennus %1 ei onnistunut.</translation>
+        <translation>Kohteen %1 asennus ei onnistunut.</translation>
     </message>
     <message>
         <location filename="../src/modules/finished/Config.cpp" line="150"/>
@@ -1239,7 +1250,7 @@ Asennus voi jatkua, mutta jotkin toiminnot saattavat olla pois käytöstä.</tra
         <location filename="../src/modules/finished/Config.cpp" line="151"/>
         <source>Installation Complete</source>
         <comment>@title</comment>
-        <translation>Asennus valmis</translation>
+        <translation>Asennus on valmis</translation>
     </message>
     <message>
         <location filename="../src/modules/finished/Config.cpp" line="153"/>
@@ -1251,25 +1262,25 @@ Asennus voi jatkua, mutta jotkin toiminnot saattavat olla pois käytöstä.</tra
         <location filename="../src/modules/finished/Config.cpp" line="154"/>
         <source>The installation of %1 is complete.</source>
         <comment>@info</comment>
-        <translation>Asennus %1 on valmis.</translation>
+        <translation>%1 asennus on valmis.</translation>
     </message>
     <message>
         <location filename="../src/modules/keyboard/Config.cpp" line="583"/>
         <source>Keyboard model has been set to %1.</source>
         <comment>@label, %1 is keyboard model, as in Apple Magic Keyboard</comment>
-        <translation type="unfinished"/>
+        <translation>Näppäimistömalliksi on asetettu %1.</translation>
     </message>
     <message>
         <location filename="../src/modules/keyboard/Config.cpp" line="591"/>
         <source>Keyboard layout has been set to %1/%2.</source>
         <comment>@label, %1 is layout, %2 is layout variant</comment>
-        <translation>Näppäimistön asettelu on asetettu %1/%2.</translation>
+        <translation>Näppäimistöksi on asetettu %1/%2.</translation>
     </message>
     <message>
         <location filename="../src/modules/locale/Config.cpp" line="381"/>
         <source>Set timezone to %1.</source>
         <comment>@action</comment>
-        <translation type="unfinished"/>
+        <translation>Aseta aikavyöhykkeeksi %1.</translation>
     </message>
     <message>
         <location filename="../src/modules/locale/Config.cpp" line="418"/>
@@ -1445,7 +1456,7 @@ Asennus voi jatkua, mutta jotkin toiminnot saattavat olla pois käytöstä.</tra
     <message>
         <location filename="../src/modules/partition/gui/CreatePartitionTableDialog.ui" line="43"/>
         <source>Creating a new partition table will delete all existing data on the disk.</source>
-        <translation>Uuden osiotaulukon luominen poistaa kaikki olemassa olevat tiedostot asemalta.</translation>
+        <translation>Uuden osiotaulukon luominen poistaa kaikki olemassa olevat tiedostot kiintolevyltä.</translation>
     </message>
     <message>
         <location filename="../src/modules/partition/gui/CreatePartitionTableDialog.ui" line="69"/>
@@ -1481,7 +1492,7 @@ Asennus voi jatkua, mutta jotkin toiminnot saattavat olla pois käytöstä.</tra
     <message>
         <location filename="../src/modules/partition/jobs/CreatePartitionTableJob.cpp" line="86"/>
         <source>The installer failed to create a partition table on %1.</source>
-        <translation>Asennusohjelma epäonnistui osiotaulukon luonnissa kohteeseen %1.</translation>
+        <translation>Asentaja epäonnistui osiotaun luomisessa kohteeseen %1.</translation>
     </message>
 </context>
 <context>
@@ -1549,7 +1560,7 @@ Asennus voi jatkua, mutta jotkin toiminnot saattavat olla pois käytöstä.</tra
     <message>
         <location filename="../src/modules/partition/jobs/CreateVolumeGroupJob.cpp" line="51"/>
         <source>The installer failed to create a volume group named &apos;%1&apos;.</source>
-        <translation>Asennusohjelma ei voinut luoda aseman ryhmää nimellä &apos;%1&apos;.</translation>
+        <translation>Asentaja ei voinut luoda taltioryhmää nimellä &quot;%1&quot;.</translation>
     </message>
 </context>
 <context>
@@ -1570,7 +1581,7 @@ Asennus voi jatkua, mutta jotkin toiminnot saattavat olla pois käytöstä.</tra
     <message>
         <location filename="../src/modules/partition/jobs/DeactivateVolumeGroupJob.cpp" line="46"/>
         <source>The installer failed to deactivate a volume group named %1.</source>
-        <translation>Asennusohjelma ei pystynyt poistamaan levyryhmää nimellä %1.</translation>
+        <translation>Asentaja ei voinut poistaa taltioryhmää nimellä %1.</translation>
     </message>
 </context>
 <context>
@@ -1591,7 +1602,7 @@ Asennus voi jatkua, mutta jotkin toiminnot saattavat olla pois käytöstä.</tra
     <message>
         <location filename="../src/modules/partition/jobs/DeletePartitionJob.cpp" line="99"/>
         <source>The installer failed to delete partition %1.</source>
-        <translation>Asennusohjelma epäonnistui osion %1 poistossa.</translation>
+        <translation>Asentaja epäonnistui osion %1 poistamisessa.</translation>
     </message>
 </context>
 <context>
@@ -1599,7 +1610,7 @@ Asennus voi jatkua, mutta jotkin toiminnot saattavat olla pois käytöstä.</tra
     <message>
         <location filename="../src/modules/partition/gui/DeviceInfoWidget.cpp" line="147"/>
         <source>The type of &lt;strong&gt;partition table&lt;/strong&gt; on the selected storage device.&lt;br&gt;&lt;br&gt;The only way to change the partition table type is to erase and recreate the partition table from scratch, which destroys all data on the storage device.&lt;br&gt;This installer will keep the current partition table unless you explicitly choose otherwise.&lt;br&gt;If unsure, on modern systems GPT is preferred.</source>
-        <translation>Valitun kiintolevyn &lt;strong&gt;osiotaulukon&lt;/strong&gt; tyyppi.&lt;br&gt;&lt;br&gt;Ainoa tapa muuttaa osiotaulukon tyyppiä on poistaa ja luoda osiot alusta uudelleen, mikä tuhoaa kaikki kiintolevyn sisältämät tiedot. &lt;br&gt;Asennusohjelma säilyttää nykyisen osiotaulukon, ellet nimenomaisesti valitse muuta.&lt;br&gt;Jos olet epävarma niin nykyaikaisissa järjestelmissä suositellaan GPT:tä.</translation>
+        <translation>Valitun kiintolevyn &lt;strong&gt;osiotaulu&lt;/strong&gt; on tyyppiä.&lt;br&gt;&lt;br&gt;Ainoa tapa muuttaa osiotaulun tyyppiä on poistaa ja luoda osiot alusta uudelleen, mikä tuhoaa kaikki kiintolevyn sisältämät tiedostot. &lt;br&gt;Asentaja säilyttää nykyisen osiotaulun, ellet nimenomaisesti valitse muuta.&lt;br&gt;Nykyaikaisissa järjestelmissä suositellaan GPT:tä, jos olet epävarma.</translation>
     </message>
     <message>
         <location filename="../src/modules/partition/gui/DeviceInfoWidget.cpp" line="139"/>
@@ -1614,7 +1625,7 @@ Asennus voi jatkua, mutta jotkin toiminnot saattavat olla pois käytöstä.</tra
     <message>
         <location filename="../src/modules/partition/gui/DeviceInfoWidget.cpp" line="104"/>
         <source>This installer &lt;strong&gt;cannot detect a partition table&lt;/strong&gt; on the selected storage device.&lt;br&gt;&lt;br&gt;The device either has no partition table, or the partition table is corrupted or of an unknown type.&lt;br&gt;This installer can create a new partition table for you, either automatically, or through the manual partitioning page.</source>
-        <translation>Asennusohjelma &lt;strong&gt;ei tunnista osiotaulukkoa&lt;/strong&gt; valitussa kiintolevyssä.&lt;br&gt;&lt;br&gt;Laitteessa ei ole osiotaulukkoa, taulukko on vioittunut tai tuntematon.&lt;br&gt;Asennusohjelma voi tehdä uuden osiotaulukon, joko automaattisesti tai manuaalisesti.</translation>
+        <translation>Asentaja &lt;strong&gt;ei tunnista osiotaulua&lt;/strong&gt; valitussa kiintolevyssä.&lt;br&gt;&lt;br&gt;Joko ei ole osiotaulua, taulukko on viallinen tai tuntematon.&lt;br&gt;Asentaja voi tehdä uuden osiotaulun, joko automaattisesti tai manuaalisesti.</translation>
     </message>
     <message>
         <location filename="../src/modules/partition/gui/DeviceInfoWidget.cpp" line="89"/>
@@ -1782,7 +1793,7 @@ Asennus voi jatkua, mutta jotkin toiminnot saattavat olla pois käytöstä.</tra
     <message>
         <location filename="../src/libcalamaresui/widgets/ErrorDialog.ui" line="56"/>
         <source>Would you like to paste the install log to the web?</source>
-        <translation>Haluatko liittää asennuslokin verkkoon?</translation>
+        <translation>Haluatko lähettää asennuslokin kehittäjille?</translation>
     </message>
 </context>
 <context>
@@ -1877,13 +1888,13 @@ Asennus voi jatkua, mutta jotkin toiminnot saattavat olla pois käytöstä.</tra
         <location filename="../src/modules/finished/FinishedPage.cpp" line="89"/>
         <source>&lt;h1&gt;All done.&lt;/h1&gt;&lt;br/&gt;%1 has been installed on your computer.&lt;br/&gt;You may now restart into your new system, or continue using the %2 Live environment.</source>
         <comment>@info</comment>
-        <translation>&lt;h1&gt;Kaikki tehty.&lt;/h1&gt;&lt;br/&gt;%1 on asennettu tietokoneellesi.&lt;br/&gt;Voit käynnistää tietokoneen nyt uuteen järjestelmääsi, tai voit jatkaa käyttöjärjestelmän %2 live-ympäristön käyttöä.</translation>
+        <translation>&lt;h1&gt;Valmista.&lt;/h1&gt;&lt;br/&gt;%1 on asennettu tietokoneellesi.&lt;br/&gt;Voit käynnistää tietokoneen, tai voit jatkaa %2 live-ympäristön käyttöä.</translation>
     </message>
     <message>
         <location filename="../src/modules/finished/FinishedPage.cpp" line="95"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;When this box is checked, your system will restart immediately when you click on &lt;span style=&quot;font-style:italic;&quot;&gt;Done&lt;/span&gt; or close the installer.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <comment>@tooltip</comment>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Kun tämä valintaruutu on valittuna, järjestelmä käynnistyy heti, kun napsautat &lt;span style=&quot;font-style:italic;&quot;&gt;Valmis&lt;/span&gt; tai suljet asentimen.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Valintaruudun ollessa valittuna, tietokone käynnistetään uudelleen heti, kun painat &lt;span style=&quot;font-style:italic;&quot;&gt;Valmis&lt;/span&gt; tai suljet ohjelman.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../src/modules/finished/FinishedPage.cpp" line="109"/>
@@ -1895,7 +1906,7 @@ Asennus voi jatkua, mutta jotkin toiminnot saattavat olla pois käytöstä.</tra
         <location filename="../src/modules/finished/FinishedPage.cpp" line="118"/>
         <source>&lt;h1&gt;Installation Failed&lt;/h1&gt;&lt;br/&gt;%1 has not been installed on your computer.&lt;br/&gt;The error message was: %2.</source>
         <comment>@info, %1 is product name with version</comment>
-        <translation>&lt;h1&gt;Asennus epäonnistui &lt;/h1&gt;&lt;br/&gt;%1 ei ole asennettu tietokoneeseesi.&lt;br/&gt;Virhesanoma oli: %2.</translation>
+        <translation>&lt;h1&gt;Asennus epäonnistui! &lt;/h1&gt;&lt;br/&gt;%1 ei ole asennettuna tietokoneellesi.&lt;br/&gt;Virhesanoma: %2.</translation>
     </message>
 </context>
 <context>
@@ -1944,7 +1955,7 @@ Asennus voi jatkua, mutta jotkin toiminnot saattavat olla pois käytöstä.</tra
     <message>
         <location filename="../src/modules/partition/jobs/FormatPartitionJob.cpp" line="73"/>
         <source>The installer failed to format partition %1 on disk &apos;%2&apos;.</source>
-        <translation>Aseman &apos;%2&apos; osion %1 alustus epäonnistui.</translation>
+        <translation>Asentaja ei onnistunut alustamaan osiota %1 levyllä &quot;%2&apos;&quot;.</translation>
     </message>
 </context>
 <context>
@@ -1957,7 +1968,7 @@ Asennus voi jatkua, mutta jotkin toiminnot saattavat olla pois käytöstä.</tra
     <message>
         <location filename="../src/modules/welcome/checker/GeneralRequirements.cpp" line="162"/>
         <source>Available drive space is all of the hard disks and SSDs connected to the system.</source>
-        <translation>Käytettävissä oleva levytila jossa on kaikki kytketyt kiintolevyt ja SSD-levyt.</translation>
+        <translation>Käytettävissä oleva levytila ​​on tietokoneeseen kytketyt hdd- ja ssd-kiintolevyt.</translation>
     </message>
     <message>
         <location filename="../src/modules/welcome/checker/GeneralRequirements.cpp" line="165"/>
@@ -2007,12 +2018,12 @@ Asennus voi jatkua, mutta jotkin toiminnot saattavat olla pois käytöstä.</tra
     <message>
         <location filename="../src/modules/welcome/checker/GeneralRequirements.cpp" line="205"/>
         <source>The installer is not running with administrator rights.</source>
-        <translation>Asennusohjelma ei ole käynnissä järjestelmänvalvojan oikeuksin.</translation>
+        <translation>Asentaja ei ole käynnissä järjestelmänvalvojan oikeuksilla.</translation>
     </message>
     <message>
         <location filename="../src/modules/welcome/checker/GeneralRequirements.cpp" line="213"/>
         <source>has a screen large enough to show the whole installer</source>
-        <translation>näytöllä on riittävän suuri tarkkuus asentajalle</translation>
+        <translation>näytön tarkkuus on riittävä asentajalle</translation>
     </message>
     <message>
         <location filename="../src/modules/welcome/checker/GeneralRequirements.cpp" line="217"/>
@@ -2022,7 +2033,7 @@ Asennus voi jatkua, mutta jotkin toiminnot saattavat olla pois käytöstä.</tra
     <message>
         <location filename="../src/modules/welcome/checker/GeneralRequirements.cpp" line="218"/>
         <source>The screen is too small to display the installer.</source>
-        <translation>Näyttö on liian pieni asentajan näyttämiseksi.</translation>
+        <translation>Näytön tarkkuus on liian pieni asentajan näyttämiseksi.</translation>
     </message>
     <message>
         <location filename="../src/modules/welcome/checker/GeneralRequirements.cpp" line="227"/>
@@ -2202,7 +2213,7 @@ Asennus voi jatkua, mutta jotkin toiminnot saattavat olla pois käytöstä.</tra
         <location filename="../src/modules/license/LicensePage.cpp" line="149"/>
         <source>This setup procedure will install proprietary software that is subject to licensing terms.</source>
         <comment>@info</comment>
-        <translation>Tämä asennusohjelma asentaa patentoidun ohjelmiston, johon sovelletaan lisenssiehtoja.</translation>
+        <translation>Asentaja asentaa patentoidun ohjelmiston, johon sovelletaan lisenssiehtoja.</translation>
     </message>
     <message>
         <location filename="../src/modules/license/LicensePage.cpp" line="154"/>
@@ -2214,13 +2225,13 @@ Asennus voi jatkua, mutta jotkin toiminnot saattavat olla pois käytöstä.</tra
         <location filename="../src/modules/license/LicensePage.cpp" line="159"/>
         <source>This setup procedure can install proprietary software that is subject to licensing terms in order to provide additional features and enhance the user experience.</source>
         <comment>@info</comment>
-        <translation>Tämä asennus voi asentaa patentoidun ohjelmiston, johon sovelletaan lisenssiehtoja lisäominaisuuksien tarjoamiseksi ja käyttökokemuksen parantamiseksi.</translation>
+        <translation>Asentaja voi asentaa patentoidun ohjelmiston, johon sovelletaan lisenssiehtoja lisäominaisuuksien tarjoamiseksi ja käyttökokemuksen parantamiseksi.</translation>
     </message>
     <message>
         <location filename="../src/modules/license/LicensePage.cpp" line="165"/>
         <source>If you do not agree with the terms, proprietary software will not be installed, and open source alternatives will be used instead.</source>
         <comment>@info</comment>
-        <translation>Jos et hyväksy ehtoja, omaa ohjelmistoa ei asenneta, vaan sen sijaan käytetään avoimen lähdekoodin vaihtoehtoja.</translation>
+        <translation>Jos et hyväksy ehtoja, patentoituja ohjelmistoja ei asennetaa, vaan sen sijaan käytetään avoimen lähdekoodin vaihtoehtoja.</translation>
     </message>
 </context>
 <context>
@@ -2428,7 +2439,7 @@ Asennus voi jatkua, mutta jotkin toiminnot saattavat olla pois käytöstä.</tra
     <message>
         <location filename="../src/modules/localeq/Map.qml" line="248"/>
         <source>Timezone: %1</source>
-        <translation type="unfinished"/>
+        <translation>Aikavyöhyke: %1</translation>
     </message>
     <message>
         <location filename="../src/modules/localeq/Map.qml" line="265"/>
@@ -2436,8 +2447,8 @@ Asennus voi jatkua, mutta jotkin toiminnot saattavat olla pois käytöstä.</tra
             and timezone settings for you. You can fine-tune the suggested settings below. Search the map by dragging
             to move and using the +/- buttons to zoom in/out or use mouse scrolling for zooming.</source>
         <comment>@info</comment>
-        <translation>Valitse sijainti kartalla ja asennusohjelma ehdottaa sinulle maa ja aikavyöhykkeen asetuksia.
-             Voit hienosäätää alla olevia asetuksia. Etsi kartalla vetämällä tai painamalla +/- painikkeita.
+        <translation>Valitse sinun sijaintisi kartalla, jotta asentaja voi ehdottaa sinulle maa ja aikavyöhykkeen asetuksia.
+             Voit hienosäätää asetuksia. Etsi kartalta vetämällä tai painamalla +/- painikkeita.
 Voit myös käyttää hiiren rullaa skaalaamiseen.</translation>
     </message>
 </context>
@@ -2807,12 +2818,12 @@ Voit myös käyttää hiiren rullaa skaalaamiseen.</translation>
     <message>
         <location filename="../src/modules/keyboard/KeyboardPage.ui" line="74"/>
         <source>Keyboard model:</source>
-        <translation>Näppäimistön malli:</translation>
+        <translation>Näppäimistömalli:</translation>
     </message>
     <message>
         <location filename="../src/modules/keyboard/KeyboardPage.ui" line="146"/>
         <source>Type here to test your keyboard</source>
-        <translation>Kirjoita tähän testaksesi näppäimistöä.</translation>
+        <translation>Testaa näppäimistöä kirjoittamalla tähän</translation>
     </message>
     <message>
         <location filename="../src/modules/keyboard/KeyboardPage.ui" line="153"/>
@@ -2836,7 +2847,7 @@ Voit myös käyttää hiiren rullaa skaalaamiseen.</translation>
     <message>
         <location filename="../src/modules/users/page_usersetup.ui" line="325"/>
         <source>Choose a password to keep your account safe.</source>
-        <translation>Valitse salasana ja pidä tilisi turvallisena.</translation>
+        <translation>Valitse salasana, joka pitää tilin turvallisena.</translation>
     </message>
     <message>
         <location filename="../src/modules/users/page_usersetup.ui" line="349"/>
@@ -2904,7 +2915,7 @@ Voit myös käyttää hiiren rullaa skaalaamiseen.</translation>
     <message>
         <location filename="../src/modules/users/page_usersetup.ui" line="495"/>
         <source>Choose a password for the administrator account.</source>
-        <translation>Valitse salasana pääkäyttäjän tilille.</translation>
+        <translation>Valitse salasana, järjestelmänvalvojan tilille.</translation>
     </message>
     <message>
         <location filename="../src/modules/users/page_usersetup.ui" line="519"/>
@@ -2915,27 +2926,27 @@ Voit myös käyttää hiiren rullaa skaalaamiseen.</translation>
     <message>
         <location filename="../src/modules/users/page_usersetup.ui" line="627"/>
         <source>Use Active Directory</source>
-        <translation type="unfinished"/>
+        <translation>Käytä Active Directory</translation>
     </message>
     <message>
         <location filename="../src/modules/users/page_usersetup.ui" line="638"/>
         <source>Domain:</source>
-        <translation type="unfinished"/>
+        <translation>Toimialue:</translation>
     </message>
     <message>
         <location filename="../src/modules/users/page_usersetup.ui" line="652"/>
         <source>Domain Administrator:</source>
-        <translation type="unfinished"/>
+        <translation>Toimialueen järjestelmänvalvoja:</translation>
     </message>
     <message>
         <location filename="../src/modules/users/page_usersetup.ui" line="662"/>
         <source>Password:</source>
-        <translation type="unfinished"/>
+        <translation>Salasana:</translation>
     </message>
     <message>
         <location filename="../src/modules/users/page_usersetup.ui" line="680"/>
         <source>IP Address (optional):</source>
-        <translation type="unfinished"/>
+        <translation>IP-osoite (valinnainen):</translation>
     </message>
 </context>
 <context>
@@ -3200,60 +3211,60 @@ Voit myös käyttää hiiren rullaa skaalaamiseen.</translation>
         <location filename="../src/modules/partition/PartitionViewStep.cpp" line="144"/>
         <source>Install %1 &lt;strong&gt;alongside&lt;/strong&gt; another operating system</source>
         <comment>@label</comment>
-        <translation type="unfinished"/>
+        <translation>Asenna %1 toisen käyttöjärjestelmän &lt;strong&gt;rinnalle&lt;/strong&gt;</translation>
     </message>
     <message>
         <location filename="../src/modules/partition/PartitionViewStep.cpp" line="148"/>
         <source>&lt;strong&gt;Erase&lt;/strong&gt; disk and install %1</source>
         <comment>@label</comment>
-        <translation type="unfinished"/>
+        <translation>&lt;strong&gt;Tyhjennä&lt;/strong&gt; kiintolevy ja asenna %1</translation>
     </message>
     <message>
         <location filename="../src/modules/partition/PartitionViewStep.cpp" line="152"/>
         <source>&lt;strong&gt;Replace&lt;/strong&gt; a partition with %1</source>
         <comment>@label</comment>
-        <translation type="unfinished"/>
+        <translation>&lt;strong&gt;Korvaa&lt;/strong&gt; osio %1:lla</translation>
     </message>
     <message>
         <location filename="../src/modules/partition/PartitionViewStep.cpp" line="157"/>
         <source>&lt;strong&gt;Manual&lt;/strong&gt; partitioning</source>
         <comment>@label</comment>
-        <translation type="unfinished"/>
+        <translation>&lt;strong&gt;Manuaalinen&lt;/strong&gt; osiointi</translation>
     </message>
     <message>
         <location filename="../src/modules/partition/PartitionViewStep.cpp" line="179"/>
         <source>Install %1 &lt;strong&gt;alongside&lt;/strong&gt; another operating system on disk &lt;strong&gt;%2&lt;/strong&gt; (%3)</source>
         <comment>@info</comment>
-        <translation type="unfinished"/>
+        <translation>Asenna %1 toisen &lt;strong&gt;rinnalle&lt;/strong&gt; levylle &lt;strong&gt;%2&lt;/strong&gt; (%3)</translation>
     </message>
     <message>
         <location filename="../src/modules/partition/PartitionViewStep.cpp" line="188"/>
         <source>&lt;strong&gt;Erase&lt;/strong&gt; disk &lt;strong&gt;%2&lt;/strong&gt; (%3) and install %1</source>
         <comment>@info</comment>
-        <translation type="unfinished"/>
+        <translation>&lt;strong&gt;Tyhjennä&lt;/strong&gt; levy &lt;strong&gt;%2&lt;/strong&gt; (%3) ja asenna %1</translation>
     </message>
     <message>
         <location filename="../src/modules/partition/PartitionViewStep.cpp" line="195"/>
         <source>&lt;strong&gt;Replace&lt;/strong&gt; a partition on disk &lt;strong&gt;%2&lt;/strong&gt; (%3) with %1</source>
         <comment>@info</comment>
-        <translation type="unfinished"/>
+        <translation>&lt;strong&gt;Korvaa&lt;/strong&gt; levyn &lt;strong&gt;%2&lt;/strong&gt; (%3) osio, %1</translation>
     </message>
     <message>
         <location filename="../src/modules/partition/PartitionViewStep.cpp" line="204"/>
         <source>&lt;strong&gt;Manual&lt;/strong&gt; partitioning on disk &lt;strong&gt;%1&lt;/strong&gt; (%2)</source>
         <comment>@info</comment>
-        <translation type="unfinished"/>
+        <translation>&lt;strong&gt;Manuaalinen&lt;/strong&gt; osiointi levylle &lt;strong&gt;%1&lt;/strong&gt; (%2)</translation>
     </message>
     <message>
         <location filename="../src/modules/partition/PartitionViewStep.cpp" line="214"/>
         <source>Disk &lt;strong&gt;%1&lt;/strong&gt; (%2)</source>
         <comment>@info</comment>
-        <translation type="unfinished"/>
+        <translation>Levy &lt;strong&gt;%1&lt;/strong&gt; (%2)</translation>
     </message>
     <message>
         <location filename="../src/modules/partition/PartitionViewStep.cpp" line="239"/>
         <source>Create a swap file.</source>
-        <translation type="unfinished"/>
+        <translation>Luo swap tiedostona.</translation>
     </message>
     <message>
         <location filename="../src/modules/partition/PartitionViewStep.cpp" line="314"/>
@@ -3313,13 +3324,13 @@ Voit myös käyttää hiiren rullaa skaalaamiseen.</translation>
     <message>
         <location filename="../src/libcalamares/JobQueue.cpp" line="138"/>
         <source>Calamares</source>
-        <translation type="unfinished"/>
+        <translation>Calamares</translation>
     </message>
     <message>
         <location filename="../src/libcalamares/JobQueue.cpp" line="138"/>
         <source>Installation in progress</source>
         <comment>@status</comment>
-        <translation type="unfinished"/>
+        <translation>Asennus meneillään</translation>
     </message>
 </context>
 <context>
@@ -3507,7 +3518,7 @@ Asennus voi jatkua, mutta jotkin toiminnot saattavat olla pois käytöstä.&lt;/
     <message>
         <location filename="../src/modules/partition/jobs/RemoveVolumeGroupJob.cpp" line="46"/>
         <source>The installer failed to remove a volume group named &apos;%1&apos;.</source>
-        <translation>Asennusoihjelma ei onnistunut poistamaan taltioryhmää &apos;%1&apos;.</translation>
+        <translation>Asentaja ei onnistunut poistamaan taltioryhmää &quot;%1&quot;.</translation>
     </message>
 </context>
 <context>
@@ -3517,14 +3528,18 @@ Asennus voi jatkua, mutta jotkin toiminnot saattavat olla pois käytöstä.&lt;/
         <source>This computer does not satisfy the minimum requirements for installing %1.
 
 Installation cannot continue.</source>
-        <translation type="unfinished"/>
+        <translation>Tietokone ei täytä minimivaatimuksia %1 asentamiseen.
+
+Asennusta ei voi jatkaa.</translation>
     </message>
     <message>
         <location filename="../src/modules/welcomeq/Requirements.qml" line="41"/>
         <source>This computer does not satisfy some of the recommended requirements for setting up %1.
 
 Setup can continue, but some features might be disabled.&lt;/p&gt;</source>
-        <translation type="unfinished"/>
+        <translation>Tietokone ei täytä joitakin suositeltuja vaatimuksia %1 asennukseen.
+
+Asennusta voidaan jatkaa, mutta joitakin ominaisuuksia saattaa jäädä pois.&lt;/p&gt;</translation>
     </message>
 </context>
 <context>
@@ -3550,7 +3565,7 @@ Setup can continue, but some features might be disabled.&lt;/p&gt;</source>
     <message>
         <location filename="../src/modules/partition/jobs/ResizePartitionJob.cpp" line="70"/>
         <source>The installer failed to resize partition %1 on disk &apos;%2&apos;.</source>
-        <translation>Asennusohjelma epäonnistui osion %1 koon muuttamisessa asemalla &apos;%2&apos;.</translation>
+        <translation>Asentaja epäonnistui osion %1 koon muutoksessa asemalla &quot;%2&quot;.</translation>
     </message>
 </context>
 <context>
@@ -3585,7 +3600,7 @@ Setup can continue, but some features might be disabled.&lt;/p&gt;</source>
     <message>
         <location filename="../src/modules/partition/jobs/ResizeVolumeGroupJob.cpp" line="58"/>
         <source>The installer failed to resize a volume group named &apos;%1&apos;.</source>
-        <translation>Asennusohjelma ei onnistunut muuttamaan taltioryhmän &apos;%1&apos; kokoa.</translation>
+        <translation>Asentaja ei onnistunut muuttamaan taltioryhmän &quot;%1&quot; kokoa.</translation>
     </message>
 </context>
 <context>
@@ -3648,7 +3663,7 @@ Setup can continue, but some features might be disabled.&lt;/p&gt;</source>
         <location filename="../src/modules/keyboard/SetKeyboardLayoutJob.cpp" line="66"/>
         <source>Setting keyboard model to %1, layout as %2-%3…</source>
         <comment>@status, %1 model, %2 layout, %3 variant</comment>
-        <translation>Asetetaan näppäimistön malliksi %1, asettelu %2-%3…</translation>
+        <translation>Asetetaan näppäimistömalliksi %1, asettelu %2-%3…</translation>
     </message>
     <message>
         <location filename="../src/modules/keyboard/SetKeyboardLayoutJob.cpp" line="371"/>
@@ -3782,7 +3797,7 @@ Setup can continue, but some features might be disabled.&lt;/p&gt;</source>
     <message>
         <location filename="../src/modules/partition/jobs/SetPartitionFlagsJob.cpp" line="149"/>
         <source>The installer failed to set flags on partition %1.</source>
-        <translation>Asennusohjelma ei voinut asettaa lippuja osioon %1.</translation>
+        <translation>Asentaja ei voinut asettaa lippua osioon %1.</translation>
     </message>
 </context>
 <context>
@@ -3946,12 +3961,12 @@ Setup can continue, but some features might be disabled.&lt;/p&gt;</source>
     <message>
         <location filename="../src/modules/packagechooserq/UEFI.qml" line="103"/>
         <source>Option: </source>
-        <translation type="unfinished"/>
+        <translation>Optio: </translation>
     </message>
     <message>
         <location filename="../src/modules/packagechooserq/UEFI.qml" line="120"/>
         <source>Select</source>
-        <translation type="unfinished"/>
+        <translation>Valitse</translation>
     </message>
 </context>
 <context>
@@ -3989,7 +4004,7 @@ Setup can continue, but some features might be disabled.&lt;/p&gt;</source>
     <message>
         <location filename="../src/modules/usersq/UserInput.qml" line="181"/>
         <source>If more than one person will use this computer, you can create multiple accounts after installation.</source>
-        <translation>Jos tätä tietokonetta käyttää useampi kuin yksi henkilö, voit luoda useita tilejä asennuksen jälkeen.</translation>
+        <translation>Jos tietokonetta käyttää useampi kuin yksi henkilö, voit luoda lisää käyttäjiä asennuksen jälkeen.</translation>
     </message>
     <message>
         <location filename="../src/modules/usersq/UserInput.qml" line="195"/>
@@ -4029,7 +4044,7 @@ Setup can continue, but some features might be disabled.&lt;/p&gt;</source>
     <message>
         <location filename="../src/modules/usersq/UserInput.qml" line="288"/>
         <source>Choose a password to keep your account safe.</source>
-        <translation>Valitse salasana ja pidä tilisi turvallisena.</translation>
+        <translation>Valitse salasana, joka pitää tilin turvallisena.</translation>
     </message>
     <message>
         <location filename="../src/modules/usersq/UserInput.qml" line="312"/>
@@ -4059,7 +4074,7 @@ Setup can continue, but some features might be disabled.&lt;/p&gt;</source>
     <message>
         <location filename="../src/modules/usersq/UserInput.qml" line="403"/>
         <source>Choose a root password to keep your account safe.</source>
-        <translation>Valitse root salasana ja pidä tilisi turvallisena.</translation>
+        <translation>Valitse root salasana, joka pitää tilin turvallisena.</translation>
     </message>
     <message>
         <location filename="../src/modules/usersq/UserInput.qml" line="428"/>
@@ -4102,7 +4117,7 @@ Setup can continue, but some features might be disabled.&lt;/p&gt;</source>
     <message>
         <location filename="../src/modules/users/UsersPage.cpp" line="205"/>
         <source>&lt;small&gt;If more than one person will use this computer, you can create multiple accounts after installation.&lt;/small&gt;</source>
-        <translation>&lt;small&gt;Jos useampi henkilö käyttää tätä samaa tietokonetta, voit luoda useita tilejä asennuksen jälkeen.&lt;/small&gt;</translation>
+        <translation>&lt;small&gt;Jos tietokonetta käyttää useampi kuin yksi henkilö, voit luoda lisää käyttäjiä asennuksen jälkeen.&lt;/small&gt;</translation>
     </message>
 </context>
 <context>
@@ -4220,12 +4235,12 @@ Setup can continue, but some features might be disabled.&lt;/p&gt;</source>
     <message>
         <location filename="../src/modules/welcome/WelcomePage.ui" line="179"/>
         <source>Open release notes website</source>
-        <translation>Avaa julkaisutietojen verkkosivusto</translation>
+        <translation>Avaa julkaisun tiedot verkkosivulta</translation>
     </message>
     <message>
         <location filename="../src/modules/welcome/WelcomePage.ui" line="182"/>
         <source>&amp;Release notes</source>
-        <translation>&amp;Julkaisutiedot</translation>
+        <translation>&amp;Julkaisun tiedot</translation>
     </message>
     <message>
         <location filename="../src/modules/welcome/WelcomePage.ui" line="169"/>
@@ -4247,7 +4262,7 @@ Setup can continue, but some features might be disabled.&lt;/p&gt;</source>
         <location filename="../src/calamares/DebugWindow.cpp" line="238"/>
         <source>About %1 Installer</source>
         <comment>@title</comment>
-        <translation>Tietoja %1 asennusohjelmasta</translation>
+        <translation>Tietoja %1 asentajasta</translation>
     </message>
     <message>
         <location filename="../src/modules/welcome/WelcomePage.cpp" line="213"/>
@@ -4329,7 +4344,7 @@ Setup can continue, but some features might be disabled.&lt;/p&gt;</source>
     <message>
         <location filename="../src/branding/kaos_branding/calamares-navigation.qml" line="121"/>
         <source>Back</source>
-        <translation>Takaisin</translation>
+        <translation>Paluu</translation>
     </message>
     <message>
         <location filename="../src/branding/kaos_branding/calamares-navigation.qml" line="153"/>
@@ -4384,19 +4399,19 @@ Setup can continue, but some features might be disabled.&lt;/p&gt;</source>
     <message>
         <location filename="../src/modules/finishedq/finishedq.qml" line="37"/>
         <source>Installation Completed</source>
-        <translation>Asennus suoritettu</translation>
+        <translation>Asennus on valmis</translation>
     </message>
     <message>
         <location filename="../src/modules/finishedq/finishedq.qml" line="44"/>
         <source>%1 has been installed on your computer.&lt;br/&gt;
             You may now restart into your new system, or continue using the Live environment.</source>
         <translation>%1 on asennettu tietokoneellesi.&lt;br/&gt;
-            Voit käynnistää tietokoneen uudelleen tai jatkaa Live-ympäristön käyttöä.</translation>
+            Käynnistää tietokoneen uudelleen tai jatka Live-ympäristön käyttöä.</translation>
     </message>
     <message>
         <location filename="../src/modules/finishedq/finishedq.qml" line="66"/>
         <source>Close Installer</source>
-        <translation>Sulje asennusohjelma</translation>
+        <translation>Sulje asentaja</translation>
     </message>
     <message>
         <location filename="../src/modules/finishedq/finishedq.qml" line="73"/>
@@ -4407,8 +4422,8 @@ Setup can continue, but some features might be disabled.&lt;/p&gt;</source>
         <location filename="../src/modules/finishedq/finishedq.qml" line="94"/>
         <source>&lt;p&gt;A full log of the install is available as installation.log in the home directory of the Live user.&lt;br/&gt;
             This log is copied to %1 of the target system.&lt;/p&gt;</source>
-        <translation>&lt;p&gt;Asennusloki install.log löytyy asennusmedialta live-käyttäjän kotihakemistosta&lt;br/&gt;
-            Tämä loki kopioidaan myös tietokoneelle kansioon %1.&lt;/p&gt;</translation>
+        <translation>&lt;p&gt;Asennuksen install.log löytyy asennusmedialta live-käyttäjän kotihakemistosta&lt;br/&gt;
+            Loki kopioidaan myös tietokoneelle kansioon %1.&lt;/p&gt;</translation>
     </message>
 </context>
 <context>
@@ -4417,7 +4432,7 @@ Setup can continue, but some features might be disabled.&lt;/p&gt;</source>
         <location filename="../src/modules/finishedq/finishedq@mobile.qml" line="36"/>
         <source>Installation Completed</source>
         <comment>@title</comment>
-        <translation>Asennus suoritettu</translation>
+        <translation>Asennus on valmis</translation>
     </message>
     <message>
         <location filename="../src/modules/finishedq/finishedq@mobile.qml" line="43"/>
@@ -4446,13 +4461,13 @@ Setup can continue, but some features might be disabled.&lt;/p&gt;</source>
         <location filename="../src/modules/keyboardq/keyboardq.qml" line="61"/>
         <source>To activate keyboard preview, select a layout.</source>
         <comment>@label</comment>
-        <translation>Jos haluat aktivoida näppäimistön esikatselun, valitse asettelu.</translation>
+        <translation>Näppäimistön esikatselu valitsemalla asettelu.</translation>
     </message>
     <message>
         <location filename="../src/modules/keyboardq/keyboardq.qml" line="144"/>
         <source>&lt;b&gt;Keyboard Model:&amp;nbsp;&amp;nbsp;&lt;/b&gt;</source>
         <comment>@label</comment>
-        <translation>&lt;b&gt;Näppäimistö:&amp;nbsp;&amp;nbsp;&lt;/b&gt;</translation>
+        <translation>&lt;b&gt;Näppäimistömalli:&amp;nbsp;&amp;nbsp;&lt;/b&gt;</translation>
     </message>
     <message>
         <location filename="../src/modules/keyboardq/keyboardq.qml" line="185"/>
@@ -4511,7 +4526,7 @@ Setup can continue, but some features might be disabled.&lt;/p&gt;</source>
     <message>
         <location filename="../src/modules/partitionq/manual.qml" line="80"/>
         <source>Back</source>
-        <translation>Takaisin</translation>
+        <translation>Paluu</translation>
     </message>
 </context>
 <context>
@@ -4521,7 +4536,7 @@ Setup can continue, but some features might be disabled.&lt;/p&gt;</source>
         <source>&lt;h3&gt;%1&lt;/h3&gt;
             &lt;p&gt;These are example release notes.&lt;/p&gt;</source>
         <translation>&lt;h3&gt;%1&lt;/h3&gt;
-            &lt;p&gt;Nämä ovat esimerkkejä julkaisutiedoista.&lt;/p&gt;</translation>
+            &lt;p&gt;Esimerkki julkaisun tiedoista.&lt;/p&gt;</translation>
     </message>
 </context>
 <context>
@@ -4529,12 +4544,12 @@ Setup can continue, but some features might be disabled.&lt;/p&gt;</source>
     <message>
         <location filename="../src/modules/packagechooserq/packagechooserq.qml" line="107"/>
         <source>Option: </source>
-        <translation type="unfinished"/>
+        <translation>Optio: </translation>
     </message>
     <message>
         <location filename="../src/modules/packagechooserq/packagechooserq.qml" line="123"/>
         <source>Select</source>
-        <translation type="unfinished"/>
+        <translation>Valitse</translation>
     </message>
 </context>
 <context>
@@ -4542,12 +4557,12 @@ Setup can continue, but some features might be disabled.&lt;/p&gt;</source>
     <message>
         <location filename="../src/modules/packagechooserq/packagechooserq@audio.qml" line="108"/>
         <source>Option: </source>
-        <translation type="unfinished"/>
+        <translation>Optio: </translation>
     </message>
     <message>
         <location filename="../src/modules/packagechooserq/packagechooserq@audio.qml" line="125"/>
         <source>Select</source>
-        <translation type="unfinished"/>
+        <translation>Valitse</translation>
     </message>
 </context>
 <context>
@@ -4646,12 +4661,37 @@ ls -l /home
  * AMD CPU systems
 
 The vertical scrollbar is adjustable, current width set to 10.</source>
-        <translation type="unfinished"/>
+        <translation>### %1
+Tämä on esimerkki QML-tiedostosta, joka näyttää Markdown vaihtoehdot sisällössä,
+Flickable-sisältöä voi vetää ja pyyhkiä.
+
+RichTextin QML voi käyttää HTML-tageja, Markdownissa se käyttää Markdown-syntaksia. Flickable-sisältö on hyödyllistä kosketusnäytöille.
+
+**Tämä on lihavoitu teksti**
+
+*Tämä on kursivoitu teksti*
+
+_Tämä on alleviivattua tekstiä_
+
+&gt; lohkolainaus
+
+~~Tämä on yliviivattua~~
+
+Koodin esimerkki:
+```
+ls -l /home
+```
+
+**Listat:**
+ * Intel CPU systems
+ * AMD CPU systems
+
+Pysty vierityspalkki on säädettävissä, nyt leveys on asetettu arvoon 10.</translation>
     </message>
     <message>
         <location filename="../src/modules/welcomeq/release_notes.qml" line="80"/>
         <source>Back</source>
-        <translation>Takaisin</translation>
+        <translation>Paluu</translation>
     </message>
 </context>
 <context>
@@ -4664,7 +4704,7 @@ The vertical scrollbar is adjustable, current width set to 10.</source>
     <message>
         <location filename="../src/branding/kaos_branding/show.qml" line="73"/>
         <source>After creating your chosen disk setup in the first 10 % the full copying of the ISO will take the longest of this install phase and will run until approximately 45%.</source>
-        <translation>Kun olet luonut valitsemasi levyasetukset on ensimmäinen 10 % tehty. ISO-levykuvan koko kopiointi vie eniten aikaa 45 % asennuksesta.</translation>
+        <translation>Kun olet luonut levyasetukset on ensimmäinen 10 % valmiina. ISO-levykuvan koko kopiointi vie 45 % asennusajasta.</translation>
     </message>
     <message>
         <location filename="../src/branding/kaos_branding/show.qml" line="76"/>
@@ -4674,7 +4714,7 @@ The vertical scrollbar is adjustable, current width set to 10.</source>
     <message>
         <location filename="../src/branding/kaos_branding/show.qml" line="77"/>
         <source>Once the ISO is copied some 25 post-install modules will run. This includes setting user specific options, removing Live Session only packages and adjusting hardware setup.</source>
-        <translation>Kun ISO on kopioitu, suoritetaan noin 25 asennuksen jälkeistä moduulia. Tähän sisältyy käyttäjäkohtaisten valintojen asettaminen, live-istunnon poistaminen ja laitteiston asetusten säätäminen.</translation>
+        <translation>Kun ISO on kopioitu, suoritetaan noin 25 asennuksen jälkeistä tehtävää. Tähän sisältyy käyttäjäkohtaisten valintojen asentaminen, live-istunnon poistaminen ja laitteiston säätäminen.</translation>
     </message>
     <message>
         <location filename="../src/branding/kaos_branding/show.qml" line="80"/>
@@ -4749,7 +4789,9 @@ The vertical scrollbar is adjustable, current width set to 10.</source>
         <source>### Welcome to the %1 %2 installer
 
 This program will ask you some questions and set up %1 on your computer.</source>
-        <translation type="unfinished"/>
+        <translation>### Tervetuloa %1 %2 asentajaan
+
+Ohjelma kysyy sinulta kysymyksiä ja asentaa %1 tietokoneellesi.</translation>
     </message>
     <message>
         <location filename="../src/modules/welcomeq/welcomeq.qml" line="129"/>
@@ -4769,7 +4811,7 @@ This program will ask you some questions and set up %1 on your computer.</source
     <message>
         <location filename="../src/modules/welcomeq/welcomeq.qml" line="218"/>
         <source>Release Notes</source>
-        <translation>Julkaisutiedot</translation>
+        <translation>Julkaisun tiedot</translation>
     </message>
     <message>
         <location filename="../src/modules/welcomeq/welcomeq.qml" line="242"/>

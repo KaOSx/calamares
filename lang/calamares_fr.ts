@@ -17,7 +17,20 @@ Copyright 2014-2024 Anke Boersma, demm@kaosx.us
 Thanks to [the Calamares team](href='https://calamares.io/team/)
 
 and the [KaOS translators team](href=&apos;https://www.transifex.com/kaos/kaos/).</source>
-        <translation type="unfinished"/>
+        <translation># %1
+**%2**
+
+pour **%3**
+
+Copyright 2014-2017 Teo Mrnjavac, teo@kde.org
+
+Copyright 2017-2022 Adriaan de Groot, groot@kde.org
+
+Copyright 2014-2024 Anke Boersma, demm@kaosx.us
+
+Merci à [l’équipe de Calamares](href=&apos;https://calamares.io/team/)
+
+et à [l’équipe de traducteurs de KaOS](href=&apos;https://www.transifex.com/kaos/kaos/).</translation>
     </message>
 </context>
 <context>
@@ -45,13 +58,13 @@ and the [KaOS translators team](href=&apos;https://www.transifex.com/kaos/kaos/)
         <location filename="../src/modules/users/ActiveDirectoryJob.cpp" line="39"/>
         <source>Enroll system in Active Directory</source>
         <comment>@label</comment>
-        <translation type="unfinished"/>
+        <translation>Inscrire le système dans l’Active Directory</translation>
     </message>
     <message>
         <location filename="../src/modules/users/ActiveDirectoryJob.cpp" line="45"/>
         <source>Enrolling system in Active Directory…</source>
         <comment>@status</comment>
-        <translation type="unfinished"/>
+        <translation>Inscription du système dans l’Active Directory…</translation>
     </message>
 </context>
 <context>
@@ -1254,7 +1267,7 @@ L&apos;installateur va fermer et tous les changements seront perdus.</translatio
         <location filename="../src/modules/keyboard/Config.cpp" line="583"/>
         <source>Keyboard model has been set to %1.</source>
         <comment>@label, %1 is keyboard model, as in Apple Magic Keyboard</comment>
-        <translation type="unfinished"/>
+        <translation>Le modèle clavier a été configuré avec %1.</translation>
     </message>
     <message>
         <location filename="../src/modules/keyboard/Config.cpp" line="591"/>
@@ -1266,7 +1279,7 @@ L&apos;installateur va fermer et tous les changements seront perdus.</translatio
         <location filename="../src/modules/locale/Config.cpp" line="381"/>
         <source>Set timezone to %1.</source>
         <comment>@action</comment>
-        <translation type="unfinished"/>
+        <translation>Fuseau horaire défini à %1.</translation>
     </message>
     <message>
         <location filename="../src/modules/locale/Config.cpp" line="418"/>
@@ -2425,7 +2438,7 @@ L&apos;installateur va fermer et tous les changements seront perdus.</translatio
     <message>
         <location filename="../src/modules/localeq/Map.qml" line="248"/>
         <source>Timezone: %1</source>
-        <translation type="unfinished"/>
+        <translation>Fuseau horaire : %1</translation>
     </message>
     <message>
         <location filename="../src/modules/localeq/Map.qml" line="265"/>
@@ -2910,27 +2923,27 @@ L&apos;installateur va fermer et tous les changements seront perdus.</translatio
     <message>
         <location filename="../src/modules/users/page_usersetup.ui" line="627"/>
         <source>Use Active Directory</source>
-        <translation type="unfinished"/>
+        <translation>Utiliser l’Active Directory</translation>
     </message>
     <message>
         <location filename="../src/modules/users/page_usersetup.ui" line="638"/>
         <source>Domain:</source>
-        <translation type="unfinished"/>
+        <translation>Domaine :</translation>
     </message>
     <message>
         <location filename="../src/modules/users/page_usersetup.ui" line="652"/>
         <source>Domain Administrator:</source>
-        <translation type="unfinished"/>
+        <translation>Administrateur du domaine :</translation>
     </message>
     <message>
         <location filename="../src/modules/users/page_usersetup.ui" line="662"/>
         <source>Password:</source>
-        <translation type="unfinished"/>
+        <translation>Mot de passe :</translation>
     </message>
     <message>
         <location filename="../src/modules/users/page_usersetup.ui" line="680"/>
         <source>IP Address (optional):</source>
-        <translation type="unfinished"/>
+        <translation>Adresse IP (optionnel) :</translation>
     </message>
 </context>
 <context>
@@ -3195,60 +3208,60 @@ L&apos;installateur va fermer et tous les changements seront perdus.</translatio
         <location filename="../src/modules/partition/PartitionViewStep.cpp" line="144"/>
         <source>Install %1 &lt;strong&gt;alongside&lt;/strong&gt; another operating system</source>
         <comment>@label</comment>
-        <translation type="unfinished"/>
+        <translation>Installer %1 &lt;strong&gt;à côté&lt;/strong&gt; d’un autre système d’exploitation</translation>
     </message>
     <message>
         <location filename="../src/modules/partition/PartitionViewStep.cpp" line="148"/>
         <source>&lt;strong&gt;Erase&lt;/strong&gt; disk and install %1</source>
         <comment>@label</comment>
-        <translation type="unfinished"/>
+        <translation>&lt;strong&gt;Écraser&lt;/strong&gt; le disque et installer %1</translation>
     </message>
     <message>
         <location filename="../src/modules/partition/PartitionViewStep.cpp" line="152"/>
         <source>&lt;strong&gt;Replace&lt;/strong&gt; a partition with %1</source>
         <comment>@label</comment>
-        <translation type="unfinished"/>
+        <translation>&lt;strong&gt;Remplacer&lt;/strong&gt; une partition par %1</translation>
     </message>
     <message>
         <location filename="../src/modules/partition/PartitionViewStep.cpp" line="157"/>
         <source>&lt;strong&gt;Manual&lt;/strong&gt; partitioning</source>
         <comment>@label</comment>
-        <translation type="unfinished"/>
+        <translation>Partitionnement &lt;strong&gt;manuel&lt;/strong&gt;</translation>
     </message>
     <message>
         <location filename="../src/modules/partition/PartitionViewStep.cpp" line="179"/>
         <source>Install %1 &lt;strong&gt;alongside&lt;/strong&gt; another operating system on disk &lt;strong&gt;%2&lt;/strong&gt; (%3)</source>
         <comment>@info</comment>
-        <translation type="unfinished"/>
+        <translation>Installer %1 &lt;strong&gt;à côté&lt;/strong&gt; d’un autre système d’exploitation sur le disque &lt;strong&gt;%2&lt;/strong&gt; (%3)</translation>
     </message>
     <message>
         <location filename="../src/modules/partition/PartitionViewStep.cpp" line="188"/>
         <source>&lt;strong&gt;Erase&lt;/strong&gt; disk &lt;strong&gt;%2&lt;/strong&gt; (%3) and install %1</source>
         <comment>@info</comment>
-        <translation type="unfinished"/>
+        <translation>&lt;strong&gt;Écraser&lt;/strong&gt; le disque &lt;strong&gt;%2&lt;/strong&gt; (%3) et installer %1.</translation>
     </message>
     <message>
         <location filename="../src/modules/partition/PartitionViewStep.cpp" line="195"/>
         <source>&lt;strong&gt;Replace&lt;/strong&gt; a partition on disk &lt;strong&gt;%2&lt;/strong&gt; (%3) with %1</source>
         <comment>@info</comment>
-        <translation type="unfinished"/>
+        <translation>&lt;strong&gt;Remplacer&lt;/strong&gt; une partition sur le disque &lt;strong&gt;%2&lt;/strong&gt; (%3) par %1</translation>
     </message>
     <message>
         <location filename="../src/modules/partition/PartitionViewStep.cpp" line="204"/>
         <source>&lt;strong&gt;Manual&lt;/strong&gt; partitioning on disk &lt;strong&gt;%1&lt;/strong&gt; (%2)</source>
         <comment>@info</comment>
-        <translation type="unfinished"/>
+        <translation>Partitionnement &lt;strong&gt;manuel&lt;/strong&gt; sur le disque &lt;strong&gt;%1&lt;/strong&gt; (%2)</translation>
     </message>
     <message>
         <location filename="../src/modules/partition/PartitionViewStep.cpp" line="214"/>
         <source>Disk &lt;strong&gt;%1&lt;/strong&gt; (%2)</source>
         <comment>@info</comment>
-        <translation type="unfinished"/>
+        <translation>Disque &lt;strong&gt;%1&lt;/strong&gt; (%2)</translation>
     </message>
     <message>
         <location filename="../src/modules/partition/PartitionViewStep.cpp" line="239"/>
         <source>Create a swap file.</source>
-        <translation type="unfinished"/>
+        <translation>Créer un fichier swap.</translation>
     </message>
     <message>
         <location filename="../src/modules/partition/PartitionViewStep.cpp" line="314"/>
@@ -3308,13 +3321,13 @@ L&apos;installateur va fermer et tous les changements seront perdus.</translatio
     <message>
         <location filename="../src/libcalamares/JobQueue.cpp" line="138"/>
         <source>Calamares</source>
-        <translation type="unfinished"/>
+        <translation>Calamares</translation>
     </message>
     <message>
         <location filename="../src/libcalamares/JobQueue.cpp" line="138"/>
         <source>Installation in progress</source>
         <comment>@status</comment>
-        <translation type="unfinished"/>
+        <translation>Installation en cours</translation>
     </message>
 </context>
 <context>
@@ -3511,14 +3524,18 @@ Sortie :
         <source>This computer does not satisfy the minimum requirements for installing %1.
 
 Installation cannot continue.</source>
-        <translation type="unfinished"/>
+        <translation>Cet ordinateur ne satisfait pas les conditions requises pour installer %1.
+
+L’installation ne peut pas continuer.</translation>
     </message>
     <message>
         <location filename="../src/modules/welcomeq/Requirements.qml" line="41"/>
         <source>This computer does not satisfy some of the recommended requirements for setting up %1.
 
 Setup can continue, but some features might be disabled.&lt;/p&gt;</source>
-        <translation type="unfinished"/>
+        <translation>Cet ordinateur ne satisfait pas les conditions requises pour installer %1.
+
+L’installation peut continuer, mais certaines fonctionnalités peuvent être désactivées.&lt;/p&gt;</translation>
     </message>
 </context>
 <context>
@@ -3940,12 +3957,12 @@ Setup can continue, but some features might be disabled.&lt;/p&gt;</source>
     <message>
         <location filename="../src/modules/packagechooserq/UEFI.qml" line="103"/>
         <source>Option: </source>
-        <translation type="unfinished"/>
+        <translation>Option :</translation>
     </message>
     <message>
         <location filename="../src/modules/packagechooserq/UEFI.qml" line="120"/>
         <source>Select</source>
-        <translation type="unfinished"/>
+        <translation>Sélectionner</translation>
     </message>
 </context>
 <context>
@@ -4523,12 +4540,12 @@ Les paramètres régionaux du système affectent le format des dates et des nomb
     <message>
         <location filename="../src/modules/packagechooserq/packagechooserq.qml" line="107"/>
         <source>Option: </source>
-        <translation type="unfinished"/>
+        <translation>Option :</translation>
     </message>
     <message>
         <location filename="../src/modules/packagechooserq/packagechooserq.qml" line="123"/>
         <source>Select</source>
-        <translation type="unfinished"/>
+        <translation>Sélectionner</translation>
     </message>
 </context>
 <context>
@@ -4536,12 +4553,12 @@ Les paramètres régionaux du système affectent le format des dates et des nomb
     <message>
         <location filename="../src/modules/packagechooserq/packagechooserq@audio.qml" line="108"/>
         <source>Option: </source>
-        <translation type="unfinished"/>
+        <translation>Option :</translation>
     </message>
     <message>
         <location filename="../src/modules/packagechooserq/packagechooserq@audio.qml" line="125"/>
         <source>Select</source>
-        <translation type="unfinished"/>
+        <translation>Sélectionner</translation>
     </message>
 </context>
 <context>
@@ -4640,7 +4657,32 @@ ls -l /home
  * AMD CPU systems
 
 The vertical scrollbar is adjustable, current width set to 10.</source>
-        <translation type="unfinished"/>
+        <translation>### %1
+Ceci est un exemple de fichier QML, affichant des eptions en Markdown avec du contenu cliquable.
+
+QML avec RichText peut utiliser les balises HTML, avec Markdown il utilise la syntaxe simple de Markdown, le contenu cliquable est utile pour les écrans tactiles.
+
+**Ceci est un texte en gras**
+
+*Ceci est un texte en italique*
+
+_Ceci est un texte souligné_
+
+&gt; Bloc de citation
+
+~~Ceci est un texte barré~~
+
+Exemple de code :
+```
+ls -l /home
+```
+
+**Listes :**
+ * Intel CPU systems
+ * AMD CPU systems
+
+La barre de défilement verticale est réglable, la largeur actuelle étant fixée à 10.
+</translation>
     </message>
     <message>
         <location filename="../src/modules/welcomeq/release_notes.qml" line="80"/>
@@ -4743,7 +4785,9 @@ The vertical scrollbar is adjustable, current width set to 10.</source>
         <source>### Welcome to the %1 %2 installer
 
 This program will ask you some questions and set up %1 on your computer.</source>
-        <translation type="unfinished"/>
+        <translation>### Bienvenue sur l’installeur %1 %2
+
+Ce programme va vous poser quelques questions et configurer %1 sur votre ordinateur.</translation>
     </message>
     <message>
         <location filename="../src/modules/welcomeq/welcomeq.qml" line="129"/>

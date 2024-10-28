@@ -17,7 +17,20 @@ Copyright 2014-2024 Anke Boersma, demm@kaosx.us
 Thanks to [the Calamares team](href='https://calamares.io/team/)
 
 and the [KaOS translators team](href=&apos;https://www.transifex.com/kaos/kaos/).</source>
-        <translation type="unfinished"/>
+        <translation># %1
+**%2**
+
+per a **%3**
+
+Copyright 2014-2017 Teo Mrnjavac, teo@kde.org
+
+Copyright 2017-2022 Adriaan de Groot, groot@kde.org
+
+Copyright 2014-2024 Anke Boersma, demm@kaosx.us
+
+Gràcies a [l&apos;equip de Calamares](href=&apos;https://calamares.io/team/)
+
+i a l&apos;[equip de traductors del KaOS](href=&apos;https://www.transifex.com/kaos/kaos/).</translation>
     </message>
 </context>
 <context>
@@ -45,13 +58,13 @@ and the [KaOS translators team](href=&apos;https://www.transifex.com/kaos/kaos/)
         <location filename="../src/modules/users/ActiveDirectoryJob.cpp" line="39"/>
         <source>Enroll system in Active Directory</source>
         <comment>@label</comment>
-        <translation type="unfinished"/>
+        <translation>Registra el sistema a l&apos;Active Directory</translation>
     </message>
     <message>
         <location filename="../src/modules/users/ActiveDirectoryJob.cpp" line="45"/>
         <source>Enrolling system in Active Directory…</source>
         <comment>@status</comment>
-        <translation type="unfinished"/>
+        <translation>Es registra el sistema a l&apos;Active Directory...</translation>
     </message>
 </context>
 <context>
@@ -777,7 +790,7 @@ L&apos;instal·lador es tancarà i tots els canvis es perdran.</translation>
         <location filename="../src/modules/partition/gui/ChoicePage.cpp" line="897"/>
         <source>Reuse %1 as home partition for %2</source>
         <comment>@label</comment>
-        <translation>Es reutilitza %1 com a partició de l&apos;usuari per a %2. {1 ?} {2?}</translation>
+        <translation>Reutilitza %1 com a partició de l&apos;usuari per a %2.</translation>
     </message>
     <message>
         <location filename="../src/modules/partition/gui/ChoicePage.cpp" line="1065"/>
@@ -1034,7 +1047,7 @@ L&apos;instal·lador es tancarà i tots els canvis es perdran.</translation>
         <location filename="../src/modules/partition/jobs/ClearMountsJob.cpp" line="372"/>
         <source>Clearing mounts for partitioning operations on %1…</source>
         <comment>@status</comment>
-        <translation>Es netegen els muntatges per a les operacions de les particions a %1. {1…?}</translation>
+        <translation>Es netegen els muntatges per a les operacions de les particions a %1...</translation>
     </message>
     <message>
         <location filename="../src/modules/partition/jobs/ClearMountsJob.cpp" line="391"/>
@@ -1255,7 +1268,7 @@ L&apos;instal·lador es tancarà i tots els canvis es perdran.</translation>
         <location filename="../src/modules/keyboard/Config.cpp" line="583"/>
         <source>Keyboard model has been set to %1.</source>
         <comment>@label, %1 is keyboard model, as in Apple Magic Keyboard</comment>
-        <translation type="unfinished"/>
+        <translation>El model del teclat s&apos;ha establert a %1.</translation>
     </message>
     <message>
         <location filename="../src/modules/keyboard/Config.cpp" line="591"/>
@@ -1267,7 +1280,7 @@ L&apos;instal·lador es tancarà i tots els canvis es perdran.</translation>
         <location filename="../src/modules/locale/Config.cpp" line="381"/>
         <source>Set timezone to %1.</source>
         <comment>@action</comment>
-        <translation type="unfinished"/>
+        <translation>Estableix la zona horària a %1.</translation>
     </message>
     <message>
         <location filename="../src/modules/locale/Config.cpp" line="418"/>
@@ -1387,7 +1400,7 @@ L&apos;instal·lador es tancarà i tots els canvis es perdran.</translation>
         <location filename="../src/modules/partition/jobs/CreatePartitionJob.cpp" line="181"/>
         <source>Create new %1MiB partition on %3 (%2) with entries %4</source>
         <comment>@title</comment>
-        <translation>Crea una partició nova de %1 MiB a %3 (%2) amb entrades %4. {1M?} {3 ?} {2)?} {4?}</translation>
+        <translation>Crea una partició nova de %1 MiB a %3 (%2) amb entrades %4.</translation>
     </message>
     <message>
         <location filename="../src/modules/partition/jobs/CreatePartitionJob.cpp" line="189"/>
@@ -1424,7 +1437,7 @@ L&apos;instal·lador es tancarà i tots els canvis es perdran.</translation>
         <location filename="../src/modules/partition/jobs/CreatePartitionJob.cpp" line="257"/>
         <source>Creating new %1 partition on %2…</source>
         <comment>@status</comment>
-        <translation>Es crea la partició nova %1 a %2. {1 ?} {2…?}</translation>
+        <translation>Es crea la partició nova %1 a %2...</translation>
     </message>
     <message>
         <location filename="../src/modules/partition/jobs/CreatePartitionJob.cpp" line="274"/>
@@ -1468,7 +1481,7 @@ L&apos;instal·lador es tancarà i tots els canvis es perdran.</translation>
         <location filename="../src/modules/partition/jobs/CreatePartitionTableJob.cpp" line="58"/>
         <source>Creating new %1 partition table on %2…</source>
         <comment>@status</comment>
-        <translation>Es crea una taula de particions nova %1 a %2. {1 ?} {2…?}</translation>
+        <translation>Es crea la taula de particions nova %1 a %2...</translation>
     </message>
     <message>
         <location filename="../src/modules/partition/jobs/CreatePartitionTableJob.cpp" line="49"/>
@@ -1536,7 +1549,7 @@ L&apos;instal·lador es tancarà i tots els canvis es perdran.</translation>
         <location filename="../src/modules/partition/jobs/CreateVolumeGroupJob.cpp" line="44"/>
         <source>Creating new volume group named %1…</source>
         <comment>@status</comment>
-        <translation>Es crea el grup de volums nou anomenat %1. {1…?}</translation>
+        <translation>Es crea el grup de volums nou anomenat %1...</translation>
     </message>
     <message>
         <location filename="../src/modules/partition/jobs/CreateVolumeGroupJob.cpp" line="38"/>
@@ -1578,7 +1591,7 @@ L&apos;instal·lador es tancarà i tots els canvis es perdran.</translation>
         <location filename="../src/modules/partition/jobs/DeletePartitionJob.cpp" line="85"/>
         <source>Deleting partition %1…</source>
         <comment>@status</comment>
-        <translation>Se suprimeix la partició %1. {1…?}</translation>
+        <translation>Se suprimeix la partició %1...</translation>
     </message>
     <message>
         <location filename="../src/modules/partition/jobs/DeletePartitionJob.cpp" line="79"/>
@@ -1813,7 +1826,7 @@ L&apos;instal·lador es tancarà i tots els canvis es perdran.</translation>
         <location filename="../src/modules/partition/jobs/FillGlobalStorageJob.cpp" line="235"/>
         <source>Set up &lt;strong&gt;new&lt;/strong&gt; %2 partition with mount point &lt;strong&gt;%1&lt;/strong&gt;%3</source>
         <comment>@info</comment>
-        <translation>Estableix la partició &lt;strong&gt;nova&lt;/strong&gt; %2 amb el punt de muntatge &lt;strong&gt;%1&lt;/strong&gt; %3. {2 ?} {1&lt;?} {3?}</translation>
+        <translation>Estableix la partició &lt;strong&gt;nova&lt;/strong&gt; %2 amb el punt de muntatge &lt;strong&gt;%1&lt;/strong&gt; %3.</translation>
     </message>
     <message>
         <location filename="../src/modules/partition/jobs/FillGlobalStorageJob.cpp" line="250"/>
@@ -1837,7 +1850,7 @@ L&apos;instal·lador es tancarà i tots els canvis es perdran.</translation>
         <location filename="../src/modules/partition/jobs/FillGlobalStorageJob.cpp" line="280"/>
         <source>Set up %3 partition &lt;strong&gt;%1&lt;/strong&gt; with mount point &lt;strong&gt;%2&lt;/strong&gt;%4…</source>
         <comment>@info</comment>
-        <translation>Estableix la partició %3 &lt;strong&gt;%1&lt;/strong&gt; amb el punt de muntatge &lt;strong&gt;%2&lt;/strong&gt; %4. {3 ?} {1&lt;?} {2&lt;?} {4…?}</translation>
+        <translation>S&apos;estableix la partició %3 &lt;strong&gt;%1&lt;/strong&gt; amb el punt de muntatge &lt;strong&gt;%2&lt;/strong&gt; %4...</translation>
     </message>
     <message>
         <location filename="../src/modules/partition/jobs/FillGlobalStorageJob.cpp" line="296"/>
@@ -1919,7 +1932,7 @@ L&apos;instal·lador es tancarà i tots els canvis es perdran.</translation>
         <location filename="../src/modules/partition/jobs/FormatPartitionJob.cpp" line="39"/>
         <source>Format partition %1 (file system: %2, size: %3 MiB) on %4</source>
         <comment>@title</comment>
-        <translation>Formata la partició %1 (sistema de fitxers: %2, mida: %3 MiB) a %4. {1 ?} {2,?} {3 ?} {4?}</translation>
+        <translation>Formata la partició %1 (sistema de fitxers: %2, mida: %3 MiB) a %4.</translation>
     </message>
     <message>
         <location filename="../src/modules/partition/jobs/FormatPartitionJob.cpp" line="49"/>
@@ -1937,7 +1950,7 @@ L&apos;instal·lador es tancarà i tots els canvis es perdran.</translation>
         <location filename="../src/modules/partition/jobs/FormatPartitionJob.cpp" line="64"/>
         <source>Formatting partition %1 with file system %2…</source>
         <comment>@status</comment>
-        <translation>Es formata la partició %1 amb el sistema de fitxers %2. {1 ?} {2…?}</translation>
+        <translation>Es formata la partició %1 amb el sistema de fitxers %2...</translation>
     </message>
     <message>
         <location filename="../src/modules/partition/jobs/FormatPartitionJob.cpp" line="73"/>
@@ -2426,7 +2439,7 @@ L&apos;instal·lador es tancarà i tots els canvis es perdran.</translation>
     <message>
         <location filename="../src/modules/localeq/Map.qml" line="248"/>
         <source>Timezone: %1</source>
-        <translation type="unfinished"/>
+        <translation>Zona horària: %1</translation>
     </message>
     <message>
         <location filename="../src/modules/localeq/Map.qml" line="265"/>
@@ -2913,27 +2926,27 @@ per desplaçar-s&apos;hi i useu els botons +/- per fer ampliar-lo o reduir-lo, o
     <message>
         <location filename="../src/modules/users/page_usersetup.ui" line="627"/>
         <source>Use Active Directory</source>
-        <translation type="unfinished"/>
+        <translation>Usa l&apos;Active Directory</translation>
     </message>
     <message>
         <location filename="../src/modules/users/page_usersetup.ui" line="638"/>
         <source>Domain:</source>
-        <translation type="unfinished"/>
+        <translation>Domini:</translation>
     </message>
     <message>
         <location filename="../src/modules/users/page_usersetup.ui" line="652"/>
         <source>Domain Administrator:</source>
-        <translation type="unfinished"/>
+        <translation>Administració del domini:</translation>
     </message>
     <message>
         <location filename="../src/modules/users/page_usersetup.ui" line="662"/>
         <source>Password:</source>
-        <translation type="unfinished"/>
+        <translation>Contrasenya:</translation>
     </message>
     <message>
         <location filename="../src/modules/users/page_usersetup.ui" line="680"/>
         <source>IP Address (optional):</source>
-        <translation type="unfinished"/>
+        <translation>Adreça IP (opcional):</translation>
     </message>
 </context>
 <context>
@@ -3198,60 +3211,60 @@ per desplaçar-s&apos;hi i useu els botons +/- per fer ampliar-lo o reduir-lo, o
         <location filename="../src/modules/partition/PartitionViewStep.cpp" line="144"/>
         <source>Install %1 &lt;strong&gt;alongside&lt;/strong&gt; another operating system</source>
         <comment>@label</comment>
-        <translation type="unfinished"/>
+        <translation>Instal·la %1 &lt;strong&gt;al costat&lt;/strong&gt; d&apos;un altre sistema operatiu.</translation>
     </message>
     <message>
         <location filename="../src/modules/partition/PartitionViewStep.cpp" line="148"/>
         <source>&lt;strong&gt;Erase&lt;/strong&gt; disk and install %1</source>
         <comment>@label</comment>
-        <translation type="unfinished"/>
+        <translation>&lt;strong&gt;Esborra&lt;/strong&gt; el disc i instal·la-hi %1.</translation>
     </message>
     <message>
         <location filename="../src/modules/partition/PartitionViewStep.cpp" line="152"/>
         <source>&lt;strong&gt;Replace&lt;/strong&gt; a partition with %1</source>
         <comment>@label</comment>
-        <translation type="unfinished"/>
+        <translation>&lt;strong&gt;Reemplaça&lt;/strong&gt; una partició amb %1.</translation>
     </message>
     <message>
         <location filename="../src/modules/partition/PartitionViewStep.cpp" line="157"/>
         <source>&lt;strong&gt;Manual&lt;/strong&gt; partitioning</source>
         <comment>@label</comment>
-        <translation type="unfinished"/>
+        <translation>Particions &lt;strong&gt;manuals&lt;/strong&gt;</translation>
     </message>
     <message>
         <location filename="../src/modules/partition/PartitionViewStep.cpp" line="179"/>
         <source>Install %1 &lt;strong&gt;alongside&lt;/strong&gt; another operating system on disk &lt;strong&gt;%2&lt;/strong&gt; (%3)</source>
         <comment>@info</comment>
-        <translation type="unfinished"/>
+        <translation>Instal·la %1 &lt;strong&gt;al costat&lt;/strong&gt; d&apos;un altre sistema operatiu al disc &lt;strong&gt;%2&lt;/strong&gt; (%3).</translation>
     </message>
     <message>
         <location filename="../src/modules/partition/PartitionViewStep.cpp" line="188"/>
         <source>&lt;strong&gt;Erase&lt;/strong&gt; disk &lt;strong&gt;%2&lt;/strong&gt; (%3) and install %1</source>
         <comment>@info</comment>
-        <translation type="unfinished"/>
+        <translation>&lt;strong&gt;Esborra&lt;/strong&gt; el disc &lt;strong&gt;%2&lt;/strong&gt; (%3) i instal·la-hi %1.</translation>
     </message>
     <message>
         <location filename="../src/modules/partition/PartitionViewStep.cpp" line="195"/>
         <source>&lt;strong&gt;Replace&lt;/strong&gt; a partition on disk &lt;strong&gt;%2&lt;/strong&gt; (%3) with %1</source>
         <comment>@info</comment>
-        <translation type="unfinished"/>
+        <translation>&lt;strong&gt;Reemplaça&lt;/strong&gt; una partició del disc &lt;strong&gt;%2&lt;/strong&gt; (%3) amb %1.</translation>
     </message>
     <message>
         <location filename="../src/modules/partition/PartitionViewStep.cpp" line="204"/>
         <source>&lt;strong&gt;Manual&lt;/strong&gt; partitioning on disk &lt;strong&gt;%1&lt;/strong&gt; (%2)</source>
         <comment>@info</comment>
-        <translation type="unfinished"/>
+        <translation>Particions &lt;strong&gt;manuals&lt;/strong&gt; del disc &lt;strong&gt;%1&lt;/strong&gt; (%2)</translation>
     </message>
     <message>
         <location filename="../src/modules/partition/PartitionViewStep.cpp" line="214"/>
         <source>Disk &lt;strong&gt;%1&lt;/strong&gt; (%2)</source>
         <comment>@info</comment>
-        <translation type="unfinished"/>
+        <translation>Disc &lt;strong&gt;%1&lt;/strong&gt; (%2)</translation>
     </message>
     <message>
         <location filename="../src/modules/partition/PartitionViewStep.cpp" line="239"/>
         <source>Create a swap file.</source>
-        <translation type="unfinished"/>
+        <translation>Crea un fitxer d&apos;intercanvi.</translation>
     </message>
     <message>
         <location filename="../src/modules/partition/PartitionViewStep.cpp" line="314"/>
@@ -3311,13 +3324,13 @@ per desplaçar-s&apos;hi i useu els botons +/- per fer ampliar-lo o reduir-lo, o
     <message>
         <location filename="../src/libcalamares/JobQueue.cpp" line="138"/>
         <source>Calamares</source>
-        <translation type="unfinished"/>
+        <translation>Calamares</translation>
     </message>
     <message>
         <location filename="../src/libcalamares/JobQueue.cpp" line="138"/>
         <source>Installation in progress</source>
         <comment>@status</comment>
-        <translation type="unfinished"/>
+        <translation>Instal·lació en curs</translation>
     </message>
 </context>
 <context>
@@ -3515,14 +3528,18 @@ La configuració pot continuar, però algunes característiques podrien estar in
         <source>This computer does not satisfy the minimum requirements for installing %1.
 
 Installation cannot continue.</source>
-        <translation type="unfinished"/>
+        <translation>Aquest ordinador no compleix els requisits mínims per instal·lar-hi %1.
+
+La instal·lació no pot continuar.</translation>
     </message>
     <message>
         <location filename="../src/modules/welcomeq/Requirements.qml" line="41"/>
         <source>This computer does not satisfy some of the recommended requirements for setting up %1.
 
 Setup can continue, but some features might be disabled.&lt;/p&gt;</source>
-        <translation type="unfinished"/>
+        <translation>Aquest ordinador no satisfà alguns dels requisits recomanats per configurar-hi %1.
+
+La configuració pot continuar, però algunes característiques podrien estar inhabilitades.</translation>
     </message>
 </context>
 <context>
@@ -3566,7 +3583,7 @@ Setup can continue, but some features might be disabled.&lt;/p&gt;</source>
         <location filename="../src/modules/partition/jobs/ResizeVolumeGroupJob.cpp" line="28"/>
         <source>Resize volume group named %1 from %2 to %3</source>
         <comment>@title</comment>
-        <translation>Canvia la mida del grup de volums anomenat %1 de %2 a %3. {1 ?} {2 ?} {3?}</translation>
+        <translation>Canvia la mida del grup de volums anomenat %1 de %2 a %3.</translation>
     </message>
     <message>
         <location filename="../src/modules/partition/jobs/ResizeVolumeGroupJob.cpp" line="37"/>
@@ -3625,7 +3642,7 @@ Setup can continue, but some features might be disabled.&lt;/p&gt;</source>
         <location filename="../src/modules/users/SetHostNameJob.cpp" line="48"/>
         <source>Setting hostname %1…</source>
         <comment>@status</comment>
-        <translation>S&apos;estableix el nom d&apos;amfitrió %1. {1…?}</translation>
+        <translation>S&apos;estableix el nom d&apos;amfitrió %1...</translation>
     </message>
     <message>
         <location filename="../src/modules/users/SetHostNameJob.cpp" line="121"/>
@@ -3794,7 +3811,7 @@ Setup can continue, but some features might be disabled.&lt;/p&gt;</source>
         <location filename="../src/modules/users/SetPasswordJob.cpp" line="44"/>
         <source>Setting password for user %1…</source>
         <comment>@status</comment>
-        <translation>S&apos;estableix la contrasenya per a l&apos;usuari %1. {1…?}</translation>
+        <translation>S&apos;estableix la contrasenya per a l&apos;usuari %1...</translation>
     </message>
     <message>
         <location filename="../src/modules/users/SetPasswordJob.cpp" line="81"/>
@@ -3944,12 +3961,12 @@ Setup can continue, but some features might be disabled.&lt;/p&gt;</source>
     <message>
         <location filename="../src/modules/packagechooserq/UEFI.qml" line="103"/>
         <source>Option: </source>
-        <translation type="unfinished"/>
+        <translation>Opció:</translation>
     </message>
     <message>
         <location filename="../src/modules/packagechooserq/UEFI.qml" line="120"/>
         <source>Select</source>
-        <translation type="unfinished"/>
+        <translation>Selecciona</translation>
     </message>
 </context>
 <context>
@@ -4527,12 +4544,12 @@ Setup can continue, but some features might be disabled.&lt;/p&gt;</source>
     <message>
         <location filename="../src/modules/packagechooserq/packagechooserq.qml" line="107"/>
         <source>Option: </source>
-        <translation type="unfinished"/>
+        <translation>Opció:</translation>
     </message>
     <message>
         <location filename="../src/modules/packagechooserq/packagechooserq.qml" line="123"/>
         <source>Select</source>
-        <translation type="unfinished"/>
+        <translation>Selecciona</translation>
     </message>
 </context>
 <context>
@@ -4540,12 +4557,12 @@ Setup can continue, but some features might be disabled.&lt;/p&gt;</source>
     <message>
         <location filename="../src/modules/packagechooserq/packagechooserq@audio.qml" line="108"/>
         <source>Option: </source>
-        <translation type="unfinished"/>
+        <translation>Opció:</translation>
     </message>
     <message>
         <location filename="../src/modules/packagechooserq/packagechooserq@audio.qml" line="125"/>
         <source>Select</source>
-        <translation type="unfinished"/>
+        <translation>Selecciona</translation>
     </message>
 </context>
 <context>
@@ -4644,7 +4661,31 @@ ls -l /home
  * AMD CPU systems
 
 The vertical scrollbar is adjustable, current width set to 10.</source>
-        <translation type="unfinished"/>
+        <translation>### %1
+Aquest és un fitxer QML d&apos;exemple, que mostra opcions a Markdown amb contingut Flickable.
+
+QML amb RichText pot usar etiquetes HTML, amb Markdown usa la simple sintaxi de Markdown. El contingut de Flickable és útil per a pantalles tàctils.
+
+**Aquest text és en negreta**
+
+*Aquest text és en cursiva*
+
+_Aquest és un text subratllat_
+
+&gt; cita de bloc
+
+~~Això està ratllat~~
+
+Exemple de codi:
+```
+ls -l /home
+```
+
+**Llistes:**
+* Sistemes de CPU Intel
+* Sistemes de CPU AMD
+
+La barra de desplaçament vertical és ajustable, l&apos;amplada actual s&apos;estableix a 10.</translation>
     </message>
     <message>
         <location filename="../src/modules/welcomeq/release_notes.qml" line="80"/>
@@ -4747,7 +4788,9 @@ The vertical scrollbar is adjustable, current width set to 10.</source>
         <source>### Welcome to the %1 %2 installer
 
 This program will ask you some questions and set up %1 on your computer.</source>
-        <translation type="unfinished"/>
+        <translation>### Us donem la benvinguda a l&apos;instal·lador %1 %2
+
+Aquest programa us farà algunes preguntes i configurarà %1 a l&apos;ordinador.</translation>
     </message>
     <message>
         <location filename="../src/modules/welcomeq/welcomeq.qml" line="129"/>
