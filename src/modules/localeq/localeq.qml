@@ -139,145 +139,145 @@ Page {
                 }
             }
         }
+    }
 
-        Drawer {
-            id: drawerLanguage
-            width: 0.33 * root.width
-            height: root.height
-            edge: Qt.LeftEdge
+    Drawer {
+        id: drawerLanguage
+        width: 0.33 * root.width
+        height: root.height
+        edge: Qt.LeftEdge
 
-            ScrollView {
-                id: scroll1
-                anchors.fill: parent
-                contentHeight: 800
-                ScrollBar.horizontal.policy: ScrollBar.AlwaysOff
+        ScrollView {
+            id: scroll1
+            anchors.fill: parent
+            contentHeight: 800
+            ScrollBar.horizontal.policy: ScrollBar.AlwaysOff
 
-                ListView {
-                    id: list1
-                    focus: true
-                    clip: true
+            ListView {
+                id: list1
+                focus: true
+                clip: true
+                width: parent.width
+
+                model: config.supportedLocales
+                currentIndex: -1 //config.localeIndex
+
+                header: Rectangle {
                     width: parent.width
-
-                    model: config.supportedLocales
-                    currentIndex: -1 //config.localeIndex
-
-                    header: Rectangle {
-                        width: parent.width
-                        height: 100
-                        color: "#eff0f1" //headerBackgroundColor
-                        Text {
-                            anchors.fill: parent
-                            wrapMode: Text.WordWrap
-                            text: qsTr("<h3>Languages</h3> </br>
-                            The system locale setting affects the language and character set for some command line user interface elements. The current setting is <strong>%1</strong>.", "@info").arg(config.currentLanguageCode)
-                            font.pointSize: 10
-                        }
+                    height: 100
+                    color: "#eff0f1" //headerBackgroundColor
+                    Text {
+                        anchors.fill: parent
+                        wrapMode: Text.WordWrap
+                        text: qsTr("<h3>Languages</h3> </br>
+                        The system locale setting affects the language and character set for some command line user interface elements. The current setting is <strong>%1</strong>.", "@info").arg(config.currentLanguageCode)
+                        font.pointSize: 10
                     }
-
-                    delegate: ItemDelegate {
-
-                        property variant myData: model
-                        hoverEnabled: true
-                        width: drawerLanguage.width
-                        implicitHeight: 24
-                        highlighted: ListView.isCurrentItem
-                        Label {
-                            Layout.fillHeight: true
-                            Layout.fillWidth: true
-                            horizontalAlignment: Text.AlignHCenter
-                            width: parent.width
-                            height: 24
-                            color: highlighted ? "#eff0f1" : "#1F1F1F" // headerBackgroundColor : textColor
-                            text: modelData
-                            background: Rectangle {
-
-                                color: highlighted || hovered ? highlightColor : backgroundLighterColor
-                                opacity: highlighted || hovered ? 0.5 : 0.9
-                            }
-
-                            MouseArea {
-                                hoverEnabled: true
-                                anchors.fill: parent
-                                cursorShape: Qt.PointingHandCursor
-                                onClicked: {
-                                    list1.currentIndex = index
-                                    drawerLanguage.close()
-                                }
-                            }
-                        }
-                    }
-                    onCurrentItemChanged: { config.currentLanguageCode = model[currentIndex] } /* This works because model is a stringlist */
                 }
+
+                delegate: ItemDelegate {
+
+                    property variant myData: model
+                    hoverEnabled: true
+                    width: drawerLanguage.width
+                    implicitHeight: 24
+                    highlighted: ListView.isCurrentItem
+                    Label {
+                        Layout.fillHeight: true
+                        Layout.fillWidth: true
+                        horizontalAlignment: Text.AlignHCenter
+                        width: parent.width
+                        height: 24
+                        color: highlighted ? "#eff0f1" : "#1F1F1F" // headerBackgroundColor : textColor
+                        text: modelData
+                        background: Rectangle {
+
+                            color: highlighted || hovered ? highlightColor : backgroundLighterColor
+                            opacity: highlighted || hovered ? 0.5 : 0.9
+                        }
+
+                        MouseArea {
+                            hoverEnabled: true
+                            anchors.fill: parent
+                            cursorShape: Qt.PointingHandCursor
+                            onClicked: {
+                                list1.currentIndex = index
+                                drawerLanguage.close()
+                            }
+                        }
+                    }
+                }
+                onCurrentItemChanged: { config.currentLanguageCode = model[currentIndex] } /* This works because model is a stringlist */
             }
         }
+    }
 
-        Drawer {
-            id: drawerLocale
-            width: 0.33 * root.width
-            height: root.height
-            edge: Qt.RightEdge
+    Drawer {
+        id: drawerLocale
+        width: 0.33 * root.width
+        height: root.height
+        edge: Qt.RightEdge
 
-            ScrollView {
-                id: scroll2
-                anchors.fill: parent
-                contentHeight: 800
-                ScrollBar.horizontal.policy: ScrollBar.AlwaysOff
+        ScrollView {
+            id: scroll2
+            anchors.fill: parent
+            contentHeight: 800
+            ScrollBar.horizontal.policy: ScrollBar.AlwaysOff
 
-                ListView {
-                    id: list2
-                    focus: true
-                    clip: true
+            ListView {
+                id: list2
+                focus: true
+                clip: true
+                width: parent.width
+
+                model: config.supportedLocales
+                currentIndex: -1 //model.currentLCCodeIndex
+
+                header: Rectangle {
                     width: parent.width
-
-                    model: config.supportedLocales
-                    currentIndex: -1 //model.currentLCCodeIndex
-
-                    header: Rectangle {
-                        width: parent.width
-                        height: 100
-                        color: "#eff0f1" // headerBackgroundColor
-                        Text {
-                            anchors.fill: parent
-                            wrapMode: Text.WordWrap
-                            text: qsTr("<h3>Locales</h3> </br>
-                                The system locale setting affects the numbers and dates format. The current setting is <strong>%1</strong>.", "@info").arg(config.currentLCCode)
-                            font.pointSize: 10
-                        }
+                    height: 100
+                    color: "#eff0f1" // headerBackgroundColor
+                    Text {
+                        anchors.fill: parent
+                        wrapMode: Text.WordWrap
+                        text: qsTr("<h3>Locales</h3> </br>
+                            The system locale setting affects the numbers and dates format. The current setting is <strong>%1</strong>.", "@info").arg(config.currentLCCode)
+                        font.pointSize: 10
                     }
-
-                    delegate: ItemDelegate {
-
-                        hoverEnabled: true
-                        width: drawerLocale.width
-                        implicitHeight: 24
-                        highlighted: ListView.isCurrentItem
-                        Label {
-                            Layout.fillHeight: true
-                            Layout.fillWidth: true
-                            horizontalAlignment: Text.AlignHCenter
-                            width: parent.width
-                            height: 24
-                            color: highlighted ? "#eff0f1" : "#1F1F1F" // headerBackgroundColor : textColor
-                            text: modelData
-                            background: Rectangle {
-
-                                color: highlighted || hovered ? highlightColor : backgroundLighterColor
-                                opacity: highlighted || hovered ? 0.5 : 0.9
-                            }
-
-                            MouseArea {
-                                hoverEnabled: true
-                                anchors.fill: parent
-                                cursorShape: Qt.PointingHandCursor
-                                onClicked: {
-                                    list2.currentIndex = index
-                                    drawerLocale.close()
-                                }
-                            }
-                        }
-                    }
-                    onCurrentItemChanged: { config.currentLCCode = model[currentIndex]; } /* This works because model is a stringlist */
                 }
+
+                delegate: ItemDelegate {
+
+                    hoverEnabled: true
+                    width: drawerLocale.width
+                    implicitHeight: 24
+                    highlighted: ListView.isCurrentItem
+                    Label {
+                        Layout.fillHeight: true
+                        Layout.fillWidth: true
+                        horizontalAlignment: Text.AlignHCenter
+                        width: parent.width
+                        height: 24
+                        color: highlighted ? "#eff0f1" : "#1F1F1F" // headerBackgroundColor : textColor
+                        text: modelData
+                        background: Rectangle {
+
+                            color: highlighted || hovered ? highlightColor : backgroundLighterColor
+                            opacity: highlighted || hovered ? 0.5 : 0.9
+                        }
+
+                        MouseArea {
+                            hoverEnabled: true
+                            anchors.fill: parent
+                            cursorShape: Qt.PointingHandCursor
+                            onClicked: {
+                                list2.currentIndex = index
+                                drawerLocale.close()
+                            }
+                        }
+                    }
+                }
+                onCurrentItemChanged: { config.currentLCCode = model[currentIndex]; } /* This works because model is a stringlist */
             }
         }
     }
