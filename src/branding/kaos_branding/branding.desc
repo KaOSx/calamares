@@ -130,9 +130,9 @@ strings:
     bootloaderEntryName: KaOS
     productUrl:          https://kaosx.us/
     supportUrl:          https://kaosx.us/docs/
-    knownIssuesUrl:      https://kaosx.us/pages/download/#known-issues
-    releaseNotesUrl:     https://kaosx.us/pages/release_notes
-    donateUrl:           https://kaosx.us/about/donors/
+    knownIssuesUrl:      https://kaosx.us/download/#known-issues
+    releaseNotesUrl:     https://kaosx.us/release_notes
+    donateUrl:           https://kaosx.us/donate/
 
 # These images are loaded from the branding module directory.
 #

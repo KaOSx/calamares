@@ -13,14 +13,14 @@ import io.calamares.ui 1.0
 
 import QtQuick
 import QtQuick.Controls
-import QtQuick.Controls 2.15 as QQC2
+import QtQuick.Controls as QQC2
 import QtQuick.Layouts
 
 import QtQuick.Window 2.3
 import QtQuick.VirtualKeyboard
 import "content"
 
-import org.kde.kirigami 2.7 as Kirigami
+import org.kde.kirigami as Kirigami
 
 Item {
     // You can hard-code a color here, or bind to a Kirigami theme color,
