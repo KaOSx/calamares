@@ -34,7 +34,7 @@
     <message>
         <location filename="../show.qml" line="82"/>
         <source>Calligra is available in the repositories</source>
-        <translation>Calligra е наличен от хранилищата.</translation>
+        <translation>Calligra е наличен от хранилищата</translation>
     </message>
     <message>
         <location filename="../show.qml" line="85"/>
