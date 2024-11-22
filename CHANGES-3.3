@@ -7,16 +7,36 @@ contributors are listed. Note that Calamares does not have a historical
 changelog -- this log starts with version 3.3.0. See CHANGES-3.2 for
 the history of the 3.2 series (2018-05 - 2022-08).
 
-# 3.3.11 (unreleased)
+# 3.3.12 (2024-11-21)
 
 This release contains contributions from (alphabetically by given name):
- - Nobody yet
+ - Adriaan de Groot
+
+## Core ##
+ - This release repairs the Calamares configuration file which is
+   used by external Calamares modules -- calamares-extensions in particular.
+
+## Modules ##
+ - *users* module always uses a 3-digit UMASK if one is specified.
+
+
+# 3.3.11 (2024-11-05)
+
+This release contains contributions from (alphabetically by given name):
+ - Adriaan de Groot
+ - Jakob Petsovits
+ - Simon Quigley
 
 ## Core ##
  - Nothing yet
 
 ## Modules ##
- - Nothing yet
+ - *unpackfs* now supports a `condition` configuration option for
+   conditional installation / unsquash. (thanks Simon)
+ - *unpackfsc* module imported from Calamares-extensions, and extended
+   with the same `condition` configuration.
+ - *partition* crash fixed when swap was using the wrong end-sector
+   in some GPT configurations. (thanks Jakob, #2367)
 
 
 # 3.3.10 (2024-10-21)

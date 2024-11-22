@@ -167,6 +167,26 @@ private:
     mutable QMutex m_mutex;
 };
 
+
+/** @brief Gets a value from the store
+ *
+ * When @p nestedKey contains no '.' characters, equivalent
+ * to `gs->value(nestedKey)`. Otherwise recursively looks up
+ * the '.'-separated parts of @p nestedKey in successive sub-maps
+ * of the store, returning the value in the innermost one.
+ *
+ * Example: `lookup(gs, "branding.name")` finds the value of the
+ * 'name' key in the 'branding' submap of the store.
+ *
+ * Sets @p ok to @c true if a value was found. Returns the value
+ * as a variant. If no value is found (e.g. the key is missing
+ * or some prefix submap is missing) sets @p ok to @c false
+ * and returns an invalid QVariant.
+ *
+ * @see GlobalStorage::value
+ */
+DLLEXPORT QVariant lookup( const GlobalStorage* gs, const QString& nestedKey, bool& ok );
+
 }  // namespace Calamares
 
 #endif  // CALAMARES_GLOBALSTORAGE_H

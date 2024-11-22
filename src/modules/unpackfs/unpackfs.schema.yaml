@@ -18,4 +18,8 @@ properties:
                 excludeFile: { type: string }
                 exclude: { type: array, items: { type: string } }
                 weight: { type: integer, exclusiveMinimum: 0 }
+                condition:
+                    anyOf:
+                      - type: boolean
+                      - type: string
             required: [ source , sourcefs, destination ]
